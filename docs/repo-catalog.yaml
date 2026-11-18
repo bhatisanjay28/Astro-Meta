@@ -21,30 +21,33 @@ repos:
   - name: Astro-Frontend
     url: https://github.com/bhatisanjay28/Astro-Frontend.git
     role: frontend
-    stack: React 19 + Vite 7
-    deploy: Cloudflare Pages (https://vyotish.com)
+    stack: Astro 5 + TypeScript (SSR via @astrojs/cloudflare; React islands for interactive tools)
+    deploy: Cloudflare Pages/Workers (https://vyotish.com)
     docker:
       dockerfile: Dockerfile
       image: astro-frontend
       port: 80
       run: docker build -t astro-frontend . && docker run -p 8080:80 astro-frontend
     notes: >
-      The public website. Live at https://vyotish.com via Cloudflare Pages,
-      which auto-builds on every push to main. Registered via the
-      Cloudflare GitHub App (repo-scoped), so the connection survives renames.
+      The public website. Live at https://vyotish.com via Cloudflare, which
+      auto-builds on every push to main. Currently a Vite+React SPA with the
+      approved Coming-Soon page; migrates to Astro in Epic 0.3 (DECISIONS.md D1).
 
   - name: Astro-Backend
     url: https://github.com/bhatisanjay28/Astro-Backend.git
     role: backend
-    stack: Node.js 22 + Express
+    stack: Hono + TypeScript on Cloudflare Workers (Bun runtime for local dev; Docker bun image for dev parity)
+    deploy: Cloudflare Workers (wrangler); Cron Triggers for scheduled jobs
     docker:
       dockerfile: Dockerfile
       image: astro-backend
       port: 3000
       run: docker build -t astro-backend . && docker run -p 3000:3000 astro-backend
     notes: >
-      Starter API scaffold (health + info endpoints). Extend with real
-      endpoints for bookings, contact, and content.
+      All business logic and ALL database access live here (DECISIONS.md D2/D3).
+      Supabase Postgres/Auth/Storage accessed server-side only with the
+      service-role key in Worker secrets. Frontend never touches Supabase.
+      Currently an Express scaffold; replaced by Hono in Epic 0.2.
 
 # Template for future repos — copy, fill in, uncomment:
 #  - name: New-Repo-Name

@@ -1,0 +1,33 @@
+# DECISIONS.md — Vyotish-Astro
+
+Single source of truth for architecture and product decisions. Appended per PRD §18 ("Plan first").
+Every entry records date, status, and rationale. Owners approve marked entries.
+
+| # | Decision | Status | Date |
+|---|----------|--------|------|
+| D1 | Frontend framework: **Astro 5 + TypeScript** | ✅ Approved by owner | 2026-11-18 |
+| D2 | Backend: **Hono + TypeScript on Cloudflare Workers**; Bun runtime for local dev; **Docker = local dev parity only** (bun image), production deploys via wrangler | ✅ Approved by owner | 2026-11-18 |
+| D3 | Database access: **Supabase Postgres touched ONLY by the backend** (Hono). Zero RPC / stored functions — all queries and business logic live in the backend API. RLS enabled on every table as defense-in-depth. Frontend never holds Supabase keys. | ✅ Owner directive | 2026-11-18 |
+| D4 | Auth: Supabase Auth, administered **through backend endpoints** (roles: admin, editor; first admin via secure setup script; MFA recommended). Admin cannot write to Supabase from the browser except through the API. | Decided (per D3) | 2026-11-18 |
+| D5 | Ephemeris: **astronomy-engine (MIT licence)** as the default engine behind our own Lahiri-ayanamsha + IANA-timezone layer; validated against known Panchang/Kundli values. Swiss Ephemeris (AGPL/paid) revisited only if accuracy proves insufficient — owner sign-off required before public launch either way. | Decided, revisit-gated | 2026-11-18 |
+| D6 | City data: GeoNames-derived dataset (lat/lng/IANA tz) seeded into Supabase; attribution kept in THIRD_PARTY_LICENSES.md. | Decided | 2026-11-18 |
+| D7 | **Astro-Meta is the orchestrator**: holds PRD, DECISIONS.md, plan/epics, CHANGELOG, placeholder register; frontend/backend are submodules whose pins are bumped per completed epic. | Decided | 2026-11-18 |
+| D8 | Deployment gate: **no production deploy until the owner reviews and approves the local build** (PRD §2, §18). Local preview at every milestone. | Decided | 2026-11-18 |
+| D9 | Branding: site name "Vyotish", original dummy SVG wordmark kept in one file for easy swap; final logo supplied later. | Decided (PRD §1, §9) | 2026-11-18 |
+
+## Consequences of D1 (Astro migration)
+
+- The current Astro-Frontend code is a Vite + React SPA ("Coming Soon" page). It will be **replaced by an Astro project** in Epic 0. The live Coming-Soon page is reproduced as the first Astro page so https://vyotish.com does not regress during migration.
+- Interactive pieces (Kundli form, calculators, matching) render as **Astro islands** — server-rendered shells with hydrating React/Svelte components only where needed, keeping Lighthouse ≥90 realistic.
+
+## Consequences of D2/D3 (backend shape)
+
+- The existing Express scaffold in Astro-Backend is replaced by a Hono + Bun + TypeScript Workers project (Epic 0.2). Endpoints `/health`, `/api` preserved.
+- Supabase service-role key lives in **Worker secrets only** (`wrangler secret put`), never in the repo, never in frontend env.
+- Scheduled jobs (daily Panchang/horoscope refresh, panchang_cache pruning) are Workers Cron Triggers within the same backend project.
+
+## Open items
+
+- Supabase project creation (owner, with agent guidance) — needed before Epic 0.4.
+- GitHub MCP transport: OAuth vs fine-grained PAT — resolved at first connection test after ZCode restart.
+- BMAD skill files were lost with the old local workspace; BMAD process is run manually (this plan) — reinstall optional, not blocking.
