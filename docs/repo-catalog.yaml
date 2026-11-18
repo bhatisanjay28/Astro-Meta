@@ -1,0 +1,54 @@
+# Vyotish-Astro — Repository Catalog
+# ===================================
+# Single source of truth for every repository in the Vyotish-Astro project.
+# To add a new repo: append an entry under `repos` following the same schema.
+#
+# Schema per repo entry:
+#   name      — repository name on GitHub (required)
+#   url       — full clone URL (required)
+#   role      — frontend | backend | meta | tooling | docs (required)
+#   stack     — main technologies (required)
+#   docker    — optional Docker build info
+#   notes     — free-form notes (optional)
+
+project: Vyotish-Astro
+description: >
+  Vyotish astrology platform — responsive website (frontend), API (backend),
+  and this meta repository tying them together.
+default_branch: main
+
+repos:
+  - name: Astro-Frontend
+    url: https://github.com/bhatisanjay28/Astro-Frontend.git
+    role: frontend
+    stack: React 19 + Vite 7
+    deploy: Cloudflare Pages (https://vyotish.com)
+    docker:
+      dockerfile: Dockerfile
+      image: astro-frontend
+      port: 80
+      run: docker build -t astro-frontend . && docker run -p 8080:80 astro-frontend
+    notes: >
+      The public website. Live at https://vyotish.com via Cloudflare Pages,
+      which auto-builds on every push to main. Registered via the
+      Cloudflare GitHub App (repo-scoped), so the connection survives renames.
+
+  - name: Astro-Backend
+    url: https://github.com/bhatisanjay28/Astro-Backend.git
+    role: backend
+    stack: Node.js 22 + Express
+    docker:
+      dockerfile: Dockerfile
+      image: astro-backend
+      port: 3000
+      run: docker build -t astro-backend . && docker run -p 3000:3000 astro-backend
+    notes: >
+      Starter API scaffold (health + info endpoints). Extend with real
+      endpoints for bookings, contact, and content.
+
+# Template for future repos — copy, fill in, uncomment:
+#  - name: New-Repo-Name
+#    url: https://github.com/bhatisanjay28/New-Repo-Name.git
+#    role: tooling
+#    stack: <stack>
+#    notes: <what it does>
