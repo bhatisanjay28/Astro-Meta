@@ -29,7 +29,13 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   (validated vs published tables), astronomy-engine 2.1.19 wrapper, wrap-aware bisection
   finders, Panchang five limbs as start/end windows in the sunrise-based Vedic day,
   Rahu Kaal/Yamaganda/Gulika (unverified tables flagged pending Jyotishi review P11),
-  Abhijit/Brahma Muhurta, moonrise/moonset. 30/30 validation tests green.
+  Abhijit/Brahma Muhurta, moonrise/moonset.
+- **Epic 1.3 — Kundli core:** nine grahas, Lagna (validated at sunrise across three
+  locations), whole-sign houses, Navamsha D9, Vimshottari Dasha.
+- **Epic 1.5/1.6 — calculator primitives + engine README:** moon phase, tropical sun
+  sign, Rashi/nakshatra, Chaldean numerology; accuracy notes documented. A frame-mixing
+  bug (sidereal vs tropical elongation) was caught by the moon-phase tests and fixed.
+  **59/59 tests green.**
 - **Epic 3.1 (partial) — GET /api/v1/panchang live** on
   https://astro-backend.vyotish.workers.dev (coords mode; city mode activates when the
   Supabase service key is configured as a Worker secret).
