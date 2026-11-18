@@ -7,7 +7,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-### Epic 0 — Foundations & Orchestrator (in progress)
+### Epic 0 — Foundations & Orchestrator (✅ core stories complete, 2026-11-18/19 overnight run)
 
 #### Added
 - docs: PRD digest, DECISIONS.md, plan/epics.md with BMAD epic/story plan, repo catalog.
@@ -20,21 +20,45 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Tooling: Bun 1.4.4 installed as the sole JS runtime (owner directive; no Node/npm).
 - MCP connectivity: GitHub MCP + Supabase MCP verified with scoped PATs; Cloudflare MCP
   OAuth granted; Cloudflare wrangler deploy token created and verified active.
+- **Epic 0.4 — Supabase live:** project `vyotish-dev` (ref owgszyhxvyomxyxhoeed,
+  ap-southeast-1) created; schema V1 applied — 20 tables, RLS enabled on ALL 20
+  (deny-by-default, inline user_roles policies, zero stored functions per D3);
+  sample seed (30 cities GeoNames subset, 3 sample astrologers, 3 sample pujas,
+  3 sample festivals, 3 sample muhurat rules, public.* site settings).
+- **Epic 1.1/1.2 — calculation engine core (backend `src/engine/`):** Lahiri ayanamsha
+  (validated vs published tables), astronomy-engine 2.1.19 wrapper, wrap-aware bisection
+  finders, Panchang five limbs as start/end windows in the sunrise-based Vedic day,
+  Rahu Kaal/Yamaganda/Gulika (unverified tables flagged pending Jyotishi review P11),
+  Abhijit/Brahma Muhurta, moonrise/moonset. 30/30 validation tests green.
+- **Epic 3.1 (partial) — GET /api/v1/panchang live** on
+  https://astro-backend.vyotish.workers.dev (coords mode; city mode activates when the
+  Supabase service key is configured as a Worker secret).
+- **Epic 0.5 (partial) — GitHub Actions workflows written** in both repos (backend
+  deploy-on-push; frontend build-only). Waiting on owner: PAT Workflow/Actions scope
+  + repo secrets — see the morning action list.
+- Backend CI gates: bun test, Biome lint, tsc strict — all green before every push.
 
 #### Changed
 - Astro-Backend: Express + Node scaffold replaced by Hono + Bun + TypeScript on
   Cloudflare Workers (Epic 0.2). `/health` and `/api` preserved; `/api/v1` introduced.
 - Astro-Frontend: Vite + React SPA replaced by Astro 5 + TypeScript with the Cloudflare
-  adapter (Epic 0.3). Coming-Soon page reproduced 1:1 — no regression on vyotish.com.
+  adapter (Epic 0.3). Coming-Soon page reproduced 1:1 — **pixel parity verified by
+  side-by-side screenshots vs live vyotish.com** (artifacts saved for owner review).
 - Design tokens (brand palette) and the swappable dummy Vyotish wordmark SVG introduced.
+- Frontend `preview` = Bun static server (adapter lacks astro preview; workerd unstable
+  on this workstation).
 
-#### Decisions
-- D1 Astro 5 (5.18.x) retained over Astro 6 (adapter friction); revisit before Epic 7.
-- D2 confirmed: Hono on Workers via wrangler in production; Docker (oven/bun) is local
-  dev parity only.
-- D3 enforced: Supabase touched only by the backend; zero RPC; RLS everywhere.
+#### Deployment state (owner-authorised overnight run)
+- **LIVE:** backend Worker `astro-backend` on Cloudflare (manual wrangler deploy);
+  Supabase `vyotish-dev` database (schema + seed).
+- **LOCAL ONLY (owner directive):** Astro-Frontend — committed `ea68a38`, NOT pushed
+  (push to main would auto-deploy vyotish.com; awaiting owner build approval, D8).
 
-### Pending
-- Epic 0.4: Supabase dev project + schema V1 (20 tables, RLS, seed) — needs the guided
-  dev-project creation.
+### Pending (morning action list)
+- Owner/I: grant the GitHub PAT `Workflow` + `Actions` scopes (browser, sudo needed),
+  set repo secrets (CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, SUPABASE_URL,
+  SUPABASE_SERVICE_ROLE_KEY), then push the prepared workflow commits → CI goes live.
+- Set `SUPABASE_SERVICE_ROLE_KEY` (+ `SUPABASE_URL`) as Worker secrets (`wrangler
+  secret put`) → city mode + panchang_cache go live.
 - Epic 0.5 completion: secret-scan pre-commit hooks installed in all three repos.
+- Epic 1.3/1.4: Kundli + Muhurat modules; Epic 2: site shell.
