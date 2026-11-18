@@ -19,6 +19,7 @@ Every entry records date, status, and rationale. Owners approve marked entries.
 
 - The current Astro-Frontend code is a Vite + React SPA ("Coming Soon" page). It will be **replaced by an Astro project** in Epic 0. The live Coming-Soon page is reproduced as the first Astro page so https://vyotish.com does not regress during migration.
 - Interactive pieces (Kundli form, calculators, matching) render as **Astro islands** — server-rendered shells with hydrating React/Svelte components only where needed, keeping Lighthouse ≥90 realistic.
+- **Research note (2026-11-18):** Astro 6 is now released but its `@astrojs/cloudflare` adapter still has reported friction (workerd dev-runtime changes, image transform endpoint, prerendered-manifest issues). Astro 5 (latest 5.18.x) is retained per D1; migration to 6.x is deferred until the adapter stabilises — revisit before Epic 7.
 
 ## Consequences of D2/D3 (backend shape)
 
@@ -29,5 +30,6 @@ Every entry records date, status, and rationale. Owners approve marked entries.
 ## Open items
 
 - Supabase project creation (owner, with agent guidance) — needed before Epic 0.4.
-- GitHub MCP transport: OAuth vs fine-grained PAT — resolved at first connection test after ZCode restart.
+- MCP connections: servers are declared and reachable (HTTP 401 = auth pending). Resolved routes per research: **GitHub** — fine-grained PAT (3 repos, Contents R/W) wired as `Authorization` header, or OAuth popup; **Supabase** — PAT (Account → Access Tokens) wired as header, or OAuth; **Cloudflare** — OAuth only via Settings → MCP (owner click), plus a scoped API token for wrangler deploys stored in gitignored `.env`.
+- Runtime: Bun 1.4.4 installed on the workstation; Node/npm intentionally absent (owner directive — Bun only).
 - BMAD skill files were lost with the old local workspace; BMAD process is run manually (this plan) — reinstall optional, not blocking.

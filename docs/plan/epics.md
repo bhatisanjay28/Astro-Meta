@@ -92,11 +92,59 @@ Goal: 9-tab navigation, home page, legal skeleton — all responsive, light/dark
 
 ---
 
+## Workstream split (owner directive 2026-11-18)
+
+| Workstream | Owns | Repos |
+|---|---|---|
+| **Frontend** | Astro pages/islands, design system, SEO markup, a11y, i18n scaffolding; consumes API only | Astro-Frontend |
+| **Backend** | Hono API, business logic, engine package, caching, cron, Supabase access (D3), admin APIs | Astro-Backend |
+| **Database** | Schema V1 migrations, RLS policies, indexes, seed scripts — *authored in backend repo, applied to Supabase dev project* | Astro-Backend → Supabase |
+
+Database is **never touched by the frontend** (D3). No RPC/stored functions — all logic in Hono handlers.
+
+## API & data contracts v1 (agreed before parallel build — PRD §2)
+
+All workstreams code against this contract; changes require a DECISIONS.md entry.
+
+- **Base/versioning:** backend serves `/api/v1/*` only. Breaking change ⇒ new version prefix, old kept until frontend migrates.
+- **Auth:** Supabase Auth JWT in `Authorization: Bearer <jwt>`. Admin/editor routes check role claim server-side (D4).
+- **Envelope:** success `{ "data": …, "meta"?: … }`; error `{ "error": { "code": string, "message": string, "details"?: … } }` with correct HTTP status. Codes are stable machine strings (`validation_error`, `not_found`, `rate_limited`, …).
+- **Pagination:** `?page=&limit=` (limit ≤ 50) → `meta: { page, limit, total }`.
+- **Domain endpoints (signatures fixed at story level with @hono/zod-openapi schemas):**
+  - `GET /health`, `GET /api` (preserved from scaffold)
+  - `GET /api/v1/panchang?city={slug}&date={YYYY-MM-DD}` · `GET /api/v1/muhurat/today?city=` · `POST /api/v1/muhurat/find`
+  - `POST /api/v1/kundli` · `POST /api/v1/kundli/match` · `GET /api/v1/calculators/{tool}`
+  - `GET /api/v1/horoscope/{sign}/{period}` · `GET /api/v1/astrologers` · `GET /api/v1/astrologers/{slug}`
+  - `POST /api/v1/requests/consultation` · `POST /api/v1/requests/puja` (Turnstile token + rate limit)
+  - `GET /api/v1/pujas` · `GET /api/v1/blog/posts` · `GET /api/v1/blog/posts/{slug}` · admin CRUD under `/api/v1/admin/*`
+  - `GET /api/v1/settings/public` (drives `GEMSTONES_SITE_URL` tab behaviour)
+- **Determinism/caching:** panchang & kundli responses are pure functions of inputs ⇒ cached (panchang_cache keyed city+date; no-PII policy for kundli). Cron refreshes daily content.
+- **Schema V1:** the 20 tables from PRD §10; RLS on every table; cities seeded from GeoNames subset; migrations live in `backend/supabase/migrations/`.
+- **Frontend↔backend:** typed API client in frontend generated/checked against the OpenAPI schema; no Supabase client anywhere in frontend (D3).
+
+## Epic 0 acceptance criteria
+
+| Story | Done when |
+|---|---|
+| 0.1 | CHANGELOG.md, docs/placeholders.md, THIRD_PARTY_LICENSES.md exist and are referenced in README |
+| 0.2 | `bun install && bun test && bun run dev` green; `/health` + `/api/v1` respond; `wrangler dev` runs the same app; Docker build (pinned oven/bun) runs; lint passes |
+| 0.3 | `bun install && bun build && bun run preview` green; Coming-Soon page pixel-parity vs current SPA; design tokens file + swappable wordmark SVG committed; Lighthouse ≥90 local |
+| 0.4 | Migrations apply cleanly to the dev Supabase project; RLS verified (anon can read public, insert own requests only); seed script runs |
+| 0.5 | `.env.example` in both repos documents every var; secret-scan pre-commit hook active; no real secrets in any tracked file |
+
+---
+
 ## Dependencies
 E1 feeds E3/E4 APIs · E0.4 (schema) feeds all data stories · E2 shell feeds all pages · E6.3 needs E6.2 · E7/E8 last.
 Parallelisation after Epic 0: calc engine (E1) can run alongside E2 shell; E3–E5 sequence behind both.
 
+## Environment status (2026-11-18)
+
+- Bun 1.4.4 installed on the workstation (Bun is the only JS runtime — owner directive; Node not installed).
+- MCP servers declared in ZCode user config: github, cloudflare, supabase, context7. Endpoints reachable (401 = auth pending). Auth routes per research: GitHub PAT header or OAuth; Supabase PAT header or OAuth; Cloudflare OAuth only (+ separate API token for wrangler deploys).
+- Supabase dev project: to be created in the guided browser session (Epic 0.4 prerequisite).
+
 ## Immediate next actions (on GO)
-1. Owner restarts ZCode → OAuth approvals (GitHub/Cloudflare/Supabase) → I verify all 4 MCP connections live → GO/NO-GO.
-2. Owner creates Supabase dev project (browser, guided) → Epic 0 starts.
-3. Epic 0 stories 0.2/0.3 run in parallel (backend re-arch + Astro migration), then 0.4/0.5.
+1. Guided browser session: GitHub login → fine-grained PAT; Supabase login → PAT + create dev project; Cloudflare login → MCP OAuth approve in Settings → MCP + API token for wrangler. Then session restart → verify all MCP connections live → GO/NO-GO.
+2. Epic 0 stories 0.2/0.3 run in parallel (backend re-arch + Astro migration), then 0.4/0.5.
+3. Epic 1 (engine) and Epic 2 (site shell) follow in parallel per Dependencies.
