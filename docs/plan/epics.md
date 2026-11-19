@@ -175,13 +175,14 @@ pages, all routes 200, astro check clean)
 7.1 SEO pass (unique metas, canonical, hreflang, JSON-LD Org/WebSite/Breadcrumb/
 Article/FAQ/Person, **sitemap.xml + robots.txt**, OG images, internal linking) 🔶 —
 ✅ canonical+OG+twitter on every page (Base.astro), JSON-LD: Organization+WebSite+FAQPage
-(home), Article+BreadcrumbList (blog posts), sitemap.xml 156 URLs, RSS link
-alternate; ⬜ robots.txt file, hreflang audit on remaining pages, Person JSON-LD ·
+(home), Article+BreadcrumbList (blog posts), sitemap.xml 156 URLs, robots.txt (allow all,
+/admin/ disallowed, sitemap link), RSS link
+alternate; ⬜ hreflang audit on remaining pages, Person JSON-LD ·
 7.2 Security pass (CSP/HSTS/headers, **rate limiting everywhere, Turnstile on all
 forms/login/calculators**, input-validation audit, dependency audit, secret scan) 🔶 —
-✅ API-wide security headers middleware (X-Content-Type-Options/X-Frame-Options/
-Referrer-Policy, backend 15e571d); ⬜ CSP, rate limiting, Turnstile (needs owner keys),
-dependency audit ·
+✅ API-wide security headers middleware + best-effort fixed-window rate limiter on
+login/newsletter/booking POSTs (429s, backend ba57577); ⬜ CSP, volumetric WAF/
+Turnstile (needs owner keys), dependency audit, secret scan ·
 7.3 Legal content final drafts + DPDP statements + grievance contact ⬜ (pages exist;
 drafts need owner review) · 7.4
 Analytics (CF Web Analytics + events: kundli_generated, calculator_used,
@@ -192,9 +193,10 @@ WhatsApp click-to-chat float driven by `contact_whatsapp` site setting (runtime 
 fetch, D12); ⬜ event instrumentation, CF Web Analytics, error monitoring, email design
 
 ## Epic 8 — QA, Performance & Owner Review Gate — 🔶 1/4
-8.1 Test suites green + edge cases ✅ (backend 239/239 across 25 files: engine,
-routes, admin auth/CRUD/modules, blog public reads, panchang cache, headers; frontend
-astro check + biome clean; full local sweep 166/166 routes HTTP 200 w/ content checks) ·
+8.1 Test suites green + edge cases ✅ (backend 241/241 across 26 files: engine,
+routes, admin auth/CRUD/modules, blog public reads, panchang cache, headers, rate
+limiter; frontend astro check + biome clean; full local sweep 166/166 routes HTTP 200
+w/ content checks) ·
 8.2 Lighthouse ≥90 + budgets ⬜ (needs a real Chrome audit — owner review gate) · 8.3 Device
 matrix (owner participates) ⬜ · 8.4 **Owner review gate** + launch-blocker list ⬜
 
