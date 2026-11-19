@@ -106,8 +106,11 @@ Status legend: ⬜ todo · 🔄 in progress · ✅ done · 🔶 done with refine
   warm (all cities, chunked) + 7-day prune. Cache-API edge caching of GET responses still ⬜ (optional).
 - **3.2b ✅ polish (PRD §5.3):** GET **/api/v1/festivals?date=** (backend 6ccd7ce, live);
   city panchang pages get Today/Tomorrow **quick buttons**, **festivals/vrats block**
-  for the selected day, and Hindu month (primary per 1.9) + Samvat cells. Monthly
-  calendar view still ⬜ (button stub in place).
+  for the selected day, and Hindu month (primary per 1.9) + Samvat cells. **Monthly
+  calendar view ✅ (2026-11-20, 3.2b completion): ?view=calendar&month=YYYY-MM on every
+  city page — 7-column grid with per-day tithi+nakshatra (city-mode reads → cache),
+  prev/next month nav, today highlight, deep-linkable; day sections hide in calendar
+  mode and restore via pd:show-day event.**
 - **3.4b ✅:** auspicious + inauspicious **Choghadiya slots** join muhurat/today lists
   (backend 34da3c5, live-verified: Shubh/Char/Labh/Amrit slots render on the page).
 
@@ -128,6 +131,18 @@ manglik/kaal-sarp in the response; calculator endpoints landed with 4.4**) ·
   (backend 9ad9db8) + 17 shared-template pages (BirthForm + generic renderer).
 - **4.2b 🔶:** city **autocomplete** ✅ (datalist over /cities — Epic 9.4); short
   interpretations block ⬜ (needs an admin-authored content source — lands with 6.4).
+- **4.7 ✅ Birthplace pickers (owner directive, 2026-11-20):** Google Places (New) +
+  Time Zone API proxied through the backend (GET /api/v1/places/autocomplete +
+  /places/resolve, backend b3b003e — key never reaches the browser; rate-limited
+  30/min + 60/min). WITHOUT `GOOGLE_PLACES_API_KEY` both endpoints fall back to the
+  Supabase cities table with the same response shape, so pickers work today and
+  upgrade to worldwide city,state,country suggestions the moment the owner sets the
+  key (wrangler secret put). Frontend: PlaceField.astro + place-picker.ts — every
+  place-input form now has ONE "Place of birth" autocomplete instead of raw
+  lat/lng/tz: Free Kundli, Matching (boy+girl), all BirthForm calculators, transits,
+  and both muhurat city inputs; baked city lists removed from kundli + muhurat (D12).
+  Browser-tested end-to-end; submit guards show honest errors until a suggestion is
+  picked.
 
 ## Epic 5 — Horoscope, Consultations, Poojan, Gemstones — ✅ 5/5
 5.1 Horoscope ✅ (**GET /horoscope LIVE + /horoscope/ hub + 72 static
@@ -171,18 +186,25 @@ login, dashboard counts, posts list/editor (all SEO+schedule fields), taxonomy, 
 upload+copy, horoscopes dialog editor, catalog tabs, inbox tabs, settings+export — 9
 pages, all routes 200, astro check clean)
 
-## Epic 7 — SEO, Security, Legal, Analytics — 🔶 2/4 (backend 15e571d + frontend local)
+## Epic 7 — SEO, Security, Legal, Analytics — 🔶 3/4 (backend ba57577 pushed; frontend local)
 7.1 SEO pass (unique metas, canonical, hreflang, JSON-LD Org/WebSite/Breadcrumb/
-Article/FAQ/Person, **sitemap.xml + robots.txt**, OG images, internal linking) 🔶 —
+Article/FAQ/Person, **sitemap.xml + robots.txt**, OG images, internal linking) ✅ —
 ✅ canonical+OG+twitter on every page (Base.astro), JSON-LD: Organization+WebSite+FAQPage
 (home), Article+BreadcrumbList (blog posts), sitemap.xml 156 URLs, robots.txt (allow all,
-/admin/ disallowed, sitemap link), RSS link
-alternate; ⬜ hreflang audit on remaining pages, Person JSON-LD ·
+/admin/ disallowed, sitemap link), RSS link alternate; **hreflang audit ✅ (2026-11-20):
+only / ↔ /hi/ keep the pair — 20 pages were emitting hi-alternates to non-existent
+/hi/* URLs (cleaned; decision documented in Base.astro); Person JSON-LD N/A per D14
+(byline = fixed Organization "Team Vyotish", Article author already @type=Organization) ·
 7.2 Security pass (CSP/HSTS/headers, **rate limiting everywhere, Turnstile on all
 forms/login/calculators**, input-validation audit, dependency audit, secret scan) 🔶 —
 ✅ API-wide security headers middleware + best-effort fixed-window rate limiter on
-login/newsletter/booking POSTs (429s, backend ba57577); ⬜ CSP, volumetric WAF/
-Turnstile (needs owner keys), dependency audit, secret scan ·
+login/newsletter/booking POSTs + /places (429s, backend ba57577); **dependency audit ✅
+(2026-11-20, bun audit: backend 0 findings; frontend 49→16 via build-only overrides
+ws/undici/sharp — the remaining 16 sit in astro/zod/esbuild/cloudflare-adapter majors,
+build/dev-time only, none ship in the static artifact; major upgrades = owner decision)**;
+**secret scan ✅ (2026-11-20: all 3 repos — no tracked secret-like files, no key-pattern
+literals, backend/.env properly gitignored)**; ⬜ CSP (needs a production deploy loop to
+verify → D8 owner gate), volumetric WAF/Turnstile (owner keys) ·
 7.3 Legal content final drafts + DPDP statements + grievance contact ⬜ (pages exist;
 drafts need owner review) · 7.4
 Analytics (CF Web Analytics + events: kundli_generated, calculator_used,
@@ -190,13 +212,24 @@ booking_request_sent, blog_read) + error monitoring + transactional email design
 **WhatsApp click-to-chat** 🔶 — ✅ consent-gated GA4 loader (waits for explicit Accept +
 `ga_measurement_id` site setting — nothing loads before that, banner upgrades honestly),
 WhatsApp click-to-chat float driven by `contact_whatsapp` site setting (runtime settings
-fetch, D12); ⬜ event instrumentation, CF Web Analytics, error monitoring, email design
+fetch, D12); **event instrumentation ✅ (2026-11-20): window.vyTrack fires
+kundli_generated / calculator_used (all tools + match) / booking_request_sent /
+blog_read — no-ops unless GA4 is actually loaded, so consent holds by construction**;
+⬜ CF Web Analytics, error monitoring, email design (owner accounts)
 
 ## Epic 8 — QA, Performance & Owner Review Gate — 🔶 1/4
-8.1 Test suites green + edge cases ✅ (backend 241/241 across 26 files: engine,
-routes, admin auth/CRUD/modules, blog public reads, panchang cache, headers, rate
-limiter; frontend astro check + biome clean; full local sweep 166/166 routes HTTP 200
-w/ content checks) ·
+8.1 Test suites green + edge cases ✅ (backend 241/241 → **250/250 across 27 files**
+after /places: engine, routes, admin auth/CRUD/modules, blog public reads, panchang
+cache, headers, rate limiter, places proxy; frontend astro check 0 errors + biome clean;
+full local sweep 166/166 routes HTTP 200) · **8.1b E2E page-by-page pass ✅ (2026-11-20,
+owner directive): all interactive flows browser-tested — kundli (picker→chart),
+matching (2 pickers→36 gunas), rashi+transits calculators, muhurat today/finder,
+panchang day+monthly calendar (prev/next/deep-link), blog article/TOC/search, admin
+login→dashboard; 166/166 sweep re-run green. Bugs found & fixed: UTC-date default
+showed yesterday's panchang before 05:30 IST (PanchangDetail/TodayAtAGlance/
+HomePanchang → local date), footer Popular-Tools links wrong/flat, transits tool still
+asked raw lat/lng. Known nit: sade_sati.next window jitter ±ms (iterative transit
+search) — astronomically irrelevant, UI shows dates only.** ·
 8.2 Lighthouse ≥90 + budgets ⬜ (needs a real Chrome audit — owner review gate) · 8.3 Device
 matrix (owner participates) ⬜ · 8.4 **Owner review gate** + launch-blocker list ⬜
 
@@ -249,12 +282,12 @@ frontend a thin renderer over `/api/v1/*`. Unblocks 2.5 and feeds 5.2/5.3/6.4 la
 
 ## Story totals
 E0 5✅ + 1 polish · E1 10✅(incl 1.7–1.10) · E2 6✅(incl 2.7, 2.5, 2.3b) + 1🔶(2.6) ·
-E3 4✅ + 3.2b/3.4b/3.1b ✅ · E4 6✅(+4.5/4.6) + 4.2b 🔶 · E5 5✅ ·
-E6 4✅ · E7 2🔶(7.1/7.2/7.4 partial) · E8 1✅(8.1) · E9 4✅ (D12)
-**= 50 tracked stories: ~47 done · partials: 2.5 (2.6/4.2b refinements + 5.2 profile
-pages), 7.1/7.2/7.4 (robots.txt, CSP/rate-limit/Turnstile, event instrumentation —
-some need owner keys), 8.2–8.4 (owner gates: Lighthouse audit, device matrix, review
-gate) · remaining owner action: setup-first-admin + frontend review/push decision**
+E3 4✅ + 3.2b/3.4b/3.1b ✅ · E4 6✅(+4.5/4.6/4.7) + 4.2b 🔶 · E5 5✅ ·
+E6 4✅ · E7 3🔶→7.1✅(7.2/7.4 owner-keys remain) · E8 1✅(8.1+8.1b) · E9 4✅ (D12)
+**= 51 tracked stories: ~48 done · partials: 2.5 (2.6/4.2b refinements + 5.2 profile
+pages), 7.2/7.4 (CSP/WAF/Turnstile/CF-analytics/error-monitoring/email — owner keys),
+7.3 (owner review), 8.2–8.4 (owner gates) · remaining owner actions: GOOGLE_PLACES_API_KEY
+(optional, upgrades pickers worldwide), frontend review/push decision**
 
 ## Dependencies
 1.7→3.2b/3.4b ✅ · 1.8→4.1(match)/4.3 ✅ · 1.10→4.2 ✅ · 2.5→5.1 + E9.2 ✅ ·
@@ -262,8 +295,10 @@ E1 done earlier unlocked E3/E4 ✅ · E6.3 needs 6.2 · E7/E8 last ·
 E9.4 needs E9.1–9.3 ✅ · E5/E6 can parallelise after E4 ✅.
 
 ## Polish / debt register (tracked, not owner-blocking)
-3.1b cache+cron ✅ (edge-cache optional) · 3.2b monthly calendar view ⬜ · 4.2b interpretations ⬜ ·
-5.2 profile [slug] pages + offers-config ⬜ · 0.5b secret-scan hook ⬜ ·
+3.1b cache+cron ✅ (edge-cache optional) · 3.2b monthly calendar view ✅ · 4.2b interpretations ⬜ ·
+5.2 profile [slug] pages + offers-config ⬜ · 0.5b secret-scan hook ⬜ (one-off scans ✅ 2026-11-20) ·
+kundli sade_sati.next boundary jitter ±ms (iterative transit search; UI shows dates only) ·
+BirthForm PlaceField grid alignment (minor cosmetic) ·
 P3 self-hosted fonts · P20 Lighthouse · P19 Docker build test · token rotation.
 
 ## Pre-launch gates (owner-visible)
