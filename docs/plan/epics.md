@@ -40,6 +40,7 @@ Status legend: ⬜ todo · 🔄 in progress · ✅ done · 🔶 done with refine
 | §16 | Analytics/monitor/email | 7.4 (+WhatsApp click-to-chat) |
 | §17–18 | QA/method | 8.x, CHANGELOG/placeholders ✅ |
 | §19–20 | DoD/open questions | gates at end |
+| — | **D12 API-first data plane (owner directive)** | **Epic 9 (NEW)** |
 
 ---
 
@@ -53,9 +54,12 @@ Status legend: ⬜ todo · 🔄 in progress · ✅ done · 🔶 done with refine
 1.1 Astronomy layer ✅ · 1.2 Panchang limbs ✅ · 1.3 Kundli core ✅ · 1.4 Muhurat rules ✅ ·
 1.5 Calculator primitives ✅ · 1.6 Engine README/accuracy notes ✅
 
-- **1.7 ⬜ Choghadiya + Hora + Hindu month (PRD §5.3/§5.4 — WAS MISSING):** engine adds
-  day+night Choghadiya tables, planetary Hora list, Hindu month name (Amanta **and**
-  Purnimanta, configurable) + paksha field + Samvat year; surfaces in Panchang API.
+- **1.7 ✅ Choghadiya + Hora + Hindu month (PRD §5.3/§5.4 — WAS MISSING):** engine adds
+  day+night Choghadiya tables (Chaldean lord cycles, drikpanchang-verified vs live
+  Delhi table + 14-weekday regression grid), planetary Hora list, Hindu month
+  (Amanta **and** Purnimanta, adhika flag) + paksha + Vikram/Shaka Samvat; all
+  surfaced in Panchang API. **Live 2026-11-19** (deploy 805babc; Kartika • Shukla •
+  Vikram 2083 • Shaka 1948 matches the design sample).
 - **1.8 ⬜ Ashtakoota matching engine (PRD §5.5 — WAS MISSING):** 36-guna milan across
   8 kootas with per-koota points + explanation strings; Manglik check from Lagna, Moon
   **and Venus** (classical); powers 4.1 API + 4.3 UI.
@@ -67,14 +71,21 @@ Status legend: ⬜ todo · 🔄 in progress · ✅ done · 🔶 done with refine
   D7, D10, D12 selectable alongside D9.
 
 ## Epic 2 — Public Site Shell & Home — ✅ 4/4 + 2 NEW
-2.1 Header/footer/nav/themes ✅ · 2.2 Home ✅ · 2.3 Legal+404 ✅ · 2.4 a11y+i18n ✅
+2.1 Header/footer/nav/themes ✅ · 2.2 Home ✅ *(D11 rebuild 🔶→✅, see 2.7)* · 2.3 Legal+404 ✅ · 2.4 a11y+i18n ✅
 
+- **2.7 ✅ D11 design-mockup rebuild (owner directive, supersedes Sandalwood & Teal):**
+  home + all chrome rebuilt pixel-exact to the attached mockup (frontend local
+  commit e303b6c; NOT deployed — D8 gate). Tailwind v4 utilities-only + @theme
+  design tokens; chrome-reset scoping; dual theme (class + attribute); live islands
+  for panchang/horoscope/kundli/newsletter; honest booking modal. Verified in
+  browser light+dark incl. live-API E2E kundli generation.
 - **2.5 ⬜ Home sections (PRD §6 — WAS MISSING):** daily-horoscope **12-sign picker**
   (grid linking to /horoscope/[sign]/daily) + **popular calculators** strip; replace
   the four "coming next" cards with real sample-marked sections once E5/E6 data lands.
-- **2.6 ⬜ Zodiac + planet icon set (PRD §9 — WAS MISSING):** original/open-licensed
-  SVG icons for 12 signs + 9 grahas (replace emoji), used in nav tiles, kundli tables,
-  horoscope grid; ONE swappable assets folder.
+  *(Content now served from Supabase via Epic 9.)*
+- **2.6 🔶 Zodiac + planet icon set (PRD §9):** design mandates **Material Symbols**
+  (variable font) — adopted per D11 as the icon system (nav, cards, FAQ, forms);
+  custom SVG zodiac set not required while D11 governs. ONE swappable font link.
 - **2.3b 🔶 polish:** consent-banner stub (cookie/analytics) on all pages.
 
 ## Epic 3 — Panchang & Muhurat surfaces — ✅ 4/4 + refinements
@@ -102,15 +113,18 @@ interpretations pending)* · 4.3 Matching UI ⬜ · 4.4 Calculator pages ⬜
 - **4.2b 🔶:** city **autocomplete** (typed input over the cities dataset) replacing
   preset dropdown; short interpretations block on the kundli result.
 
-## Epic 5 — Horoscope, Consultations, Poojan, Gemstones — ⬜ 0.5/5 (1 NEW)
-5.1 Horoscope API+pages ⬜ · 5.2 Astrologer directory+profile+booking ⬜ (Turnstile +
+## Epic 5 — Horoscope, Consultations, Poojan, Gemstones — 🔄 2.5/5 (1 NEW)
+5.1 Horoscope API 🔶 (**GET /horoscope + rolling sample seeds LIVE** 805babc; per-sign
+daily pages ⬜) · 5.2 Astrologer directory+profile+booking ⬜ (Turnstile +
 rate limit + admin notify; **offers configurable via site_settings — PRD §5.1**) ·
 5.3 Poojan catalogue+booking ⬜ · 5.4 Gemstones 🔶 (page ✅; wire the
 `public.gemstones_site_url` setting → tab links out when set)
 
-- **5.5 ⬜ Newsletter + notify endpoints (PRD §6/§5.8):** POST /newsletter (public,
-  rate-limited) → `newsletter_subscribers`; gemstones "notify me" uses the same
-  endpoint with a source tag; admin export in 6.4.
+- **5.5 🔶 Newsletter + notify endpoints (PRD §6/§5.8):** POST /newsletter **LIVE**
+  (validation + source whitelist + 5/10-min throttle → 429; upsert
+  `newsletter_subscribers` merge-duplicates; happy-path + validation verified
+  against the deployed worker 2026-11-19). Turnstile/WAF hardening = 7.2.
+  Admin export in 6.4.
 
 ## Epic 6 — Blog & Admin — ⬜ 0/4
 6.1 Admin auth (Supabase Auth, roles, first-admin setup script, MFA-ready) ⬜ ·
@@ -134,6 +148,27 @@ booking_request_sent, blog_read) + error monitoring + transactional email design
 8.1 Test suites green + edge cases ⬜ · 8.2 Lighthouse ≥90 + budgets ⬜ · 8.3 Device
 matrix (owner participates) ⬜ · 8.4 **Owner review gate** + launch-blocker list ⬜
 
+## Epic 9 — API-First Data Plane (D12 owner directive, 2026-11-19) — 🔄 0/4
+**Goal:** every computation in the backend, every page datum in Supabase (RLS), the
+frontend a thin renderer over `/api/v1/*`. Unblocks 2.5 and feeds 5.2/5.3/6.4 later
+(same tables, admin-managed).
+
+- **9.1 ⬜ Content tables + seeds (migration 0004):** `astrologers`, `poojas`,
+  `faq_items`, `content_blocks` (keyed marketing copy per locale) — all RLS-enabled
+  (public SELECT published rows; service-role writes), rows seeded from the design
+  mockup content marked `is_sample=true`.
+- **9.2 ⬜ Read endpoints:** GET `/api/v1/cities` (Supabase `cities`, public list for
+  selects/autocomplete) + GET `/api/v1/content/home` (single cacheable bundle:
+  astrologers, poojas, blog teasers via `blog_posts` later → content_blocks now,
+  faqs, gemstones teaser); contract v1 envelope.
+- **9.3 ⬜ Server-side limb picking:** panchang API returns `current`/`next` objects
+  per limb (additive fields; removes currentLimb/nextLimb logic from the frontend —
+  D12); engine version bump.
+- **9.4 ⬜ Frontend thin-client rewiring (local only):** remove baked CITIES list,
+  horoscope fallback lines, and home section data arrays; fetch cities + content
+  bundle at runtime; honest loading/error states (no fake data on failure).
+  Verify all sections render from live APIs; build + browser pass; local commit.
+
 ---
 
 ## Gap log (BMAD review v2 — found missing, now placed)
@@ -156,14 +191,16 @@ matrix (owner participates) ⬜ · 8.4 **Owner review gate** + launch-blocker li
 | G14 | Choghadiya in muhurat today (§5.4); WhatsApp chat (§16); newsletter endpoint; offers-config; consent stub; gemstones setting-wiring | scattered/absent | **3.4b / 7.4 / 5.5 / 5.2 / 2.3b / 5.4** |
 
 ## Story totals
-E0 5✅ + 1 polish · E1 6✅ + 4⬜ · E2 4✅ + 2⬜ + 1 polish · E3 4✅ + 3 polish ·
-E4 ~1.5/6 · E5 ~0.5/5 · E6 0/4 · E7 0/4 · E8 0/4
-**= 46 tracked stories: ~21 done · 1.5 partial · ~23.5 remaining** (polish items
+E0 5✅ + 1 polish · E1 7✅(incl 1.7) + 3⬜ · E2 5✅(incl 2.7) + 1🔶(2.6) + 1⬜ + 1 polish ·
+E3 4✅ + 3 polish · E4 ~1.5/6 · E5 ~2.5/5 (5.1🔶 5.5🔶) · E6 0/4 · E7 0/4 · E8 0/4 ·
+E9 0/4 (NEW, D12)
+**= 50 tracked stories: ~24 done · partials 1.5+2.5 · ~24 remaining** (polish items
 counted separately from the owner-visible count).
 
 ## Dependencies
-1.7→3.2b/3.4b · 1.8→4.1(match)/4.3 · 1.10→4.2 · 2.5→5.1 (picker links) · E1 done
-earlier unlocked E3/E4 · E6.3 needs 6.2 · E7/E8 last · E5/E6 can parallelise after E4.
+1.7→3.2b/3.4b ✅(1.7 done) · 1.8→4.1(match)/4.3 · 1.10→4.2 · 2.5→5.1 + E9.2 (picker
+links + content) · E1 done earlier unlocked E3/E4 · E6.3 needs 6.2 · E7/E8 last ·
+E9.4 needs E9.1–9.3 · E5/E6 can parallelise after E4.
 
 ## Polish / debt register (tracked, not owner-blocking)
 3.1b cache+cron · 3.2b quick buttons/festivals/monthly · 3.4b Choghadiya display ·

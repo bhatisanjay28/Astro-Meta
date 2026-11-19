@@ -7,6 +7,39 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### D11 design rebuild live-verified + D12 API-first directive (2026-11-19)
+
+#### Decisions
+- **D11 (owner directive):** attached homepage mockup = design source of truth;
+  supersedes Sandalwood & Teal on redesigned surfaces.
+- **D12 (owner directive):** API-first + Supabase-only data plane → new **Epic 9**
+  (backend owns all logic, frontend renders from `/api/v1/*`, no baked data).
+
+#### Backend — deployed 805babc (CI ✅, verified live)
+- **1.7 engine:** Hindu month (Amanta+Purnimanta, adhika) + paksha + Vikram/Shaka
+  Samvat + Choghadiya (day+night, drikpanchang-verified 14-weekday regression) +
+  Hora — all surfaced in `/api/v1/panchang`. Live values match the design sample
+  (Kartika • Shukla • Vikram 2083 • Shaka 1948).
+- **5.1 partial:** GET `/api/v1/horoscope` (period/lang/signs) + rolling 12×EN/HI
+  sample seeds (`is_sample=true`) — verified live.
+- **5.5 partial:** POST `/api/v1/newsletter` (validation, source whitelist,
+  per-IP throttle → 429, Supabase upsert) — happy path + validation verified live.
+- Tests 96/96 green (hindu-calendar, choghadiya/hora regression, routes).
+
+#### Frontend — LOCAL commit e303b6c (NOT deployed; D8 gate)
+- Home + chrome (utility bar, header, footer) rebuilt pixel-exact to the D11
+  mockup; Tailwind v4 utilities-only with `@theme` design tokens; chrome-reset
+  scoped resets; dual theming (class+attribute); Material Symbols per design.
+- Live islands: panchang (city/date, limbs, sun/rahu/abhijit, Hindu month &
+  Samvat), horoscope (period tabs), kundli form (N/S/E SVG charts — live E2E
+  verified), newsletter ×2; honest Phase-1 booking modal (no fake success).
+- Fixes: unlayered `icon-display.css` so display utilities beat the Google-hosted
+  icon rule; panchang island `sun` ReferenceError + duplicate nextLimb;
+  kundli/muhurat page global styles scoped (bare `button` leaked onto chrome).
+- Placeholder favicon re-coloured to D11 palette (+a11y title); biome
+  tailwindDirectives + preset migration; biome clean; verified light+dark
+  across home/kundli/muhurat/panchang pages.
+
 ### Infra complete — CI pipeline live + city-mode Panchang (2026-11-19)
 
 - PAT vyotish-zcode-agent: Actions/Secrets/Workflows R/W granted (owner sudo).
