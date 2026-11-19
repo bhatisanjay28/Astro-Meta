@@ -101,8 +101,9 @@ Status legend: ⬜ todo · 🔄 in progress · ✅ done · 🔶 done with refine
 ## Epic 3 — Panchang & Muhurat surfaces — ✅ 4/4 + refinements
 3.1 Panchang API ✅ · 3.2 City pages ✅ · 3.3 Muhurat API ✅ · 3.4 Muhurat page ✅
 
-- **3.1b ⬜ polish:** write-through `panchang_cache` on city-mode reads + daily cron
-  refresh (Workers Cron Trigger) + Cache API edge caching of GET responses.
+- **3.1b ✅ polish (backend 15e571d, pushed):** write-through `panchang_cache` on
+  city-mode reads (hit/miss meta, deterministic payloads) + daily 00:15 UTC Workers Cron
+  warm (all cities, chunked) + 7-day prune. Cache-API edge caching of GET responses still ⬜ (optional).
 - **3.2b ✅ polish (PRD §5.3):** GET **/api/v1/festivals?date=** (backend 6ccd7ce, live);
   city panchang pages get Today/Tomorrow **quick buttons**, **festivals/vrats block**
   for the selected day, and Hindu month (primary per 1.9) + Samvat cells. Monthly
@@ -145,7 +146,7 @@ offers-config via site_settings ⬜) · 5.3 Poojan catalogue+booking ✅ (GET /p
   against the deployed worker 2026-11-19). Turnstile/WAF hardening = 7.2.
   Admin export in 6.4.
 
-## Epic 6 — Blog & Admin — 🔶 2/4 (backend live; admin UI ships with 6.4)
+## Epic 6 — Blog & Admin — ✅ 4/4 (backend pushed; frontend committed LOCALLY — owner review pending)
 6.1 ✅ Admin auth (backend 84a3e63, CI-green+live: `admin_users` 0006 service-role-only,
 requireAdmin fail-closed 401/403/503, token validated via Supabase /auth/v1/user, aal
 claim MFA-ready, GET /admin/me probe; **owner action pending: run
@@ -154,23 +155,47 @@ claim MFA-ready, GET /admin/me probe; **owner action pending: run
 scheduled = draft + future publish_at + lazy sweep, soft delete, auto-slug w/ Devanagari
 fallback, auto reading time, SEO validation, tags/categories/media endpoints; Supabase
 Storage `media` bucket created; migration 0007 category link; md sanitiser = render-time
-in 6.3 per D13) · 6.3 Public blog (listing/pagination, category+tag
-pages, search, article+TOC, related, share, author box, **RSS**, sitemap) ⬜ ·
-6.4 Admin modules (horoscope content, astrologers, poojas, requests inbox, contact
-messages, newsletter export, site settings incl. GEMSTONES_SITE_URL + admin UI) ⬜
+in 6.3 per D13) ·
+6.3 ✅ Public blog (backend f296f0a pushed + frontend local: listing/pagination
+/blog/page/N, category+tag pages, client search island over /blog/posts?q=, article +
+sticky TOC from sanitised headings, related, share row + copy-link, "Team Vyotish"
+author box, /blog/rss.xml, /sitemap.xml 156 URLs; **migration 0008_blog_seed applied** —
+2 original starter articles live; rehype-sanitize GitHub-schema pipeline with id-safe
+headings) ·
+6.4 ✅ Admin modules + admin UI (backend 277a86c pushed: POST /auth/login + /auth/refresh
+proxy per D4 — browser never sees Supabase keys; astrologers/pujas CRUD w/ category+mode
+enums, horoscope content CRUD (5 sections, 4000-char caps, publish_at stamping), requests
+inbox status workflow (new/contacted/scheduled/closed), contact messages (new/read/closed),
+newsletter CSV export, settings key/value upsert; frontend local: /admin/ shell (noindex),
+login, dashboard counts, posts list/editor (all SEO+schedule fields), taxonomy, media
+upload+copy, horoscopes dialog editor, catalog tabs, inbox tabs, settings+export — 9
+pages, all routes 200, astro check clean)
 
-## Epic 7 — SEO, Security, Legal, Analytics — ⬜ 0/4
+## Epic 7 — SEO, Security, Legal, Analytics — 🔶 2/4 (backend 15e571d + frontend local)
 7.1 SEO pass (unique metas, canonical, hreflang, JSON-LD Org/WebSite/Breadcrumb/
-Article/FAQ/Person, **sitemap.xml + robots.txt**, OG images, internal linking) ⬜ ·
+Article/FAQ/Person, **sitemap.xml + robots.txt**, OG images, internal linking) 🔶 —
+✅ canonical+OG+twitter on every page (Base.astro), JSON-LD: Organization+WebSite+FAQPage
+(home), Article+BreadcrumbList (blog posts), sitemap.xml 156 URLs, RSS link
+alternate; ⬜ robots.txt file, hreflang audit on remaining pages, Person JSON-LD ·
 7.2 Security pass (CSP/HSTS/headers, **rate limiting everywhere, Turnstile on all
-forms/login/calculators**, input-validation audit, dependency audit, secret scan) ⬜ ·
-7.3 Legal content final drafts + DPDP statements + grievance contact ⬜ · 7.4
+forms/login/calculators**, input-validation audit, dependency audit, secret scan) 🔶 —
+✅ API-wide security headers middleware (X-Content-Type-Options/X-Frame-Options/
+Referrer-Policy, backend 15e571d); ⬜ CSP, rate limiting, Turnstile (needs owner keys),
+dependency audit ·
+7.3 Legal content final drafts + DPDP statements + grievance contact ⬜ (pages exist;
+drafts need owner review) · 7.4
 Analytics (CF Web Analytics + events: kundli_generated, calculator_used,
 booking_request_sent, blog_read) + error monitoring + transactional email design +
-**WhatsApp click-to-chat** ⬜
+**WhatsApp click-to-chat** 🔶 — ✅ consent-gated GA4 loader (waits for explicit Accept +
+`ga_measurement_id` site setting — nothing loads before that, banner upgrades honestly),
+WhatsApp click-to-chat float driven by `contact_whatsapp` site setting (runtime settings
+fetch, D12); ⬜ event instrumentation, CF Web Analytics, error monitoring, email design
 
-## Epic 8 — QA, Performance & Owner Review Gate — ⬜ 0/4
-8.1 Test suites green + edge cases ⬜ · 8.2 Lighthouse ≥90 + budgets ⬜ · 8.3 Device
+## Epic 8 — QA, Performance & Owner Review Gate — 🔶 1/4
+8.1 Test suites green + edge cases ✅ (backend 239/239 across 25 files: engine,
+routes, admin auth/CRUD/modules, blog public reads, panchang cache, headers; frontend
+astro check + biome clean; full local sweep 166/166 routes HTTP 200 w/ content checks) ·
+8.2 Lighthouse ≥90 + budgets ⬜ (needs a real Chrome audit — owner review gate) · 8.3 Device
 matrix (owner participates) ⬜ · 8.4 **Owner review gate** + launch-blocker list ⬜
 
 ## Epic 9 — API-First Data Plane (D12 owner directive, 2026-11-19) — ✅ 4/4
@@ -222,11 +247,12 @@ frontend a thin renderer over `/api/v1/*`. Unblocks 2.5 and feeds 5.2/5.3/6.4 la
 
 ## Story totals
 E0 5✅ + 1 polish · E1 10✅(incl 1.7–1.10) · E2 6✅(incl 2.7, 2.5, 2.3b) + 1🔶(2.6) ·
-E3 4✅ + 3.2b/3.4b ✅ + 3.1b ⬜ · E4 6✅(+4.5/4.6) + 4.2b 🔶 · E5 5✅ ·
-E6 0/4 · E7 0/4 · E8 0/4 · E9 4✅ (D12)
-**= 50 tracked stories: ~44 done · partials 2.5 (2.6/4.2b refinements + 5.2 profile
-pages) · 10 remaining = E6 (6.3/6.4) + E7 (4) + E8 (4) + polish 3.1b/0.5b** (E6.3/6.4
-carry the admin UI; E8.3/8.4 need owner participation).
+E3 4✅ + 3.2b/3.4b/3.1b ✅ · E4 6✅(+4.5/4.6) + 4.2b 🔶 · E5 5✅ ·
+E6 4✅ · E7 2🔶(7.1/7.2/7.4 partial) · E8 1✅(8.1) · E9 4✅ (D12)
+**= 50 tracked stories: ~47 done · partials: 2.5 (2.6/4.2b refinements + 5.2 profile
+pages), 7.1/7.2/7.4 (robots.txt, CSP/rate-limit/Turnstile, event instrumentation —
+some need owner keys), 8.2–8.4 (owner gates: Lighthouse audit, device matrix, review
+gate) · remaining owner action: setup-first-admin + frontend review/push decision**
 
 ## Dependencies
 1.7→3.2b/3.4b ✅ · 1.8→4.1(match)/4.3 ✅ · 1.10→4.2 ✅ · 2.5→5.1 + E9.2 ✅ ·
@@ -234,7 +260,7 @@ E1 done earlier unlocked E3/E4 ✅ · E6.3 needs 6.2 · E7/E8 last ·
 E9.4 needs E9.1–9.3 ✅ · E5/E6 can parallelise after E4 ✅.
 
 ## Polish / debt register (tracked, not owner-blocking)
-3.1b cache+cron ⬜ · 3.2b monthly calendar view ⬜ · 4.2b interpretations ⬜ ·
+3.1b cache+cron ✅ (edge-cache optional) · 3.2b monthly calendar view ⬜ · 4.2b interpretations ⬜ ·
 5.2 profile [slug] pages + offers-config ⬜ · 0.5b secret-scan hook ⬜ ·
 P3 self-hosted fonts · P20 Lighthouse · P19 Docker build test · token rotation.
 
