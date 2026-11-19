@@ -27,6 +27,8 @@ Every entry records date, status, and rationale. Owners approve marked entries.
 - Supabase service-role key lives in **Worker secrets only** (`wrangler secret put`), never in the repo, never in frontend env.
 - Scheduled jobs (daily Panchang/horoscope refresh, panchang_cache pruning) are Workers Cron Triggers within the same backend project.
 
+| D10 | **Epic/story plan v2** after BMAD traceability review of the PRD (2026-11-19): 14 gaps found and placed into new stories 1.7–1.10, 2.5–2.6, 4.5–4.6, 5.5 + polish items (see epics.md Gap Log). Engine configurability (ayanamsha/month/house/chart) accepted as required-by-PRD. | ✅ Owner-directed review | 2026-11-19 |
+
 ## Open items
 
 - Supabase project creation (owner, with agent guidance) — needed before Epic 0.4.

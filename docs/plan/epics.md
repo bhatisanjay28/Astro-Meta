@@ -1,150 +1,181 @@
-# Vyotish-Astro — Epic & Story Plan (BMAD)
+# Vyotish-Astro — Epic & Story Plan (BMAD) — v2
 
-Derived from the PRD (docs/PRD.md) and DECISIONS.md. Epics map to PRD §18 milestones.
+Derived from the PRD (`Vyotish_Website_Build_Brief.docx` v1.0) and DECISIONS.md.
+**v2 (2026-11-19): full BMAD traceability review** — every PRD section was mapped to
+stories; 14 gaps found and logged (see Gap Log). New stories are appended with new
+numbers (no renumbering) to preserve traceability.
 Working mode: autonomous, but **any product judgement call → stop and ask the owner**.
-Every epic ends with: local build verified, owner demo, CHANGELOG + placeholder register updated.
-**Build gate: nothing deploys until the owner approves the local build (D8).**
+Every epic ends with: build verified, owner demo, CHANGELOG + placeholder register updated.
+**Build/deploy gate: backend deploys via CI on push; frontend deploys ONLY after owner
+approval (D8).**
 
-Status legend: ⬜ todo · 🔄 in progress · ✅ done · ⏸️ blocked
-
----
-
-## Epic 0 — Foundations & Orchestrator (PRD milestone 1) — status ⬜
-Goal: repos, environments, design system, schema, all scaffolding in place.
-
-| # | Story | Repo | Notes |
-|---|-------|------|-------|
-| 0.1 | Meta orchestrator setup: PRD, DECISIONS.md, plan/, CHANGELOG.md, docs/placeholders.md, THIRD_PARTY_LICENSES.md | Astro-Meta | Done as part of this commit except registers |
-| 0.2 | Backend re-architecture: replace Express with **Hono + Bun + TS** Workers project; wrangler config; `/health`, `/api/v1`; Dockerfile (bun image) for local dev; lint+test wired | Astro-Backend | Express scaffold removed; endpoints preserved |
-| 0.3 | Frontend re-architecture: **Astro 5 + TS** with `@astrojs/cloudflare` adapter; Coming-Soon page reproduced 1:1 (no regression on vyotish.com); design tokens (Impeccable direction) + dummy Vyotish SVG wordmark | Astro-Frontend | SPA → Astro migration per D1 |
-| 0.4 | **Supabase project** (dev project first) + schema V1: all 20 PRD §10 tables, RLS on every table, indexes; seed script (cities subset + clearly-marked sample content) | Supabase + Astro-Backend migrations | Needs owner-created project |
-| 0.5 | Environments & secrets: `.env.example` both repos; Worker secrets via wrangler; secret scanning pre-commit | Both | PRD §14 |
-
-## Epic 1 — Calculation Engine (PRD §5.3/5.4/5.5/5.7, §8) — status ⬜
-Goal: versioned, tested engine — the site's spine. Zero I/O, pure functions.
-
-| # | Story | Notes |
-|---|-------|-------|
-| 1.1 | Core astronomy layer: astronomy-engine wrapper, Lahiri ayanamsha, IANA tz handling, sunrise-based Vedic day | D5 |
-| 1.2 | Panchang module: 5 limbs w/ start-end times, Rahu Kaal/Yamaganda/Gulika/Abhijit, Choghadiya, Hora, Amanta+Purnimanta | Validation tests vs known dates |
-| 1.3 | Kundli module: charts (N/S Indian), planetary positions, divisionals incl. Navamsha, Vimshottari Dasha, doshas | Validation vs known charts |
-| 1.4 | Muhurat rules engine: rules as data tables w/ documented sources; finder (event, range, city) | Owner flags: Jyotishi review pre-launch |
-| 1.5 | Calculator primitives: rashi, nakshatra, sun sign, lagna, moon phase, numerology set | Tier 1 per PRD 5.7 |
-| 1.6 | Engine published as internal package w/ README + accuracy notes | Consumed by backend |
-
-## Epic 2 — Public Site Shell & Home (PRD §4, §6, milestone 2) — status ⬜
-Goal: 9-tab navigation, home page, legal skeleton — all responsive, light/dark.
-
-| # | Story | Notes |
-|---|-------|-------|
-| 2.1 | Header/footer/nav: Vyotish+logo, 9 tabs, EN/HI switch, theme toggle, CTA; mobile drawer + sticky bottom CTA | |
-| 2.2 | Home page full composition per PRD §6 (hero, today-at-a-glance, horoscope picker, explore tiles, quick Kundli, calculators, astrologers-sample, festivals, pooja, blog, trust, FAQ, newsletter) | |
-| 2.3 | About/Contact + 4 legal pages skeleton + custom 404 + offline/empty/error states + consent banner stub | Content in Epic 7 |
-| 2.4 | a11y + i18n foundations: ≥44px targets, focus rings, `/hi/` route structure + hreflang scaffolding, reduced-motion | PRD §9, §13 |
-
-## Epic 3 — Panchang & Muhurat surfaces (PRD §5.3/5.4, milestone 3) — status ⬜
-| # | Story | Notes |
-|---|-------|-------|
-| 3.1 | Backend API: `/api/v1/panchang?city&date` with edge cache (panchang_cache) + cron refresh | D3: all DB via API |
-| 3.2 | `/panchang/[city]` SSR pages + city selector (remembered) + date picker + monthly view + About/Accuracy note | Per-city SEO URLs |
-| 3.3 | Backend API: today's windows + muhurat finder | Rules from engine 1.4 |
-| 3.4 | `/muhurat` today page + finder UI | |
-
-## Epic 4 — Kundli & Calculators (PRD §5.5/5.7, milestone 4) — status ⬜
-| # | Story | Notes |
-|---|-------|-------|
-| 4.1 | Backend API: kundli generate (+ no-PII cache policy), matching, calculator endpoints | Consent noted for birth data |
-| 4.2 | Free Kundli UI: city autocomplete, no-signup, N/S chart toggle, printable SVG charts, doshas + interpretations | |
-| 4.3 | Kundli matching UI: Ashtakoota 36 + Manglik + score explanation | |
-| 4.4 | Calculator library: shared template (form/result/explanation/FAQ/share/related/soft CTA) + index with search; all Tier 1 tools | Fun ones labelled "for fun" |
-
-## Epic 5 — Horoscope, Consultations, Poojan, Gemstones (PRD §5.1/5.2/5.6/5.8, milestone 5) — status ⬜
-| # | Story | Notes |
-|---|-------|-------|
-| 5.1 | Horoscope APIs + `/horoscope/[sign]/[period]` pages; Moon-sign notice + Rashi link; content from DB | Sample content marked |
-| 5.2 | Astrologer directory + profile pages (sample data, filters/sort) + booking request form (Turnstile, rate limit → API → Supabase → admin notify) | |
-| 5.3 | Poojan catalogue + detail + booking requests | |
-| 5.4 | Gemstones "Coming soon..!" driven by `GEMSTONES_SITE_URL` setting | |
-
-## Epic 6 — Blog & Admin Panel (PRD §7, milestone 6) — status ⬜
-| # | Story | Notes |
-|---|-------|-------|
-| 6.1 | Admin auth via backend: Supabase Auth, admin/editor roles, session expiry, MFA-ready, first-admin setup script | D3/D4 |
-| 6.2 | Post CRUD: draft/publish/schedule/preview, Markdown + sanitiser, media upload (Supabase Storage via API), categories/tags/slug/excerpt/featured image, SEO fields, soft delete | XSS-safe |
-| 6.3 | Public blog: listing/pagination, category+tag pages, search, article w/ TOC, related, share, author box, RSS, sitemap | |
-| 6.4 | Admin modules: horoscope content, astrologers, poojas, requests inbox, contact messages, newsletter export, site settings | SHOULD items |
-
-## Epic 7 — SEO, Security, Legal, Analytics (PRD §11–§16, milestone 7) — status ⬜
-| # | Story | Notes |
-|---|-------|-------|
-| 7.1 | SEO pass: unique titles/metas, canonical, hreflang, JSON-LD (Org/WebSite/Breadcrumb/Article/FAQ/Person), sitemap, robots, OG images, internal linking | |
-| 7.2 | Security pass: CSP/HSTS/etc headers, rate limiting everywhere, Turnstile on all forms, input validation audit, dependency audit, secret scan | |
-| 7.3 | Legal content: Privacy/Terms/Refund/Disclaimer/About/Contact final drafts + DPDP data-handling statements + grievance contact | Placeholder until owner supplies entity details |
-| 7.4 | Analytics + events (CF Web Analytics), error monitoring hookup, transactional email design (no real sends pre-approval) | |
-
-## Epic 8 — QA, Performance & Owner Review Gate (PRD §12/§17/§19, milestone 8) — status ⬜
-| # | Story | Notes |
-|---|-------|-------|
-| 8.1 | Test suites green: engine units, API tests, E2E core journeys; edge cases (midnight births, foreign tz, leap years, near-poles, invalid inputs) | |
-| 8.2 | Performance: Lighthouse ≥90 P/SEO/A11y; budgets on mid-range device profile | |
-| 8.3 | Manual device matrix: low-end Android + iPhone, both themes, slow network | Owner participates |
-| 8.4 | **Owner review gate**: local demo, placeholder register walk-through, launch blockers list | D8 — nothing deploys before this |
+Status legend: ⬜ todo · 🔄 in progress · ✅ done · 🔶 done with refinements (listed)
 
 ---
 
-## Workstream split (owner directive 2026-11-18)
+## PRD traceability matrix (§ → stories)
 
-| Workstream | Owns | Repos |
+| PRD § | Requirement area | Stories |
 |---|---|---|
-| **Frontend** | Astro pages/islands, design system, SEO markup, a11y, i18n scaffolding; consumes API only | Astro-Frontend |
-| **Backend** | Hono API, business logic, engine package, caching, cron, Supabase access (D3), admin APIs | Astro-Backend |
-| **Database** | Schema V1 migrations, RLS policies, indexes, seed scripts — *authored in backend repo, applied to Supabase dev project* | Astro-Backend → Supabase |
-
-Database is **never touched by the frontend** (D3). No RPC/stored functions — all logic in Hono handlers.
-
-## API & data contracts v1 (agreed before parallel build — PRD §2)
-
-All workstreams code against this contract; changes require a DECISIONS.md entry.
-
-- **Base/versioning:** backend serves `/api/v1/*` only. Breaking change ⇒ new version prefix, old kept until frontend migrates.
-- **Auth:** Supabase Auth JWT in `Authorization: Bearer <jwt>`. Admin/editor routes check role claim server-side (D4).
-- **Envelope:** success `{ "data": …, "meta"?: … }`; error `{ "error": { "code": string, "message": string, "details"?: … } }` with correct HTTP status. Codes are stable machine strings (`validation_error`, `not_found`, `rate_limited`, …).
-- **Pagination:** `?page=&limit=` (limit ≤ 50) → `meta: { page, limit, total }`.
-- **Domain endpoints (signatures fixed at story level with @hono/zod-openapi schemas):**
-  - `GET /health`, `GET /api` (preserved from scaffold)
-  - `GET /api/v1/panchang?city={slug}&date={YYYY-MM-DD}` · `GET /api/v1/muhurat/today?city=` · `POST /api/v1/muhurat/find`
-  - `POST /api/v1/kundli` · `POST /api/v1/kundli/match` · `GET /api/v1/calculators/{tool}`
-  - `GET /api/v1/horoscope/{sign}/{period}` · `GET /api/v1/astrologers` · `GET /api/v1/astrologers/{slug}`
-  - `POST /api/v1/requests/consultation` · `POST /api/v1/requests/puja` (Turnstile token + rate limit)
-  - `GET /api/v1/pujas` · `GET /api/v1/blog/posts` · `GET /api/v1/blog/posts/{slug}` · admin CRUD under `/api/v1/admin/*`
-  - `GET /api/v1/settings/public` (drives `GEMSTONES_SITE_URL` tab behaviour)
-- **Determinism/caching:** panchang & kundli responses are pure functions of inputs ⇒ cached (panchang_cache keyed city+date; no-PII policy for kundli). Cron refreshes daily content.
-- **Schema V1:** the 20 tables from PRD §10; RLS on every table; cities seeded from GeoNames subset; migrations live in `backend/supabase/migrations/`.
-- **Frontend↔backend:** typed API client in frontend generated/checked against the OpenAPI schema; no Supabase client anywhere in frontend (D3).
-
-## Epic 0 acceptance criteria
-
-| Story | Done when |
-|---|---|
-| 0.1 | CHANGELOG.md, docs/placeholders.md, THIRD_PARTY_LICENSES.md exist and are referenced in README |
-| 0.2 | `bun install && bun test && bun run dev` green; `/health` + `/api/v1` respond; `wrangler dev` runs the same app; Docker build (pinned oven/bun) runs; lint passes |
-| 0.3 | `bun install && bun build && bun run preview` green; Coming-Soon page pixel-parity vs current SPA; design tokens file + swappable wordmark SVG committed; Lighthouse ≥90 local |
-| 0.4 | Migrations apply cleanly to the dev Supabase project; RLS verified (anon can read public, insert own requests only); seed script runs |
-| 0.5 | `.env.example` in both repos documents every var; secret-scan pre-commit hook active; no real secrets in any tracked file |
+| §1–2 | Overview, MCP, working method | setup stories (done), D-decisions |
+| §3 | Reference sites (structure only) | research done informally; rules respected |
+| §4 | Nav/header/footer/mobile | 2.1 ✅ |
+| §5.1 | Consultations directory/profile/booking | 5.2 (+offers configurable) |
+| §5.2 | Horoscope | 5.1 |
+| §5.3 | Panchang | 1.2 ✅, **1.7 new**, 3.1 ✅+**3.1b**, 3.2 ✅+**3.2b** |
+| §5.4 | Muhurat | 1.4 ✅, 3.3 ✅, 3.4 🔶 (Choghadiya display ← 1.7) |
+| §5.5 | Kundli/matching/learn | 1.3 ✅, **1.8–1.10 new**, 4.1 🔶, 4.2 🔶, **4.3, 4.5** |
+| §5.6 | Poojan | 5.3 |
+| §5.7 | Calculators | 1.5 ✅, **4.4, 4.6 (Tier 2)** |
+| §5.8 | Gemstones | 5.4 🔶 |
+| §5.9 | Blog | 6.3 |
+| §6 | Home page | 2.2 🔶, **2.5 (picker + popular calculators)** |
+| §7 | Blog & admin | 6.1–6.4 |
+| §8 | Engine accuracy/config | 1.x ✅ + **1.9 (config), 1.10 (Sade Sati/divisionals)** |
+| §9 | Design/icons | 2.1 ✅, **2.6 (zodiac+planet icons)**; palette = owner-provided |
+| §10 | Architecture/data | 0.x ✅, contracts in this file |
+| §11–13 | SEO/Perf/A11y | 7.1, 8.2, 2.4 ✅ |
+| §14 | Security | 7.2 (Turnstile+rate-limit on all forms) |
+| §15 | Privacy/legal | 7.3, 2.3 (consent stub) |
+| §16 | Analytics/monitor/email | 7.4 (+WhatsApp click-to-chat) |
+| §17–18 | QA/method | 8.x, CHANGELOG/placeholders ✅ |
+| §19–20 | DoD/open questions | gates at end |
 
 ---
+
+## Epic 0 — Foundations & Orchestrator — ✅ 5/5
+0.1 Meta orchestrator registers ✅ · 0.2 Backend re-arch ✅ · 0.3 Astro migration ✅ ·
+0.4 Supabase dev project + schema V1 + RLS + seed ✅ · 0.5 Env & secrets ✅
+*(CI pipeline live 2026-11-19; repo + worker secrets set.)*
+- **0.5b 🔶 polish:** secret-scan pre-commit hook (gitleaks) in all 3 repos.
+
+## Epic 1 — Calculation Engine — ✅ 6/6 + 4 NEW
+1.1 Astronomy layer ✅ · 1.2 Panchang limbs ✅ · 1.3 Kundli core ✅ · 1.4 Muhurat rules ✅ ·
+1.5 Calculator primitives ✅ · 1.6 Engine README/accuracy notes ✅
+
+- **1.7 ⬜ Choghadiya + Hora + Hindu month (PRD §5.3/§5.4 — WAS MISSING):** engine adds
+  day+night Choghadiya tables, planetary Hora list, Hindu month name (Amanta **and**
+  Purnimanta, configurable) + paksha field + Samvat year; surfaces in Panchang API.
+- **1.8 ⬜ Ashtakoota matching engine (PRD §5.5 — WAS MISSING):** 36-guna milan across
+  8 kootas with per-koota points + explanation strings; Manglik check from Lagna, Moon
+  **and Venus** (classical); powers 4.1 API + 4.3 UI.
+- **1.9 ⬜ Engine configurability (PRD §8 — WAS MISSING):** settings for ayanamsha
+  (Lahiri default), month system (Amanta/Purnimanta), house system, chart style; read
+  from site_settings, threaded through engine options.
+- **1.10 ⬜ Sade Sati + extra divisionals (PRD §5.5/§5.7 — WAS MISSING):** Saturn
+  transit tables → Sade Sati status (current/upcoming + phase); divisional charts D3,
+  D7, D10, D12 selectable alongside D9.
+
+## Epic 2 — Public Site Shell & Home — ✅ 4/4 + 2 NEW
+2.1 Header/footer/nav/themes ✅ · 2.2 Home ✅ · 2.3 Legal+404 ✅ · 2.4 a11y+i18n ✅
+
+- **2.5 ⬜ Home sections (PRD §6 — WAS MISSING):** daily-horoscope **12-sign picker**
+  (grid linking to /horoscope/[sign]/daily) + **popular calculators** strip; replace
+  the four "coming next" cards with real sample-marked sections once E5/E6 data lands.
+- **2.6 ⬜ Zodiac + planet icon set (PRD §9 — WAS MISSING):** original/open-licensed
+  SVG icons for 12 signs + 9 grahas (replace emoji), used in nav tiles, kundli tables,
+  horoscope grid; ONE swappable assets folder.
+- **2.3b 🔶 polish:** consent-banner stub (cookie/analytics) on all pages.
+
+## Epic 3 — Panchang & Muhurat surfaces — ✅ 4/4 + refinements
+3.1 Panchang API ✅ · 3.2 City pages ✅ · 3.3 Muhurat API ✅ · 3.4 Muhurat page ✅
+
+- **3.1b ⬜ polish:** write-through `panchang_cache` on city-mode reads + daily cron
+  refresh (Workers Cron Trigger) + Cache API edge caching of GET responses.
+- **3.2b ⬜ polish (PRD §5.3):** Today/Tomorrow **quick buttons**; **festivals/vrats for
+  the day** (from `festivals` table) on city pages; monthly calendar view; display
+  Hindu month + Samvat (needs 1.7).
+- **3.4b 🔶:** add Choghadiya to today's auspicious list (needs 1.7).
+
+## Epic 4 — Kundli & Calculators — 🔄 1.5/6 (2 NEW stories added)
+4.1 Kundli API — 🔶 generate ✅; **matching endpoint (uses 1.8) ⬜; calculator
+endpoints ⬜ (folded into 4.4)** · 4.2 Free Kundli UI ✅ *(city autocomplete + short
+interpretations pending)* · 4.3 Matching UI ⬜ · 4.4 Calculator pages ⬜
+
+- **4.5 ⬜ Learn section (PRD §5.5 — WAS MISSING):** original articles — 12 signs,
+  Navagraha, 27 nakshatras, houses, yogas, doshas, Dasha — as Astro content
+  collection under /astrology/learn/, EN first, linked from Astrology tab + calculators.
+- **4.6 ⬜ Tier 2 calculators (PRD §5.7 "build next" — WAS MISSING):** name
+  compatibility, love, friendship, FLAMES (labelled *for fun*), Lo Shu Grid, Ishta
+  Devata, Atmakaraka/Darakaraka, transit chart, lucky vehicle number, mobile-number
+  numerology, lucky-name numerology, age — same shared template.
+- **4.2b 🔶:** city **autocomplete** (typed input over the cities dataset) replacing
+  preset dropdown; short interpretations block on the kundli result.
+
+## Epic 5 — Horoscope, Consultations, Poojan, Gemstones — ⬜ 0.5/5 (1 NEW)
+5.1 Horoscope API+pages ⬜ · 5.2 Astrologer directory+profile+booking ⬜ (Turnstile +
+rate limit + admin notify; **offers configurable via site_settings — PRD §5.1**) ·
+5.3 Poojan catalogue+booking ⬜ · 5.4 Gemstones 🔶 (page ✅; wire the
+`public.gemstones_site_url` setting → tab links out when set)
+
+- **5.5 ⬜ Newsletter + notify endpoints (PRD §6/§5.8):** POST /newsletter (public,
+  rate-limited) → `newsletter_subscribers`; gemstones "notify me" uses the same
+  endpoint with a source tag; admin export in 6.4.
+
+## Epic 6 — Blog & Admin — ⬜ 0/4
+6.1 Admin auth (Supabase Auth, roles, first-admin setup script, MFA-ready) ⬜ ·
+6.2 Post CRUD (draft/publish/schedule/preview, Markdown+sanitiser, media upload,
+SEO fields, soft delete) ⬜ · 6.3 Public blog (listing/pagination, category+tag
+pages, search, article+TOC, related, share, author box, **RSS**, sitemap) ⬜ ·
+6.4 Admin modules (horoscope content, astrologers, poojas, requests inbox, contact
+messages, newsletter export, site settings incl. GEMSTONES_SITE_URL) ⬜
+
+## Epic 7 — SEO, Security, Legal, Analytics — ⬜ 0/4
+7.1 SEO pass (unique metas, canonical, hreflang, JSON-LD Org/WebSite/Breadcrumb/
+Article/FAQ/Person, **sitemap.xml + robots.txt**, OG images, internal linking) ⬜ ·
+7.2 Security pass (CSP/HSTS/headers, **rate limiting everywhere, Turnstile on all
+forms/login/calculators**, input-validation audit, dependency audit, secret scan) ⬜ ·
+7.3 Legal content final drafts + DPDP statements + grievance contact ⬜ · 7.4
+Analytics (CF Web Analytics + events: kundli_generated, calculator_used,
+booking_request_sent, blog_read) + error monitoring + transactional email design +
+**WhatsApp click-to-chat** ⬜
+
+## Epic 8 — QA, Performance & Owner Review Gate — ⬜ 0/4
+8.1 Test suites green + edge cases ⬜ · 8.2 Lighthouse ≥90 + budgets ⬜ · 8.3 Device
+matrix (owner participates) ⬜ · 8.4 **Owner review gate** + launch-blocker list ⬜
+
+---
+
+## Gap log (BMAD review v2 — found missing, now placed)
+
+| # | PRD requirement | Was | Now |
+|---|---|---|---|
+| G1 | Choghadiya day+night (§5.3) | absent | **1.7** |
+| G2 | Hora list (§5.3) | absent | **1.7** |
+| G3 | Hindu month + paksha + Samvat year (§5.3) | absent | **1.7** |
+| G4 | Amanta/Purnimanta support (§5.3/§8) | absent | **1.7/1.9** |
+| G5 | Ashtakoota 36 engine (§5.5) | absent (UI story existed, engine didn't) | **1.8** |
+| G6 | Configurable ayanamsha/house/month/chart (§8) | absent | **1.9** |
+| G7 | Sade Sati (§5.5/§5.7) | "arriving" note only | **1.10** |
+| G8 | Other divisional charts (§5.5) | D9 only | **1.10** |
+| G9 | Learn articles (§5.5) | absent | **4.5** |
+| G10 | Tier 2 calculators (§5.7) | absent | **4.6** |
+| G11 | Home 12-sign picker + popular calculators (§6) | absent | **2.5** |
+| G12 | Zodiac/planet icon set (§9) | absent (emoji) | **2.6** |
+| G13 | Today/Tomorrow quick buttons + festivals-for-day (§5.3) | absent | **3.2b** |
+| G14 | Choghadiya in muhurat today (§5.4); WhatsApp chat (§16); newsletter endpoint; offers-config; consent stub; gemstones setting-wiring | scattered/absent | **3.4b / 7.4 / 5.5 / 5.2 / 2.3b / 5.4** |
+
+## Story totals
+E0 5✅ + 1 polish · E1 6✅ + 4⬜ · E2 4✅ + 2⬜ + 1 polish · E3 4✅ + 3 polish ·
+E4 ~1.5/6 · E5 ~0.5/5 · E6 0/4 · E7 0/4 · E8 0/4
+**= 46 tracked stories: ~21 done · 1.5 partial · ~23.5 remaining** (polish items
+counted separately from the owner-visible count).
 
 ## Dependencies
-E1 feeds E3/E4 APIs · E0.4 (schema) feeds all data stories · E2 shell feeds all pages · E6.3 needs E6.2 · E7/E8 last.
-Parallelisation after Epic 0: calc engine (E1) can run alongside E2 shell; E3–E5 sequence behind both.
+1.7→3.2b/3.4b · 1.8→4.1(match)/4.3 · 1.10→4.2 · 2.5→5.1 (picker links) · E1 done
+earlier unlocked E3/E4 · E6.3 needs 6.2 · E7/E8 last · E5/E6 can parallelise after E4.
 
-## Environment status (2026-11-18)
+## Polish / debt register (tracked, not owner-blocking)
+3.1b cache+cron · 3.2b quick buttons/festivals/monthly · 3.4b Choghadiya display ·
+4.2b autocomplete+interpretations · 2.3b consent stub · 0.5b secret-scan hook ·
+P3 self-hosted fonts · P20 Lighthouse · P19 Docker build test · token rotation.
 
-- Bun 1.4.4 installed on the workstation (Bun is the only JS runtime — owner directive; Node not installed).
-- MCP servers declared in ZCode user config: github, cloudflare, supabase, context7. Endpoints reachable (401 = auth pending). Auth routes per research: GitHub PAT header or OAuth; Supabase PAT header or OAuth; Cloudflare OAuth only (+ separate API token for wrangler deploys).
-- Supabase dev project: to be created in the guided browser session (Epic 0.4 prerequisite).
+## Pre-launch gates (owner-visible)
+Jyotishi review of muhurat rules (P11) · Jyotishi/owner engine sign-off (P16/D5) ·
+sample-data removal or marking (P8/P9/P10/P17) · legal review (P7) · **D8 frontend
+deploy approval**.
 
-## Immediate next actions (on GO)
-1. Guided browser session: GitHub login → fine-grained PAT; Supabase login → PAT + create dev project; Cloudflare login → MCP OAuth approve in Settings → MCP + API token for wrangler. Then session restart → verify all MCP connections live → GO/NO-GO.
-2. Epic 0 stories 0.2/0.3 run in parallel (backend re-arch + Astro migration), then 0.4/0.5.
-3. Epic 1 (engine) and Epic 2 (site shell) follow in parallel per Dependencies.
+## Working rules (unchanged)
+Frontend/backend/database workstream split · API & data contracts v1 · commit in the
+owning repo · BMAD-style review before every commit · QA-mindset tests · fix where
+the fix belongs · backend deploys first (additive before breaking) · Bun only.
