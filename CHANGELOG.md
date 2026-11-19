@@ -7,6 +7,37 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Re-theme — "Sandalwood & Teal" (owner brief, colours only)
+
+#### Changed (frontend, local commit 0a84310)
+- Palette replaced end-to-end: light (sandalwood #FAF6EE bg, white surfaces,
+  teal #1F6F78 primary, terracotta #E58E62 accent) is now the DEFAULT theme;
+  dark theme (#0F1B1C/#172627, teal #5CB8C2) provided per brief. Theme toggle
+  follows the system setting by default and remembers the user choice.
+- All colour centralised in tokens.css (--color-* tokens + legacy aliases);
+  zero colour values outside the token file; all gradients/glows removed.
+- Usage rules applied: teal primary buttons, terracotta CTAs with dark text,
+  white secondary buttons with teal border, teal headings/links (terracotta
+  hover), teal footer with white text, active nav = teal bg white text.
+- Status chips (auspicious #1E6B3A/#E6F4EA, inauspicious #A32A2A/#FBE9E7 —
+  dark variants supplied) always carry a ✓/⚠ icon or label, never colour alone.
+- Favicon + wordmark recoloured (wordmark now inlines with CSS-var fills so it
+  adapts per theme).
+
+#### Fixed
+- Five JS-injected islands (glance cells, Quick Kundli, Panchang detail,
+  muhurat results, kundli charts/tables) had silently unstyled results —
+  Astro scoped CSS cannot match innerHTML-injected nodes. Style blocks are
+  now is:global. Bug existed since Epic 2/3; exposed by the re-theme QA.
+
+#### Verified
+- WCAG contrast script: light 12/12 and dark 12/12 pairs pass (4.5:1 text /
+  3:1 UI); interactive borders use a stronger token where the decorative
+  sandy border fails 3:1. Old-palette hex sweep across src+public: clean.
+- Screenshots (light home, teal footer, dark muhurat chips, kundli chart)
+  saved to session artifacts for owner review.
+
+
 ### Epic 0 — Foundations & Orchestrator (✅ core stories complete, 2026-11-18/19 overnight run)
 
 #### Added
