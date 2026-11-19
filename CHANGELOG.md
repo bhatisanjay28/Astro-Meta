@@ -7,6 +7,18 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Infra complete — CI pipeline live + city-mode Panchang (2026-11-19)
+
+- PAT vyotish-zcode-agent: Actions/Secrets/Workflows R/W granted (owner sudo).
+- GitHub repo secrets set via API (sealed-box): CLOUDFLARE_API_TOKEN,
+  CLOUDFLARE_ACCOUNT_ID, SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY.
+- Actions deploy pipeline LIVE: first run 44458377057 completed/success
+  (8/8 steps: install→test→lint→typecheck→wrangler deploy). Push = deploy.
+- Worker secrets set: SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY.
+- Panchang city mode LIVE on the API: ?city={slug} DB lookup (30-city seed),
+  per-city IANA timezones (London/GMT verified), 404 for unknown slugs.
+  Frontend /panchang/[city] pages now resolve their real city slugs.
+
 ### Re-theme — "Sandalwood & Teal" (owner brief, colours only)
 
 #### Changed (frontend, local commit 0a84310)
