@@ -7,6 +7,40 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Epic 9 complete — API-first data plane live end-to-end (2026-11-19)
+
+#### Backend — deployed 494aeff (CI ✅, verified live)
+- **9.1 Supabase migration 0004** (applied once via MCP, vyotish-dev): astrologers/
+  pujas extended additively for the design surface (title, availability, sort_order,
+  accent, includes jsonb); NEW `faq_items` + `content_blocks` tables with public-read
+  RLS (status='published'); D11-verbatim seeds (3 astrologers, 3 pujas, 3 home FAQs,
+  5 content blocks) marked `is_sample=true`; generic V1 placeholders soft-retired
+  (is_active=false) → exactly 3+3 active.
+- **9.2 GET /api/v1/cities** (?lang=&country= — public city list; live: 30 cities
+  incl. London/Kathmandu/New York with Hindi names) + **GET /api/v1/content/home**
+  (one cacheable bundle: astrologers, poojas with includes, faqs, keyed content
+  blocks; honest is_sample flags; 503 w/o creds, 500 on REST failure) — both
+  live-verified.
+- **9.3 Engine 1.2.0-alpha1:** panchang `active{as_of, limb→{window,next}}` —
+  server-side current/next picking with deterministic fallbacks + `nowOverride`
+  (D12: the frontend renders picks, never computes). Tests 113/113 green
+  (pickActiveLimb boundaries/fallbacks, computePanchang active fields, cities/
+  content route mapping/503/validation/500 with mocked Supabase REST).
+
+#### Frontend — LOCAL commit 25bb1b4 (NOT deployed; D8 gate)
+- **9.4 thin-client rewiring:** home content arrays, hero trust badges and
+  gemstones kicker/title now BUILD-time fetches of /content/home with honest
+  empty notes on failure; city select + kundli datalist RUNTIME fetches of /cities;
+  panchang [city]/index getStaticPaths generated from /cities (30 pages);
+  `src/data/cities.ts` (219 lines) DELETED; rashiphal text removed from
+  HomeHoroscope (API-only data, honest unavailable line); HomePanchang renders
+  server-picked `active` limbs — client currentLimb/nextLimb pickers deleted.
+- astro check 0 errors; biome clean; build OK; browser pass: every home section
+  renders from live APIs identically to the D11 mockup (astrologers VS/AD/RM
+  initials derived, pooja ₹ formatting, 30-city datalist, Varanasi page props).
+- Boundary kept: NAV_TABS + 12-sign identity remain frontend presentation config;
+  ALL content/rows are Supabase→API.
+
 ### D11 design rebuild live-verified + D12 API-first directive (2026-11-19)
 
 #### Decisions

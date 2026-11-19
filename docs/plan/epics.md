@@ -148,26 +148,31 @@ booking_request_sent, blog_read) + error monitoring + transactional email design
 8.1 Test suites green + edge cases ⬜ · 8.2 Lighthouse ≥90 + budgets ⬜ · 8.3 Device
 matrix (owner participates) ⬜ · 8.4 **Owner review gate** + launch-blocker list ⬜
 
-## Epic 9 — API-First Data Plane (D12 owner directive, 2026-11-19) — 🔄 0/4
+## Epic 9 — API-First Data Plane (D12 owner directive, 2026-11-19) — ✅ 4/4
 **Goal:** every computation in the backend, every page datum in Supabase (RLS), the
 frontend a thin renderer over `/api/v1/*`. Unblocks 2.5 and feeds 5.2/5.3/6.4 later
 (same tables, admin-managed).
 
-- **9.1 ⬜ Content tables + seeds (migration 0004):** `astrologers`, `poojas`,
-  `faq_items`, `content_blocks` (keyed marketing copy per locale) — all RLS-enabled
-  (public SELECT published rows; service-role writes), rows seeded from the design
-  mockup content marked `is_sample=true`.
-- **9.2 ⬜ Read endpoints:** GET `/api/v1/cities` (Supabase `cities`, public list for
-  selects/autocomplete) + GET `/api/v1/content/home` (single cacheable bundle:
-  astrologers, poojas, blog teasers via `blog_posts` later → content_blocks now,
-  faqs, gemstones teaser); contract v1 envelope.
-- **9.3 ⬜ Server-side limb picking:** panchang API returns `current`/`next` objects
-  per limb (additive fields; removes currentLimb/nextLimb logic from the frontend —
-  D12); engine version bump.
-- **9.4 ⬜ Frontend thin-client rewiring (local only):** remove baked CITIES list,
-  horoscope fallback lines, and home section data arrays; fetch cities + content
-  bundle at runtime; honest loading/error states (no fake data on failure).
-  Verify all sections render from live APIs; build + browser pass; local commit.
+- **9.1 ✅ Content tables + seeds (migration 0004, applied once via MCP):**
+  astrologers/pujas extended additively (title/availability/is_available/sort_order/
+  accent/includes), `faq_items` + `content_blocks` created with public-read RLS
+  (status='published'), D11-verbatim seeds (3 astrologers, 3 pujas, 3 home FAQs,
+  5 content blocks) marked `is_sample=true`; generic V1 placeholder rows soft-retired.
+- **9.2 ✅ Read endpoints (backend 494aeff, live-verified):** GET `/api/v1/cities`
+  (lang/country filters, 503 w/o creds) + GET `/api/v1/content/home` (single bundle:
+  astrologers, poojas incl. includes jsonb, faqs, content_blocks → blocks map;
+  honest is_sample flags). Route tests: mapping/503/validation/500 (113 pass).
+- **9.3 ✅ Server-side limb picking (engine 1.2.0-alpha1):** panchang returns
+  `active{as_of, tithi, nakshatra, yoga, karana}` with `window`/`next` per limb
+  (pickActiveLimb + deterministic fallbacks; `nowOverride` for tests); unit tests
+  for boundaries/fallbacks; live-verified on new-delhi.
+- **9.4 ✅ Frontend thin-client rewiring (local commit 25bb1b4):** home arrays +
+  hero badges + gemstones kicker/title now BUILD-time fetches of /content/home
+  (fail-soft honest empty notes); city selects + kundli datalist RUNTIME fetches of
+  /cities; panchang getStaticPaths generated from /cities (30 pages);
+  src/data/cities.ts deleted; rashiphal lines removed from HomeHoroscope (text =
+  API-only data); server-picked `active` limbs rendered client-side. Browser pass:
+  all sections render identically to the D11 mockup from live APIs.
 
 ---
 
@@ -193,8 +198,8 @@ frontend a thin renderer over `/api/v1/*`. Unblocks 2.5 and feeds 5.2/5.3/6.4 la
 ## Story totals
 E0 5✅ + 1 polish · E1 7✅(incl 1.7) + 3⬜ · E2 5✅(incl 2.7) + 1🔶(2.6) + 1⬜ + 1 polish ·
 E3 4✅ + 3 polish · E4 ~1.5/6 · E5 ~2.5/5 (5.1🔶 5.5🔶) · E6 0/4 · E7 0/4 · E8 0/4 ·
-E9 0/4 (NEW, D12)
-**= 50 tracked stories: ~24 done · partials 1.5+2.5 · ~24 remaining** (polish items
+E9 4✅ (D12, 2026-11-19)
+**= 50 tracked stories: ~28 done · partials 1.5+2.5 · ~20 remaining** (polish items
 counted separately from the owner-visible count).
 
 ## Dependencies
