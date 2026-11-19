@@ -145,13 +145,19 @@ offers-config via site_settings ⬜) · 5.3 Poojan catalogue+booking ✅ (GET /p
   against the deployed worker 2026-11-19). Turnstile/WAF hardening = 7.2.
   Admin export in 6.4.
 
-## Epic 6 — Blog & Admin — ⬜ 0/4
-6.1 Admin auth (Supabase Auth, roles, first-admin setup script, MFA-ready) ⬜ ·
-6.2 Post CRUD (draft/publish/schedule/preview, Markdown+sanitiser, media upload,
-SEO fields, soft delete) ⬜ · 6.3 Public blog (listing/pagination, category+tag
+## Epic 6 — Blog & Admin — 🔶 2/4 (backend live; admin UI ships with 6.4)
+6.1 ✅ Admin auth (backend 84a3e63, CI-green+live: `admin_users` 0006 service-role-only,
+requireAdmin fail-closed 401/403/503, token validated via Supabase /auth/v1/user, aal
+claim MFA-ready, GET /admin/me probe; **owner action pending: run
+`bun scripts/setup-first-admin.ts --email …`**) ·
+6.2 ✅ Post CRUD (backend 23099dc, CI-green+live: draft/publish/archived state machine,
+scheduled = draft + future publish_at + lazy sweep, soft delete, auto-slug w/ Devanagari
+fallback, auto reading time, SEO validation, tags/categories/media endpoints; Supabase
+Storage `media` bucket created; migration 0007 category link; md sanitiser = render-time
+in 6.3 per D13) · 6.3 Public blog (listing/pagination, category+tag
 pages, search, article+TOC, related, share, author box, **RSS**, sitemap) ⬜ ·
 6.4 Admin modules (horoscope content, astrologers, poojas, requests inbox, contact
-messages, newsletter export, site settings incl. GEMSTONES_SITE_URL) ⬜
+messages, newsletter export, site settings incl. GEMSTONES_SITE_URL + admin UI) ⬜
 
 ## Epic 7 — SEO, Security, Legal, Analytics — ⬜ 0/4
 7.1 SEO pass (unique metas, canonical, hreflang, JSON-LD Org/WebSite/Breadcrumb/
@@ -218,9 +224,9 @@ frontend a thin renderer over `/api/v1/*`. Unblocks 2.5 and feeds 5.2/5.3/6.4 la
 E0 5✅ + 1 polish · E1 10✅(incl 1.7–1.10) · E2 6✅(incl 2.7, 2.5, 2.3b) + 1🔶(2.6) ·
 E3 4✅ + 3.2b/3.4b ✅ + 3.1b ⬜ · E4 6✅(+4.5/4.6) + 4.2b 🔶 · E5 5✅ ·
 E6 0/4 · E7 0/4 · E8 0/4 · E9 4✅ (D12)
-**= 50 tracked stories: ~42 done · partials 2.5 (2.6/4.2b refinements + 5.2 profile
-pages) · 12 remaining = E6 (4) + E7 (4) + E8 (4) + polish 3.1b/0.5b** (E6–E8 are the
-admin/security/launch-gate epics; E8.3/8.4 need owner participation).
+**= 50 tracked stories: ~44 done · partials 2.5 (2.6/4.2b refinements + 5.2 profile
+pages) · 10 remaining = E6 (6.3/6.4) + E7 (4) + E8 (4) + polish 3.1b/0.5b** (E6.3/6.4
+carry the admin UI; E8.3/8.4 need owner participation).
 
 ## Dependencies
 1.7→3.2b/3.4b ✅ · 1.8→4.1(match)/4.3 ✅ · 1.10→4.2 ✅ · 2.5→5.1 + E9.2 ✅ ·
