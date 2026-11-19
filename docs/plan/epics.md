@@ -60,15 +60,24 @@ Status legend: ⬜ todo · 🔄 in progress · ✅ done · 🔶 done with refine
   (Amanta **and** Purnimanta, adhika flag) + paksha + Vikram/Shaka Samvat; all
   surfaced in Panchang API. **Live 2026-11-19** (deploy 805babc; Kartika • Shukla •
   Vikram 2083 • Shaka 1948 matches the design sample).
-- **1.8 ⬜ Ashtakoota matching engine (PRD §5.5 — WAS MISSING):** 36-guna milan across
-  8 kootas with per-koota points + explanation strings; Manglik check from Lagna, Moon
-  **and Venus** (classical); powers 4.1 API + 4.3 UI.
-- **1.9 ⬜ Engine configurability (PRD §8 — WAS MISSING):** settings for ayanamsha
-  (Lahiri default), month system (Amanta/Purnimanta), house system, chart style; read
-  from site_settings, threaded through engine options.
-- **1.10 ⬜ Sade Sati + extra divisionals (PRD §5.5/§5.7 — WAS MISSING):** Saturn
-  transit tables → Sade Sati status (current/upcoming + phase); divisional charts D3,
-  D7, D10, D12 selectable alongside D9.
+- **1.8 ✅ Ashtakoota matching engine (PRD §5.5 — WAS MISSING):** 36-guna milan across
+  8 kootas (classical maxima 1..8) with per-koota detail strings; Manglik from Lagna,
+  Moon **and Venus** with own-sign/exaltation cancellation; half-sign vashya; yoni
+  animals + 7 enemy pairs; bhakoot mutual-friend cancellation. `verified:false` (P11).
+  **Live 2026-11-19** (backend 3f177ac; self-match 28/36 identity tested; 123→150 tests).
+- **1.9 ✅ Engine configurability (PRD §8 — WAS MISSING):** `engine/config.ts`
+  (ayanamsha/month_system/house_system/chart_style, allowed-value tables, DB resolver
+  with db|default|invalid source map); migration 0005 seeds `public.engine_*` site
+  settings (applied once via MCP); GET **/api/v1/settings** serves config + gemstones/
+  contact/WhatsApp; POST /kundli accepts strict-validated options and echoes
+  engine_config; panchang `hindu_month.primary` follows the configured month system.
+  (backend f9fc742)
+- **1.10 ✅ Sade Sati + extra divisionals (PRD §5.5/§5.7 — WAS MISSING):** `transits.ts`
+  Sade Sati window (first trio entry → final exit; retro dips ignored via 200-day rule;
+  EXTERNAL ANCHOR: Aquarius-moon window 2020-01-24→2028-02-23 matches published
+  ingresses) + phases 1/2/3; `divisionals.ts` Parashari D3/D7/D9/D10/D12 (D9
+  sync-tested vs navamshaSignIndex); kundli POST carries `divisionals` + `sade_sati`.
+  ENGINE_VERSION 1.3.0-alpha1. (backend 02e6530)
 
 ## Epic 2 — Public Site Shell & Home — ✅ 4/4 + 2 NEW
 2.1 Header/footer/nav/themes ✅ · 2.2 Home ✅ *(D11 rebuild 🔶→✅, see 2.7)* · 2.3 Legal+404 ✅ · 2.4 a11y+i18n ✅
@@ -79,48 +88,58 @@ Status legend: ⬜ todo · 🔄 in progress · ✅ done · 🔶 done with refine
   design tokens; chrome-reset scoping; dual theme (class + attribute); live islands
   for panchang/horoscope/kundli/newsletter; honest booking modal. Verified in
   browser light+dark incl. live-API E2E kundli generation.
-- **2.5 ⬜ Home sections (PRD §6 — WAS MISSING):** daily-horoscope **12-sign picker**
-  (grid linking to /horoscope/[sign]/daily) + **popular calculators** strip; replace
-  the four "coming next" cards with real sample-marked sections once E5/E6 data lands.
-  *(Content now served from Supabase via Epic 9.)*
+- **2.5 ✅ Home sections (PRD §6 — WAS MISSING):** home 12-sign picker cards link to
+  /horoscope/{sign}/daily (frontend local 9d20739); popular-calculators strip hrefs
+  live via content_blocks (DB updated via MCP → real tool pages); horoscope picker +
+  calculator strip fully wired to the D11 design.
 - **2.6 🔶 Zodiac + planet icon set (PRD §9):** design mandates **Material Symbols**
   (variable font) — adopted per D11 as the icon system (nav, cards, FAQ, forms);
   custom SVG zodiac set not required while D11 governs. ONE swappable font link.
-- **2.3b 🔶 polish:** consent-banner stub (cookie/analytics) on all pages.
+- **2.3b ✅ polish:** consent-banner stub in Base (honest "no analytics yet" notice,
+  localStorage-acknowledged; swap point for the real CMP in 7.2).
 
 ## Epic 3 — Panchang & Muhurat surfaces — ✅ 4/4 + refinements
 3.1 Panchang API ✅ · 3.2 City pages ✅ · 3.3 Muhurat API ✅ · 3.4 Muhurat page ✅
 
 - **3.1b ⬜ polish:** write-through `panchang_cache` on city-mode reads + daily cron
   refresh (Workers Cron Trigger) + Cache API edge caching of GET responses.
-- **3.2b ⬜ polish (PRD §5.3):** Today/Tomorrow **quick buttons**; **festivals/vrats for
-  the day** (from `festivals` table) on city pages; monthly calendar view; display
-  Hindu month + Samvat (needs 1.7).
-- **3.4b 🔶:** add Choghadiya to today's auspicious list (needs 1.7).
+- **3.2b ✅ polish (PRD §5.3):** GET **/api/v1/festivals?date=** (backend 6ccd7ce, live);
+  city panchang pages get Today/Tomorrow **quick buttons**, **festivals/vrats block**
+  for the selected day, and Hindu month (primary per 1.9) + Samvat cells. Monthly
+  calendar view still ⬜ (button stub in place).
+- **3.4b ✅:** auspicious + inauspicious **Choghadiya slots** join muhurat/today lists
+  (backend 34da3c5, live-verified: Shubh/Char/Labh/Amrit slots render on the page).
 
-## Epic 4 — Kundli & Calculators — 🔄 1.5/6 (2 NEW stories added)
-4.1 Kundli API — 🔶 generate ✅; **matching endpoint (uses 1.8) ⬜; calculator
-endpoints ⬜ (folded into 4.4)** · 4.2 Free Kundli UI ✅ *(city autocomplete + short
-interpretations pending)* · 4.3 Matching UI ⬜ · 4.4 Calculator pages ⬜
+## Epic 4 — Kundli & Calculators — ✅ 6/6 (+2 NEW stories below)
+4.1 Kundli API ✅ (**generate + POST /kundli/match via 1.8 + divisionals/Sade Sati/
+manglik/kaal-sarp in the response; calculator endpoints landed with 4.4**) ·
+4.2 Free Kundli UI ✅ · 4.3 Matching UI ✅ · 4.4 Calculator pages ✅
 
-- **4.5 ⬜ Learn section (PRD §5.5 — WAS MISSING):** original articles — 12 signs,
-  Navagraha, 27 nakshatras, houses, yogas, doshas, Dasha — as Astro content
-  collection under /astrology/learn/, EN first, linked from Astrology tab + calculators.
-- **4.6 ⬜ Tier 2 calculators (PRD §5.7 "build next" — WAS MISSING):** name
-  compatibility, love, friendship, FLAMES (labelled *for fun*), Lo Shu Grid, Ishta
-  Devata, Atmakaraka/Darakaraka, transit chart, lucky vehicle number, mobile-number
-  numerology, lucky-name numerology, age — same shared template.
-- **4.2b 🔶:** city **autocomplete** (typed input over the cities dataset) replacing
-  preset dropdown; short interpretations block on the kundli result.
+- **4.5 ✅ Learn section (PRD §5.5 — WAS MISSING):** Astro content collection
+  (src/content.config.ts) + **7 original articles** under /astrology/learn/ (12 rashis,
+  Navagraha, 27 nakshatras, 12 houses, panchang limbs+yogas, doshas, Vimshottari
+  dasha) with article renderer + /astrology hub replacing the TabStub. Frontend local
+  9d20739.
+- **4.6 ✅ Tier 2 calculators (PRD §5.7 "build next" — WAS MISSING):** engine/tools.ts
+  (Jaimini karakas, Ishta Devata base — deity table deferred to P11, Kaal Sarp with
+  12 Rahu-house types, Lo Shu grid, FLAMES/love/friendship/name-compat for_fun,
+  vehicle numbers, mobile/name numerology, age) + GET /api/v1/calculators/{…} ×16
+  (backend 9ad9db8) + 17 shared-template pages (BirthForm + generic renderer).
+- **4.2b 🔶:** city **autocomplete** ✅ (datalist over /cities — Epic 9.4); short
+  interpretations block ⬜ (needs an admin-authored content source — lands with 6.4).
 
-## Epic 5 — Horoscope, Consultations, Poojan, Gemstones — 🔄 2.5/5 (1 NEW)
-5.1 Horoscope API 🔶 (**GET /horoscope + rolling sample seeds LIVE** 805babc; per-sign
-daily pages ⬜) · 5.2 Astrologer directory+profile+booking ⬜ (Turnstile +
-rate limit + admin notify; **offers configurable via site_settings — PRD §5.1**) ·
-5.3 Poojan catalogue+booking ⬜ · 5.4 Gemstones 🔶 (page ✅; wire the
-`public.gemstones_site_url` setting → tab links out when set)
+## Epic 5 — Horoscope, Consultations, Poojan, Gemstones — ✅ 5/5
+5.1 Horoscope ✅ (**GET /horoscope LIVE + /horoscope/ hub + 72 static
+/horoscope/{sign}/{period} pages with runtime API text** — frontend local 9d20739) ·
+5.2 Astrologer directory+booking ✅ (GET /astrologers +/{slug} + POST
+/requests/consultation — backend d3d25a4 live; /consultations directory + BookingForm;
+individual profile [slug] pages ⬜ small follow-up; Turnstile + admin notify = 7.2/6.4;
+offers-config via site_settings ⬜) · 5.3 Poojan catalogue+booking ✅ (GET /pujas
+(+/{slug}, ?category=) + POST /requests/puja live; /poojan catalogue + BookingForm) ·
+5.4 Gemstones ✅ (wired to GET /settings — links out to the store the moment
+`public.gemstones_site_url` is set)
 
-- **5.5 🔶 Newsletter + notify endpoints (PRD §6/§5.8):** POST /newsletter **LIVE**
+- **5.5 ✅ Newsletter + notify endpoints (PRD §6/§5.8):** POST /newsletter **LIVE**
   (validation + source whitelist + 5/10-min throttle → 429; upsert
   `newsletter_subscribers` merge-duplicates; happy-path + validation verified
   against the deployed worker 2026-11-19). Turnstile/WAF hardening = 7.2.
@@ -196,20 +215,21 @@ frontend a thin renderer over `/api/v1/*`. Unblocks 2.5 and feeds 5.2/5.3/6.4 la
 | G14 | Choghadiya in muhurat today (§5.4); WhatsApp chat (§16); newsletter endpoint; offers-config; consent stub; gemstones setting-wiring | scattered/absent | **3.4b / 7.4 / 5.5 / 5.2 / 2.3b / 5.4** |
 
 ## Story totals
-E0 5✅ + 1 polish · E1 7✅(incl 1.7) + 3⬜ · E2 5✅(incl 2.7) + 1🔶(2.6) + 1⬜ + 1 polish ·
-E3 4✅ + 3 polish · E4 ~1.5/6 · E5 ~2.5/5 (5.1🔶 5.5🔶) · E6 0/4 · E7 0/4 · E8 0/4 ·
-E9 4✅ (D12, 2026-11-19)
-**= 50 tracked stories: ~28 done · partials 1.5+2.5 · ~20 remaining** (polish items
-counted separately from the owner-visible count).
+E0 5✅ + 1 polish · E1 10✅(incl 1.7–1.10) · E2 6✅(incl 2.7, 2.5, 2.3b) + 1🔶(2.6) ·
+E3 4✅ + 3.2b/3.4b ✅ + 3.1b ⬜ · E4 6✅(+4.5/4.6) + 4.2b 🔶 · E5 5✅ ·
+E6 0/4 · E7 0/4 · E8 0/4 · E9 4✅ (D12)
+**= 50 tracked stories: ~42 done · partials 2.5 (2.6/4.2b refinements + 5.2 profile
+pages) · 12 remaining = E6 (4) + E7 (4) + E8 (4) + polish 3.1b/0.5b** (E6–E8 are the
+admin/security/launch-gate epics; E8.3/8.4 need owner participation).
 
 ## Dependencies
-1.7→3.2b/3.4b ✅(1.7 done) · 1.8→4.1(match)/4.3 · 1.10→4.2 · 2.5→5.1 + E9.2 (picker
-links + content) · E1 done earlier unlocked E3/E4 · E6.3 needs 6.2 · E7/E8 last ·
-E9.4 needs E9.1–9.3 · E5/E6 can parallelise after E4.
+1.7→3.2b/3.4b ✅ · 1.8→4.1(match)/4.3 ✅ · 1.10→4.2 ✅ · 2.5→5.1 + E9.2 ✅ ·
+E1 done earlier unlocked E3/E4 ✅ · E6.3 needs 6.2 · E7/E8 last ·
+E9.4 needs E9.1–9.3 ✅ · E5/E6 can parallelise after E4 ✅.
 
 ## Polish / debt register (tracked, not owner-blocking)
-3.1b cache+cron · 3.2b quick buttons/festivals/monthly · 3.4b Choghadiya display ·
-4.2b autocomplete+interpretations · 2.3b consent stub · 0.5b secret-scan hook ·
+3.1b cache+cron ⬜ · 3.2b monthly calendar view ⬜ · 4.2b interpretations ⬜ ·
+5.2 profile [slug] pages + offers-config ⬜ · 0.5b secret-scan hook ⬜ ·
 P3 self-hosted fonts · P20 Lighthouse · P19 Docker build test · token rotation.
 
 ## Pre-launch gates (owner-visible)

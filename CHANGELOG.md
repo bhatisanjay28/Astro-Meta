@@ -7,6 +7,61 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Engine completeness + full page layer — Epics 1.8–1.10, 2.5, 4.1–4.6, 5.1–5.5, 3.2b/3.4b/2.3b (2026-11-19)
+
+#### Backend — 5 deploys, CI ✅, all live-verified (3f177ac → 34da3c5)
+- **1.8 Ashtakoota (3f177ac):** 36-guna/8-koota matching + Manglik (Lagna/Moon/Venus,
+  classical cancellations); `verified:false` pending Jyotishi review (P11); self-match
+  28/36 identity + recomputation cross-checks tested.
+- **1.9 Configurability (f9fc742):** engine config (ayanamsha/month/house/chart style)
+  with allowed-value validation; migration **0005** applied via MCP
+  (`public.engine_*` site settings — do NOT re-run); **GET /api/v1/settings** (engine
+  config + gemstones/contact/WhatsApp); panchang `hindu_month.primary`; kundli
+  accepts strict-validated options.
+- **1.10 Sade Sati + divisionals (02e6530):** Sade Sati window = first trio entry →
+  final exit (retro dips ignored; **external anchor: Aquarius-moon 2020-01-24 →
+  2028-02-23 matches published ingresses**), phases 1/2/3; Parashari D3/D7/D9/D10/D12
+  (D9 sync-tested); ENGINE_VERSION **1.3.0-alpha1**; kundli response gains
+  `divisionals` + `sade_sati` + `manglik` + `kaal_sarp`.
+- **4.1 match endpoint:** POST /api/v1/kundli/match (Ashtakoota + Manglik both sides +
+  classical combined note); shared birth validation extracted to src/lib/birth.ts.
+- **4.4/4.6 tools (9ad9db8):** engine/tools.ts (Jaimini karakas, Ishta Devata base —
+  deity table deferred to P11, Kaal Sarp ×12 types, Lo Shu, FLAMES/love/friendship
+  for_fun, vehicle/mobile/name numerology, age) + **GET /api/v1/calculators/{…} ×16**.
+- **5.2/5.3 (d3d25a4):** GET /astrologers(+/{slug}) + GET /pujas(+/{slug},?category=);
+  POST /requests/consultation + /requests/puja (validation, per-IP throttle, slug→id
+  resolution, anon inserts via RLS).
+- **3.2b/3.4b (6ccd7ce, 34da3c5):** GET /api/v1/festivals?date=; Choghadiya slots in
+  muhurat/today auspicious+avoid lists.
+- Tests **177/177** green; biome clean; tsc strict clean (one CI lint failure on
+  appended-file formatting — fixed in 34da3c5, CI green).
+
+#### Frontend — LOCAL commit 9d20739 (NOT deployed; D8 gate)
+- **+2,189/−75 across 26 files** — the full page layer over the API-first backend:
+  - **5.1** /horoscope/ hub + **72 static** /horoscope/{sign}/{period} pages (12×6)
+    with runtime API text + honest unavailable state.
+  - **4.4/4.6** /calculators/ hub (DB-driven Tier 1 grid) + **17 shared-template tool
+    pages** (BirthForm + generic result renderer; for_fun + P11 flags surfaced).
+  - **4.3** /matching — Ashtakoota table + Manglik verdicts (browser-verified
+    self-match 28/36).
+  - **4.5** /astrology/learn — content collection + **7 original articles** (12 rashis,
+    Navagraha, 27 nakshatras, houses, panchang, doshas, dasha) + /astrology hub.
+  - **5.2/5.3** /consultations + /poojan directories (build-time API fetch) + shared
+    BookingForm posting live to /requests/*.
+  - **5.4** /gemstones wired to /settings (links out when the store URL is set).
+  - **2.5** home picker cards → per-sign pages; calculators strip hrefs live (DB
+    content_blocks hrefs updated via MCP).
+  - **3.2b** city panchang: Today/Tomorrow quick buttons, festivals block, Hindu month
+    + Samvat cells; **2.3b** consent-banner stub in Base.
+- astro check 0 errors; biome clean; build OK; browser-verified: per-sign pages
+  (API text live), sade-sati tool E2E, matching self-match, both directories,
+  learn articles, gemstones branch.
+
+#### Status
+- **~42 of 50 tracked stories done.** Remaining: E6 (blog/admin), E7 (SEO/security/
+  legal/analytics), E8 (QA/launch gates — owner participation), polish 3.1b (cache/
+  cron), monthly calendar view, kundli interpretations, 5.2 profile pages.
+
 ### Epic 9 complete — API-first data plane live end-to-end (2026-11-19)
 
 #### Backend — deployed 494aeff (CI ✅, verified live)
