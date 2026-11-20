@@ -87,6 +87,25 @@ const page = await (await browser.newContext({ viewport: { width: 1440, height: 
   assert(await btn.isDisabled() === false, "submit button re-enabled after completion");
 }
 
+// ---- Path 4 (BUG-03): privacy link opens in a new tab, keeps form data ----
+{
+  const ctxPage = await (await browser.newContext({ viewport: { width: 1440, height: 900 } })).newPage();
+  await ctxPage.goto(BASE + "/", { waitUntil: "load" });
+  await ctxPage.click("[data-open-booking]");
+  await ctxPage.fill("#bk-name", "QA Tab Check");
+  const privacy = ctxPage.locator('#consent-check ~ label a[href="/privacy"]');
+  const target = await privacy.getAttribute("target");
+  const rel = (await privacy.getAttribute("rel")) ?? "";
+  assert(target === "_blank", "privacy link targets a new tab");
+  assert(rel.includes("noopener"), "privacy link uses rel=noopener");
+  // clicking a target=_blank link must not navigate the page
+  await privacy.click();
+  await ctxPage.waitForTimeout(400);
+  assert(ctxPage.url() === BASE + "/", "main tab did not navigate away");
+  assert((await ctxPage.inputValue("#bk-name")) === "QA Tab Check", "form data intact after link click");
+  await ctxPage.close();
+}
+
 await browser.close();
 console.log(failures ? `\n${failures} assertion(s) FAILED` : "\nALL PASS");
 process.exit(failures ? 1 : 0);
