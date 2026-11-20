@@ -268,8 +268,14 @@ showed yesterday's panchang before 05:30 IST (PanchangDetail/TodayAtAGlance/
 HomePanchang → local date), footer Popular-Tools links wrong/flat, transits tool still
 asked raw lat/lng. Known nit: sade_sati.next window jitter ±ms (iterative transit
 search) — astronomically irrelevant, UI shows dates only.** ·
-8.2 Lighthouse ≥90 + budgets ⬜ (needs a real Chrome audit — owner review gate) · 8.3 Device
-matrix (owner participates) ⬜ · 8.4 **Owner review gate** + launch-blocker list ⬜
+8.2 Lighthouse ≥90 + budgets 🔶 (**local baseline done 2026-11-20** — Chrome was on the box:
+a11y 90–95 + bp 100 everywhere; perf 98–100 on home/kundli/consultations, 82–88 on
+panchang/blog from font-swap CLS 0.25–0.36 (→ story S12), seo 92 (crawlable header anchor →
+S11); reports + findings in [lighthouse-2026-11-20/](lighthouse-2026-11-20/RESULTS.md);
+**production re-run after D8 deploy = owner gate**) · 8.3 Device
+matrix (owner participates; S5 checklist) ⬜ · 8.4 **Owner review gate** — launch-blocker
+list ✅ written: [launch-blockers.md](launch-blockers.md) (15 rows, 14 open owner actions,
+offers_config row closed) ·
 
 ## Epic 9 — API-First Data Plane (D12 owner directive, 2026-11-19) — ✅ 4/4
 **Goal:** every computation in the backend, every page datum in Supabase (RLS), the
@@ -333,8 +339,10 @@ decision (frontend LOCAL 80976ea, ahead 15 of origin), `bun scripts/setup-first-
 
 Remaining items each carry an enriched BMAD story in
 [stories-remaining.md](stories-remaining.md) (story-first hard rule, owner 2026-11-20:
-story written + reviewed before implementation — S1 P3 fonts READY, S4 8.2 Lighthouse
-READY, S6 launch-blocker list READY; rest owner-gated/blocked/parked as marked).
+story written + reviewed before implementation — **S1 P3 fonts ✅ frontend 285d710
+LOCAL · S4 8.2 local Lighthouse baseline ✅ · S6 launch-blocker list ✅
+launch-blockers.md**; S11 a11y/SEO quick fixes + S12 CLS mitigation READY next;
+rest owner-gated/blocked/parked as marked).
 
 ## Dependencies
 1.7→3.2b/3.4b ✅ · 1.8→4.1(match)/4.3 ✅ · 1.10→4.2 ✅ · 2.5→5.1 + E9.2 ✅ ·
@@ -346,7 +354,10 @@ E9.4 needs E9.1–9.3 ✅ · E5/E6 can parallelise after E4 ✅.
 5.2 profile [slug] pages + offers-config ✅ · 0.5b secret-scan hook ✅ (installed+tested in all 3 repos; sweeps clean 2026-11-20) ·
 kundli sade_sati.next boundary jitter ±ms (iterative transit search; UI shows dates only) ·
 BirthForm PlaceField grid alignment ✅ (full-row wrapper, 2026-11-20) ·
-P3 self-hosted fonts · P20 Lighthouse · P19 Docker build test (⬜ not runnable on this box — no docker installed) · token rotation.
+P3 self-hosted fonts ✅ (frontend 285d710 LOCAL: 22 woff2 in /fonts + fonts.css, zero
+third-party font requests, licenses shipped, icon helper class restored — Story S1) ·
+P20 Lighthouse 🔶 (= 8.2 local baseline done, see lighthouse-2026-11-20/) ·
+P19 Docker build test (⬜ not runnable on this box — no docker installed) · token rotation.
 
 ## Pre-launch gates (owner-visible)
 Jyotishi review of muhurat rules (P11) · Jyotishi/owner engine sign-off (P16/D5) ·

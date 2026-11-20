@@ -277,7 +277,53 @@ edge to whole minute before compare.
 
 ---
 
-## BMAD review log (recorded BEFORE implementation; rule: no unreviewed story → no work)
+## S11 · 8.2 follow-up — a11y/SEO quick fixes from the Lighthouse audit — **READY**
+
+**Story.** As the site owner I want the audit's contained accessibility/SEO findings
+fixed so the shared chrome is crawlable and screen-reader correct on every page.
+
+**Grounding (reports in `docs/plan/lighthouse-2026-11-20/`).** Site-wide findings,
+each maps to one shared component:
+1. **seo `crawlable-anchors` (all pages → seo 92):** header anchor
+   `div.max-w-7xl … a.font-label` (Gemstones "Soon" chip) is an `<a>` without a
+   usable href — Header.astro; make it `<span>`/button or give it a real target.
+2. **a11y `aria-allowed-attr` (home/kundli):** `input#hp-place` (HomePanchang) and
+   `input#hk-place` (HomeKundli) carry an aria attribute their role forbids —
+   inspect PlaceField markup, correct or drop the attribute.
+3. **a11y `label-content-name-mismatch`:** header brand link `a.flex`
+   (Header.astro) — aria-label must contain the visible label text.
+4. **a11y `heading-order` (panchang/blog/kundli):** one skipped level in shared
+   components — find and fix the culprit heading.
+5. **a11y `color-contrast`:** e.g. `div.consent-stub > button` — palette values are
+   owner-approved (D11); propose token tweak, apply only with owner nod.
+
+**AC.** Given the fixed components, when re-audited locally, then seo ≥ 95 on all
+pages, no `aria-allowed-attr` / `label-content-name-mismatch` / `heading-order`
+fails, and astro check + biome + build stay green. Contrast fix rides only on owner
+palette approval (else recorded). **Test plan.** Re-run the 5-page audit; diff
+scores. **Risks.** Changing the brand link label affects SEO text — keep visible
+text intact. **DoD.** Scores in results doc updated; findings list shrinks; commit
+LOCAL (D8).
+
+## S12 · 8.2 follow-up — CLS font-swap mitigation — **READY**
+
+**Story.** As a visitor I want pages not to shift while fonts load, so text doesn't
+jump mid-read.
+
+**Grounding.** Lighthouse: CLS 0.246 (panchang) / 0.267 (blog), culprit =
+`main#main-content` whole-block shift (font-metric swap of display/body faces);
+kundli/consultations (0.03/0.08) unaffected. Same `swap` behaviour existed with the
+Google CDN (S1 preserved font-display) — not a regression, a standing nit now
+measured.
+
+**AC.** Given fallback-font metric overrides (`ascent-override`/`descent-override`/
+`line-gap-override`/`size-adjust` tuned per face) or targeted font preloads on
+text-heavy pages, when re-audited, then CLS < 0.1 on panchang + blog with LCP/TBT
+not regressed. **Test plan.** Audit re-run ×2 per page. **Risks.** size-adjust
+changes fallback rendering on slow networks; tune conservatively. **DoD.** CLS
+recorded < 0.1; commit LOCAL.
+
+
 
 | # | Check | Result |
 |---|-------|--------|
@@ -287,6 +333,7 @@ edge to whole minute before compare.
 | R4 | Ownership/consent: stories touching the frontend note LOCAL commit per D8; owner-gated items do not impersonate agent work | PASS |
 | R5 | Risk sections present incl. failure modes (UA mismatch, CSP breakage, subset loss, deploy-vs-preview delta) | PASS |
 | R6 | DoD each closes with an epics.md flip + pointer, keeping epics.md the source of truth | PASS |
+| R7 | S11/S12 (added 2026-11-20 after the S4 audit): facts from report JSONs (selectors quoted from audit details), ACs numeric (seo ≥95, CLS <0.1), D8 noted | PASS |
 
 Review verdict: **approved for implementation** — start order: S1 (frontend, LOCAL),
 S4, S6 (meta docs). S2 prep (`_headers`) rides with S1's deploy only after owner's D8
