@@ -243,8 +243,26 @@ build/dev-time only, none ship in the static artifact; major upgrades = owner de
 literals, backend/.env properly gitignored)**; **+ 0.5b pre-commit secret-scan hooks
 installed & tested in all 3 repos (2026-11-20 — see Epic 0)**; ⬜ CSP (needs a production deploy loop to
 verify → D8 owner gate), volumetric WAF/Turnstile (owner keys) ·
-7.3 Legal content final drafts + DPDP statements + grievance contact ⬜ (pages exist;
-drafts need owner review) · 7.4
+7.3 Legal content final drafts + DPDP statements + grievance contact 🔶 —
+**agent drafts landed 2026-11-21 (owner legal review = the gate)**: all 5 pages
+(privacy/terms/refund/disclaimer/about) rewritten as sectioned documents via upgraded
+LegalPage.astro (id-anchored h2 sections, "On this page" TOC, bullets, Last-updated
+line); grounded in DPDP Act 2023 (ss. 5-14 rights/consent/notice), DPDP Rules 2025
+(Rule 3 notice, Rule 6 safeguards, Rule 7 breach ≤72h, Rule 14 grievance ≤90d —
+we commit 30d), E-Commerce Rules 2020 (Rule 4(4)/(5) grievance officer 48h-ack/1-month,
+Rule 4(2) entity details → owner gate), industry refund norms (consultations ≥24h full
+refund, poojas 48h windows, 5-7 business days to original method) and no-cure/no-
+guarantee/no-fabrication policy language; data items mirror the actual schema
+(tool inputs not stored — requests.ts is the only personal-data insert path).
+**Trust-copy accuracy sweep in the same change**: "Swiss Ephemeris" claims corrected
+to astronomy-engine (MIT) + Lahiri + IANA everywhere — Footer.astro (also removed
+unverified "vetted scholar" wording per ux-audit pattern), UtilityBar.astro,
+HomeKundli.astro, index.astro meta description, and seeded home DB rows (backend
+migration 0010, applied to Supabase owgszyhxvyomxyxhoeed; rows stay is_sample=true).
+Footer About label → "About Vyotish". astro check 0 errors; 5/5 routes 200 with
+content verified; playwright screenshots light+mobile clean. **Owner items remain:
+legal review + entity legal name/address (ECR Rule 4(2)) + grievance officer name
+(launch-blockers #3)** · 7.4
 Analytics (CF Web Analytics + events: kundli_generated, calculator_used,
 booking_request_sent, blog_read) + error monitoring + transactional email design +
 **WhatsApp click-to-chat** 🔶 — ✅ consent-gated GA4 loader (waits for explicit Accept +

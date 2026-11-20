@@ -14,7 +14,7 @@ Status: 🟡 placeholder in use · 🔴 blocks launch · ✅ resolved
 | P4 | Launch date "January 1, 2027" | `frontend/src/pages/index.astro` (`LAUNCH_DATE`) | Business placeholder — owner may change the date. | 🟡 |
 | P5 | Notify-me via `mailto:vyotish@gmail.com` | `frontend/src/pages/index.astro` | Works today; replaced by newsletter signup (Supabase) in Epic 2/Epic 7 with proper transactional email. | 🟡 |
 | P6 | Contact email `vyotish@gmail.com` on Coming-Soon page | `frontend/src/pages/index.astro` | Owner-supplied; role addresses (hello@/support@/privacy@) planned per PRD §16. | 🟡 |
-| P7 | Legal pages text (Privacy, Terms, Refund, Disclaimer, About, Contact) | Epic 2.3 skeletons → Epic 7.3 content | Placeholder copy until owner supplies entity details + legal review (DPDP Act 2023). | 🔴 |
+| P7 | Legal pages text (Privacy, Terms, Refund, Disclaimer, About, Contact) | Epic 2.3 skeletons → Epic 7.3 content | **Drafts landed 2026-11-21** (7.3): all 5 pages fully written, DPDP-grounded, no placeholder notes remain. Owner review + entity legal name/address (ECR Rule 4(2)) + grievance-officer name (Rule 4(4)) still needed → launch-blockers #3. Contact page copy was already final (UX session 2026-11-20). | 🟡 |
 | P8 | Astrologer listings | Epic 5.2 | Clearly-marked sample data; never presented as real. | 🔴 |
 | P9 | Pooja catalogue + prices | Epic 5.3 | Clearly-marked sample data. | 🔴 |
 | P10 | Horoscope content | Epic 5.1 | Rolling 12×EN/HI sample seeds **live in Supabase** (`is_sample=true`, API returns the flag); admin-editable later. | 🔴 |
