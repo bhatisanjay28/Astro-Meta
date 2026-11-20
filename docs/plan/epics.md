@@ -32,7 +32,7 @@ Status legend: ⬜ todo · 🔄 in progress · ✅ done · 🔶 done with refine
 | §6 | Home page | 2.2 🔶, **2.5 (picker + popular calculators)** |
 | §7 | Blog & admin | 6.1–6.4 |
 | §8 | Engine accuracy/config | 1.x ✅ + **1.9 (config), 1.10 (Sade Sati/divisionals)** |
-| §9 | Design/icons | 2.1 ✅, **2.6 (zodiac+planet icons)**; palette = owner-provided |
+| §9 | Design/icons | 2.1 ✅, **2.6 ✅ (Material Symbols per D11)**; palette = owner-provided |
 | §10 | Architecture/data | 0.x ✅, contracts in this file |
 | §11–13 | SEO/Perf/A11y | 7.1, 8.2, 2.4 ✅ |
 | §14 | Security | 7.2 (Turnstile+rate-limit on all forms) |
@@ -48,7 +48,15 @@ Status legend: ⬜ todo · 🔄 in progress · ✅ done · 🔶 done with refine
 0.1 Meta orchestrator registers ✅ · 0.2 Backend re-arch ✅ · 0.3 Astro migration ✅ ·
 0.4 Supabase dev project + schema V1 + RLS + seed ✅ · 0.5 Env & secrets ✅
 *(CI pipeline live 2026-11-19; repo + worker secrets set.)*
-- **0.5b 🔶 polish:** secret-scan pre-commit hook (gitleaks) in all 3 repos.
+- **0.5b ✅ polish (2026-11-20):** secret-scan pre-commit hook in all 3 repos — gitleaks
+  unavailable on the box → portable Bun scanner `scripts/secret-scan.ts` (meta 4a989fa):
+  9 high-confidence patterns (PEM / AKIA / AIza / gh_ / github_pat_ / xox / sk_live /
+  sb_secret_ / credential-assignment), `secret-scan:allow` line marker for documented
+  exceptions, `--all` full-tree sweep mode. Hooks at `.git/hooks/pre-commit` +
+  `.git/modules/{backend,frontend}/hooks/pre-commit` (absolute bun path). Tested live:
+  fake AKIA blocked (meta), fake ghp_ blocked (backend submodule branch), allow-marker
+  passes, clean passes, `--all` sweeps clean ×3. Upgrade path: swap hook bodies for
+  gitleaks, keep the exit contract (0 clean / 1 leak).
 
 ## Epic 1 — Calculation Engine — ✅ 6/6 + 4 NEW
 1.1 Astronomy layer ✅ · 1.2 Panchang limbs ✅ · 1.3 Kundli core ✅ · 1.4 Muhurat rules ✅ ·
@@ -92,7 +100,7 @@ Status legend: ⬜ todo · 🔄 in progress · ✅ done · 🔶 done with refine
   /horoscope/{sign}/daily (frontend local 9d20739); popular-calculators strip hrefs
   live via content_blocks (DB updated via MCP → real tool pages); horoscope picker +
   calculator strip fully wired to the D11 design.
-- **2.6 🔶 Zodiac + planet icon set (PRD §9):** design mandates **Material Symbols**
+- **2.6 ✅ Zodiac + planet icon set (PRD §9):** design mandates **Material Symbols**
   (variable font) — adopted per D11 as the icon system (nav, cards, FAQ, forms);
   custom SVG zodiac set not required while D11 governs. ONE swappable font link.
 - **2.3b ✅ polish:** consent-banner stub in Base (honest "no analytics yet" notice,
@@ -129,8 +137,14 @@ manglik/kaal-sarp in the response; calculator endpoints landed with 4.4**) ·
   12 Rahu-house types, Lo Shu grid, FLAMES/love/friendship/name-compat for_fun,
   vehicle numbers, mobile/name numerology, age) + GET /api/v1/calculators/{…} ×16
   (backend 9ad9db8) + 17 shared-template pages (BirthForm + generic renderer).
-- **4.2b 🔶:** city **autocomplete** ✅ (datalist over /cities — Epic 9.4); short
-  interpretations block ⬜ (needs an admin-authored content source — lands with 6.4).
+- **4.2b ✅ (2026-11-20):** city **autocomplete** ✅ (datalist → PlaceField, Epic 9.4/4.7);
+  short **interpretations block ✅** — admin-authored via the existing `content_blocks`
+  table: public GET /api/v1/content/blocks?prefix=kundli. (backend ead7867, pushed+live)
+  + admin CRUD /api/v1/admin/content-blocks and the /admin/blocks editor (frontend
+  80976ea LOCAL, nav entry added); kundli page renders published kundli.* notes
+  fail-soft per block (3 sample notes seeded via MCP, is_sample=true); the dosha
+  fine-print now shows API verdicts (1.10 sade_sati/manglik/kaal_sarp) instead of the
+  stale client-side checks; planetary table gains a Navamsha (D9) column.
 - **4.7 ✅ Birthplace pickers (owner directive, 2026-11-20):** Google Places (New) +
   Time Zone API proxied through the backend (GET /api/v1/places/autocomplete +
   /places/resolve, backend b3b003e — key never reaches the browser; rate-limited
@@ -167,8 +181,13 @@ manglik/kaal-sarp in the response; calculator endpoints landed with 4.4**) ·
 /horoscope/{sign}/{period} pages with runtime API text** — frontend local 9d20739) ·
 5.2 Astrologer directory+booking ✅ (GET /astrologers +/{slug} + POST
 /requests/consultation — backend d3d25a4 live; /consultations directory + BookingForm;
-individual profile [slug] pages ⬜ small follow-up; Turnstile + admin notify = 7.2/6.4;
-offers-config via site_settings ⬜) · 5.3 Poojan catalogue+booking ✅ (GET /pujas
+**individual profile pages + offers-config ✅ (2026-11-20):** /consultations/{slug} and
+/poojan/{slug} static pages (breadcrumb + BreadcrumbList JSON-LD, facts grid, session
+types, in sitemap) + OfferStrip on both directories fed by the `public.offers_config`
+site setting. **Admin contract (no new UI):** settings UI, key `public.offers_config`,
+value = JSON array `[{"text": "…", "href": "/path", "audience": "consultation|puja|all"}]`
+(href optional, must start "/"; audience filters placement; max 5 shown; renderer
+validates shape fail-soft → empty). Turnstile + admin notify = 7.2/6.4) · 5.3 Poojan catalogue+booking ✅ (GET /pujas
 (+/{slug}, ?category=) + POST /requests/puja live; /poojan catalogue + BookingForm) ·
 5.4 Gemstones ✅ (wired to GET /settings — links out to the store the moment
 `public.gemstones_site_url` is set)
@@ -221,7 +240,8 @@ login/newsletter/booking POSTs + /places (429s, backend ba57577); **dependency a
 ws/undici/sharp — the remaining 16 sit in astro/zod/esbuild/cloudflare-adapter majors,
 build/dev-time only, none ship in the static artifact; major upgrades = owner decision)**;
 **secret scan ✅ (2026-11-20: all 3 repos — no tracked secret-like files, no key-pattern
-literals, backend/.env properly gitignored)**; ⬜ CSP (needs a production deploy loop to
+literals, backend/.env properly gitignored)**; **+ 0.5b pre-commit secret-scan hooks
+installed & tested in all 3 repos (2026-11-20 — see Epic 0)**; ⬜ CSP (needs a production deploy loop to
 verify → D8 owner gate), volumetric WAF/Turnstile (owner keys) ·
 7.3 Legal content final drafts + DPDP statements + grievance contact ⬜ (pages exist;
 drafts need owner review) · 7.4
@@ -299,13 +319,17 @@ frontend a thin renderer over `/api/v1/*`. Unblocks 2.5 and feeds 5.2/5.3/6.4 la
 | G14 | Choghadiya in muhurat today (§5.4); WhatsApp chat (§16); newsletter endpoint; offers-config; consent stub; gemstones setting-wiring | scattered/absent | **3.4b / 7.4 / 5.5 / 5.2 / 2.3b / 5.4** |
 
 ## Story totals
-E0 5✅ + 1 polish · E1 10✅(incl 1.7–1.10) · E2 6✅(incl 2.7, 2.5, 2.3b) + 1🔶(2.6) ·
-E3 4✅ + 3.2b/3.4b/3.1b ✅ · E4 6✅(+4.5/4.6/4.7) + 4.2b 🔶 · E5 5✅ ·
-E6 4✅ · E7 3🔶→7.1✅(7.2/7.4 owner-keys remain) · E8 1✅(8.1+8.1b) · E9 4✅ (D12)
-**= 51 tracked stories: ~48 done · partials: 2.5 (2.6/4.2b refinements + 5.2 profile
-pages), 7.2/7.4 (CSP/WAF/Turnstile/CF-analytics/error-monitoring/email — owner keys),
-7.3 (owner review), 8.2–8.4 (owner gates) · remaining owner actions: GOOGLE_PLACES_API_KEY
-(optional, upgrades pickers worldwide), frontend review/push decision**
+E0 5✅ + 0.5b ✅ · E1 10✅(incl 1.7–1.10) · E2 2.1–2.7 all ✅ (incl 2.5/2.3b/2.6) ·
+E3 4✅ + 3.2b/3.4b/3.1b ✅ · E4 4.1–4.7b all ✅ (incl 4.2b interpretations) ·
+E5 5✅ (5.2 profile [slug] + offers-config ✅) ·
+E6 4✅ · E7 7.1✅ (7.2/7.4 owner-keys remain) · E8 1✅(8.1+8.1b) · E9 4✅ (D12)
+**= 51 tracked stories: all code-side work done (2026-11-20) · remaining items are
+owner-gated only: 7.2 CSP/WAF/Turnstile (owner keys + production deploy loop), 7.3 legal
+drafts (owner review), 7.4 CF-analytics/error-monitoring/email (owner accounts), 8.2
+Lighthouse / 8.3 device matrix / 8.4 launch review (owner gates) · owner actions:
+GOOGLE_PLACES_API_KEY (optional, upgrades pickers worldwide), frontend review/push
+decision (frontend LOCAL 80976ea, ahead 15 of origin), `bun scripts/setup-first-admin.ts
+--email …`, D8 deploy approval**
 
 ## Dependencies
 1.7→3.2b/3.4b ✅ · 1.8→4.1(match)/4.3 ✅ · 1.10→4.2 ✅ · 2.5→5.1 + E9.2 ✅ ·
@@ -313,11 +337,11 @@ E1 done earlier unlocked E3/E4 ✅ · E6.3 needs 6.2 · E7/E8 last ·
 E9.4 needs E9.1–9.3 ✅ · E5/E6 can parallelise after E4 ✅.
 
 ## Polish / debt register (tracked, not owner-blocking)
-3.1b cache+cron ✅ (edge-cache optional) · 3.2b monthly calendar view ✅ · 4.2b interpretations ⬜ ·
-5.2 profile [slug] pages + offers-config ⬜ · 0.5b secret-scan hook ⬜ (one-off scans ✅ 2026-11-20) ·
+3.1b cache+cron ✅ (edge-cache optional) · 3.2b monthly calendar view ✅ · 4.2b interpretations ✅ ·
+5.2 profile [slug] pages + offers-config ✅ · 0.5b secret-scan hook ✅ (installed+tested in all 3 repos; sweeps clean 2026-11-20) ·
 kundli sade_sati.next boundary jitter ±ms (iterative transit search; UI shows dates only) ·
-BirthForm PlaceField grid alignment (minor cosmetic) ·
-P3 self-hosted fonts · P20 Lighthouse · P19 Docker build test · token rotation.
+BirthForm PlaceField grid alignment ✅ (full-row wrapper, 2026-11-20) ·
+P3 self-hosted fonts · P20 Lighthouse · P19 Docker build test (⬜ not runnable on this box — no docker installed) · token rotation.
 
 ## Pre-launch gates (owner-visible)
 Jyotishi review of muhurat rules (P11) · Jyotishi/owner engine sign-off (P16/D5) ·
