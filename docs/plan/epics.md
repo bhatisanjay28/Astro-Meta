@@ -334,8 +334,9 @@ owner-gated only: 7.2 CSP/WAF/Turnstile (owner keys + production deploy loop), 7
 drafts (owner review), 7.4 CF-analytics/error-monitoring/email (owner accounts), 8.2
 Lighthouse / 8.3 device matrix / 8.4 launch review (owner gates) · owner actions:
 GOOGLE_PLACES_API_KEY (optional, upgrades pickers worldwide), frontend review/push
-decision (frontend LOCAL 80976ea, ahead 15 of origin), `bun scripts/setup-first-admin.ts
---email …`, D8 deploy approval**
+decision (frontend LOCAL, ahead 16 of origin), admin sign-in password check
+(vyotish@gmail.com admin row exists since 2026-11-19 — see launch-blockers.md #2),
+D8 deploy approval**
 
 Remaining items each carry an enriched BMAD story in
 [stories-remaining.md](stories-remaining.md) (story-first hard rule, owner 2026-11-20:
