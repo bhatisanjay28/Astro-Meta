@@ -331,6 +331,11 @@ GOOGLE_PLACES_API_KEY (optional, upgrades pickers worldwide), frontend review/pu
 decision (frontend LOCAL 80976ea, ahead 15 of origin), `bun scripts/setup-first-admin.ts
 --email …`, D8 deploy approval**
 
+Remaining items each carry an enriched BMAD story in
+[stories-remaining.md](stories-remaining.md) (story-first hard rule, owner 2026-11-20:
+story written + reviewed before implementation — S1 P3 fonts READY, S4 8.2 Lighthouse
+READY, S6 launch-blocker list READY; rest owner-gated/blocked/parked as marked).
+
 ## Dependencies
 1.7→3.2b/3.4b ✅ · 1.8→4.1(match)/4.3 ✅ · 1.10→4.2 ✅ · 2.5→5.1 + E9.2 ✅ ·
 E1 done earlier unlocked E3/E4 ✅ · E6.3 needs 6.2 · E7/E8 last ·
