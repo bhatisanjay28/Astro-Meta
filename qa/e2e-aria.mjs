@@ -34,6 +34,27 @@ for (const path of PAGES) {
   assert(violations.length === 0, `${path}: no aria-allowed-attr violations`);
 }
 
+// BUG-05 — header logo accessible name must contain the visible text
+// (label-content-name-mismatch used to fire on all ~298 pages).
+{
+  await page.goto(BASE + "/", { waitUntil: "load" });
+  await page.waitForTimeout(300);
+  await page.addScriptTag({ content: axeSrc });
+  const mismatch = await page.evaluate(() =>
+    window.axe
+      .run(document, { runOnly: { type: "tag", values: ["wcag2a", "wcag2aa"] } })
+      .then((r) => r.violations.filter((v) => v.id === "label-content-name-mismatch")),
+  );
+  assert(mismatch.length === 0, "homepage: no label-content-name-mismatch (logo aria-label)");
+  const logo = await page.evaluate(() =>
+    document.querySelector('header a[aria-label]')?.getAttribute("aria-label"),
+  );
+  assert(
+    (logo ?? "").toLowerCase().includes("vyotish vedic astrology & wisdom"),
+    "logo aria-label contains the visible brand text",
+  );
+}
+
 // combobox wiring on a representative field
 await page.goto(BASE + "/muhurat", { waitUntil: "load" });
 const wiring = await page.evaluate(() => {
