@@ -143,6 +143,24 @@ manglik/kaal-sarp in the response; calculator endpoints landed with 4.4**) ·
   and both muhurat city inputs; baked city lists removed from kundli + muhurat (D12).
   Browser-tested end-to-end; submit guards show honest errors until a suggestion is
   picked.
+- **4.7b ✅ Worldwide coverage + places store (owner directive, 2026-11-20):** the
+  DB itself now carries all places — GeoNames seed (backend dd697ac, CC BY 4.0,
+  scripts/seed-cities.ts): cities5000 worldwide + India towns pop≥1000 → **70,718
+  cities (7,216 India)** upserted on geonames_id, population-ranked, collision-safe
+  slugs (single-owner claims; panchang slugs preserved). Migration 0009: `places`
+  store (validated+stored reference data, service-role RLS), pg_trgm GIN on
+  name/search_names, country + search_names columns (exonyms: "Calcutta"→Kolkata,
+  romanizations, native scripts). /places/resolve returns structured
+  {place_id, lat, lng, tz, label, structured{main,admin1,country,country_code}},
+  writes through to the store, and answers repeat Google ids cache-first (saves
+  quota, works keyless). /cities is a search endpoint (?q=, ?limit≤200) — build
+  consumers scoped. Frontend cd63b0f (LOCAL): home kundli+panchang dropdowns →
+  PlaceField (datalist broke at 70k rows), panchang index worldwide search field,
+  panchang page set India-first (110 IN + 50 world = 160 pages incl Nagpur/Indore),
+  place_id hidden input on every form, place:selected now bubbles (fixed stale
+  HomePanchang data bug). E2E re-verified on every birthplace surface with small
+  towns (Sirohi/Bundi/Sri Ganganagar/Jodhpur). Still pending owner: the Google key
+  upgrades suggestions to Google's worldwide dataset — no code change needed.
 
 ## Epic 5 — Horoscope, Consultations, Poojan, Gemstones — ✅ 5/5
 5.1 Horoscope ✅ (**GET /horoscope LIVE + /horoscope/ hub + 72 static
