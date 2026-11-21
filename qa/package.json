@@ -1,0 +1,9 @@
+{
+  "name": "qa",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "axe-core": "^4.14.1",
+    "playwright-core": "1.65.1"
+  }
+}

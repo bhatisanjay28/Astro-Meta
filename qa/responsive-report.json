@@ -1,0 +1,142 @@
+{
+  "overflow": {
+    "360": [],
+    "768": [],
+    "1024": []
+  },
+  "perf": {
+    "/": {
+      "domContentLoaded": 835,
+      "load": 881,
+      "resources": 63,
+      "transferKB": 3217,
+      "big": [
+        "material-symbols-outlined-var-latin.woff2 1118KB",
+        "client 295KB",
+        "icons.js?v=8dff3357 271KB"
+      ],
+      "docHeight": 7522,
+      "blockingScripts": 0,
+      "wallMs": 2419
+    },
+    "/kundli": {
+      "domContentLoaded": 215,
+      "load": 222,
+      "resources": 58,
+      "transferKB": 11,
+      "big": [
+        "kundli.astro?astro&type=style&index=0&lang.css 5KB",
+        "client 0KB",
+        "PlaceField.astro?astro&type=style&index=0&lang.css 0KB"
+      ],
+      "docHeight": 1212,
+      "blockingScripts": 0,
+      "wallMs": 1740
+    },
+    "/matching": {
+      "domContentLoaded": 137,
+      "load": 150,
+      "resources": 60,
+      "transferKB": 152,
+      "big": [
+        "noto-sans-devanagari-600-devanagari.woff2 118KB",
+        "noto-sans-devanagari-600-latin.woff2 25KB",
+        "matching.astro?astro&type=style&index=0&lang.css 4KB"
+      ],
+      "docHeight": 1625,
+      "blockingScripts": 0,
+      "wallMs": 1678
+    },
+    "/panchang/new-delhi": {
+      "domContentLoaded": 279,
+      "load": 282,
+      "resources": 65,
+      "transferKB": 56,
+      "big": [
+        "PanchangDetail.astro?astro&type=script&index=0&lan 21KB",
+        "panchang-calendar.ts 20KB",
+        "PanchangDetail.astro?astro&type=style&index=0&lang 7KB"
+      ],
+      "docHeight": 2501,
+      "blockingScripts": 0,
+      "wallMs": 1827
+    },
+    "/calculators/rashi": {
+      "domContentLoaded": 177,
+      "load": 180,
+      "resources": 60,
+      "transferKB": 11,
+      "big": [
+        "[tool].astro?astro&type=style&index=0&lang.css 4KB",
+        "client 0KB",
+        "PlaceField.astro?astro&type=style&index=0&lang.css 0KB"
+      ],
+      "docHeight": 1490,
+      "blockingScripts": 0,
+      "wallMs": 1727
+    },
+    "/blog": {
+      "domContentLoaded": 289,
+      "load": 290,
+      "resources": 61,
+      "transferKB": 28,
+      "big": [
+        "blog-search.ts 9KB",
+        "index.astro?astro&type=script&index=0&lang.ts 7KB",
+        "index.astro?astro&type=style&index=0&lang.css 3KB"
+      ],
+      "docHeight": 1307,
+      "blockingScripts": 0,
+      "wallMs": 1804
+    },
+    "/horoscope": {
+      "domContentLoaded": 120,
+      "load": 121,
+      "resources": 58,
+      "transferKB": 8,
+      "big": [
+        "index.astro?astro&type=style&index=0&lang.css 2KB",
+        "client 0KB",
+        "tokens.css 0KB"
+      ],
+      "docHeight": 1449,
+      "blockingScripts": 0,
+      "wallMs": 1655
+    },
+    "/contact": {
+      "domContentLoaded": 152,
+      "load": 156,
+      "resources": 57,
+      "transferKB": 15,
+      "big": [
+        "contact.astro?astro&type=style&index=0&lang.css 8KB",
+        "client 0KB",
+        "tokens.css 0KB"
+      ],
+      "docHeight": 1931,
+      "blockingScripts": 0,
+      "wallMs": 1698
+    },
+    "/muhurat": {
+      "domContentLoaded": 276,
+      "load": 280,
+      "resources": 59,
+      "transferKB": 11,
+      "big": [
+        "index.astro?astro&type=style&index=0&lang.css 5KB",
+        "client 0KB",
+        "PlaceField.astro?astro&type=style&index=0&lang.css 0KB"
+      ],
+      "docHeight": 1956,
+      "blockingScripts": 0,
+      "wallMs": 1848
+    }
+  },
+  "hindi": {
+    "lang": "hi",
+    "title": "व्योतिष — प्रामाणिक वैदिक ज्योतिष",
+    "h1": "वैदिक ज्ञान, आधुनिक जीवन के लिए",
+    "hasDevanagari": true,
+    "boxOverflow": false
+  }
+}

@@ -1,7 +1,8 @@
 // S13 — owner-requested calculators: moon-phase / sun-sign / destiny-number.
 // Black-box e2e through the real UI: fill the form, submit, assert the
-// research-verified vectors render; plus strict WCAG AA contrast (axe) on all
-// three pages in BOTH light and dark mode.
+// research-verified vectors render (S14-2 shared block renderer: verdict card
+// / chips / detail rows); plus strict WCAG AA contrast (axe) on all three
+// pages in BOTH light and dark mode.
 // Run: bun qa/e2e-s13-calculators.mjs   (preview server on :4321 required;
 // backend must be deployed — pages call the live worker API)
 import { chromium } from "playwright-core";
@@ -26,26 +27,30 @@ async function calc(path, fields) {
     await page.fill(`[name="${name}"]`, value);
   }
   await page.click("form button[type=submit]");
-  await page.waitForSelector("[data-calc-result] .grid-result", { timeout: 15000 });
-  // key → rendered text of the value cell
+  await page.waitForSelector("[data-calc-result] .verdict-card, [data-calc-result] .hint.err", { timeout: 15000 });
+  // S14-2 renderer shapes: verdict card, chips ("Label value"), detail rows ("k=v")
   return page.evaluate(() => {
-    const out = {};
-    document.querySelectorAll("[data-calc-result] .row").forEach((row) => {
-      const k = row.querySelector(".k")?.textContent?.trim();
-      const v = row.querySelector(".v")?.textContent?.trim();
-      if (k) out[k] = v ?? "";
-    });
-    return out;
+    const $ = (sel) => Array.from(document.querySelectorAll(`[data-calc-result] ${sel}`));
+    return {
+      verdict: document.querySelector("[data-calc-result] .verdict-main")?.textContent?.trim() ?? "",
+      sub: document.querySelector("[data-calc-result] .verdict-sub")?.textContent?.trim() ?? "",
+      chips: $(".chip").map((c) =>
+        [c.querySelector(".chip-k")?.textContent?.trim(), c.querySelector(".chip-v")?.textContent?.trim()]
+          .filter(Boolean)
+          .join(" "),
+      ),
+      rows: $(".row").map((r) => `${r.querySelector(".k")?.textContent?.trim()}=${r.querySelector(".v")?.textContent?.trim()}`),
+    };
   });
 }
 
 function check(caseName, result, expectations) {
   const row = { case: caseName, ok: true, misses: [] };
   for (const [key, predicate] of Object.entries(expectations)) {
-    const value = result[key] ?? "";
+    const value = result[key];
     if (!predicate(value)) {
       row.ok = false;
-      row.misses.push(`${key}="${value}"`);
+      row.misses.push(`${key}=${JSON.stringify(value)?.slice(0, 140)}`);
     }
   }
   if (!row.ok) failures++;
@@ -53,57 +58,58 @@ function check(caseName, result, expectations) {
   console.log(`${row.ok ? "PASS" : "FAIL"}  ${caseName}${row.ok ? "" : " → " + row.misses.join("; ")}`);
 }
 
-const includes = (needle) => (v) => v.includes(needle);
+const includes = (needle) => (v) => typeof v === "string" && v.includes(needle);
+const has = (needle) => (v) =>
+  Array.isArray(v) ? v.some((x) => String(x).includes(needle)) : String(v ?? "").includes(needle);
 
-// 1. Moon phase — full-moon instant (published 2025-01-13 22:26 UTC)
+// 1. Moon phase — full-moon instant (published 2025-01-13 22:26 UTC; 22:30 is
+// just past full → waning, chips carry motion, rows carry neighbouring phases)
 const fm = await calc("/calculators/moon-phase/", { date: "2025-01-13", time: "22:30" });
 check("moon-phase FM 2025-01-13 22:30 UTC", fm, {
-  phase: includes("Full Moon"),
-  waxing: includes("No"),
-  prev_new_moon: includes("2024-12-30"),
-  next_new_moon: includes("2025-01-29"),
-  next_full_moon: includes("2025-02-12"),
+  verdict: includes("Full Moon"),
+  chips: has("Waning"),
+  // neighbouring phases render in display format ("31 Dec 2024, 03:57 am")
+  rows: has("Previous new moon=31 Dec 2024") && has("Next new moon=29 Jan 2025") && has("Next full moon=12 Feb 2025"),
 });
 
 // 2. Moon phase — date-only default (noon UTC) lands in the NM bucket for 2025-06-25
 const nm = await calc("/calculators/moon-phase/", { date: "2025-06-25" });
 check("moon-phase date-only 2025-06-25", nm, {
-  phase: includes("New Moon"),
-  next_full_moon: includes("2025-07-10"),
+  verdict: includes("New Moon"),
+  // API returns 2025-07-10T20:37Z → IST 11 Jul, which is what the renderer shows
+  rows: has("Next full moon=11 Jul 2025"),
 });
 
 // 3. Sun sign — Makar Sankranti day 2025 (ingress 09:03 IST → noon UTC is Makara)
 const sun = await calc("/calculators/sun-sign/", { date: "2025-01-14" });
 check("sun-sign Makar Sankranti 2025-01-14", sun, {
-  tropical_sign: includes("Capricorn"),
-  rashi: includes("Capricorn"),
-  lord: includes("Saturn"),
+  verdict: includes("Capricorn"),
+  sub: has("Capricorn"),
+  chips: has("Sign lord Saturn"),
 });
 
-// 4. Sun sign — Mesha ingress straddle (Apr 13 Meena / Apr 15 Mesha)
+// 4. Sun sign — Mesha ingress straddle. The verdict card shows the WESTERN
+// (tropical) sign; the vedic rashi rides in the sub line. On 2025-04-13 the
+// tropical sun is already Aries (ingress Mar 20) while sidereal is still Meena.
 const meena = await calc("/calculators/sun-sign/", { date: "2025-04-13" });
-check("sun-sign 2025-04-13 (pre-ingress)", meena, { rashi: includes("Pisces") });
+check("sun-sign 2025-04-13 (pre-ingress)", meena, { verdict: includes("Aries"), sub: has("Pisces") });
 const mesha = await calc("/calculators/sun-sign/", { date: "2025-04-15" });
-check("sun-sign 2025-04-15 (post-ingress)", mesha, { rashi: includes("Aries"), lord: includes("Mars") });
+check("sun-sign 2025-04-15 (post-ingress)", mesha, { verdict: includes("Aries"), sub: has("Mesha"), chips: has("Sign lord Mars") });
 
 // 5. Destiny — master-33 case (bhagyank.in shows 33, AstroTalk shows 6)
 const master = await calc("/calculators/destiny-number/", { date: "1970-06-19" });
 check("destiny master-33 1970-06-19", master, {
-  destiny: includes("6"),
-  destiny_sum: includes("33"),
-  master: includes("Yes"),
-  mulank: includes("1"),
-  destiny_lord: includes("Venus"),
-  mulank_lord: includes("Sun"),
+  verdict: includes("6"),
+  chips: has("Mulank 1") && has("Destiny lord Venus") && has("Mulank lord Sun") && has("Master number Yes"),
+  rows: has("Full sum before reduction=33") && has("Master number=Yes"),
 });
 
 // 6. Destiny — plain vectors (Independence Day → 8/Saturn)
 const indep = await calc("/calculators/destiny-number/", { date: "1947-08-15" });
 check("destiny 1947-08-15", indep, {
-  destiny: includes("8"),
-  destiny_lord: includes("Saturn"),
-  mulank: includes("6"),
-  master: includes("No"),
+  verdict: includes("8"),
+  chips: has("Destiny lord Saturn") && has("Mulank 6"),
+  rows: has("Master number=No"),
 });
 
 // 7. Impossible date — the browser's type=date input is the client-side guard:

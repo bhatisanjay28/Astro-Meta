@@ -1,0 +1,108 @@
+{
+  "ran_at": "2026-11-21T17:49:06.747Z",
+  "cases": [
+    {
+      "case": "rashi verdict card",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "vimshottari-dasha page",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "lo-shu grid page",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "transits table",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "mangal-dosha MD2 (cancelled)",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "kaal-sarp page",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "flames trace",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "name-numerology with owner date",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "vehicle plate verdict",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "nakshatra new page",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "lagna new page",
+      "ok": true,
+      "misses": []
+    }
+  ],
+  "contrast": {
+    "light rashi": {
+      "ok": true,
+      "violations": []
+    },
+    "light vimshottari-dasha": {
+      "ok": true,
+      "violations": []
+    },
+    "light lo-shu": {
+      "ok": true,
+      "violations": []
+    },
+    "light transits": {
+      "ok": true,
+      "violations": []
+    },
+    "dark rashi": {
+      "ok": true,
+      "violations": []
+    },
+    "dark vimshottari-dasha": {
+      "ok": true,
+      "violations": []
+    },
+    "dark lo-shu": {
+      "ok": true,
+      "violations": []
+    },
+    "dark transits": {
+      "ok": true,
+      "violations": []
+    }
+  },
+  "shots": [
+    "C:\\Users\\sanjay.bhati.OM\\Downloads\\Vyotish-Repos\\Astro-Meta\\_bmad-output\\calculators\\qa\\shots-after\\rashi-360.png",
+    "C:\\Users\\sanjay.bhati.OM\\Downloads\\Vyotish-Repos\\Astro-Meta\\_bmad-output\\calculators\\qa\\shots-after\\rashi-768.png",
+    "C:\\Users\\sanjay.bhati.OM\\Downloads\\Vyotish-Repos\\Astro-Meta\\_bmad-output\\calculators\\qa\\shots-after\\rashi-1024.png",
+    "C:\\Users\\sanjay.bhati.OM\\Downloads\\Vyotish-Repos\\Astro-Meta\\_bmad-output\\calculators\\qa\\shots-after\\rashi-1440.png",
+    "C:\\Users\\sanjay.bhati.OM\\Downloads\\Vyotish-Repos\\Astro-Meta\\_bmad-output\\calculators\\qa\\shots-after\\vimshottari-dasha-360.png",
+    "C:\\Users\\sanjay.bhati.OM\\Downloads\\Vyotish-Repos\\Astro-Meta\\_bmad-output\\calculators\\qa\\shots-after\\vimshottari-dasha-768.png",
+    "C:\\Users\\sanjay.bhati.OM\\Downloads\\Vyotish-Repos\\Astro-Meta\\_bmad-output\\calculators\\qa\\shots-after\\vimshottari-dasha-1024.png",
+    "C:\\Users\\sanjay.bhati.OM\\Downloads\\Vyotish-Repos\\Astro-Meta\\_bmad-output\\calculators\\qa\\shots-after\\vimshottari-dasha-1440.png",
+    "C:\\Users\\sanjay.bhati.OM\\Downloads\\Vyotish-Repos\\Astro-Meta\\_bmad-output\\calculators\\qa\\shots-after\\lo-shu-360.png",
+    "C:\\Users\\sanjay.bhati.OM\\Downloads\\Vyotish-Repos\\Astro-Meta\\_bmad-output\\calculators\\qa\\shots-after\\lo-shu-768.png",
+    "C:\\Users\\sanjay.bhati.OM\\Downloads\\Vyotish-Repos\\Astro-Meta\\_bmad-output\\calculators\\qa\\shots-after\\lo-shu-1024.png",
+    "C:\\Users\\sanjay.bhati.OM\\Downloads\\Vyotish-Repos\\Astro-Meta\\_bmad-output\\calculators\\qa\\shots-after\\lo-shu-1440.png"
+  ]
+}
