@@ -337,4 +337,124 @@ recorded < 0.1; commit LOCAL.
 
 Review verdict: **approved for implementation** — start order: S1 (frontend, LOCAL),
 S4, S6 (meta docs). S2 prep (`_headers`) rides with S1's deploy only after owner's D8
+
+---
+
+## S13 · Owner request (2026-11-21) — 3 new calculators: Moon Phase, Sun Sign (Surya Rashi), Destiny Number (Bhagyank) — **DONE** (backend 7a7da87 committed + deployed 94225ac0, live-verified; push stalled by network, retry pending; frontend 8189e22 LOCAL push-gated; DoD details in epics.md 4.8)
+
+**Story.** As a visitor I want three more self-serve calculators — Moon Phase (phase,
+illumination, age, next/prev new & full moon for any date), Sun Sign (Western tropical
+sign + Vedic Surya Rashi + Sun nakshatra), and Destiny Number (Bhagyank from the full
+DOB, with Mulank + planetary lords) — so vyotish.com covers the standard calculator
+trio, all computed by the backend engine (D12: API-first, frontend thin renderer).
+
+Owner's literal ask (2026-11-21): "moon phase calculator, sun shine calculator,
+destiny number calculator". Research verdict (3 web agents, 2026-11-21): **no
+astrology tool named "Sunshine Calculator" exists** (exact-phrase search + checks of
+prokerala/astrosage/drikpanchang/astro-seek/ganeshaspeaks); the space's standard tool
+is **"Sun Sign Calculator" / "Surya Rashi Calculator"** — building that, with BOTH
+tropical and sidereal output so neither interpretation is lost. Named `sun-sign`
+(page + API); the naming call is flagged to the owner in the session report.
+
+**Grounding (verified 2026-11-21).**
+- Backend pattern: engine wrappers in `backend/src/engine/calculators.ts`
+  (`moonPhaseName` L25–43 already bins 8 phases from tropical elongation;
+  `sunSignTropical` L46–51; `numerology` L106–123 already computes Bhagyank the
+  simplified-digit way), GET routes + `requireDate` in
+  `backend/src/routes/v1/calculators.ts`, engine exports `engine/index.ts:21`,
+  engine tests `backend/test/calculators.test.ts`, route-style tests via
+  `app.request` in `backend/test/app.test.ts`.
+- astronomy-engine 2.1.19 already a dep: `MoonPhase`, `Illumination().phase_fraction`,
+  `SearchMoonPhase(target, start, ±limitDays)` (negative = backward; verified against
+  the real npm build by research agent). New/full-moon instants cross-checked against
+  timeanddate UTC tables + NASA SVS hourly files + astro-seek; systematic engine-vs-
+  published offset ≤ ~1.5 min → assert ±2 min.
+- Sidereal plumbing exists: `bodies.ts` `sunSiderealLon` L19–21, `kundli.ts`
+  `signOf`/`nakshatraOf`; `matching.ts:232` `RASHI_LORDS` (unexported — export it).
+- Frontend pattern: registry-driven `frontend/src/pages/calculators/[tool].astro`
+  (TOOLS inside getStaticPaths; kinds birth/date/name/…; generic envelope renderer;
+  extraFields support optional inputs — time field rides on this), hub TIER2 list
+  `frontend/src/pages/calculators/index.astro:19–33`.
+- Destiny policy (research-verified live on bhagyank.in + AstroTalk + GaneshaSpeaks):
+  Bhagyank = digit-sum over DDMMYYYY reduced to one digit; Moolank = day reduced;
+  master totals {11,22,33} surface BOTH compound and root (GaneshaSpeaks "33 = 6"
+  superset display); lords 1 Sun, 2 Moon, 3 Jupiter, 4 Rahu, 5 Mercury, 6 Venus,
+  7 Ketu, 8 Saturn, 9 Mars (5 independent sources concur; Indian sites use Rahu/Ketu,
+  not Uranus/Neptune).
+
+**Acceptance criteria (Given/When/Then).**
+1. Moon phase: Given `GET /api/v1/calculators/moon-phase?date=2025-01-13`
+   (&time=HH:MM optional, default 12:00 UTC), when valid, then `data` carries `phase`
+   (8 classical names), `illumination` (0–1), `waxing`, `moon_age_days`,
+   `prev_new_moon`/`next_new_moon`/`prev_full_moon`/`next_full_moon` (ISO UTC),
+   Vedic moon `rashi`, `engine_version`. Instant assertions within ±2 min of
+   published values for vectors: 2025-01-13T22:27Z (FM; next FM 2025-02-12T13:53Z,
+   next NM 2025-01-29T12:35Z, prev NM 2024-12-30T22:27Z), 2025-06-11T07:44Z (FM),
+   2025-06-25T10:32Z (NM; next NM 2025-07-24T19:11Z), 2025-11-20T06:48Z (NM; next FM
+   2025-12-04T23:14Z), 2026-01-18T19:53Z (NM; next FM 2026-02-01T22:09Z).
+2. Phase buckets: Given elongation exactly 22.5 / 157.5 / 337.5, when binned, then
+   half-open [start,end) yields Waxing Crescent / Full Moon / New Moon (337.5° is
+   the START of the New Moon bucket — edges never flip to the neighbour).
+3. Sun sign: Given `GET /api/v1/calculators/sun-sign?date=`, when computed at 12:00
+   UTC, then `data` carries `tropical_sign`, sidereal `rashi` + `rashi_index`, Sun
+   `nakshatra` + `pada`, `lord`, `engine_version`. Sankranti cusp vectors:
+   2025-01-14 → Makara (after 09:03 IST ingress), 2025-04-13 → Meena, 2025-04-15 →
+   Mesha; tropical boundary 2026-04-19 → Aries / 2026-04-21 → Taurus stays green.
+4. Destiny: Given `GET /api/v1/calculators/destiny-number?date=`, when valid, then
+   `data` carries `destiny` (root), `destiny_sum` (compound pre-reduction), `master`
+   (true iff sum ∈ {11,22,33}), `mulank`, `destiny_lord`, `mulank_lord`,
+   `engine_version`. Vectors: 1970-06-19 → 6 (sum 33, master true, mulank 1);
+   1947-08-15 → 8; 1950-01-26 → 6; 1869-10-02 → 9; 1950-09-17 → 5 (mulank 8);
+   1985-08-15 → 1; 2004-02-29 → 1 (mulank 2).
+5. Validation: Given a missing/invalid date, an impossible calendar date
+   (2025-02-30 — Bun's ISO parser rolls it over to Mar 2, so routes validate with
+   a UTC round-trip check), or a time not matching HH:MM, when requested, then
+   400 `validation_error` in the standard error envelope.
+6. Frontend: Given /calculators/moon-phase (date + optional time), /calculators/
+   sun-sign and /calculators/destiny-number (date), when a visitor submits, then the
+   generic renderer shows the result rows; hub lists all three in TIER2; `bun run
+   build` passes; QA e2e (submit each page with a known vector, assert the expected
+   value renders, light+dark, axe contrast) passes with evidence in `qa/evidence/`.
+7. Commits: backend commit → push → wrangler deploy → live-verify the three
+   endpoints against the published vectors (topology D2); frontend LOCAL commit
+   only, push-gated (D8).
+
+**Steps.**
+1. Engine: add `moonPhaseDetails`, `sunSignDetails`, `destinyNumber` to
+   `calculators.ts`; export `RASHI_LORDS` from `matching.ts`; re-export from
+   `engine/index.ts`; keep `moonPhaseName` signature intact (existing consumers).
+2. Routes: 3 GET endpoints (requireDate + optional-time validation for moon-phase).
+3. Tests: extend `calculators.test.ts` (engine vectors incl. ±2 min instant asserts,
+   bucket edges, master-number case) + `app.test.ts` (envelope shape, 400s).
+4. QA gates: `bun test`, `biome check src test`, `tsc --noEmit`.
+5. Backend commit → push → `wrangler deploy` → live-verify 3 endpoints.
+6. Frontend: 3 registry entries + hub TIER2 rows; `bun run build`; QA e2e with
+   evidence; LOCAL commit.
+7. Meta: flip this story's status, add Epic-4 addendum line in `epics.md`.
+
+**Risks.** SearchMoonPhase backward semantics at exact-event instants (prev/next may
+return the event itself — documented, tests use instants ±1 min off the event);
+date-only moon-phase input assumes 12:00 UTC (stated on the page + response meta);
+sidereal/tropical frame mixing regression (reuse `elongation`, add no new frame
+math); master-number display divergence across sites (compound+root superset chosen);
+"sunshine" naming interpretation (flagged to owner; slug stays `sun-sign`).
+
+**DoD.** All backend tests green; 3 endpoints live-verified on the deployed worker;
+frontend build + e2e evidence saved; commits per D2/D8; epics.md addendum + this
+story's status flipped.
+
+
+
+| # | Check | Result |
+|---|-------|--------|
+| R1 | Fact-check: every file/line/state claim re-verified against the working tree 2026-11-21 | PASS — calculators.ts L25–43/46–51/106–123, routes requireDate L53–58, engine/index.ts:21, matching.ts:232, [tool].astro registry + index.astro TIER2 L19–33 all re-grepped this session; astronomy-engine 2.1.19 in backend/package.json |
+| R2 | Coverage: all three owner-asked calculators have endpoints + pages + tests | PASS — moon-phase, sun-sign, destiny-number each carry AC 1/3/4, route step, page step, e2e step |
+| R3 | AC testability: every Given/When/Then observable | PASS — numeric/ISO assertions with named published instants; 400s via HTTP status; e2e via rendered text |
+| R4 | Ownership/consent: backend push+deploy per D2 topology, frontend LOCAL per D8; owner explicitly asked for build+test-before-commit | PASS |
+| R5 | Risks incl. failure modes present (backward-search semantics, UTC assumption, frame mixing, master-number divergence, naming) | PASS |
+| R6 | DoD closes with epics.md flip + pointer | PASS |
+| R7 | Destiny/ sun-sign policy grounded in live-verified sources (bhagyank.in, AstroTalk, GaneshaSpeaks, DrikPanchang Sankranti tables) | PASS |
+
+Review verdict: **approved for implementation** (BMAD review 2026-11-21) — proceed:
+backend engine → routes → tests → deploy → frontend pages → e2e → LOCAL commit.
 decision; owner-gated stories wait on owner inputs.

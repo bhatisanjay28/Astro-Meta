@@ -123,6 +123,25 @@ Status legend: ⬜ todo · 🔄 in progress · ✅ done · 🔶 done with refine
   (backend 34da3c5, live-verified: Shubh/Char/Labh/Amrit slots render on the page).
 
 ## Epic 4 — Kundli & Calculators — ✅ 6/6 (+2 NEW stories below)
+
+- **4.8 ✅ Owner-requested calculators (S13, 2026-11-21):** Moon Phase / Sun Sign
+  (Surya Rashi) / Destiny Number (Bhagyank) — owner asked for "moon phase,
+  sun shine, destiny number"; research (3 web agents vs prokerala/astrosage/
+  drikpanchang/bhagyank.in/timeanddate/NASA) showed no astrology tool named
+  "sunshine calculator" exists → built the standard Sun Sign Calculator with
+  BOTH tropical + sidereal output (naming call flagged to owner). Engine:
+  moonPhaseDetails (neighbour lunations via SearchMoonPhase ±35d, age,
+  illumination, Vedic moon rashi), sunSignDetails (tropical + sidereal +
+  Sun nakshatra/pada + lord; RASHI_LORDS now exported from matching.ts),
+  destinyNumber (compound sum + master {11,22,33} flag + Rahu/Ketu lords).
+  Routes GET /calculators/{moon-phase,sun-sign,destiny-number} with an
+  isCalendarDate guard (Bun ISO parser rolls 2025-02-30 → Mar 2 silently).
+  Backend 7a7da87, deployed 94225ac0, live-verified vs published instants
+  (±2 min) + Sankranti cusps; tests 288 green (BMAD review APPROVED).
+  Frontend 8189e22 LOCAL: 3 registry pages + hub rows + sitemap sync +
+  shared-template .btn theme-aware fix (was 1.97:1 light-mode fail).
+  e2e-s13 14/14 + e2e-contrast no-regression (evidence qa/evidence/
+  s13-calculators.json). Backend push stalled (network) — retry tracked.
 4.1 Kundli API ✅ (**generate + POST /kundli/match via 1.8 + divisionals/Sade Sati/
 manglik/kaal-sarp in the response; calculator endpoints landed with 4.4**) ·
 4.2 Free Kundli UI ✅ · 4.3 Matching UI ✅ · 4.4 Calculator pages ✅

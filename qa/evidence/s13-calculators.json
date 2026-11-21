@@ -1,0 +1,71 @@
+{
+  "ran_at": "2026-11-21T07:25:35.782Z",
+  "cases": [
+    {
+      "case": "moon-phase FM 2025-01-13 22:30 UTC",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "moon-phase date-only 2025-06-25",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "sun-sign Makar Sankranti 2025-01-14",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "sun-sign 2025-04-13 (pre-ingress)",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "sun-sign 2025-04-15 (post-ingress)",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "destiny master-33 1970-06-19",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "destiny 1947-08-15",
+      "ok": true,
+      "misses": []
+    },
+    {
+      "case": "date input rejects impossible 2025-02-30",
+      "ok": true,
+      "actual": ""
+    }
+  ],
+  "contrast": {
+    "light /calculators/moon-phase/": {
+      "ok": true,
+      "violations": []
+    },
+    "light /calculators/sun-sign/": {
+      "ok": true,
+      "violations": []
+    },
+    "light /calculators/destiny-number/": {
+      "ok": true,
+      "violations": []
+    },
+    "dark /calculators/moon-phase/": {
+      "ok": true,
+      "violations": []
+    },
+    "dark /calculators/sun-sign/": {
+      "ok": true,
+      "violations": []
+    },
+    "dark /calculators/destiny-number/": {
+      "ok": true,
+      "violations": []
+    }
+  }
+}
