@@ -1,0 +1,4682 @@
+[
+  {
+    "slug": "rashi",
+    "kind": "birth",
+    "ok": true,
+    "pageTitle": "Rashi & Nakshatra Calculator — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "time",
+        "type": "time",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "lat",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "lng",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "tz",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "place_id",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      }
+    ],
+    "placeResolved": "✓ New Delhi, Delhi, India",
+    "resultClass": "grid-result",
+    "resultText": "rashiSagittarius\nrashiIndex8\nnakshatraUttara Ashadha\nnakshatraIndex20\npada1",
+    "rows": [
+      {
+        "k": "rashi",
+        "v": "Sagittarius",
+        "kBox": {
+          "w": 39,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 86,
+          "h": 23,
+          "x": 334
+        }
+      },
+      {
+        "k": "rashiIndex",
+        "v": "8",
+        "kBox": {
+          "w": 82,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 377
+        }
+      },
+      {
+        "k": "nakshatra",
+        "v": "Uttara Ashadha",
+        "kBox": {
+          "w": 81,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 126,
+          "h": 23,
+          "x": 376
+        }
+      },
+      {
+        "k": "nakshatraIndex",
+        "v": "20",
+        "kBox": {
+          "w": 124,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 19,
+          "h": 23,
+          "x": 419
+        }
+      },
+      {
+        "k": "pada",
+        "v": "1",
+        "kBox": {
+          "w": 43,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 5,
+          "h": 23,
+          "x": 338
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/rashi-360.png",
+      "768": "_bmad-output/calculators/qa/shots/rashi-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/rashi-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/rashi-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 142
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 142
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 142
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 142
+      }
+    }
+  },
+  {
+    "slug": "sade-sati",
+    "kind": "birth",
+    "ok": true,
+    "pageTitle": "Shani Sade Sati Check — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "time",
+        "type": "time",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "lat",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "lng",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "tz",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "place_id",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      }
+    ],
+    "placeResolved": "✓ New Delhi, Delhi, India",
+    "resultClass": "grid-result",
+    "resultText": "in_sade_satiNo\nphase—\nmoon_signTaurus\nmoon_sign_index1\nsaturn_signPisces\nsaturn_sign_index11\nsaturn_offset_from_moon10\ncurrent—\nnext\nstart2027-06-02T22:45:33.227Z\nend2034-07-12T22:21:59.945Z\nnoteSade Sati = Saturn transiting 12th/1st/2nd from natal Moon; window = first entry to final exit (mid-window retro dips ignored, classical presentation). Phases 1–3 in transit order. Pending Jyotishi review (P11).\nverifiedNo\n\nTable set pending Jyotishi review (P11) — treat as indicative.",
+    "rows": [
+      {
+        "k": "in_sade_sati",
+        "v": "No",
+        "kBox": {
+          "w": 106,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 22,
+          "h": 23,
+          "x": 401
+        }
+      },
+      {
+        "k": "phase",
+        "v": "—",
+        "kBox": {
+          "w": 50,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 14,
+          "h": 23,
+          "x": 345
+        }
+      },
+      {
+        "k": "moon_sign",
+        "v": "Taurus",
+        "kBox": {
+          "w": 92,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 54,
+          "h": 23,
+          "x": 387
+        }
+      },
+      {
+        "k": "moon_sign_index",
+        "v": "1",
+        "kBox": {
+          "w": 147,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 5,
+          "h": 23,
+          "x": 442
+        }
+      },
+      {
+        "k": "saturn_sign",
+        "v": "Pisces",
+        "kBox": {
+          "w": 97,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 50,
+          "h": 23,
+          "x": 392
+        }
+      },
+      {
+        "k": "saturn_sign_index",
+        "v": "11",
+        "kBox": {
+          "w": 151,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 446
+        }
+      },
+      {
+        "k": "saturn_offset_from_moon",
+        "v": "10",
+        "kBox": {
+          "w": 217,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 15,
+          "h": 23,
+          "x": 512
+        }
+      },
+      {
+        "k": "current",
+        "v": "—",
+        "kBox": {
+          "w": 58,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 14,
+          "h": 23,
+          "x": 353
+        }
+      },
+      {
+        "k": "next",
+        "v": "start2027-06-02T22:45:33.227Z\nend2034-07-12T22:21:59.945Z",
+        "kBox": {
+          "w": 34,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 850,
+          "h": 50,
+          "x": 295
+        }
+      },
+      {
+        "k": "start",
+        "v": "2027-06-02T22:45:33.227Z",
+        "kBox": {
+          "w": 37,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 206,
+          "h": 23,
+          "x": 332
+        }
+      },
+      {
+        "k": "end",
+        "v": "2034-07-12T22:21:59.945Z",
+        "kBox": {
+          "w": 31,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 200,
+          "h": 23,
+          "x": 326
+        }
+      },
+      {
+        "k": "note",
+        "v": "Sade Sati = Saturn transiting 12th/1st/2nd from natal Moon; window = first entry to final exit (mid-window retro dips ignored, classical presentation). Phases 1–3 in transit order. Pending Jyotishi review (P11).",
+        "kBox": {
+          "w": 36,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 849,
+          "h": 48,
+          "x": 295
+        }
+      },
+      {
+        "k": "verified",
+        "v": "No",
+        "kBox": {
+          "w": 59,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 22,
+          "h": 23,
+          "x": 354
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/sade-sati-360.png",
+      "768": "_bmad-output/calculators/qa/shots/sade-sati-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/sade-sati-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/sade-sati-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 583
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 433
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 408
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 408
+      }
+    }
+  },
+  {
+    "slug": "mangal-dosha",
+    "kind": "birth",
+    "ok": false,
+    "pageTitle": "Mangal Dosha Check — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "time",
+        "type": "time",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "lat",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "lng",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "tz",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "place_id",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      }
+    ],
+    "placeResolved": "✓ New Delhi, Delhi, India",
+    "resultClass": "hint err",
+    "resultText": "No route for GET /api/v1/kundli",
+    "rows": [],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 ()"
+    ],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/mangal-dosha-360.png",
+      "768": "_bmad-output/calculators/qa/shots/mangal-dosha-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/mangal-dosha-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/mangal-dosha-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      }
+    }
+  },
+  {
+    "slug": "kaal-sarp",
+    "kind": "birth",
+    "ok": false,
+    "pageTitle": "Kaal Sarp Yoga Check — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "time",
+        "type": "time",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "lat",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "lng",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "tz",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "place_id",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      }
+    ],
+    "placeResolved": "✓ New Delhi, Delhi, India",
+    "resultClass": "hint err",
+    "resultText": "No route for GET /api/v1/kundli",
+    "rows": [],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 ()"
+    ],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/kaal-sarp-360.png",
+      "768": "_bmad-output/calculators/qa/shots/kaal-sarp-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/kaal-sarp-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/kaal-sarp-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      }
+    }
+  },
+  {
+    "slug": "karakas",
+    "kind": "birth",
+    "ok": true,
+    "pageTitle": "Atmakaraka & Jaimini Karakas — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "time",
+        "type": "time",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "lat",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "lng",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "tz",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "place_id",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      }
+    ],
+    "placeResolved": "✓ New Delhi, Delhi, India",
+    "resultClass": "grid-result",
+    "resultText": "karakas\nkarakaAtmakaraka\nplanetMoon\nsignSagittarius\ndegree_in_sign29.85\nnavamsha_signSagittarius\nkarakaAmatyakaraka\nplanetMars\nsignAquarius\ndegree_in_sign24.4\nnavamsha_signTaurus\nkarakaBhratrikaraka\nplanetVenus\nsignPisces\ndegree_in_sign18.77\nnavamsha_signSagittarius\nkarakaMatrikaraka\nplanetJupiter\nsignGemini\ndegree_in_sign15.77\nnavamsha_signAquarius\nkarakaPutrakaraka\nplanetMercury\nsignAries\ndegree_in_sign14.33\nnavamsha_signLeo\nkarakaGnatikaraka\nplanetSaturn\nsignCapricorn\ndegree_in_sign1.54\nnavamsha_signCapricorn\nkarakaDarakaraka\nplanetSun\nsignTaurus\ndegree_in_sign0.4\nnavamsha_signCapricorn",
+    "rows": [
+      {
+        "k": "karakas",
+        "v": "karakaAtmakaraka\nplanetMoon\nsignSagittarius\ndegree_in_sign29.85\nnavamsha_signSagittarius\nkarakaAmatyakaraka\nplanetMars\nsignAquarius\ndegree_in_sign24.4\nnavamsha_signTaurus\nkarakaBhratrikaraka\nplanetVenus\nsignPisces\ndegree_in_sign18.77\nnavamsha_signSagittarius\nkarakaMatrikaraka\nplanetJupiter\nsignGemin",
+        "kBox": {
+          "w": 63,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 850,
+          "h": 875,
+          "x": 295
+        }
+      },
+      {
+        "k": "karaka",
+        "v": "Atmakaraka",
+        "kBox": {
+          "w": 55,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 99,
+          "h": 23,
+          "x": 350
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Moon",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 45,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Sagittarius",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 86,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "degree_in_sign",
+        "v": "29.85",
+        "kBox": {
+          "w": 128,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 43,
+          "h": 23,
+          "x": 423
+        }
+      },
+      {
+        "k": "navamsha_sign",
+        "v": "Sagittarius",
+        "kBox": {
+          "w": 132,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 86,
+          "h": 23,
+          "x": 427
+        }
+      },
+      {
+        "k": "karaka",
+        "v": "Amatyakaraka",
+        "kBox": {
+          "w": 55,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 119,
+          "h": 23,
+          "x": 350
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Mars",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 39,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Aquarius",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 71,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "degree_in_sign",
+        "v": "24.4",
+        "kBox": {
+          "w": 128,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 33,
+          "h": 23,
+          "x": 423
+        }
+      },
+      {
+        "k": "navamsha_sign",
+        "v": "Taurus",
+        "kBox": {
+          "w": 132,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 54,
+          "h": 23,
+          "x": 427
+        }
+      },
+      {
+        "k": "karaka",
+        "v": "Bhratrikaraka",
+        "kBox": {
+          "w": 55,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 107,
+          "h": 23,
+          "x": 350
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Venus",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 50,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Pisces",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 50,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "degree_in_sign",
+        "v": "18.77",
+        "kBox": {
+          "w": 128,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 36,
+          "h": 23,
+          "x": 423
+        }
+      },
+      {
+        "k": "navamsha_sign",
+        "v": "Sagittarius",
+        "kBox": {
+          "w": 132,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 86,
+          "h": 23,
+          "x": 427
+        }
+      },
+      {
+        "k": "karaka",
+        "v": "Matrikaraka",
+        "kBox": {
+          "w": 55,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 95,
+          "h": 23,
+          "x": 350
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Jupiter",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 55,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Gemini",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 57,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "degree_in_sign",
+        "v": "15.77",
+        "kBox": {
+          "w": 128,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 36,
+          "h": 23,
+          "x": 423
+        }
+      },
+      {
+        "k": "navamsha_sign",
+        "v": "Aquarius",
+        "kBox": {
+          "w": 132,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 71,
+          "h": 23,
+          "x": 427
+        }
+      },
+      {
+        "k": "karaka",
+        "v": "Putrakaraka",
+        "kBox": {
+          "w": 55,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 97,
+          "h": 23,
+          "x": 350
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Mercury",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 65,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Aries",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 39,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "degree_in_sign",
+        "v": "14.33",
+        "kBox": {
+          "w": 128,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 37,
+          "h": 23,
+          "x": 423
+        }
+      },
+      {
+        "k": "navamsha_sign",
+        "v": "Leo",
+        "kBox": {
+          "w": 132,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 27,
+          "h": 23,
+          "x": 427
+        }
+      },
+      {
+        "k": "karaka",
+        "v": "Gnatikaraka",
+        "kBox": {
+          "w": 55,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 98,
+          "h": 23,
+          "x": 350
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Saturn",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 52,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Capricorn",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 80,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "degree_in_sign",
+        "v": "1.54",
+        "kBox": {
+          "w": 128,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 29,
+          "h": 23,
+          "x": 423
+        }
+      },
+      {
+        "k": "navamsha_sign",
+        "v": "Capricorn",
+        "kBox": {
+          "w": 132,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 80,
+          "h": 23,
+          "x": 427
+        }
+      },
+      {
+        "k": "karaka",
+        "v": "Darakaraka",
+        "kBox": {
+          "w": 55,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 94,
+          "h": 23,
+          "x": 350
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Sun",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 30,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Taurus",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 54,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "degree_in_sign",
+        "v": "0.4",
+        "kBox": {
+          "w": 128,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 23,
+          "h": 23,
+          "x": 423
+        }
+      },
+      {
+        "k": "navamsha_sign",
+        "v": "Capricorn",
+        "kBox": {
+          "w": 132,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 80,
+          "h": 23,
+          "x": 427
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/karakas-360.png",
+      "768": "_bmad-output/calculators/qa/shots/karakas-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/karakas-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/karakas-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          900,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 917
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          900,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 917
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          900,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 917
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          900,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 917
+      }
+    }
+  },
+  {
+    "slug": "ishta-devata",
+    "kind": "birth",
+    "ok": true,
+    "pageTitle": "Ishta Devata (Atmakaraka base) — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "time",
+        "type": "time",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "lat",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "lng",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "tz",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "place_id",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      }
+    ],
+    "placeResolved": "✓ New Delhi, Delhi, India",
+    "resultClass": "grid-result",
+    "resultText": "atmakaraka\nkarakaAtmakaraka\nplanetMoon\nsignSagittarius\ndegree_in_sign29.85\nnavamsha_signSagittarius\nnavamsha_signSagittarius\nishta_devata—\nnoteIshta Devata = deity of the Atmakaraka's navamsha sign; the sign-to-deity table differs between classical schools and is pending Jyotishi verification (P11).",
+    "rows": [
+      {
+        "k": "atmakaraka",
+        "v": "karakaAtmakaraka\nplanetMoon\nsignSagittarius\ndegree_in_sign29.85\nnavamsha_signSagittarius",
+        "kBox": {
+          "w": 99,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 850,
+          "h": 125,
+          "x": 295
+        }
+      },
+      {
+        "k": "karaka",
+        "v": "Atmakaraka",
+        "kBox": {
+          "w": 55,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 99,
+          "h": 23,
+          "x": 350
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Moon",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 45,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Sagittarius",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 86,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "degree_in_sign",
+        "v": "29.85",
+        "kBox": {
+          "w": 128,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 43,
+          "h": 23,
+          "x": 423
+        }
+      },
+      {
+        "k": "navamsha_sign",
+        "v": "Sagittarius",
+        "kBox": {
+          "w": 132,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 86,
+          "h": 23,
+          "x": 427
+        }
+      },
+      {
+        "k": "navamsha_sign",
+        "v": "Sagittarius",
+        "kBox": {
+          "w": 132,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 86,
+          "h": 23,
+          "x": 427
+        }
+      },
+      {
+        "k": "ishta_devata",
+        "v": "—",
+        "kBox": {
+          "w": 108,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 14,
+          "h": 23,
+          "x": 403
+        }
+      },
+      {
+        "k": "note",
+        "v": "Ishta Devata = deity of the Atmakaraka's navamsha sign; the sign-to-deity table differs between classical schools and is pending Jyotishi verification (P11).",
+        "kBox": {
+          "w": 36,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 808,
+          "h": 48,
+          "x": 295
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/ishta-devata-360.png",
+      "768": "_bmad-output/calculators/qa/shots/ishta-devata-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/ishta-devata-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/ishta-devata-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          150,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 367
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          150,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 267
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          150,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 267
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          150,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 267
+      }
+    }
+  },
+  {
+    "slug": "transits",
+    "kind": "transits",
+    "ok": true,
+    "pageTitle": "Current Transit Chart — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "lat",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "lng",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "tz",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      },
+      {
+        "name": "place_id",
+        "type": "hidden",
+        "required": false,
+        "visible": false
+      }
+    ],
+    "resultClass": "grid-result",
+    "resultText": "as_of2026-11-21T15:12:44.102Z\ntimezoneAsia/Kolkata\ngrahas\nplanetSun\nlon215.0909\nsignScorpio\nsignIndex7\nnakshatraAnuradha\nnakshatraIndex16\npada1\nretrogradeNo\nplanetMoon\nlon354.6324\nsignPisces\nsignIndex11\nnakshatraRevati\nnakshatraIndex26\npada3\nretrogradeNo\nplanetMars\nlon123.9869\nsignLeo\nsignIndex4\nnakshatraMagha\nnakshatraIndex9\npada2\nretrogradeNo\nplanetMercury\nlon195.6222\nsignLibra\nsignIndex6\nnakshatraSwati\nnakshatraIndex14\npada3\nretrogradeNo\nplanetJupiter\nlon122.0617\nsignLeo\nsignIndex4\nnakshatraMagha\nnakshatraIndex9\npada1\nretrogradeNo\nplanetVenus\nlon179.7475\nsignVirgo\nsignIndex5\nnakshatraChitra\nnakshatraIndex13\npada2\nretrogradeNo\nplanetSaturn\nlon344.0353\nsignPisces\nsignIndex11\nnakshatraUttara Bhadrapada\nnakshatraIndex25\npada4\nretrogradeYes\nplanetRahu\nlon324.9787\nsignAquarius\nsignIndex10\nnakshatraPurva Bhadrapada\nnakshatraIndex24\npada2\nretrogradeYes\nplanetKetu\nlon144.9787\nsignLeo\nsignIndex4\nnakshatraPurva Phalguni\nnakshatraIndex10\npada4\nretrogradeYes",
+    "rows": [
+      {
+        "k": "as_of",
+        "v": "2026-11-21T15:12:44.102Z",
+        "kBox": {
+          "w": 46,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 182,
+          "h": 23,
+          "x": 341
+        }
+      },
+      {
+        "k": "timezone",
+        "v": "Asia/Kolkata",
+        "kBox": {
+          "w": 74,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 101,
+          "h": 23,
+          "x": 369
+        }
+      },
+      {
+        "k": "grahas",
+        "v": "planetSun\nlon215.0909\nsignScorpio\nsignIndex7\nnakshatraAnuradha\nnakshatraIndex16\npada1\nretrogradeNo\nplanetMoon\nlon354.6324\nsignPisces\nsignIndex11\nnakshatraRevati\nnakshatraIndex26\npada3\nretrogradeNo\nplanetMars\nlon123.9869\nsignLeo\nsignIndex4\nnakshatraMagha\nnakshatraIndex9\npada2\nretrogradeNo\nplanetMercu",
+        "kBox": {
+          "w": 57,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 850,
+          "h": 1800,
+          "x": 295
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Sun",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 30,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "lon",
+        "v": "215.0909",
+        "kBox": {
+          "w": 24,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 68,
+          "h": 23,
+          "x": 319
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Scorpio",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 60,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "signIndex",
+        "v": "7",
+        "kBox": {
+          "w": 76,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 371
+        }
+      },
+      {
+        "k": "nakshatra",
+        "v": "Anuradha",
+        "kBox": {
+          "w": 81,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 80,
+          "h": 23,
+          "x": 376
+        }
+      },
+      {
+        "k": "nakshatraIndex",
+        "v": "16",
+        "kBox": {
+          "w": 124,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 15,
+          "h": 23,
+          "x": 419
+        }
+      },
+      {
+        "k": "pada",
+        "v": "1",
+        "kBox": {
+          "w": 43,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 5,
+          "h": 23,
+          "x": 338
+        }
+      },
+      {
+        "k": "retrograde",
+        "v": "No",
+        "kBox": {
+          "w": 86,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 22,
+          "h": 23,
+          "x": 381
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Moon",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 45,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "lon",
+        "v": "354.6324",
+        "kBox": {
+          "w": 24,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 72,
+          "h": 23,
+          "x": 319
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Pisces",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 50,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "signIndex",
+        "v": "11",
+        "kBox": {
+          "w": 76,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 371
+        }
+      },
+      {
+        "k": "nakshatra",
+        "v": "Revati",
+        "kBox": {
+          "w": 81,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 49,
+          "h": 23,
+          "x": 376
+        }
+      },
+      {
+        "k": "nakshatraIndex",
+        "v": "26",
+        "kBox": {
+          "w": 124,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 19,
+          "h": 23,
+          "x": 419
+        }
+      },
+      {
+        "k": "pada",
+        "v": "3",
+        "kBox": {
+          "w": 43,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 338
+        }
+      },
+      {
+        "k": "retrograde",
+        "v": "No",
+        "kBox": {
+          "w": 86,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 22,
+          "h": 23,
+          "x": 381
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Mars",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 39,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "lon",
+        "v": "123.9869",
+        "kBox": {
+          "w": 24,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 68,
+          "h": 23,
+          "x": 319
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Leo",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 27,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "signIndex",
+        "v": "4",
+        "kBox": {
+          "w": 76,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 371
+        }
+      },
+      {
+        "k": "nakshatra",
+        "v": "Magha",
+        "kBox": {
+          "w": 81,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 56,
+          "h": 23,
+          "x": 376
+        }
+      },
+      {
+        "k": "nakshatraIndex",
+        "v": "9",
+        "kBox": {
+          "w": 124,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 419
+        }
+      },
+      {
+        "k": "pada",
+        "v": "2",
+        "kBox": {
+          "w": 43,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 338
+        }
+      },
+      {
+        "k": "retrograde",
+        "v": "No",
+        "kBox": {
+          "w": 86,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 22,
+          "h": 23,
+          "x": 381
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Mercury",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 65,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "lon",
+        "v": "195.6222",
+        "kBox": {
+          "w": 24,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 66,
+          "h": 23,
+          "x": 319
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Libra",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 38,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "signIndex",
+        "v": "6",
+        "kBox": {
+          "w": 76,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 371
+        }
+      },
+      {
+        "k": "nakshatra",
+        "v": "Swati",
+        "kBox": {
+          "w": 81,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 43,
+          "h": 23,
+          "x": 376
+        }
+      },
+      {
+        "k": "nakshatraIndex",
+        "v": "14",
+        "kBox": {
+          "w": 124,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 15,
+          "h": 23,
+          "x": 419
+        }
+      },
+      {
+        "k": "pada",
+        "v": "3",
+        "kBox": {
+          "w": 43,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 338
+        }
+      },
+      {
+        "k": "retrograde",
+        "v": "No",
+        "kBox": {
+          "w": 86,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 22,
+          "h": 23,
+          "x": 381
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Jupiter",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 55,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "lon",
+        "v": "122.0617",
+        "kBox": {
+          "w": 24,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 61,
+          "h": 23,
+          "x": 319
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Leo",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 27,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "signIndex",
+        "v": "4",
+        "kBox": {
+          "w": 76,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 371
+        }
+      },
+      {
+        "k": "nakshatra",
+        "v": "Magha",
+        "kBox": {
+          "w": 81,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 56,
+          "h": 23,
+          "x": 376
+        }
+      },
+      {
+        "k": "nakshatraIndex",
+        "v": "9",
+        "kBox": {
+          "w": 124,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 419
+        }
+      },
+      {
+        "k": "pada",
+        "v": "1",
+        "kBox": {
+          "w": 43,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 5,
+          "h": 23,
+          "x": 338
+        }
+      },
+      {
+        "k": "retrograde",
+        "v": "No",
+        "kBox": {
+          "w": 86,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 22,
+          "h": 23,
+          "x": 381
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Venus",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 50,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "lon",
+        "v": "179.7475",
+        "kBox": {
+          "w": 24,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 65,
+          "h": 23,
+          "x": 319
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Virgo",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 42,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "signIndex",
+        "v": "5",
+        "kBox": {
+          "w": 76,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 371
+        }
+      },
+      {
+        "k": "nakshatra",
+        "v": "Chitra",
+        "kBox": {
+          "w": 81,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 49,
+          "h": 23,
+          "x": 376
+        }
+      },
+      {
+        "k": "nakshatraIndex",
+        "v": "13",
+        "kBox": {
+          "w": 124,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 15,
+          "h": 23,
+          "x": 419
+        }
+      },
+      {
+        "k": "pada",
+        "v": "2",
+        "kBox": {
+          "w": 43,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 338
+        }
+      },
+      {
+        "k": "retrograde",
+        "v": "No",
+        "kBox": {
+          "w": 86,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 22,
+          "h": 23,
+          "x": 381
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Saturn",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 52,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "lon",
+        "v": "344.0353",
+        "kBox": {
+          "w": 24,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 72,
+          "h": 23,
+          "x": 319
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Pisces",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 50,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "signIndex",
+        "v": "11",
+        "kBox": {
+          "w": 76,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 371
+        }
+      },
+      {
+        "k": "nakshatra",
+        "v": "Uttara Bhadrapada",
+        "kBox": {
+          "w": 81,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 156,
+          "h": 23,
+          "x": 376
+        }
+      },
+      {
+        "k": "nakshatraIndex",
+        "v": "25",
+        "kBox": {
+          "w": 124,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 19,
+          "h": 23,
+          "x": 419
+        }
+      },
+      {
+        "k": "pada",
+        "v": "4",
+        "kBox": {
+          "w": 43,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 338
+        }
+      },
+      {
+        "k": "retrograde",
+        "v": "Yes",
+        "kBox": {
+          "w": 86,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 28,
+          "h": 23,
+          "x": 381
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Rahu",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 41,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "lon",
+        "v": "324.9787",
+        "kBox": {
+          "w": 24,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 70,
+          "h": 23,
+          "x": 319
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Aquarius",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 71,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "signIndex",
+        "v": "10",
+        "kBox": {
+          "w": 76,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 15,
+          "h": 23,
+          "x": 371
+        }
+      },
+      {
+        "k": "nakshatra",
+        "v": "Purva Bhadrapada",
+        "kBox": {
+          "w": 81,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 151,
+          "h": 23,
+          "x": 376
+        }
+      },
+      {
+        "k": "nakshatraIndex",
+        "v": "24",
+        "kBox": {
+          "w": 124,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 19,
+          "h": 23,
+          "x": 419
+        }
+      },
+      {
+        "k": "pada",
+        "v": "2",
+        "kBox": {
+          "w": 43,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 338
+        }
+      },
+      {
+        "k": "retrograde",
+        "v": "Yes",
+        "kBox": {
+          "w": 86,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 28,
+          "h": 23,
+          "x": 381
+        }
+      },
+      {
+        "k": "planet",
+        "v": "Ketu",
+        "kBox": {
+          "w": 52,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 36,
+          "h": 23,
+          "x": 347
+        }
+      },
+      {
+        "k": "lon",
+        "v": "144.9787",
+        "kBox": {
+          "w": 24,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 66,
+          "h": 23,
+          "x": 319
+        }
+      },
+      {
+        "k": "sign",
+        "v": "Leo",
+        "kBox": {
+          "w": 33,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 27,
+          "h": 23,
+          "x": 328
+        }
+      },
+      {
+        "k": "signIndex",
+        "v": "4",
+        "kBox": {
+          "w": 76,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 371
+        }
+      },
+      {
+        "k": "nakshatra",
+        "v": "Purva Phalguni",
+        "kBox": {
+          "w": 81,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 119,
+          "h": 23,
+          "x": 376
+        }
+      },
+      {
+        "k": "nakshatraIndex",
+        "v": "10",
+        "kBox": {
+          "w": 124,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 15,
+          "h": 23,
+          "x": 419
+        }
+      },
+      {
+        "k": "pada",
+        "v": "4",
+        "kBox": {
+          "w": 43,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 338
+        }
+      },
+      {
+        "k": "retrograde",
+        "v": "Yes",
+        "kBox": {
+          "w": 86,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 28,
+          "h": 23,
+          "x": 381
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/transits-360.png",
+      "768": "_bmad-output/calculators/qa/shots/transits-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/transits-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/transits-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          1825,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 1892
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          1825,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 1892
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          1825,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 1892
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          1825,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 1892
+      }
+    }
+  },
+  {
+    "slug": "moon-phase",
+    "kind": "generic",
+    "ok": true,
+    "pageTitle": "Moon Phase Calculator — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "time",
+        "type": "time",
+        "required": false,
+        "visible": true
+      }
+    ],
+    "resultClass": "grid-result",
+    "resultText": "phaseFull Moon\nillumination1\nwaxingNo\nmoon_age_days14\nprev_new_moon2024-12-30T22:27:25.420Z\nnext_new_moon2025-01-29T12:36:33.845Z\nprev_full_moon2024-12-15T09:02:14.764Z\nnext_full_moon2025-01-13T22:27:32.236Z\nrashiGemini",
+    "rows": [
+      {
+        "k": "phase",
+        "v": "Full Moon",
+        "kBox": {
+          "w": 50,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 75,
+          "h": 23,
+          "x": 345
+        }
+      },
+      {
+        "k": "illumination",
+        "v": "1",
+        "kBox": {
+          "w": 94,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 5,
+          "h": 23,
+          "x": 389
+        }
+      },
+      {
+        "k": "waxing",
+        "v": "No",
+        "kBox": {
+          "w": 57,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 22,
+          "h": 23,
+          "x": 352
+        }
+      },
+      {
+        "k": "moon_age_days",
+        "v": "14",
+        "kBox": {
+          "w": 141,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 15,
+          "h": 23,
+          "x": 436
+        }
+      },
+      {
+        "k": "prev_new_moon",
+        "v": "2024-12-30T22:27:25.420Z",
+        "kBox": {
+          "w": 140,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 202,
+          "h": 23,
+          "x": 435
+        }
+      },
+      {
+        "k": "next_new_moon",
+        "v": "2025-01-29T12:36:33.845Z",
+        "kBox": {
+          "w": 138,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 201,
+          "h": 23,
+          "x": 433
+        }
+      },
+      {
+        "k": "prev_full_moon",
+        "v": "2024-12-15T09:02:14.764Z",
+        "kBox": {
+          "w": 130,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 197,
+          "h": 23,
+          "x": 425
+        }
+      },
+      {
+        "k": "next_full_moon",
+        "v": "2025-01-13T22:27:32.236Z",
+        "kBox": {
+          "w": 128,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 197,
+          "h": 23,
+          "x": 423
+        }
+      },
+      {
+        "k": "rashi",
+        "v": "Gemini",
+        "kBox": {
+          "w": 39,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 57,
+          "h": 23,
+          "x": 334
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/moon-phase-360.png",
+      "768": "_bmad-output/calculators/qa/shots/moon-phase-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/moon-phase-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/moon-phase-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          50,
+          50
+        ],
+        "resultBoxH": 342
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 242
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 242
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 242
+      }
+    }
+  },
+  {
+    "slug": "sun-sign",
+    "kind": "generic",
+    "ok": true,
+    "pageTitle": "Sun Sign Calculator — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      }
+    ],
+    "resultClass": "grid-result",
+    "resultText": "tropical_signCapricorn\nrashiCapricorn\nrashiIndex9\nnakshatraUttara Ashadha\nnakshatraIndex20\npada2\nlordSaturn",
+    "rows": [
+      {
+        "k": "tropical_sign",
+        "v": "Capricorn",
+        "kBox": {
+          "w": 106,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 80,
+          "h": 23,
+          "x": 401
+        }
+      },
+      {
+        "k": "rashi",
+        "v": "Capricorn",
+        "kBox": {
+          "w": 39,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 80,
+          "h": 23,
+          "x": 334
+        }
+      },
+      {
+        "k": "rashiIndex",
+        "v": "9",
+        "kBox": {
+          "w": 82,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 377
+        }
+      },
+      {
+        "k": "nakshatra",
+        "v": "Uttara Ashadha",
+        "kBox": {
+          "w": 81,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 126,
+          "h": 23,
+          "x": 376
+        }
+      },
+      {
+        "k": "nakshatraIndex",
+        "v": "20",
+        "kBox": {
+          "w": 124,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 19,
+          "h": 23,
+          "x": 419
+        }
+      },
+      {
+        "k": "pada",
+        "v": "2",
+        "kBox": {
+          "w": 43,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 338
+        }
+      },
+      {
+        "k": "lord",
+        "v": "Saturn",
+        "kBox": {
+          "w": 31,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 52,
+          "h": 23,
+          "x": 326
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/sun-sign-360.png",
+      "768": "_bmad-output/calculators/qa/shots/sun-sign-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/sun-sign-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/sun-sign-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 192
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 192
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 192
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 192
+      }
+    }
+  },
+  {
+    "slug": "destiny-number",
+    "kind": "generic",
+    "ok": true,
+    "pageTitle": "Destiny Number (Bhagyank) — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      }
+    ],
+    "resultClass": "grid-result",
+    "resultText": "destiny6\ndestiny_sum33\nmasterYes\nmulank1\ndestiny_lordVenus\nmulank_lordSun",
+    "rows": [
+      {
+        "k": "destiny",
+        "v": "6",
+        "kBox": {
+          "w": 58,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 353
+        }
+      },
+      {
+        "k": "destiny_sum",
+        "v": "33",
+        "kBox": {
+          "w": 105,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 19,
+          "h": 23,
+          "x": 400
+        }
+      },
+      {
+        "k": "master",
+        "v": "Yes",
+        "kBox": {
+          "w": 57,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 28,
+          "h": 23,
+          "x": 352
+        }
+      },
+      {
+        "k": "mulank",
+        "v": "1",
+        "kBox": {
+          "w": 60,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 5,
+          "h": 23,
+          "x": 355
+        }
+      },
+      {
+        "k": "destiny_lord",
+        "v": "Venus",
+        "kBox": {
+          "w": 101,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 50,
+          "h": 23,
+          "x": 396
+        }
+      },
+      {
+        "k": "mulank_lord",
+        "v": "Sun",
+        "kBox": {
+          "w": 103,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 30,
+          "h": 23,
+          "x": 398
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/destiny-number-360.png",
+      "768": "_bmad-output/calculators/qa/shots/destiny-number-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/destiny-number-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/destiny-number-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 167
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 167
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 167
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 167
+      }
+    }
+  },
+  {
+    "slug": "numerology",
+    "kind": "generic",
+    "ok": true,
+    "pageTitle": "Vedic Numerology — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "required": false,
+        "visible": true
+      }
+    ],
+    "resultClass": "grid-result",
+    "resultText": "mulank5\ndestiny2\nname_root3\nname_sum12\nname_lordJupiter",
+    "rows": [
+      {
+        "k": "mulank",
+        "v": "5",
+        "kBox": {
+          "w": 60,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 355
+        }
+      },
+      {
+        "k": "destiny",
+        "v": "2",
+        "kBox": {
+          "w": 58,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 353
+        }
+      },
+      {
+        "k": "name_root",
+        "v": "3",
+        "kBox": {
+          "w": 91,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 386
+        }
+      },
+      {
+        "k": "name_sum",
+        "v": "12",
+        "kBox": {
+          "w": 94,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 14,
+          "h": 23,
+          "x": 389
+        }
+      },
+      {
+        "k": "name_lord",
+        "v": "Jupiter",
+        "kBox": {
+          "w": 90,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 55,
+          "h": 23,
+          "x": 385
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/numerology-360.png",
+      "768": "_bmad-output/calculators/qa/shots/numerology-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/numerology-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/numerology-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 142
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 142
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 142
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 142
+      }
+    }
+  },
+  {
+    "slug": "lo-shu",
+    "kind": "generic",
+    "ok": true,
+    "pageTitle": "Lo Shu Grid — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      }
+    ],
+    "resultClass": "grid-result",
+    "resultText": "grid\nnumber4\ndigits4\ncount1\nnumber9\ndigits9, 9\ncount2\nnumber2\ndigits2\ncount1\nnumber3\ndigits3\ncount1\nnumber5\ndigits—\ncount0\nnumber7\ndigits—\ncount0\nnumber8\ndigits—\ncount0\nnumber1\ndigits1, 1\ncount2\nnumber6\ndigits—\ncount0\nmissing5, 7, 8, 6\nrepeated9, 1",
+    "rows": [
+      {
+        "k": "grid",
+        "v": "number4\ndigits4\ncount1\nnumber9\ndigits9, 9\ncount2\nnumber2\ndigits2\ncount1\nnumber3\ndigits3\ncount1\nnumber5\ndigits—\ncount0\nnumber7\ndigits—\ncount0\nnumber8\ndigits—\ncount0\nnumber1\ndigits1, 1\ncount2\nnumber6\ndigits—\ncount0",
+        "kBox": {
+          "w": 32,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 850,
+          "h": 675,
+          "x": 295
+        }
+      },
+      {
+        "k": "number",
+        "v": "4",
+        "kBox": {
+          "w": 64,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 359
+        }
+      },
+      {
+        "k": "digits",
+        "v": "4",
+        "kBox": {
+          "w": 44,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 339
+        }
+      },
+      {
+        "k": "count",
+        "v": "1",
+        "kBox": {
+          "w": 46,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 5,
+          "h": 23,
+          "x": 341
+        }
+      },
+      {
+        "k": "number",
+        "v": "9",
+        "kBox": {
+          "w": 64,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 359
+        }
+      },
+      {
+        "k": "digits",
+        "v": "9, 9",
+        "kBox": {
+          "w": 44,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 28,
+          "h": 23,
+          "x": 339
+        }
+      },
+      {
+        "k": "count",
+        "v": "2",
+        "kBox": {
+          "w": 46,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 341
+        }
+      },
+      {
+        "k": "number",
+        "v": "2",
+        "kBox": {
+          "w": 64,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 359
+        }
+      },
+      {
+        "k": "digits",
+        "v": "2",
+        "kBox": {
+          "w": 44,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 339
+        }
+      },
+      {
+        "k": "count",
+        "v": "1",
+        "kBox": {
+          "w": 46,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 5,
+          "h": 23,
+          "x": 341
+        }
+      },
+      {
+        "k": "number",
+        "v": "3",
+        "kBox": {
+          "w": 64,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 359
+        }
+      },
+      {
+        "k": "digits",
+        "v": "3",
+        "kBox": {
+          "w": 44,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 339
+        }
+      },
+      {
+        "k": "count",
+        "v": "1",
+        "kBox": {
+          "w": 46,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 5,
+          "h": 23,
+          "x": 341
+        }
+      },
+      {
+        "k": "number",
+        "v": "5",
+        "kBox": {
+          "w": 64,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 359
+        }
+      },
+      {
+        "k": "digits",
+        "v": "—",
+        "kBox": {
+          "w": 44,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 14,
+          "h": 23,
+          "x": 339
+        }
+      },
+      {
+        "k": "count",
+        "v": "0",
+        "kBox": {
+          "w": 46,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 341
+        }
+      },
+      {
+        "k": "number",
+        "v": "7",
+        "kBox": {
+          "w": 64,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 359
+        }
+      },
+      {
+        "k": "digits",
+        "v": "—",
+        "kBox": {
+          "w": 44,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 14,
+          "h": 23,
+          "x": 339
+        }
+      },
+      {
+        "k": "count",
+        "v": "0",
+        "kBox": {
+          "w": 46,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 341
+        }
+      },
+      {
+        "k": "number",
+        "v": "8",
+        "kBox": {
+          "w": 64,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 359
+        }
+      },
+      {
+        "k": "digits",
+        "v": "—",
+        "kBox": {
+          "w": 44,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 14,
+          "h": 23,
+          "x": 339
+        }
+      },
+      {
+        "k": "count",
+        "v": "0",
+        "kBox": {
+          "w": 46,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 341
+        }
+      },
+      {
+        "k": "number",
+        "v": "1",
+        "kBox": {
+          "w": 64,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 5,
+          "h": 23,
+          "x": 359
+        }
+      },
+      {
+        "k": "digits",
+        "v": "1, 1",
+        "kBox": {
+          "w": 44,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 18,
+          "h": 23,
+          "x": 339
+        }
+      },
+      {
+        "k": "count",
+        "v": "2",
+        "kBox": {
+          "w": 46,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 341
+        }
+      },
+      {
+        "k": "number",
+        "v": "6",
+        "kBox": {
+          "w": 64,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 359
+        }
+      },
+      {
+        "k": "digits",
+        "v": "—",
+        "kBox": {
+          "w": 44,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 14,
+          "h": 23,
+          "x": 339
+        }
+      },
+      {
+        "k": "count",
+        "v": "0",
+        "kBox": {
+          "w": 46,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 341
+        }
+      },
+      {
+        "k": "missing",
+        "v": "5, 7, 8, 6",
+        "kBox": {
+          "w": 62,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 61,
+          "h": 23,
+          "x": 357
+        }
+      },
+      {
+        "k": "repeated",
+        "v": "9, 1",
+        "kBox": {
+          "w": 74,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 23,
+          "h": 23,
+          "x": 369
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/lo-shu-360.png",
+      "768": "_bmad-output/calculators/qa/shots/lo-shu-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/lo-shu-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/lo-shu-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          700,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 767
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          700,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 767
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          700,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 767
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          700,
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 767
+      }
+    }
+  },
+  {
+    "slug": "vehicle-number",
+    "kind": "generic",
+    "ok": true,
+    "pageTitle": "Lucky Vehicle Number — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      }
+    ],
+    "resultClass": "grid-result",
+    "resultText": "mulank5\nlordMercury\nfriendly_numbers1, 2, 3, 4, 5, 6, 8, 9\nneutral_numbers7\nnoteLucky vehicle numbers via the birth-day number's planetary lord friendships (common convention; Rahu/Ketu mapped to Saturn/Mars sides). Pending Jyotishi review (P11).\nverifiedNo\n\nTable set pending Jyotishi review (P11) — treat as indicative.",
+    "rows": [
+      {
+        "k": "mulank",
+        "v": "5",
+        "kBox": {
+          "w": 60,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 355
+        }
+      },
+      {
+        "k": "lord",
+        "v": "Mercury",
+        "kBox": {
+          "w": 31,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 65,
+          "h": 23,
+          "x": 326
+        }
+      },
+      {
+        "k": "friendly_numbers",
+        "v": "1, 2, 3, 4, 5, 6, 8, 9",
+        "kBox": {
+          "w": 143,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 126,
+          "h": 23,
+          "x": 438
+        }
+      },
+      {
+        "k": "neutral_numbers",
+        "v": "7",
+        "kBox": {
+          "w": 141,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 436
+        }
+      },
+      {
+        "k": "note",
+        "v": "Lucky vehicle numbers via the birth-day number's planetary lord friendships (common convention; Rahu/Ketu mapped to Saturn/Mars sides). Pending Jyotishi review (P11).",
+        "kBox": {
+          "w": 36,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 827,
+          "h": 48,
+          "x": 295
+        }
+      },
+      {
+        "k": "verified",
+        "v": "No",
+        "kBox": {
+          "w": 59,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 22,
+          "h": 23,
+          "x": 354
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/vehicle-number-360.png",
+      "768": "_bmad-output/calculators/qa/shots/vehicle-number-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/vehicle-number-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/vehicle-number-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          50,
+          25,
+          175,
+          25
+        ],
+        "resultBoxH": 408
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          75,
+          25
+        ],
+        "resultBoxH": 258
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          50,
+          25
+        ],
+        "resultBoxH": 233
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          50,
+          25
+        ],
+        "resultBoxH": 233
+      }
+    }
+  },
+  {
+    "slug": "name-numerology",
+    "kind": "generic",
+    "ok": true,
+    "pageTitle": "Lucky Name Numerology — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "required": true,
+        "visible": true
+      }
+    ],
+    "resultClass": "grid-result",
+    "resultText": "sum25\nroot7\nlordKetu\nletters3, 1, 5, 1, 1, 1, 2, 5, 1, 4, 1\nnoteChaldean name numerology (traditional Vedic numerology uses Chaldean values).",
+    "rows": [
+      {
+        "k": "sum",
+        "v": "25",
+        "kBox": {
+          "w": 35,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 19,
+          "h": 23,
+          "x": 330
+        }
+      },
+      {
+        "k": "root",
+        "v": "7",
+        "kBox": {
+          "w": 32,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 9,
+          "h": 23,
+          "x": 327
+        }
+      },
+      {
+        "k": "lord",
+        "v": "Ketu",
+        "kBox": {
+          "w": 31,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 36,
+          "h": 23,
+          "x": 326
+        }
+      },
+      {
+        "k": "letters",
+        "v": "3, 1, 5, 1, 1, 1, 2, 5, 1, 4, 1",
+        "kBox": {
+          "w": 50,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 154,
+          "h": 23,
+          "x": 345
+        }
+      },
+      {
+        "k": "note",
+        "v": "Chaldean name numerology (traditional Vedic numerology uses Chaldean values).",
+        "kBox": {
+          "w": 36,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 669,
+          "h": 23,
+          "x": 331
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/name-numerology-360.png",
+      "768": "_bmad-output/calculators/qa/shots/name-numerology-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/name-numerology-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/name-numerology-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          100
+        ],
+        "resultBoxH": 217
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          50
+        ],
+        "resultBoxH": 167
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 142
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 142
+      }
+    }
+  },
+  {
+    "slug": "mobile-numerology",
+    "kind": "generic",
+    "ok": true,
+    "pageTitle": "Mobile Number Numerology — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "digits",
+        "type": "text",
+        "required": true,
+        "visible": true
+      }
+    ],
+    "resultClass": "grid-result",
+    "resultText": "sum63\nroot9\nlordMars\nnoteChaldean digit-sum of the mobile number with its planetary lord. For entertainment; no service-quality claim.\nfor_funYes\n\nFor entertainment only.",
+    "rows": [
+      {
+        "k": "sum",
+        "v": "63",
+        "kBox": {
+          "w": 35,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 20,
+          "h": 23,
+          "x": 330
+        }
+      },
+      {
+        "k": "root",
+        "v": "9",
+        "kBox": {
+          "w": 32,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 327
+        }
+      },
+      {
+        "k": "lord",
+        "v": "Mars",
+        "kBox": {
+          "w": 31,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 39,
+          "h": 23,
+          "x": 326
+        }
+      },
+      {
+        "k": "note",
+        "v": "Chaldean digit-sum of the mobile number with its planetary lord. For entertainment; no service-quality claim.",
+        "kBox": {
+          "w": 36,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 803,
+          "h": 48,
+          "x": 295
+        }
+      },
+      {
+        "k": "for_fun",
+        "v": "Yes",
+        "kBox": {
+          "w": 59,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 28,
+          "h": 23,
+          "x": 354
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/mobile-numerology-360.png",
+      "768": "_bmad-output/calculators/qa/shots/mobile-numerology-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/mobile-numerology-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/mobile-numerology-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          125,
+          25
+        ],
+        "resultBoxH": 283
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          50,
+          25
+        ],
+        "resultBoxH": 208
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          50,
+          25
+        ],
+        "resultBoxH": 208
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          50,
+          25
+        ],
+        "resultBoxH": 208
+      }
+    }
+  },
+  {
+    "slug": "age",
+    "kind": "generic",
+    "ok": true,
+    "pageTitle": "Age Calculator — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "visible": true
+      }
+    ],
+    "resultClass": "grid-result",
+    "resultText": "years26\nmonths8\ndays23\ntotal_days9762",
+    "rows": [
+      {
+        "k": "years",
+        "v": "26",
+        "kBox": {
+          "w": 44,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 19,
+          "h": 23,
+          "x": 339
+        }
+      },
+      {
+        "k": "months",
+        "v": "8",
+        "kBox": {
+          "w": 61,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 10,
+          "h": 23,
+          "x": 356
+        }
+      },
+      {
+        "k": "days",
+        "v": "23",
+        "kBox": {
+          "w": 39,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 19,
+          "h": 23,
+          "x": 334
+        }
+      },
+      {
+        "k": "total_days",
+        "v": "9762",
+        "kBox": {
+          "w": 87,
+          "h": 23,
+          "x": 295
+        },
+        "vBox": {
+          "w": 38,
+          "h": 23,
+          "x": 382
+        }
+      }
+    ],
+    "consoleErrors": [],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/age-360.png",
+      "768": "_bmad-output/calculators/qa/shots/age-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/age-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/age-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 117
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 117
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 117
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [
+          25,
+          25,
+          25,
+          25
+        ],
+        "resultBoxH": 117
+      }
+    }
+  },
+  {
+    "slug": "name-compatibility",
+    "kind": "generic",
+    "ok": false,
+    "pageTitle": "Name Compatibility — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "b",
+        "type": "text",
+        "required": true,
+        "visible": true
+      }
+    ],
+    "resultClass": "hint err",
+    "resultText": "a and b name parameters are required",
+    "rows": [],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 400 ()"
+    ],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/name-compatibility-360.png",
+      "768": "_bmad-output/calculators/qa/shots/name-compatibility-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/name-compatibility-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/name-compatibility-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 83
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      }
+    }
+  },
+  {
+    "slug": "love",
+    "kind": "generic",
+    "ok": false,
+    "pageTitle": "Love Compatibility (fun) — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "b",
+        "type": "text",
+        "required": true,
+        "visible": true
+      }
+    ],
+    "resultClass": "hint err",
+    "resultText": "a and b name parameters are required",
+    "rows": [],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 400 ()"
+    ],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/love-360.png",
+      "768": "_bmad-output/calculators/qa/shots/love-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/love-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/love-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 83
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      }
+    }
+  },
+  {
+    "slug": "friendship",
+    "kind": "generic",
+    "ok": false,
+    "pageTitle": "Friendship Compatibility (fun) — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "b",
+        "type": "text",
+        "required": true,
+        "visible": true
+      }
+    ],
+    "resultClass": "hint err",
+    "resultText": "a and b name parameters are required",
+    "rows": [],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 400 ()"
+    ],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/friendship-360.png",
+      "768": "_bmad-output/calculators/qa/shots/friendship-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/friendship-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/friendship-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 83
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      }
+    }
+  },
+  {
+    "slug": "flames",
+    "kind": "generic",
+    "ok": false,
+    "pageTitle": "FLAMES (fun) — Free Vedic Calculator | Vyotish",
+    "formFields": [
+      {
+        "name": "date",
+        "type": "date",
+        "required": false,
+        "visible": true
+      },
+      {
+        "name": "name",
+        "type": "text",
+        "required": true,
+        "visible": true
+      },
+      {
+        "name": "b",
+        "type": "text",
+        "required": true,
+        "visible": true
+      }
+    ],
+    "resultClass": "hint err",
+    "resultText": "a and b name parameters are required",
+    "rows": [],
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 400 ()"
+    ],
+    "shots": {
+      "360": "_bmad-output/calculators/qa/shots/flames-360.png",
+      "768": "_bmad-output/calculators/qa/shots/flames-768.png",
+      "1024": "_bmad-output/calculators/qa/shots/flames-1024.png",
+      "1440": "_bmad-output/calculators/qa/shots/flames-1440.png"
+    },
+    "overflow": {
+      "360": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 83
+      },
+      "768": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "1024": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      },
+      "1440": {
+        "overflowX": false,
+        "firstBad": null,
+        "rowHeights": [],
+        "resultBoxH": 58
+      }
+    }
+  }
+]

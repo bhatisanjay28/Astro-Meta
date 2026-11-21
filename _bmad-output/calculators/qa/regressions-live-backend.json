@@ -1,0 +1,170 @@
+{
+  "date": "2026-11-21T17:23:51.086Z",
+  "base": "https://astro-backend.vyotish.workers.dev",
+  "pass": 27,
+  "fail": 0,
+  "results": [
+    {
+      "id": "RG-01",
+      "desc": "rashi 1990-05-15 14:30 Delhi → Capricorn/Uttara Ashadha p2",
+      "ok": true,
+      "detail": "{\"rashi\":\"Capricorn\",\"rashiIndex\":9,\"nakshatra\":\"Uttara Ashadha\",\"nakshatraIndex\":20,\"pada\":2,\"lord\":\"Saturn\",\"nakshatra_lord\":\"Sun\",\"interpretation\":{\"verdict\":\"Uttara Ashadha, pada 2\",\"meaning\":\"Birth falls in Uttara Ashadha — unshakeable and lasting victory (Sun, Vishvedevas). Its lord Sun shapes the Vimshottari dasha sequence from birth.\",\"guidance\":[],\"basis\":\"BPHS nakshatra attributions; research §2.2\"},\"engine_version\":\"1.4.0-alpha1\"}"
+    },
+    {
+      "id": "RG-02",
+      "desc": "destiny 1970-06-19 → 6 / sum 33 / master / mulank 1",
+      "ok": true,
+      "detail": "{\"destiny\":6,\"destiny_sum\":33,\"master\":true,\"mulank\":1,\"destiny_lord\":\"Venus\",\"mulank_lord\":\"Sun\",\"interpretation\":{\"verdict\":\"Bhagyank 6 — ruled by Venus\",\"meaning\":\"Root 6 is ruled by Venus — the number of love, beauty and service; it flourishes in art, family harmony and caring responsibilities.\",\"guidance\":[\"Key themes: harmony, beauty, responsibility.\"],\"basis\":\"Chaldean numerology research §3; interpretations pending Jyotishi review (P11)\"},\"engine_version\":\"1.4.0-alpha1\"}"
+    },
+    {
+      "id": "RG-03",
+      "desc": "mobile 9990513999 → 63 → 9 Mars",
+      "ok": true,
+      "detail": "{\"raw\":\"9990513999\",\"digits_clean\":\"9990513999\",\"prefix_stripped\":null,\"sum\":63,\"root\":9,\"lord\":\"Mars\",\"length_warning\":null,\"note\":\"Chaldean digit-sum of the mobile number with its planetary lord. For entertainment; no service-quality claim.\",\"interpretation\":{\"verdict\":\"Mobile root 9 — ruled by Mars\",\"meaning\":\"Root 9 is ruled by Mars — the warrior number; energetic, courageous and humanitarian, it completes the 1–9 cycle.\",\"guidance\":[\"Key themes: courage, energy, service.\"],\"basis\":\"Chaldean numerology research §3; interpretations pending Jyotishi review (P11)\"},\"for_fun\":true,\"engine_version\":\"1.4.0-alpha1\"}"
+    },
+    {
+      "id": "RG-04",
+      "desc": "lo-shu 1967-08-24 → missing [3,5], repeated []",
+      "ok": true,
+      "detail": "{\"m\":[3,5],\"r\":[]}"
+    },
+    {
+      "id": "RG-05",
+      "desc": "sun-sign Sankranti pair → Makara / Dhanu",
+      "ok": true,
+      "detail": "Capricorn / Sagittarius"
+    },
+    {
+      "id": "RG-06",
+      "desc": "moon-phase FM instant → Full Moon",
+      "ok": true,
+      "detail": "{\"phase\":\"Full Moon\",\"illum\":1}"
+    },
+    {
+      "id": "RG-07",
+      "desc": "name-numerology 'Sanjay Bhati' → 25 → 7 Ketu",
+      "ok": true,
+      "detail": "{\"sum\":25,\"root\":7,\"lord\":\"Ketu\",\"letters\":[{\"letter\":\"S\",\"value\":3},{\"letter\":\"A\",\"value\":1},{\"letter\":\"N\",\"value\":5},{\"letter\":\"J\",\"value\":1},{\"letter\":\"A\",\"value\":1},{\"letter\":\"Y\",\"value\":1},{\"letter\":\"B\",\"value\":2},{\"letter\":\"H\",\"value\":5},{\"letter\":\"A\",\"value\":1},{\"letter\":\"T\",\"value\":4},{\"letter\":\"I\",\"value\":1}],\"words\":[{\"word\":\"SANJAY\",\"sum\":12,\"root\":3},{\"word\":\"BHATI\",\"sum\":13,\"root\":4}],\"note\":\"Chaldean name numerology (traditional Vedic numerology uses Chaldean values).\",\"interpretation\":{\"verdict\":\"Name root 7 — ruled by Ketu\",\"meaning\":\"Root 7 is ruled by Ketu — the seeker's number; introspective, philosophical and analytical, it succeeds through depth rather than breadth.\",\"guidance\":[\"Key themes: spirituality, research, introspection.\"],\"basis\":\"Chaldean numerology research §3; interpretations pending Jyotishi review (P11)\"},\"engine_version\":\"1.4.0-alpha1\"}"
+    },
+    {
+      "id": "RG-08",
+      "desc": "age Feb-29 → 24y 11m 30d / 9131 days",
+      "ok": true,
+      "detail": "{\"years\":24,\"months\":11,\"days\":30,\"total_days\":9131,\"total_weeks\":1304,\"total_hours\":219144,\"day_of_week\":\"Tuesday\",\"next_birthday\":{\"date\":\"2025-03-01\",\"days_until\":1,\"weekday\":\"Saturday\"},\"engine_version\":\"1.4.0-alpha1\"}"
+    },
+    {
+      "id": "QB-01a",
+      "desc": "kundli 22:15 IST Mumbai → UTC echo 2000-03-30T16:45",
+      "ok": true,
+      "detail": "got 2000-03-30T16:45:00.000Z"
+    },
+    {
+      "id": "QB-01b",
+      "desc": "rashi 1995-11-05 19:15 IST Mumbai (evening) → Pisces",
+      "ok": true,
+      "detail": "got Pisces"
+    },
+    {
+      "id": "QB-01c",
+      "desc": "kundli 1990-05-15 14:30 Sydney → lagna Virgo (control)",
+      "ok": true,
+      "detail": "got Virgo"
+    },
+    {
+      "id": "QB-02",
+      "desc": "transits Rahu sidereal ≈ 300.75° (Δ<0.3°)",
+      "ok": true,
+      "detail": "got 300.7454 Δ=0.00008349133975116274"
+    },
+    {
+      "id": "QB-05",
+      "desc": "manglik MD2 → from_moon true AND cancelled true",
+      "ok": true,
+      "detail": "{\"fm\":true,\"c\":true,\"h\":{\"lagna\":11,\"moon\":1,\"venus\":1}}"
+    },
+    {
+      "id": "QB-06",
+      "desc": "sade-sati Ex2 window starts 2022-04-29 (first-entry)",
+      "ok": true,
+      "detail": "got 2022-04-29T02:17:17.251Z"
+    },
+    {
+      "id": "QB-08",
+      "desc": "ishta-devata 1990-06-15 10:30 Delhi → Shiva (12th from Karakamsha)",
+      "ok": true,
+      "detail": "got \"Shiva\""
+    },
+    {
+      "id": "QB-10",
+      "desc": "rashi 2025-02-30 → 400",
+      "ok": true,
+      "detail": "got 400"
+    },
+    {
+      "id": "QN-08",
+      "desc": "numerology 2025-02-30 → 400",
+      "ok": true,
+      "detail": "got 400"
+    },
+    {
+      "id": "QF-06",
+      "desc": "age 2025-02-30 → 400",
+      "ok": true,
+      "detail": "got 400"
+    },
+    {
+      "id": "QF-07",
+      "desc": "age future DOB → 400",
+      "ok": true,
+      "detail": "got 400"
+    },
+    {
+      "id": "QN-01",
+      "desc": "mobile '+91 98765 43210' → 45 → 9 Mars",
+      "ok": true,
+      "detail": "{\"raw\":\"+91 98765 43210\",\"digits_clean\":\"9876543210\",\"prefix_stripped\":\"9876543210\",\"sum\":45,\"root\":9,\"lord\":\"Mars\",\"length_warning\":null,\"note\":\"Chaldean digit-sum of the mobile number with its planetary lord. For entertainment; no service-quality claim.\",\"interpretation\":{\"verdict\":\"Mobile root 9 — ruled by Mars\",\"meaning\":\"Root 9 is ruled by Mars — the warrior number; energetic, courageous and humanitarian, it completes the 1–9 cycle.\",\"guidance\":[\"Key themes: courage, energy, service.\"],\"basis\":\"Chaldean numerology research §3; interpretations pending Jyotishi review (P11)\"},\"for_fun\":true,\"engine_version\":\"1.4.0-alpha1\"}"
+    },
+    {
+      "id": "QN-02",
+      "desc": "vehicle mulank 5 → friendly [1,2,3,4,6] neutral [7,8,9]",
+      "ok": true,
+      "detail": "{\"f\":[1,2,3,4,6],\"n\":[7,8,9]}"
+    },
+    {
+      "id": "QF-02",
+      "desc": "flames Rohan+Lenna → Marriage (Wikipedia vector)",
+      "ok": true,
+      "detail": "got Marriage"
+    },
+    {
+      "id": "QF-03",
+      "desc": "flames Asha+Asha → Friends (n=0 convention)",
+      "ok": true,
+      "detail": "got Friends"
+    },
+    {
+      "id": "NEW-01",
+      "desc": "nakshatra route live: Uttara Ashadha p2, lord Sun, engine 1.4",
+      "ok": true,
+      "detail": "{\"nakshatra\":\"Uttara Ashadha\",\"nakshatra_index\":20,\"pada\":2,\"moon_sign\":\"Capricorn\",\"nakshatra_lord\":\"Sun\",\"balance_at_birth_years\":3.645,\"interpretation\":{\"verdict\":\"Uttara Ashadha, pada 2\",\"meaning\":\"Birth falls in Uttara Ashadha — unshakeable and lasting victory (Sun, Vishvedevas). Its lord Sun shapes the Vimshottari dasha sequence from birth.\",\"guidance\":[],\"basis\":\"BPHS nakshatra attributions; research §2.2\"},\"engine_version\":\"1.4.0-alpha1\"}"
+    },
+    {
+      "id": "NEW-02",
+      "desc": "vimshottari-dasha live: mahadashas + running antardasha",
+      "ok": true,
+      "detail": "status=200 cur={\"mahadasha_lord\":\"Saturn\",\"mahadasha_start\":\"2012-06-16T16:49:23.855Z\",\"mahadasha_end\":\"2031-06-17T10:49:23.855Z\",\"antardasha_lord\":\"Rahu\",\"antardasha_start\":\"2026-01-28T04:31:23.855Z\",\"antardasha_end\":\"2028-12-04T03:37:23.855Z\",\"antardasha_index\":7,\"elapsed_fraction\":0.285828,\"next_antardasha_lord\":\"Jupiter\",\"next_antardasha_start\":\"2028-12-04T03:37:23.855Z\"}"
+    },
+    {
+      "id": "NEW-03",
+      "desc": "mangal-dosha live: from_moon true, cancelled true, interpretation",
+      "ok": true,
+      "detail": "{\"is_manglik\":false,\"from_lagna\":false,\"from_moon\":true,\"from_venus\":true,\"mars_houses\":{\"lagna\":11,\"moon\":1,\"venus\":1},\"cancelled\":true,\"cancellation_reason\":\"Mars in Capricorn (exaltation) — classical cancellation.\",\"detail\":\"Mars in house 11 from Lagna, 1 from Moon, 1 from Venus.\",\"verified\":false,\"gender\":null,\"interpretation\":{\"verdict\":\"Manglik placement present but cancelled\",\"meaning\":\"Mars sits in a dosha position, yet Mars in Capricorn (exaltation) — classical cancellation. — the dosha is treated as nullified in matching.\",\"guidance\":[\"Show the raw placement + cancellation together when matching; both charts' full context matters.\"],\"basis\":\"Classical cancellation rules; research §4.3\"},\"engine_version\":\"1.4.0-alpha1\"}"
+    },
+    {
+      "id": "NEW-04",
+      "desc": "vehicle-plate live: DL/8/CAF/1234 parsed, owner roots",
+      "ok": true,
+      "detail": "{\"plate\":\"DL8CAF1234\",\"state_code\":\"DL\",\"rto_code\":\"8\",\"series_letters\":\"CAF\",\"number_portion\":\"1234\",\"owner\":{\"mulank\":6,\"bhagyank\":4},\"school_a\":{\"value\":10,\"root\":1,\"label\":\"digits of 1234 → 10 → 1\"},\"school_b\":{\"value\":37,\"root\":1,\"label\":\"Chaldean letters + digits → 37 → 1\"},\"verdict\":\"Not suggested\",\"verdict_reasons\":[\"School A root 1 is enemy for mulank 6\",\"School A root 1 is enemy for bhagyank 4\",\"School B root 1 is enemy for mulank 6\",\"School B root 1 is enemy for bhagyank 4\"],\"digit_clash_warnings\":[\"Digit 1 clashes with your numbers\",\"Digit 2 clashes with your numbers\",\"Digit 3 clashes with your numbers\"],\"interpretation\":{\"verdict\":\"Not suggested\",\"meaning\":\"The plate is read by two schools — pure digit sum (School A) and Chaldean letter+digit sum (School B) — against your mulank/bhagyank. Where the schools disagree, both readings are shown rather than averaged.\",\"guidance\":[\"Verdicts are advisory; registration constraints and personal preference apply.\"],\"basis\":\"Vehicle numerology research §3.5\"},\"engine_version\":\"1.4.0-alpha1\"}"
+    }
+  ]
+}

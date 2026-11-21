@@ -1,0 +1,81 @@
+# QA Report — Birth/Chart Calculators (Quinn, QA Engineer)
+
+- **Cluster**: Vedic birth-chart tools — rashi (+nakshatra shared page), sade-sati, kaal-sarp, mangal-dosha, karakas (Atmakaraka/Jaimini), ishta-devata, transits, plus lagna & vimshottari-dasha (served inside POST `/api/v1/kundli`, no dedicated page).
+- **Date**: 2026-11-21
+- **Method**: (1) Cross-checked every live API value against the analyst research worked examples. (2) Ran own one-off bun probes against `https://astro-backend.vyotish.workers.dev` (GET `/api/v1/calculators/*`, POST `/api/v1/kundli`) with the exact research input vectors, including boundary pairs and a tz=UTC control. (3) Independently recomputed disputed charts with the backend's own `astronomy-engine` dependency + Meeus GMST/ascendant + mean-node formulas to adjudicate engine-vs-research conflicts. (4) Read `backend/src/lib/birth.ts` and `backend/src/engine/matching.ts` to pin root causes (read-only). (5) UI via `_bmad-output/calculators/qa/ui-probe.json` + screenshots.
+- **Evidence**: `_bmad-output/calculators/inventory.md`; research files (`rashi.md`, `nakshatra.md`, `shani-sade-sati.md`, `kaal-sarp-yoga.md`, `mangal-dosha.md`, `atmakaraka-jaimini-karakas.md`, `ishta-devata.md`, `current-transit-chart.md`, `lagna-rising-sign.md`, `vimshottari-dasha.md`); `qa/api-probe.json`; `qa/ui-probe.json`; `qa/shots/{rashi,transits,karakas,sade-sati,lo-shu}-*.png`; probes `%TEMP%\qb-probe-{a,b,c}.mjs` (run 2026-11-21).
+- **Constraints honoured**: no application code modified; `qa/calculators-probe.mjs` untouched; probe scripts kept outside the repo in `%TEMP%`.
+
+**Shared fixture verified**: research fixture 1990-05-15 14:30 IST Delhi → engine Moon 271.901 (research 271.9010, exact), Uttara Ashadha pada 2, lagna Virgo 151.9118 (research 151.9092, Δ0.003°), Sun dasha balance 3.645 (research 3.6446), Sun ends 1994-01-05, Moon ends 2004-01-06 — **fixture PASSES**. Note: `qa/api-probe.json`'s captured "kundli dasha fixture" used 10:30 IST (a different input; Moon 269.8497 Sagittarius p1, balance 4.568 — internally consistent), so the exact research vector was re-probed here.
+
+---
+
+## Discrepancy table
+
+Dead pages and P0s first.
+
+| ID | Calculator | Type | Input used | Expected (source) | Actual | Severity | Suspected root cause |
+|----|-----------|------|-----------|-------------------|--------|----------|----------------------|
+| QB-01 | All birth-input calculators (rashi, nakshatra, sade-sati, karakas, ishta-devata, entire kundli, /match) | Wrong result | rashi GET 1995-11-05 19:15 IST Mumbai; sade-sati 1990-06-15 20:00 Delhi; kundli POST 2000-03-30 22:15 / 1995-11-05 19:15 / 1990-05-15 14:30 Sydney | Correct-date chart: Moon Pisces 358.93 (mangal-dosha.md Ex1); natal Moon Aquarius; Moon Capricorn 285.79 (kaal-sarp.md Ex1); lagna Virgo 158.3634 (lagna.md Ex4) | Chart computed for date +4 days later (time-of-day kept): rashi → Taurus/Rohini p3; sade-sati natal moon Aries; kundli `datetime_utc` echo = 2000-04-03T16:45Z / 1995-11-09T13:45Z / 1990-05-19T04:30Z; kundli Moon 336.92 / 48.20 / asc shifted ~3.5° | **P0** | `backend/src/lib/birth.ts:77` — drift-solver compares formatted wall-clock against literal 0 (`drift = localMinutes - 0`, should be `− (hh*60+mm)`); when local time + tz offset ≥ 24:00 (IST ≥ 18:30, Sydney ≥ 14:00), first pass gets `dateDrift = −1` and each of the 3 capped iterations adds +1 day, then hh:mm is added on top. Any evening birth in a positive-offset zone (≈40% of real births) gets a wrong chart. Control: same instant via tz=UTC returns correct values (asc 213.8244, Moon 285.7855) |
+| QB-02 | kundli (Rahu/Ketu) + transits + kaal-sarp | Wrong result | transits 2026-11-21 Delhi; kundli 1990-05-15 14:30 Delhi; kaal-sarp KS2 2000-03-30 14:15 Mumbai | Rahu sidereal: 300.77 Aquarius Dhanishta p3 (transits.md ExA + independent Meeus mean-node calc); 287.62 Capricorn at 1990-05-15; KS2 full Kaal Sarp + Anant, Rahu h1 (kaal-sarp.md Ex2, sidereal hemming) | Rahu = tropical (un-ayanamsha'd) mean node: 324.9786 / 311.3425 / 120.3388 — every Rahu/Ketu sign, degree, nakshatra, pada, house, navamsha wrong by exactly the ayanamsha (24.21°/23.72°); KS2 verdict `present:false` because Moon 281.75 falls outside the tropical arc [300.3→120.3] but inside the sidereal arc [276.5→96.5] | **P0** | Node longitude in `backend/src/engine/nodes.ts` never has Lahiri ayanamsha subtracted; `kaalSarp` (engine/tools.ts:175) hemms sidereal planets against this tropical axis, so verdicts can flip arbitrarily. All 7 other grahas verified sidereal (Sun 215.0909 vs research 215.0306; Moon/Mars exact vs research) |
+| QB-03 | kaal-sarp (UI) | Dead page | kaal-sarp page, any input (ui-probe) | A kaal-sarp verdict (research kaal-sarp.md Ex1–Ex4) | Page permanently shows `resultClass "hint err"`: "No route for GET /api/v1/kundli" (404), console error; no calculation ever possible from the UI | **P0** | `[tool].astro` registry maps kaal-sarp to GET `/api/v1/kundli`; kundli is POST-only (routes/v1/kundli.ts:66). Confirmed by probe: GET → 404 `not_found` |
+| QB-04 | mangal-dosha (UI) | Dead page | mangal-dosha page, any input (ui-probe) | Manglik verdict per mangal-dosha.md Ex1–Ex4 | Same dead-page signature: 404 "No route for GET /api/v1/kundli" rendered as error hint; all four research examples unreachable via UI | **P0** | Same registry bug as QB-03 |
+| QB-05 | mangal-dosha (API) | Wrong result | KS4 2000-03-30 noon Mumbai (correct-day control); MD2 1992-03-02 08:15 Jaipur; MD4 1990-06-15 06:30 Delhi | Research Ex1/Ex2: per-frame detections reported WITH cancellation (e.g., Ex2 from_moon=true h1, from_venus=true h1, cancelled=true mars_exalted). Mars h4/h7/h1/h2/h12 are dosha houses and must show `from_x=true` | When `cancelled=true` ALL frame flags are forced false (`from_moon:false` despite `mars_houses.moon:4`; `from_venus:false` despite house 1); produces `cancelled:true` with zero positive frames — violates research boolean-sanity rule. `cancellation_reason` also conflates own-sign vs exaltation: "Mars in Capricorn (own sign / exaltation)" for an exaltation case | P1 | `backend/src/engine/matching.ts` (manglik): `from_lagna: !cancelled && fromLagna` (and moon/venus) suppresses detection instead of reporting detection + cancellation; reason string hardcodes "(own sign / exaltation)" |
+| QB-06 | sade-sati (API) | Wrong result | sade-sati GET 1995-11-05 14:20 IST Mumbai (research Ex2) | Window start 2022-04-29 (first-entry convention, shani-sade-sati.md Ex2); note text itself says "window = first entry to final exit" | `current.start = 2023-01-17T…` (stable post-retro entry); window start contradicts the engine's own note text. End 2030-04-17 matches research; E1 (Aquarius moon) phase 3 + window 2020-01-24→2028-02-23 pass | P1 | `engine/tools.ts` sade-sati window builder uses a stability filter on first entry while the note (and research) define the window as first entry — convention/code mismatch |
+| QB-07 | sade-sati (API/UI) | Missing input | sade-sati GET E1 + `as_of=2019-01-15` | Check-date input lets users ask "was I in sade-sati on date X" (shani-sade-sati.md recommended input set) | No check-date field; `as_of` silently ignored (identical response) — everything is anchored to "now" only | P1 | Param not parsed in routes/v1/calculators.ts; UI form has only date/time/place (ui-probe formFields) |
+| QB-08 | ishta-devata (API) | Missing detail | ishta-devata GET 1990-06-15 10:30 IST Delhi (research ExB) | Shiva — classical method: 12th from Karakamsha (Scorpio → Libra), occupant by highest degree else sign lord (ishta-devata.md) | `ishta_devata: null` on every probe (api-probe + own probes + UI "—"); AK/Karakamsha consistency with /karakas is satisfied, but the core output is never produced; note text describes the sign-lord-of-Karakamsha method research explicitly marks "do not implement" | P1 | `engine/tools.ts` ishta-devata returns null pending Jyotishi review (P11) and pairs it with the wrong-method description |
+| QB-09 | birth-input calculators (UI/API) | Missing input | karakas GET 2026-11-21 19:31:10 IST; all UI forms (ui-probe) | Research recommended inputs: gender context for mangal-dosha (X6); time to seconds (karakas.md ExA uses 19:31:10) | No gender field anywhere; time input/API restricted to HH:mm — `19:31:10` → 400 "time must be HH:mm (24h)"; research Example A cannot be evaluated as written | P1 | `TIME_RE` in lib/birth.ts:9; frontend forms render only date/time/place (ui-probe formFields) |
+| QB-10 | All birth-input calculators | Validation | rashi GET 2025-02-30, 2025-04-31, 2023-02-29 (12:00 Delhi) | 400 for impossible dates (X4) | All return 200 with silently rolled-over charts (2025-02-30 → treated as Mar 2: Taurus/Krittika p2) | P2 | `Date.parse` rollover in lib/birth.ts:54 accepted as valid; no calendar sanity check |
+| QB-11 | All calculator pages (UI) | Alignment | sade-sati-1440.png, transits-360.png, lo-shu-1440.png; ui-probe kBox/vBox geometry | Results rendered as styled cards/table rows (research UX expectation; page CSS scope) | Label and value glued inline: `in_sade_satiNo`, `phase—`, `moon_signTaurus`, `lon215.0909`, `as_of2026-11-21T15:12:44.102Z`; kBox/vBox x-positions overlap at every width → JS-injected result rows get no styles | P2 | `[tool].astro` scoped CSS not applied to runtime-injected `.row/.k/.v` nodes (needs `is:global` — inventory X3) |
+| QB-12 | transits, karakas, sade-sati (UI) | Alignment | transits-360.png at 360–1440; ui-probe rowHeights | Human-readable transit table / karaka list (research output expectations) | transits = 75 raw key/value rows in one column, grahas row 1825px tall at ALL widths (unusable on mobile); karakas single 900px row; sade-sati dumps raw ISO timestamps ("2027-06-02T22:45:33.227Z") and internal fields (`saturn_sign_index`) | P2 | Generic recursive object renderer (X5) + no presentation layer; raw API payload dumped verbatim |
+| QB-13 | rashi, kundli dasha, lagna | Missing detail | rashi GET E1; kundli POST L1 | Research complete-output lists: rashi should give degree-in-sign + rashi lord (rashi.md); dasha should include antardasha (sub-period) breakdown (vimshottari.md); lagna has its own research spec (lagna-rising-sign.md) | rashi returns only sign/nakshatra/pada; kundli dasha payload has mahadashas but no antardashas; lagna exposed only inside POST kundli (no dedicated page/endpoint) | P2 | Output schemas in engine/calculators.ts narrower than research output lists; no /lagna route |
+| QB-14 | kaal-sarp, several (API) | Missing detail | KS1/KS2 responses | Research type list spelled "Ghatak" (kaal-sarp.md §3); UI payloads should be audience-appropriate | Engine emits "Ghaatak"; internal markers `verified:false`, "Pending Jyotishi review (P11)" leaked into user-facing note strings on multiple calculators | P3 | engine/tools.ts strings |
+| QB-15 | All calculator pages (UI) | Alignment | every screenshot (rashi-360, transits-360, sade-sati-1440, lo-shu-1440…) | Consent notice must not obstruct results | Fixed bottom consent banner overlays the result region in every capture; on 360px it can hide computed rows until dismissed | P3 | Banner z-index/position in layout shell |
+
+### Research errata (not app bugs — documented so downstream fixes target the right truth)
+
+1. `kaal-sarp-yoga.md` Ex1–Ex4 quote Rahu ≈ 101.14° — that is the mean node at the J2000 epoch, not at 2000-03-30 (true sidereal ≈ 96.5° Cancer, verified independently). The Ex2/Ex3 margin verdicts built on the stale value are unreliable; the engine's sidereal node (96.48) is correct — only its tropical mixing (QB-02) is wrong.
+2. `shani-sade-sati.md` Ex1 "next window 2046-12-08→2055-02-05" matches a Capricorn-moon row (Saturn enters Sagittarius 2046-12); for the Ex1 Aquarius-moon chart the engine's next window start 2049-03-06 (Saturn → Capricorn) is astronomically correct.
+3. `mangal-dosha.md` Ex2 absolute longitudes are all +30° (one sign high); the sign-relative values (Makara 16.18 etc.) are correct and the engine matches those exactly.
+
+---
+
+## Per-calculator summary
+
+"Pass" = verdict/values correct at API level for correct-date inputs (UI defects are alignment failures, not calc failures).
+
+| Calculator | Verdict | Evidence |
+|-----------|---------|----------|
+| rashi (+nakshatra page) | **PASS (calc)** | All research vectors exact: E1 14:30 → Makara/U.Ashadha p2 (Moon 271.901 exact); E3 noon default ✓; E4 1889 Allahabad ✓; boundary trio 13:15/15:14/15:45 ✓. Evening inputs poisoned by QB-01. UI: form fine, results unstyled (QB-11); missing degree/lord (QB-13) |
+| lagna (kundli) | **PASS (calc)** | 151.9118 vs research 151.9092 (Δ0.003° ≈ 11″); 14:20/14:22 boundary pair reproduced; Sydney expected value 158.3634 confirmed correct by independent pipeline — engine's wrong 164.41 was QB-01 (date shift), not southern-hemisphere math |
+| vimshottari-dasha (kundli) | **PASS (calc)** | Balance 3.645 vs 3.6446 (3-dp rounding); Sun ends 1994-01-05, Moon ends 2004-01-06 — exact; balances internally consistent across all fixtures (4.568 = 6×(1−f); 9.538 = 10×(1−0.0462)). Missing antardashas (QB-13) |
+| sade-sati | **PASS (verdict)** | E1 in=true phase 3, window 2020-01-24→2028-02-23 ✓; E2 end 2030-04-17 ✓; Taurus-moon control in=false ✓. Start-convention mismatch (QB-06), no check-date (QB-07), evening natal-moon poisoning (QB-01) |
+| karakas (Jaimini) | **PASS (calc)** | Example B: all 7 karaka ranks + signs + navamsha signs match (Δ≤0.02°, ephemeris/rounding); AK consistency holds across endpoints. Seconds rejected (QB-09); evening poisoning (QB-01) |
+| ishta-devata | **FAIL** | `ishta_devata` null on every input (QB-08); AK/Karakamsha layer itself correct |
+| transits | **PASS planets / FAIL nodes** | Sun 215.0909 vs research 215.0306 (DrikPanchang-level agreement); Moon/Mars/Venus/Jupiter/Saturn correct; Rahu/Ketu tropical (QB-02). UI unusable (QB-12) |
+| kaal-sarp | **FAIL (verdicts unreliable)** | Hemming computed against tropical axis (QB-02) — KS2 flips from research's full+Anant to false; KS1 additionally date-poisoned (QB-01); type naming logic implemented; UI page dead (QB-03) |
+| mangal-dosha | **PASS (verdict) / FAIL (detail)** | MD4 is_manglik=true matches research; MD2/MD5 verdicts defensible post-cancellation; but frame flags suppressed under cancellation (QB-05), page dead (QB-04), evening charts poisoned (QB-01) |
+
+---
+
+## Top 5 issues for this cluster
+
+1. **QB-01 (P0) — Evening births computed for the wrong day.** The shared UTC solver (`lib/birth.ts:77`) drifts every chart where local time + tz offset crosses midnight (+4 days, time-of-day kept). Hits every calculator, kundli, and matchmaking for roughly the evening 40% of births in IST (≥18:30) and any positive-offset zone. Root cause and fix are one line: compare the drift against the target hh:mm.
+2. **QB-02 (P0) — Rahu/Ketu are tropical.** The node longitude never gets Lahiri subtracted, so every Rahu/Ketu attribute in kundli and transits is wrong by the ayanamsha, and kaal-sarp hemming mixes sidereal planets with a tropical axis — verdicts can flip (proven on research Ex2).
+3. **QB-03 + QB-04 (P0) — kaal-sarp and mangal-dosha pages are dead.** Both call GET `/api/v1/kundli` against a POST-only route; every UI calculation 404s. Two of the cluster's flagship tools are unusable in production.
+4. **QB-05 (P1) — Manglik cancellation suppresses detection.** With cancellation active, `from_lagna/from_moon/from_venus` are zeroed even when Mars sits in a dosha house, yielding `cancelled:true` with no detected dosha — contradicts research Ex1/Ex2 output contract and mislabels exaltation as "own sign".
+5. **QB-11 + QB-12 (P2) — Results render unstyled everywhere.** Scoped-CSS bug (X3) leaves JS-injected rows as glued raw text (`moon_signTaurus`, `as_of2026-11-21T…`); transits becomes a 75-row, 1825px wall of JSON at every viewport. The calculations may be right, but users see an unusable dump.
+
+---
+
+## Severity counts
+
+| Severity | Count | IDs |
+|----------|-------|-----|
+| P0 | 4 | QB-01, QB-02, QB-03, QB-04 |
+| P1 | 5 | QB-05, QB-06, QB-07, QB-08, QB-09 |
+| P2 | 4 | QB-10, QB-11, QB-12, QB-13 |
+| P3 | 2 | QB-14, QB-15 |
+| **Total** | **15** | |
+
+**3 most severe: QB-01, QB-02, QB-03.**

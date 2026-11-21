@@ -7,6 +7,46 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Calculators overhaul — Epic 14 (owner directive 2026-11-21: "cross check and fix outputs of all the calculators")
+
+BMAD pipeline (Mary research → Quinn cross-check → Sally output-spec → Bob stories →
+Amelia dev → Quinn verify). Full papers: `_bmad-output/calculators/`.
+
+#### Root causes behind the owner's "missing details / wrong alignment" report
+- **Missing details:** 20 endpoints returned rich payloads the old page never rendered —
+  it dumped raw rows (`grid-result`) with no verdict, chips, tables or interpretation.
+- **Wrong alignment:** Astro scoped CSS never matches JS-injected DOM nodes, so every
+  result block was unstyled.
+- **Wrong values (17 proven bugs):** UTC day-shift solver for evening births (P0),
+  tropical Rahu/Ketu (P0), sade-sati window start, raw manglik flags dropped when
+  cancelled, mean-node formula, 6 dead pages (mangal-dosha/kaal-sarp wiring, FLAMES
+  params, names-kind fields), missing required inputs (plate, gender, optional date).
+
+#### Backend — 2 deploys, CI ✅, live-verified 27/27 (ab93aa0 + d362808)
+- engine 1.4.0-alpha1: QB-01 UTC solver, QB-02 sidereal mean nodes, QB-05 raw manglik
+  flags kept alongside cancellations, QB-06/07 sade-sati first-entry windows + dhaiya +
+  phase_windows, cumulative antardashas, interpretations layer, kaal-sarp planet table,
+  KARAKA_SCHEME, honest Unparseable plates.
+- 4 new routes: nakshatra / lagna / vimshottari-dasha / mangal-dosha (+ vehicle-plate
+  rewrite, name-numerology owner_compatibility). 313 tests green on pushed HEAD d362808.
+
+#### Frontend — 3 commits pushed = D8 deploy (7ba48b4 → 3cf3301; 36 commits went live)
+- Shared block renderer (`calculator-renderer.ts` + per-endpoint `calculator-render-map.ts`):
+  verdict card (B1) + status chips (B2) + meaning/guidance/basis (B3) + detail cards,
+  tables, Lo Shu 3×3, dasha bar/timeline (B4) + honesty rules: `verified:false` →
+  P11 flagline, for_fun label, unmapped keys → "More details" fallback (B5).
+- All 23 calculator pages rebuilt on it; `is:global` result styles off theme tokens;
+  3 new pages (nakshatra / lagna / vimshottari-dasha); registry fixes (dedicated
+  mangal-dosha + kaal-sarp routes, names-kind a/b fields, required plate input,
+  gender select, optional owner date, sade-sati as-of); hub + sitemap updated.
+
+#### Verification (S14-3)
+- 26/26 regressions vs deployed backend **and** vs live vyotish.com post-deploy;
+  27/27 live-Worker checks; 14/14 S13 e2e on the new renderer; 11/11 S14 UI checks;
+  axe wcag2aa 8/8 (4 pages × light/dark); 92/92 result-bearing shots at
+  360/768/1024/1440 → `_bmad-output/calculators/qa/shots-after/`.
+- Deferred (documented): gochara overlay for dasha pages, P11 Jyotishi sign-off.
+
 ### Engine completeness + full page layer — Epics 1.8–1.10, 2.5, 4.1–4.6, 5.1–5.5, 3.2b/3.4b/2.3b (2026-11-19)
 
 #### Backend — 5 deploys, CI ✅, all live-verified (3f177ac → 34da3c5)

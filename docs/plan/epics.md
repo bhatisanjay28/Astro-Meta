@@ -342,6 +342,34 @@ frontend a thin renderer over `/api/v1/*`. Unblocks 2.5 and feeds 5.2/5.3/6.4 la
 
 ---
 
+## Epic 14 — Calculators overhaul (owner directive 2026-11-21) — ✅ 4/4
+
+Owner: *"cross check and fix outputs of all the calculators … not getting all the
+details … alignment is not correct … check inputs … no scope of error."* Full BMAD
+pipeline ran (Mary → Quinn → Sally → Bob → Amelia → Quinn); papers in
+`_bmad-output/calculators/` (23 research files, 58 findings → 17 proven bugs, output
+spec + Stitch screens, 4 stories, closeout SUMMARY.md).
+
+- **14.1a ✅ Backend engine (ab93aa0, pushed + deployed + 27/27 live):** UTC solver
+  (evening births), sidereal mean nodes, raw manglik flags beside cancellations,
+  sade-sati first-entry windows + dhaiya + phase_windows, cumulative antardashas,
+  kaal-sarp planet table, karakas scheme, honest plates. ENGINE_VERSION 1.4.0-alpha1.
+- **14.1b ✅ Backend routes + interpretations (+ d362808):** nakshatra / lagna /
+  vimshottari-dasha / mangal-dosha routes; vehicle-plate rewrite; name-numerology
+  owner_compatibility; interpretation layer. 313 tests green (story estimated ≥320 —
+  honest deviation).
+- **14.2 ✅ Frontend renderer + pages (a5ccbae + b333ed8 + 3cf3301, pushed = D8
+  deploy):** shared block renderer (verdict card / chips / meaning / detail cards /
+  Lo Shu 3×3 / dasha timeline / honesty flaglines + "More details" fallback); all 23
+  pages rebuilt with is:global token styles (root cause of the alignment complaint);
+  3 new pages; registry fixes (dedicated MD/KS routes, names a/b, plate, gender,
+  owner date, as-of); hub + sitemap. Push deployed all 36 pending local commits.
+- **14.3 ✅ Verify + docs (meta 8ecab96):** 26/26 regressions vs deployed backend AND
+  live vyotish.com; 14/14 S13 + 11/11 S14 e2e; axe AA 8/8 light+dark; 92/92 shots;
+  CHANGELOG + SUMMARY.md + memory. Deferred: gochara overlay, P11 Jyotishi sign-off.
+
+---
+
 ## Gap log (BMAD review v2 — found missing, now placed)
 
 | # | PRD requirement | Was | Now |
@@ -365,15 +393,16 @@ frontend a thin renderer over `/api/v1/*`. Unblocks 2.5 and feeds 5.2/5.3/6.4 la
 E0 5✅ + 0.5b ✅ · E1 10✅(incl 1.7–1.10) · E2 2.1–2.7 all ✅ (incl 2.5/2.3b/2.6) ·
 E3 4✅ + 3.2b/3.4b/3.1b ✅ · E4 4.1–4.7b all ✅ (incl 4.2b interpretations) ·
 E5 5✅ (5.2 profile [slug] + offers-config ✅) ·
-E6 4✅ · E7 7.1✅ (7.2/7.4 owner-keys remain) · E8 1✅(8.1+8.1b) · E9 4✅ (D12)
-**= 51 tracked stories: all code-side work done (2026-11-20) · remaining items are
-owner-gated only: 7.2 CSP/WAF/Turnstile (owner keys + production deploy loop), 7.3 legal
-drafts (owner review), 7.4 CF-analytics/error-monitoring/email (owner accounts), 8.2
-Lighthouse / 8.3 device matrix / 8.4 launch review (owner gates) · owner actions:
-GOOGLE_PLACES_API_KEY (optional, upgrades pickers worldwide), frontend review/push
-decision (frontend LOCAL, ahead 16 of origin), admin sign-in password check
-(vyotish@gmail.com admin row exists since 2026-11-19 — see launch-blockers.md #2),
-D8 deploy approval**
+E6 4✅ · E7 7.1✅ (7.2/7.4 owner-keys remain) · E8 1✅(8.1+8.1b) · E9 4✅ (D12) ·
+E14 4✅ (calculators overhaul, 2026-11-21 — backend AND frontend pushed & live)
+**= 55 tracked stories: all code-side work done; both repos pushed (2026-11-21) ·
+remaining items are owner-gated only: 7.2 CSP/WAF/Turnstile (owner keys + production
+deploy loop), 7.3 legal drafts (owner review), 7.4 CF-analytics/error-monitoring/email
+(owner accounts), 8.2 Lighthouse / 8.3 device matrix / 8.4 launch review (owner gates) ·
+owner actions: GOOGLE_PLACES_API_KEY (optional, upgrades pickers worldwide), admin
+sign-in password check (vyotish@gmail.com admin row exists since 2026-11-19 — see
+launch-blockers.md #2) · note: frontend push 3cf3301 (2026-11-21) deployed the
+previously pending local commits — D8 gate consumed by Epic 14 owner delegation**
 
 Remaining items each carry an enriched BMAD story in
 [stories-remaining.md](stories-remaining.md) (story-first hard rule, owner 2026-11-20:

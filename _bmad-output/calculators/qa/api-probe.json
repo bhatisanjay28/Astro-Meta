@@ -1,0 +1,1301 @@
+[
+  {
+    "name": "rashi",
+    "status": 200,
+    "expect": "research/rashi.md fixture 1990-05-15 Delhi",
+    "body": {
+      "data": {
+        "rashi": "Sagittarius",
+        "rashiIndex": 8,
+        "nakshatra": "Uttara Ashadha",
+        "nakshatraIndex": 20,
+        "pada": 1,
+        "engine_version": "1.3.0-alpha1"
+      },
+      "meta": {
+        "consent_note": "Birth details are processed on request and are not stored."
+      }
+    }
+  },
+  {
+    "name": "moon-phase FM",
+    "status": 200,
+    "expect": "Full Moon, illumination ~1.0, next FM 2025-02-12T13:53Z, next NM 2025-01-29T12:35Z, prev NM 2024-12-30T22:27Z",
+    "body": {
+      "data": {
+        "phase": "Full Moon",
+        "illumination": 1,
+        "waxing": false,
+        "moon_age_days": 14,
+        "prev_new_moon": "2024-12-30T22:27:25.420Z",
+        "next_new_moon": "2025-01-29T12:36:33.845Z",
+        "prev_full_moon": "2024-12-15T09:02:14.764Z",
+        "next_full_moon": "2025-01-13T22:27:32.236Z",
+        "rashi": "Gemini",
+        "engine_version": "1.3.0-alpha1"
+      },
+      "meta": {
+        "note": "date and time are interpreted in UTC; time defaults to 12:00 UTC"
+      }
+    }
+  },
+  {
+    "name": "moon-phase NM",
+    "status": 200,
+    "expect": "New Moon, waxing false",
+    "body": {
+      "data": {
+        "phase": "New Moon",
+        "illumination": 0,
+        "waxing": true,
+        "moon_age_days": 29.31,
+        "prev_new_moon": "2025-05-27T03:02:52.165Z",
+        "next_new_moon": "2025-06-25T10:32:07.502Z",
+        "prev_full_moon": "2025-06-11T07:44:26.705Z",
+        "next_full_moon": "2025-07-10T20:37:22.564Z",
+        "rashi": "Gemini",
+        "engine_version": "1.3.0-alpha1"
+      },
+      "meta": {
+        "note": "date and time are interpreted in UTC; time defaults to 12:00 UTC"
+      }
+    }
+  },
+  {
+    "name": "sun-sign sankranti",
+    "status": 200,
+    "expect": "rashi Makara (12:00 UTC is after 09:03 IST ingress)",
+    "body": {
+      "data": {
+        "tropical_sign": "Capricorn",
+        "rashi": "Capricorn",
+        "rashiIndex": 9,
+        "nakshatra": "Uttara Ashadha",
+        "nakshatraIndex": 20,
+        "pada": 2,
+        "lord": "Saturn",
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "sun-sign pre-ingress",
+    "status": 200,
+    "expect": "rashi Dhanu",
+    "body": {
+      "data": {
+        "tropical_sign": "Capricorn",
+        "rashi": "Sagittarius",
+        "rashiIndex": 8,
+        "nakshatra": "Uttara Ashadha",
+        "nakshatraIndex": 20,
+        "pada": 1,
+        "lord": "Jupiter",
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "destiny master33",
+    "status": 200,
+    "expect": "destiny 6, destiny_sum 33, master true, mulank 1, lords Venus/Sun",
+    "body": {
+      "data": {
+        "destiny": 6,
+        "destiny_sum": 33,
+        "master": true,
+        "mulank": 1,
+        "destiny_lord": "Venus",
+        "mulank_lord": "Sun",
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "destiny indep",
+    "status": 200,
+    "expect": "destiny 8, mulank 6",
+    "body": {
+      "data": {
+        "destiny": 8,
+        "destiny_sum": 35,
+        "master": false,
+        "mulank": 6,
+        "destiny_lord": "Saturn",
+        "mulank_lord": "Venus",
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "numerology",
+    "status": 200,
+    "expect": "mulank 5, destiny 2, name per Chaldean",
+    "body": {
+      "data": {
+        "mulank": 5,
+        "destiny": 2,
+        "name_root": 3,
+        "name_sum": 12,
+        "name_lord": "Jupiter",
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "lo-shu",
+    "status": 200,
+    "expect": "grid of 9, classical order 4,9,2,3,5,7,8,1,6",
+    "body": {
+      "data": {
+        "grid": [
+          {
+            "number": 4,
+            "digits": [
+              "4"
+            ],
+            "count": 1
+          },
+          {
+            "number": 9,
+            "digits": [
+              "9",
+              "9"
+            ],
+            "count": 2
+          },
+          {
+            "number": 2,
+            "digits": [
+              "2"
+            ],
+            "count": 1
+          },
+          {
+            "number": 3,
+            "digits": [
+              "3"
+            ],
+            "count": 1
+          },
+          {
+            "number": 5,
+            "digits": [],
+            "count": 0
+          },
+          {
+            "number": 7,
+            "digits": [],
+            "count": 0
+          },
+          {
+            "number": 8,
+            "digits": [],
+            "count": 0
+          },
+          {
+            "number": 1,
+            "digits": [
+              "1",
+              "1"
+            ],
+            "count": 2
+          },
+          {
+            "number": 6,
+            "digits": [],
+            "count": 0
+          }
+        ],
+        "missing": [
+          5,
+          7,
+          8,
+          6
+        ],
+        "repeated": [
+          9,
+          1
+        ],
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "vehicle",
+    "status": 200,
+    "expect": "mulank 5 Mercury friendly set",
+    "body": {
+      "data": {
+        "mulank": 5,
+        "lord": "Mercury",
+        "friendly_numbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ],
+        "neutral_numbers": [
+          7
+        ],
+        "note": "Lucky vehicle numbers via the birth-day number's planetary lord friendships (common convention; Rahu/Ketu mapped to Saturn/Mars sides). Pending Jyotishi review (P11).",
+        "verified": false,
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "name-numerology",
+    "status": 200,
+    "expect": "Chaldean per-letter values",
+    "body": {
+      "data": {
+        "sum": 25,
+        "root": 7,
+        "lord": "Ketu",
+        "letters": [
+          3,
+          1,
+          5,
+          1,
+          1,
+          1,
+          2,
+          5,
+          1,
+          4,
+          1
+        ],
+        "note": "Chaldean name numerology (traditional Vedic numerology uses Chaldean values).",
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "mobile",
+    "status": 200,
+    "expect": "sum 63 root 9 Mars",
+    "body": {
+      "data": {
+        "sum": 63,
+        "root": 9,
+        "lord": "Mars",
+        "note": "Chaldean digit-sum of the mobile number with its planetary lord. For entertainment; no service-quality claim.",
+        "for_fun": true,
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "age",
+    "status": 200,
+    "expect": "per borrow convention in research/age-calculator.md",
+    "body": {
+      "data": {
+        "years": 25,
+        "months": 0,
+        "days": 0,
+        "total_days": 9132,
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "age same-day",
+    "status": 200,
+    "expect": "edge case Feb-29 birthday",
+    "body": {
+      "data": {
+        "years": 24,
+        "months": 11,
+        "days": 30,
+        "total_days": 9131,
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "name-compat",
+    "status": 200,
+    "expect": "roots + band",
+    "body": {
+      "data": {
+        "a_root": 3,
+        "b_root": 4,
+        "combined_root": 7,
+        "band": "Harmonious",
+        "note": "Chaldean name-compatibility game for fun — not a relationship verdict.",
+        "for_fun": true,
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "love",
+    "status": 200,
+    "expect": "score 55-95 + band",
+    "body": {
+      "data": {
+        "score": 75,
+        "band": "Warm",
+        "note": "Name-numerology game for fun — not an astrological or relational verdict.",
+        "for_fun": true,
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "friendship",
+    "status": 200,
+    "expect": "score + band",
+    "body": {
+      "data": {
+        "score": 55,
+        "band": "Harmonious",
+        "note": "Name-numerology game for fun — not an astrological or social verdict.",
+        "for_fun": true,
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "flames",
+    "status": 200,
+    "expect": "Wikipedia vector: Marriage (verify convention)",
+    "body": {
+      "data": {
+        "result": "Enemy",
+        "letters_removed": 2,
+        "for_fun": true,
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "flames same",
+    "status": 200,
+    "expect": "n=0 convention",
+    "body": {
+      "data": {
+        "result": "Marriage",
+        "letters_removed": 4,
+        "for_fun": true,
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "karakas",
+    "status": 200,
+    "expect": "7 karakas descending degree",
+    "body": {
+      "data": {
+        "karakas": [
+          {
+            "karaka": "Atmakaraka",
+            "planet": "Moon",
+            "sign": "Sagittarius",
+            "degree_in_sign": 29.85,
+            "navamsha_sign": "Sagittarius"
+          },
+          {
+            "karaka": "Amatyakaraka",
+            "planet": "Mars",
+            "sign": "Aquarius",
+            "degree_in_sign": 24.4,
+            "navamsha_sign": "Taurus"
+          },
+          {
+            "karaka": "Bhratrikaraka",
+            "planet": "Venus",
+            "sign": "Pisces",
+            "degree_in_sign": 18.77,
+            "navamsha_sign": "Sagittarius"
+          },
+          {
+            "karaka": "Matrikaraka",
+            "planet": "Jupiter",
+            "sign": "Gemini",
+            "degree_in_sign": 15.77,
+            "navamsha_sign": "Aquarius"
+          },
+          {
+            "karaka": "Putrakaraka",
+            "planet": "Mercury",
+            "sign": "Aries",
+            "degree_in_sign": 14.33,
+            "navamsha_sign": "Leo"
+          },
+          {
+            "karaka": "Gnatikaraka",
+            "planet": "Saturn",
+            "sign": "Capricorn",
+            "degree_in_sign": 1.54,
+            "navamsha_sign": "Capricorn"
+          },
+          {
+            "karaka": "Darakaraka",
+            "planet": "Sun",
+            "sign": "Taurus",
+            "degree_in_sign": 0.4,
+            "navamsha_sign": "Capricorn"
+          }
+        ],
+        "engine_version": "1.3.0-alpha1"
+      },
+      "meta": {
+        "consent_note": "Birth details are processed on request and are not stored."
+      }
+    }
+  },
+  {
+    "name": "ishta-devata",
+    "status": 200,
+    "expect": "ishta_devata null (known gap)",
+    "body": {
+      "data": {
+        "atmakaraka": {
+          "karaka": "Atmakaraka",
+          "planet": "Moon",
+          "sign": "Sagittarius",
+          "degree_in_sign": 29.85,
+          "navamsha_sign": "Sagittarius"
+        },
+        "navamsha_sign": "Sagittarius",
+        "ishta_devata": null,
+        "note": "Ishta Devata = deity of the Atmakaraka's navamsha sign; the sign-to-deity table differs between classical schools and is pending Jyotishi verification (P11).",
+        "engine_version": "1.3.0-alpha1"
+      },
+      "meta": {
+        "consent_note": "Birth details are processed on request and are not stored."
+      }
+    }
+  },
+  {
+    "name": "sade-sati",
+    "status": 200,
+    "expect": "Aquarius moon; Saturn in Pisces = phase 2 (2025-11-21)",
+    "body": {
+      "data": {
+        "in_sade_sati": false,
+        "phase": null,
+        "moon_sign": "Taurus",
+        "moon_sign_index": 1,
+        "saturn_sign": "Pisces",
+        "saturn_sign_index": 11,
+        "saturn_offset_from_moon": 10,
+        "current": null,
+        "next": {
+          "start": "2027-06-02T22:46:04.011Z",
+          "end": "2034-07-12T22:22:30.729Z"
+        },
+        "note": "Sade Sati = Saturn transiting 12th/1st/2nd from natal Moon; window = first entry to final exit (mid-window retro dips ignored, classical presentation). Phases 1–3 in transit order. Pending Jyotishi review (P11).",
+        "verified": false,
+        "engine_version": "1.3.0-alpha1"
+      },
+      "meta": {
+        "consent_note": "Birth details are processed on request and are not stored."
+      }
+    }
+  },
+  {
+    "name": "kaal-sarp API",
+    "status": 200,
+    "expect": "kaal_sarp present? type Ghatak per research",
+    "body": {
+      "data": {
+        "birth": {
+          "datetime_utc": "2000-03-30T06:30:00.000Z",
+          "date": "2000-03-30",
+          "time": "12:00",
+          "timezone": "Asia/Kolkata",
+          "latitude": 19.076,
+          "longitude": 72.8777
+        },
+        "lagna": {
+          "lon": 72.4709,
+          "sign": "Gemini",
+          "signIndex": 2,
+          "nakshatra": "Ardra",
+          "nakshatraIndex": 5,
+          "pada": 2,
+          "house": 1
+        },
+        "grahas": [
+          {
+            "planet": "Sun",
+            "lon": 346.0035,
+            "sign": "Pisces",
+            "signIndex": 11,
+            "nakshatra": "Uttara Bhadrapada",
+            "nakshatraIndex": 25,
+            "pada": 4,
+            "retrograde": false
+          },
+          {
+            "planet": "Moon",
+            "lon": 280.6158,
+            "sign": "Capricorn",
+            "signIndex": 9,
+            "nakshatra": "Shravana",
+            "nakshatraIndex": 21,
+            "pada": 1,
+            "retrograde": false
+          },
+          {
+            "planet": "Mars",
+            "lon": 11.425,
+            "sign": "Aries",
+            "signIndex": 0,
+            "nakshatra": "Ashwini",
+            "nakshatraIndex": 0,
+            "pada": 4,
+            "retrograde": false
+          },
+          {
+            "planet": "Mercury",
+            "lon": 318.2671,
+            "sign": "Aquarius",
+            "signIndex": 10,
+            "nakshatra": "Shatabhisha",
+            "nakshatraIndex": 23,
+            "pada": 4,
+            "retrograde": false
+          },
+          {
+            "planet": "Jupiter",
+            "lon": 14.9305,
+            "sign": "Aries",
+            "signIndex": 0,
+            "nakshatra": "Bharani",
+            "nakshatraIndex": 1,
+            "pada": 1,
+            "retrograde": false
+          },
+          {
+            "planet": "Venus",
+            "lon": 326.8786,
+            "sign": "Aquarius",
+            "signIndex": 10,
+            "nakshatra": "Purva Bhadrapada",
+            "nakshatraIndex": 24,
+            "pada": 3,
+            "retrograde": false
+          },
+          {
+            "planet": "Saturn",
+            "lon": 21.4483,
+            "sign": "Aries",
+            "signIndex": 0,
+            "nakshatra": "Bharani",
+            "nakshatraIndex": 1,
+            "pada": 3,
+            "retrograde": false
+          },
+          {
+            "planet": "Rahu",
+            "lon": 120.3438,
+            "sign": "Leo",
+            "signIndex": 4,
+            "nakshatra": "Magha",
+            "nakshatraIndex": 9,
+            "pada": 1,
+            "retrograde": true
+          },
+          {
+            "planet": "Ketu",
+            "lon": 300.3438,
+            "sign": "Aquarius",
+            "signIndex": 10,
+            "nakshatra": "Dhanishta",
+            "nakshatraIndex": 22,
+            "pada": 3,
+            "retrograde": true
+          }
+        ],
+        "houses": {
+          "Sun": 10,
+          "Moon": 8,
+          "Mars": 11,
+          "Mercury": 9,
+          "Jupiter": 11,
+          "Venus": 9,
+          "Saturn": 11,
+          "Rahu": 3,
+          "Ketu": 9
+        },
+        "navamsha": {
+          "Sun": 7,
+          "Moon": 0,
+          "Mars": 3,
+          "Mercury": 11,
+          "Jupiter": 4,
+          "Venus": 2,
+          "Saturn": 6,
+          "Rahu": 0,
+          "Ketu": 6
+        },
+        "divisionals": {
+          "Sun": {
+            "D3": 3,
+            "D7": 8,
+            "D9": 7,
+            "D10": 0,
+            "D12": 5
+          },
+          "Moon": {
+            "D3": 1,
+            "D7": 5,
+            "D9": 0,
+            "D10": 8,
+            "D12": 1
+          },
+          "Mars": {
+            "D3": 4,
+            "D7": 2,
+            "D9": 3,
+            "D10": 3,
+            "D12": 4
+          },
+          "Mercury": {
+            "D3": 2,
+            "D7": 2,
+            "D9": 11,
+            "D10": 4,
+            "D12": 5
+          },
+          "Jupiter": {
+            "D3": 4,
+            "D7": 3,
+            "D9": 4,
+            "D10": 4,
+            "D12": 5
+          },
+          "Venus": {
+            "D3": 6,
+            "D7": 4,
+            "D9": 2,
+            "D10": 6,
+            "D12": 8
+          },
+          "Saturn": {
+            "D3": 8,
+            "D7": 5,
+            "D9": 6,
+            "D10": 7,
+            "D12": 8
+          },
+          "Rahu": {
+            "D3": 4,
+            "D7": 4,
+            "D9": 0,
+            "D10": 4,
+            "D12": 4
+          },
+          "Ketu": {
+            "D3": 10,
+            "D7": 10,
+            "D9": 6,
+            "D10": 10,
+            "D12": 10
+          },
+          "Lagna": {
+            "D3": 6,
+            "D7": 4,
+            "D9": 9,
+            "D10": 6,
+            "D12": 6
+          }
+        },
+        "sade_sati": {
+          "in_sade_sati": false,
+          "phase": null,
+          "moon_sign": "Capricorn",
+          "moon_sign_index": 9,
+          "saturn_sign": "Pisces",
+          "saturn_sign_index": 11,
+          "saturn_offset_from_moon": 2,
+          "current": null,
+          "next": {
+            "start": "2046-12-07T16:56:05.227Z",
+            "end": "2055-02-05T12:23:48.117Z"
+          },
+          "note": "Sade Sati = Saturn transiting 12th/1st/2nd from natal Moon; window = first entry to final exit (mid-window retro dips ignored, classical presentation). Phases 1–3 in transit order. Pending Jyotishi review (P11).",
+          "verified": false
+        },
+        "manglik": {
+          "is_manglik": false,
+          "from_lagna": false,
+          "from_moon": false,
+          "from_venus": false,
+          "mars_houses": {
+            "lagna": 11,
+            "moon": 4,
+            "venus": 3
+          },
+          "cancelled": true,
+          "cancellation_reason": "Mars in Aries (own sign / exaltation) — classical cancellation.",
+          "detail": "Mars in house 11 from Lagna, 4 from Moon, 3 from Venus.",
+          "verified": false
+        },
+        "kaal_sarp": {
+          "present": false,
+          "axis": null,
+          "rahu_house": 3,
+          "type": null,
+          "note": "All seven grahas hemmed within one Rahu–Ketu axis; type named by Rahu's house from the Lagna. Partial Kaal Sarp is not asserted. Pending Jyotishi review (P11).",
+          "verified": false
+        },
+        "dasha": {
+          "moon_nakshatra": "Shravana",
+          "moon_nakshatra_lord": "Moon",
+          "balance_at_birth_years": 9.538,
+          "mahadashas": [
+            {
+              "lord": "Moon",
+              "start": "2000-03-30T06:30:00.000Z",
+              "end": "2009-10-13T02:01:22.830Z",
+              "years": 9.538
+            },
+            {
+              "lord": "Mars",
+              "start": "2009-10-13T02:01:22.830Z",
+              "end": "2016-10-12T20:01:22.830Z",
+              "years": 7
+            },
+            {
+              "lord": "Rahu",
+              "start": "2016-10-12T20:01:22.830Z",
+              "end": "2034-10-13T08:01:22.830Z",
+              "years": 18
+            },
+            {
+              "lord": "Jupiter",
+              "start": "2034-10-13T08:01:22.830Z",
+              "end": "2050-10-13T08:01:22.830Z",
+              "years": 16
+            },
+            {
+              "lord": "Saturn",
+              "start": "2050-10-13T08:01:22.830Z",
+              "end": "2069-10-13T02:01:22.830Z",
+              "years": 19
+            },
+            {
+              "lord": "Mercury",
+              "start": "2069-10-13T02:01:22.830Z",
+              "end": "2086-10-13T08:01:22.830Z",
+              "years": 17
+            },
+            {
+              "lord": "Ketu",
+              "start": "2086-10-13T08:01:22.830Z",
+              "end": "2093-10-13T02:01:22.830Z",
+              "years": 7
+            },
+            {
+              "lord": "Venus",
+              "start": "2093-10-13T02:01:22.830Z",
+              "end": "2113-10-14T02:01:22.830Z",
+              "years": 20
+            },
+            {
+              "lord": "Sun",
+              "start": "2113-10-14T02:01:22.830Z",
+              "end": "2119-10-14T14:01:22.830Z",
+              "years": 6
+            }
+          ]
+        },
+        "engine_version": "1.3.0-alpha1"
+      },
+      "meta": {
+        "consent_note": "Birth details are processed on request and are not stored.",
+        "chart_styles": [
+          "north_indian",
+          "south_indian"
+        ],
+        "engine_config": {
+          "ayanamsha": "lahiri",
+          "month_system": "purnimanta",
+          "house_system": "whole_sign",
+          "chart_style": "north_indian"
+        }
+      }
+    }
+  },
+  {
+    "name": "kundli dasha fixture",
+    "status": 200,
+    "expect": "dasha Sun first, balance 3.6446y; lagna sign",
+    "body": {
+      "data": {
+        "birth": {
+          "datetime_utc": "1990-05-15T05:00:00.000Z",
+          "date": "1990-05-15",
+          "time": "10:30",
+          "timezone": "Asia/Kolkata",
+          "latitude": 28.6139,
+          "longitude": 77.209
+        },
+        "lagna": {
+          "lon": 99.8915,
+          "sign": "Cancer",
+          "signIndex": 3,
+          "nakshatra": "Pushya",
+          "nakshatraIndex": 7,
+          "pada": 2,
+          "house": 1
+        },
+        "grahas": [
+          {
+            "planet": "Sun",
+            "lon": 30.3961,
+            "sign": "Taurus",
+            "signIndex": 1,
+            "nakshatra": "Krittika",
+            "nakshatraIndex": 2,
+            "pada": 2,
+            "retrograde": false
+          },
+          {
+            "planet": "Moon",
+            "lon": 269.8497,
+            "sign": "Sagittarius",
+            "signIndex": 8,
+            "nakshatra": "Uttara Ashadha",
+            "nakshatraIndex": 20,
+            "pada": 1,
+            "retrograde": false
+          },
+          {
+            "planet": "Mars",
+            "lon": 324.3989,
+            "sign": "Aquarius",
+            "signIndex": 10,
+            "nakshatra": "Purva Bhadrapada",
+            "nakshatraIndex": 24,
+            "pada": 2,
+            "retrograde": false
+          },
+          {
+            "planet": "Mercury",
+            "lon": 14.3318,
+            "sign": "Aries",
+            "signIndex": 0,
+            "nakshatra": "Bharani",
+            "nakshatraIndex": 1,
+            "pada": 1,
+            "retrograde": true
+          },
+          {
+            "planet": "Jupiter",
+            "lon": 75.7681,
+            "sign": "Gemini",
+            "signIndex": 2,
+            "nakshatra": "Ardra",
+            "nakshatraIndex": 5,
+            "pada": 3,
+            "retrograde": false
+          },
+          {
+            "planet": "Venus",
+            "lon": 348.7672,
+            "sign": "Pisces",
+            "signIndex": 11,
+            "nakshatra": "Revati",
+            "nakshatraIndex": 26,
+            "pada": 1,
+            "retrograde": false
+          },
+          {
+            "planet": "Saturn",
+            "lon": 271.5357,
+            "sign": "Capricorn",
+            "signIndex": 9,
+            "nakshatra": "Uttara Ashadha",
+            "nakshatraIndex": 20,
+            "pada": 2,
+            "retrograde": true
+          },
+          {
+            "planet": "Rahu",
+            "lon": 311.3514,
+            "sign": "Aquarius",
+            "signIndex": 10,
+            "nakshatra": "Shatabhisha",
+            "nakshatraIndex": 23,
+            "pada": 2,
+            "retrograde": true
+          },
+          {
+            "planet": "Ketu",
+            "lon": 131.3514,
+            "sign": "Leo",
+            "signIndex": 4,
+            "nakshatra": "Magha",
+            "nakshatraIndex": 9,
+            "pada": 4,
+            "retrograde": true
+          }
+        ],
+        "houses": {
+          "Sun": 11,
+          "Moon": 6,
+          "Mars": 8,
+          "Mercury": 10,
+          "Jupiter": 12,
+          "Venus": 9,
+          "Saturn": 7,
+          "Rahu": 8,
+          "Ketu": 2
+        },
+        "navamsha": {
+          "Sun": 9,
+          "Moon": 8,
+          "Mars": 1,
+          "Mercury": 4,
+          "Jupiter": 10,
+          "Venus": 8,
+          "Saturn": 9,
+          "Rahu": 9,
+          "Ketu": 3
+        },
+        "divisionals": {
+          "Sun": {
+            "D3": 1,
+            "D7": 7,
+            "D9": 9,
+            "D10": 9,
+            "D12": 1
+          },
+          "Moon": {
+            "D3": 4,
+            "D7": 2,
+            "D9": 8,
+            "D10": 5,
+            "D12": 7
+          },
+          "Mars": {
+            "D3": 6,
+            "D7": 3,
+            "D9": 1,
+            "D10": 6,
+            "D12": 7
+          },
+          "Mercury": {
+            "D3": 4,
+            "D7": 3,
+            "D9": 4,
+            "D10": 4,
+            "D12": 5
+          },
+          "Jupiter": {
+            "D3": 6,
+            "D7": 5,
+            "D9": 10,
+            "D10": 7,
+            "D12": 8
+          },
+          "Venus": {
+            "D3": 3,
+            "D7": 9,
+            "D9": 8,
+            "D10": 1,
+            "D12": 6
+          },
+          "Saturn": {
+            "D3": 9,
+            "D7": 3,
+            "D9": 9,
+            "D10": 5,
+            "D12": 9
+          },
+          "Rahu": {
+            "D3": 2,
+            "D7": 0,
+            "D9": 9,
+            "D10": 1,
+            "D12": 2
+          },
+          "Ketu": {
+            "D3": 8,
+            "D7": 6,
+            "D9": 3,
+            "D10": 7,
+            "D12": 8
+          },
+          "Lagna": {
+            "D3": 3,
+            "D7": 11,
+            "D9": 5,
+            "D10": 2,
+            "D12": 6
+          }
+        },
+        "sade_sati": {
+          "in_sade_sati": false,
+          "phase": null,
+          "moon_sign": "Sagittarius",
+          "moon_sign_index": 8,
+          "saturn_sign": "Pisces",
+          "saturn_sign_index": 11,
+          "saturn_offset_from_moon": 3,
+          "current": null,
+          "next": {
+            "start": "2043-12-11T16:48:00.147Z",
+            "end": "2052-02-24T21:24:09.287Z"
+          },
+          "note": "Sade Sati = Saturn transiting 12th/1st/2nd from natal Moon; window = first entry to final exit (mid-window retro dips ignored, classical presentation). Phases 1–3 in transit order. Pending Jyotishi review (P11).",
+          "verified": false
+        },
+        "manglik": {
+          "is_manglik": true,
+          "from_lagna": true,
+          "from_moon": false,
+          "from_venus": true,
+          "mars_houses": {
+            "lagna": 8,
+            "moon": 3,
+            "venus": 12
+          },
+          "cancelled": false,
+          "cancellation_reason": null,
+          "detail": "Mars in house 8 from Lagna, 3 from Moon, 12 from Venus.",
+          "verified": false
+        },
+        "kaal_sarp": {
+          "present": false,
+          "axis": null,
+          "rahu_house": 8,
+          "type": null,
+          "note": "All seven grahas hemmed within one Rahu–Ketu axis; type named by Rahu's house from the Lagna. Partial Kaal Sarp is not asserted. Pending Jyotishi review (P11).",
+          "verified": false
+        },
+        "dasha": {
+          "moon_nakshatra": "Uttara Ashadha",
+          "moon_nakshatra_lord": "Sun",
+          "balance_at_birth_years": 4.568,
+          "mahadashas": [
+            {
+              "lord": "Sun",
+              "start": "1990-05-15T05:00:00.000Z",
+              "end": "1994-12-08T12:49:38.435Z",
+              "years": 4.568
+            },
+            {
+              "lord": "Moon",
+              "start": "1994-12-08T12:49:38.435Z",
+              "end": "2004-12-08T00:49:38.435Z",
+              "years": 10
+            },
+            {
+              "lord": "Mars",
+              "start": "2004-12-08T00:49:38.435Z",
+              "end": "2011-12-08T18:49:38.435Z",
+              "years": 7
+            },
+            {
+              "lord": "Rahu",
+              "start": "2011-12-08T18:49:38.435Z",
+              "end": "2029-12-08T06:49:38.435Z",
+              "years": 18
+            },
+            {
+              "lord": "Jupiter",
+              "start": "2029-12-08T06:49:38.435Z",
+              "end": "2045-12-08T06:49:38.435Z",
+              "years": 16
+            },
+            {
+              "lord": "Saturn",
+              "start": "2045-12-08T06:49:38.435Z",
+              "end": "2064-12-08T00:49:38.435Z",
+              "years": 19
+            },
+            {
+              "lord": "Mercury",
+              "start": "2064-12-08T00:49:38.435Z",
+              "end": "2081-12-08T06:49:38.435Z",
+              "years": 17
+            },
+            {
+              "lord": "Ketu",
+              "start": "2081-12-08T06:49:38.435Z",
+              "end": "2088-12-08T00:49:38.435Z",
+              "years": 7
+            },
+            {
+              "lord": "Venus",
+              "start": "2088-12-08T00:49:38.435Z",
+              "end": "2108-12-09T00:49:38.435Z",
+              "years": 20
+            }
+          ]
+        },
+        "engine_version": "1.3.0-alpha1"
+      },
+      "meta": {
+        "consent_note": "Birth details are processed on request and are not stored.",
+        "chart_styles": [
+          "north_indian",
+          "south_indian"
+        ],
+        "engine_config": {
+          "ayanamsha": "lahiri",
+          "month_system": "purnimanta",
+          "house_system": "whole_sign",
+          "chart_style": "north_indian"
+        }
+      }
+    }
+  },
+  {
+    "name": "X1 mangal GET (bug)",
+    "status": 404,
+    "expect": "404 GET not allowed — proves UI bug X1",
+    "body": {
+      "error": {
+        "code": "not_found",
+        "message": "No route for GET /api/v1/kundli"
+      }
+    }
+  },
+  {
+    "name": "X2 name param (bug)",
+    "status": 400,
+    "expect": "400 a and b required — proves UI bug X2",
+    "body": {
+      "error": {
+        "code": "validation_error",
+        "message": "a and b name parameters are required"
+      }
+    }
+  },
+  {
+    "name": "X4 impossible date",
+    "status": 200,
+    "expect": "silently rolls to Mar 2 (bug X4)",
+    "body": {
+      "data": {
+        "mulank": 3,
+        "destiny": 5,
+        "name_root": 0,
+        "name_sum": 0,
+        "name_lord": "Sun",
+        "engine_version": "1.3.0-alpha1"
+      }
+    }
+  },
+  {
+    "name": "transits",
+    "status": 200,
+    "expect": "9 grahas as_of now",
+    "body": {
+      "data": {
+        "as_of": "2026-11-21T15:13:36.705Z",
+        "timezone": "Asia/Kolkata",
+        "grahas": [
+          {
+            "planet": "Sun",
+            "lon": 215.0915,
+            "sign": "Scorpio",
+            "signIndex": 7,
+            "nakshatra": "Anuradha",
+            "nakshatraIndex": 16,
+            "pada": 1,
+            "retrograde": false
+          },
+          {
+            "planet": "Moon",
+            "lon": 354.6409,
+            "sign": "Pisces",
+            "signIndex": 11,
+            "nakshatra": "Revati",
+            "nakshatraIndex": 26,
+            "pada": 3,
+            "retrograde": false
+          },
+          {
+            "planet": "Mars",
+            "lon": 123.9872,
+            "sign": "Leo",
+            "signIndex": 4,
+            "nakshatra": "Magha",
+            "nakshatraIndex": 9,
+            "pada": 2,
+            "retrograde": false
+          },
+          {
+            "planet": "Mercury",
+            "lon": 195.6228,
+            "sign": "Libra",
+            "signIndex": 6,
+            "nakshatra": "Swati",
+            "nakshatraIndex": 14,
+            "pada": 3,
+            "retrograde": false
+          },
+          {
+            "planet": "Jupiter",
+            "lon": 122.0618,
+            "sign": "Leo",
+            "signIndex": 4,
+            "nakshatra": "Magha",
+            "nakshatraIndex": 9,
+            "pada": 1,
+            "retrograde": false
+          },
+          {
+            "planet": "Venus",
+            "lon": 179.7476,
+            "sign": "Virgo",
+            "signIndex": 5,
+            "nakshatra": "Chitra",
+            "nakshatraIndex": 13,
+            "pada": 2,
+            "retrograde": false
+          },
+          {
+            "planet": "Saturn",
+            "lon": 344.0352,
+            "sign": "Pisces",
+            "signIndex": 11,
+            "nakshatra": "Uttara Bhadrapada",
+            "nakshatraIndex": 25,
+            "pada": 4,
+            "retrograde": true
+          },
+          {
+            "planet": "Rahu",
+            "lon": 324.9786,
+            "sign": "Aquarius",
+            "signIndex": 10,
+            "nakshatra": "Purva Bhadrapada",
+            "nakshatraIndex": 24,
+            "pada": 2,
+            "retrograde": true
+          },
+          {
+            "planet": "Ketu",
+            "lon": 144.9786,
+            "sign": "Leo",
+            "signIndex": 4,
+            "nakshatra": "Purva Phalguni",
+            "nakshatraIndex": 10,
+            "pada": 4,
+            "retrograde": true
+          }
+        ],
+        "engine_version": "1.3.0-alpha1"
+      },
+      "meta": {
+        "cache": "short-lived; positions move continuously"
+      }
+    }
+  }
+]
