@@ -80,6 +80,18 @@ await page.waitForTimeout(300);
 expect((await summaryText()).includes("Please fix 2 fields"), "rashi — date ok, 2 left (time+place)");
 expect((await txt(page.locator("form[data-calc-endpoint] .dt[data-dt=time] .dt-error"))).includes("time of birth"),
   "rashi — TOB message under time field");
+// S18 owner find: complete hh:mm WITHOUT a meridiem must not silently compose AM
+const tsegs = page.locator(".dt:has(#bf-time) [data-dt-seg]");
+await tsegs.nth(0).fill("10");
+await tsegs.nth(1).fill("30");
+await tsegs.nth(0).blur();
+await page.waitForTimeout(200);
+expect((await page.locator("#bf-time").inputValue()) === "", "rashi — no AM/PM → hidden value stays empty");
+expect(/AM or PM|AM\/PM/.test(await txt(page.locator("form[data-calc-endpoint] .dt[data-dt=time] .dt-error"))),
+  "rashi — meridiem message under time field while typing");
+await submitBtn("form[data-calc-endpoint]").click();
+await page.waitForTimeout(300);
+expect((await summaryText()).includes("Please fix 2 fields"), "rashi — hh:mm without AM/PM still blocked (2 fields)");
 await fillTime(".dt:has(#bf-time)", "06", "30", "pm");
 await submitBtn("form[data-calc-endpoint]").click();
 await page.waitForTimeout(300);

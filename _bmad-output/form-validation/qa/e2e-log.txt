@@ -3,6 +3,9 @@ pass  rashi empty — focus on first error (got #bf-date-dd)
 pass  rashi — DOB message under date field
 pass  rashi — date ok, 2 left (time+place)
 pass  rashi — TOB message under time field
+pass  rashi — no AM/PM → hidden value stays empty
+pass  rashi — meridiem message under time field while typing
+pass  rashi — hh:mm without AM/PM still blocked (2 fields)
 pass  rashi — only place left → fix 1
 pass  rashi — free-text place blocked with POB message
 pass  rashi — pick clears place error
