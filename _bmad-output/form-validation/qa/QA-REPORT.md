@@ -43,6 +43,8 @@ consultation {name}                         → 400 details: phone/topic listed
 
 ⚠ **Noted gap (backend, pending deploy):** `kundli date=2099-01-01` currently returns **200** on the live worker — the future-date rejection (`birth.ts`) is implemented and unit-tested locally (backend suite green incl. the new "S18: future birth dates are rejected" test) but the S18 backend commit is not pushed/deployed yet. The live API never computes a *wrong* result for missing/invalid input (all 400s above), so the owner-facing contract holds; the future-date 400 goes live with the S18 backend push.
 
+> **AMENDMENT (2026-11-22, post-push):** gap closed. Backend pushed through 6ebfc05 (CI lint-gate required a whitespace fixup on the S18 files), deploy success — live re-curl: `kundli date=2099-01-01` → **HTTP 400**. Frontend pushed through 007195a (astro-check fix in form-validation.ts + dead frontmatter import in BookingModal), Pages deploy success — live /calculators/rashi serves the RequiredNote + 3 req-stars + the 360px col-span fix; /kundli, /matching, /consultations, /muhurat all serve the required-note. Frontend CI remains red on 7 PRE-EXISTING astro-check errors (5× DateField segment-input typings from the S16 era, 2× compatibility key-nulls from Epic ZC) — non-gating for deploys (Cloudflare deploys independently; live verified), left untouched per minimal-change discipline, recommended as a small follow-up.
+
 ## Bugs found & fixed during QA
 
 | # | Bug | Fix |
