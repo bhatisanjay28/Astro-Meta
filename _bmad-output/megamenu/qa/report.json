@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-22T06:23:39.494Z",
+  "date": "2026-11-22T06:50:35.990Z",
   "failures": 0,
   "results": [
     {
       "id": "M1",
       "name": "hover opens after intent delay (not instantly)",
       "ok": true,
-      "detail": "opened ~214ms, not visible at 60ms: true"
+      "detail": "opened ~146ms, not visible at 60ms: true"
     },
     {
       "id": "M2",
@@ -70,15 +70,21 @@
     },
     {
       "id": "M12-1440",
-      "name": "panel within viewport at 1440px",
+      "name": "every panel within viewport at 1440px (8 tabs)",
       "ok": true,
-      "detail": "x=48 w=1344"
+      "detail": "all fit"
     },
     {
       "id": "M12-1280",
-      "name": "panel within viewport at 1280px",
+      "name": "every panel within viewport at 1280px (8 tabs)",
       "ok": true,
-      "detail": "x=8 w=1264"
+      "detail": "all fit"
+    },
+    {
+      "id": "M16",
+      "name": "panels content-sized per tab, not full-width",
+      "ok": true,
+      "detail": "Consultations=576, Horoscope=850, Panchang=680, Muhurat=576, Astrology=544, Poojan=552, Free Calculators=922, Blog=471"
     },
     {
       "id": "M13",
