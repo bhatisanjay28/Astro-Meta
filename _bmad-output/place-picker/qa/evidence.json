@@ -1,5 +1,5 @@
 {
-  "ran_at": "2026-11-21T18:59:21.799Z",
+  "ran_at": "2026-11-22T15:32:48.136Z",
   "base": "http://127.0.0.1:4321",
   "results": [
     {
@@ -46,9 +46,9 @@
     },
     {
       "id": "P-05",
-      "name": "kundli submit blocked while field holds free text",
+      "name": "kundli submit blocked while field holds free text (gate owns the block)",
       "ok": true,
-      "detail": "Please select your place of birth from the suggestions."
+      "detail": "{\"status\":\"Please select your place of birth from the list.\",\"summary\":\"Please fix 1 field to continue.\",\"kErrHidden\":true}"
     },
     {
       "id": "P-06a",
@@ -126,7 +126,7 @@
       "id": "P-10a",
       "name": "carded city pick navigates to /panchang/mumbai",
       "ok": true,
-      "detail": "http://127.0.0.1:4321/panchang/mumbai"
+      "detail": "http://127.0.0.1:4321/panchang/mumbai?date=2026-11-22"
     },
     {
       "id": "P-10b",
@@ -136,9 +136,9 @@
     },
     {
       "id": "P-11a",
-      "name": "required calculator blocks free text",
+      "name": "required calculator blocks free text (gate wording — birth place context)",
       "ok": true,
-      "detail": "Please select a city from the list."
+      "detail": "Please select your place of birth from the list."
     },
     {
       "id": "P-11b",

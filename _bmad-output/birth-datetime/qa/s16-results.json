@@ -112,7 +112,7 @@
       "id": "D-19",
       "name": "required-empty submit blocked before page handler; focus on DD",
       "ok": true,
-      "detail": "ran=false err=Please enter a complete date (DD/MM/YYYY)."
+      "detail": "ran=false err=Please enter your date of birth."
     },
     {
       "id": "D-20",
@@ -127,8 +127,14 @@
       "detail": "1985-04-07"
     },
     {
+      "id": "D-22a",
+      "name": "hour12 time without AM/PM stays empty (no silent AM — S18)",
+      "ok": true,
+      "detail": "v="
+    },
+    {
       "id": "D-22",
-      "name": "HomeKundli [data-tob] hidden carries 24h",
+      "name": "HomeKundli [data-tob] hidden carries 24h (AM picked)",
       "ok": true,
       "detail": "06:45"
     },
@@ -154,7 +160,7 @@
       "id": "D-26",
       "name": "partially-typed optional time blocks submit",
       "ok": true,
-      "detail": "ran=false err=Please enter a complete time, or clear it."
+      "detail": "ran=false err=Please complete the time — minute and AM/PM missing."
     },
     {
       "id": "D-27",
@@ -163,8 +169,14 @@
       "detail": "1990-10-10"
     },
     {
+      "id": "D-28a",
+      "name": "tool time without AM/PM stays empty (no silent AM — S18)",
+      "ok": true,
+      "detail": ""
+    },
+    {
       "id": "D-28",
-      "name": "[tool] time guard reads hidden [name=time] .value",
+      "name": "[tool] time guard reads hidden [name=time] .value (AM picked)",
       "ok": true,
       "detail": "09:15"
     },
@@ -242,9 +254,9 @@
     },
     {
       "id": "D-41",
-      "name": "valid range passes guard → page handler runs (city error shows)",
+      "name": "valid range, empty city → gate blocks (city wording, handler suppressed)",
       "ok": true,
-      "detail": "ran=true err=Please select the city from the suggestions."
+      "detail": "ran=false status=Please select the city from the suggestions."
     },
     {
       "id": "D-42",

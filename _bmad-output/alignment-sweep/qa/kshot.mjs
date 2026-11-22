@@ -1,0 +1,10 @@
+import { chromium } from "playwright-core";
+const browser = await chromium.launch({ executablePath: "C:\Program Files\Google\Chrome\Application\chrome.exe" });
+const page = await browser.newPage({ viewport: { width: 1366, height: 768 } });
+await page.goto("http://127.0.0.1:4321/kundli/", { waitUntil: "networkidle" });
+const f = page.locator("form[data-k-form]");
+await f.scrollIntoViewIfNeeded();
+await page.waitForTimeout(150);
+await f.screenshot({ path: "shots/kundli-form-after.png" });
+await browser.close();
+console.log("ok");

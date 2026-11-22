@@ -55,3 +55,5 @@ Automated sweep over every `dist/**/*.html` (excluding `/admin/*` and `/privacy/
 
 ## Not verified live yet
 Frontend push + Pages deploy + live curl sweep pending owner consent.
+
+> **LIVE VERIFICATION (2026-11-22, owner-approved push):** frontend 087c0ee + meta c6268ce pushed; Pages deploy success. Live curl sweep of 12 representative pages (home, kundli, matching, muhurat, 2 astrologer profiles, 2 panchang cities incl. inline-script caption, 2 learn articles, terms, 2 poojan slugs): **all clean**, home has no Supabase mention. Note: only the 3 home-featured poojas have baked detail pages — graha-shanti-puja / satyanarayan-puja / rudrabhishek-puja return 404 (pre-existing routing: getStaticPaths bakes the home set only; their DB rows never rendered publicly — clean-up was hygiene).
