@@ -1,0 +1,180 @@
+{
+  "date": "2026-11-22T06:23:39.494Z",
+  "failures": 0,
+  "results": [
+    {
+      "id": "M1",
+      "name": "hover opens after intent delay (not instantly)",
+      "ok": true,
+      "detail": "opened ~214ms, not visible at 60ms: true"
+    },
+    {
+      "id": "M2",
+      "name": "aria-expanded=true + aria-controls wiring",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "M3",
+      "name": "panel stays open after moving into it",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "M4",
+      "name": "quick pass does not open (flicker guard)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "M5",
+      "name": "closes after the 250ms grace period",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "M6",
+      "name": "hover-switch closes the previous panel",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "M7",
+      "name": "sub-link navigates to /kundli",
+      "ok": true,
+      "detail": "http://127.0.0.1:4321/kundli"
+    },
+    {
+      "id": "M8",
+      "name": "tab label navigates to its hub",
+      "ok": true,
+      "detail": "http://127.0.0.1:4321/blog"
+    },
+    {
+      "id": "M9",
+      "name": "focus opens, ArrowDown enters panel, Escape closes + refocuses",
+      "ok": true,
+      "detail": "focusOpen=true first=  All astrologers   Verified Jyotish scholars — browse by expertise and language  escClosed=true refocused=true"
+    },
+    {
+      "id": "M10",
+      "name": "tabbing out of the item closes the panel",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "M11",
+      "name": "Gemstones renders no dropdown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "M12-1440",
+      "name": "panel within viewport at 1440px",
+      "ok": true,
+      "detail": "x=48 w=1344"
+    },
+    {
+      "id": "M12-1280",
+      "name": "panel within viewport at 1280px",
+      "ok": true,
+      "detail": "x=8 w=1264"
+    },
+    {
+      "id": "M13",
+      "name": "all 68 sub-links resolve 200",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "id": "M14-light",
+      "name": "axe wcag2aa clean with panel open (light)",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "id": "M14-dark",
+      "name": "axe wcag2aa clean with panel open (dark)",
+      "ok": true,
+      "detail": "ok"
+    },
+    {
+      "id": "M15",
+      "name": "hamburger hidden on hover-capable desktop",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "T1-mobile-360",
+      "name": "desktop nav hidden, hamburger shown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "T2-mobile-360",
+      "name": "drawer shows 8 accordion toggles (Gemstones plain)",
+      "ok": true,
+      "detail": "count=8"
+    },
+    {
+      "id": "T3-mobile-360",
+      "name": "accordion opens with sign links",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "T4-mobile-360",
+      "name": "accordion sub-link navigates",
+      "ok": true,
+      "detail": "http://127.0.0.1:4321/horoscope/taurus/daily"
+    },
+    {
+      "id": "T5-mobile-360",
+      "name": "Gemstones is a plain link in the drawer",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "T6-mobile-360",
+      "name": "tab label in drawer navigates to hub",
+      "ok": true,
+      "detail": "http://127.0.0.1:4321/blog"
+    },
+    {
+      "id": "T1-tablet-768",
+      "name": "desktop nav hidden, hamburger shown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "T2-tablet-768",
+      "name": "drawer shows 8 accordion toggles (Gemstones plain)",
+      "ok": true,
+      "detail": "count=8"
+    },
+    {
+      "id": "T3-tablet-768",
+      "name": "accordion opens with sign links",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "T4-tablet-768",
+      "name": "accordion sub-link navigates",
+      "ok": true,
+      "detail": "http://127.0.0.1:4321/horoscope/taurus/daily"
+    },
+    {
+      "id": "T5-tablet-768",
+      "name": "Gemstones is a plain link in the drawer",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "T6-tablet-768",
+      "name": "tab label in drawer navigates to hub",
+      "ok": true,
+      "detail": "http://127.0.0.1:4321/blog"
+    }
+  ]
+}
