@@ -72,7 +72,7 @@ assert(tips >= 4 && tips <= 6, `tips 4–6 (got ${tips})`);
 assert(labels.length === 6 && labels.every((l) => l && !l.toLowerCase().endsWith("compatibility compatibility")), `labels clean (${labels.join(", ")})`);
 assert(disclaimer.includes("guidance and entertainment"), "disclaimer strip renders");
 const unverified = await page.locator(".zc-unverified").count();
-assert(unverified === 1, "honesty flag (interpretive method) present");
+assert(unverified === 0, "interpretive-method tag dropped (content signed off 2026-11-22)");
 
 // --- 4. facts chips + swap on the pair page
 const chips = await page.locator(".zc-chip").allTextContents();

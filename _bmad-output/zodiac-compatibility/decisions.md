@@ -36,4 +36,5 @@ Writers produce per-base-sign JSON in `_bmad-output/zodiac-compatibility/content
 
 ## Open (owner gates)
 - **G1** Final category set — **RESOLVED 2026-11-22**: 6 scored (Love, Sexual, Friendship, Communication, Trust, Emotional) + text-only Relationship Tips; 35–95 honest range; hub + 78 static pair pages.
-- **G2** Commit/push consent — end of epic, per operating rules (frontend push now deploys vyotish.com — D8 gate consumed 2026-11-21).
+- **G2** Commit/push consent — **RESOLVED 2026-11-22 (approved)**: backend fc1b6c4 + frontend 63013e5 + meta 83035b0 pushed & live.
+- **Content sign-off** — **RESOLVED 2026-11-22 (owner approved)**: D-ZC6's P11-class gate for this content set closes; engine `verified: true` (sign-compatibility only — Ashtakoota/muhurat/transits keep their own `verified: false`), the "interpretive method" UI tag no longer renders, method framing + guidance-and-entertainment disclaimer stay. Tests/e2e re-pinned and green.

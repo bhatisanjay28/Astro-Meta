@@ -404,8 +404,12 @@ originality 6-gram vs Astrotalk corpus] → Sally Stitch design spec → backend
 [verdict-card pattern, band accents, disabled-until-both, cross-link band] →
 qa/e2e-zc-compatibility.mjs 23/23 + axe strict light+dark clean + aria/contrast suites
 ALL PASS; footer col-heads h4→h2 site-wide [axe heading-order], CTA ink --ink-on-gold→
---color-on-primary on --gold fills — 2026-11-22, LOCAL ONLY, owner push-consent G2 pending)
-**= 59 tracked stories: all code-side work done; both repos pushed (2026-11-21, E-ZC local) ·
+--color-on-primary on --gold fills — 2026-11-22 G2 approved → backend fc1b6c4 /
+frontend 63013e5 / meta 83035b0 PUSHED & LIVE (hub+78 pages+sitemap verified on
+vyotish.com, mirrored 404) → **content SIGNED OFF by owner 2026-11-22** → verified:true
+(sign-off commit, backend pin in this commit), interpretive-method tag dropped,
+tests/e2e re-run green)
+**= 59 tracked stories: all code-side work done; both repos pushed ·
 remaining items are owner-gated only: 7.2 CSP/WAF/Turnstile (owner keys + production
 deploy loop), 7.3 legal drafts (owner review), 7.4 CF-analytics/error-monitoring/email
 (owner accounts), 8.2 Lighthouse / 8.3 device matrix / 8.4 launch review (owner gates) ·
