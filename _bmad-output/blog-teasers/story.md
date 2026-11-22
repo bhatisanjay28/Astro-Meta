@@ -45,3 +45,9 @@ block is the only place the sample names survive.
 - [ ] Frontend: `BlogTeaser.href?` + stretched-link card
 - [ ] QA: live API checks, local build page checks, screenshots; BMAD review
 - [ ] Owner consent → commit (backend, frontend) + push
+
+## Amendment 1 (2026-11-22, owner follow-up)
+
+"Admin Login" link shown publicly in the Section-10 header (pointing at /blog) — removed
+along with its `|` separator; "Browse All Articles →" kept. Single occurrence repo-wide.
+QA: dist grep (no "Admin Login", CTA intact) + live check after deploy.
