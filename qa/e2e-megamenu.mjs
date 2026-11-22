@@ -2,7 +2,8 @@
 // Black-box e2e through the real UI: hover open/close intent delays (100/250ms),
 // panel survives the move into it, hover-switching between tabs, click-through
 // to sub-pages, keyboard (focus-open, ArrowDown, Escape refocus, tab-out close),
-// Gemstones renders no dropdown, panel never overflows the viewport (1280/1440),
+// Gemstones renders no dropdown, every panel viewport-clamped (1280/1440) and
+// content-sized per tab (compact, not full-width),
 // every configured sub-link resolves 200, mobile/touch accordion (360/768) with
 // hub navigation intact, axe light+dark with a panel open, screenshots.
 // Run: bun qa/e2e-megamenu.mjs   (preview server on :4321 required)
@@ -73,10 +74,12 @@ await page.mouse.move(720, 600, { steps: 2 }); // leave within the open delay
 await page.waitForTimeout(350);
 t("M4", "quick pass does not open (flicker guard)", !(await panel("Blog").isVisible().catch(() => false)));
 
-// M5 closes after grace on leave
+// M5 closes after grace on leave (move below the panel — it is content-sized
+// now, so a fixed page point could land inside it, which would rightly stay open)
 await trigger("Free Calculators").hover();
 await panel("Free Calculators").waitFor({ state: "visible" });
-await page.mouse.move(720, 600);
+const fcb = await panel("Free Calculators").boundingBox();
+await page.mouse.move(fcb.x + 40, Math.min(fcb.y + fcb.height + 80, 880));
 await page.waitForTimeout(120);
 const stillOpenAt120 = await panel("Free Calculators").isVisible();
 await page.waitForTimeout(350);
@@ -132,17 +135,33 @@ t("M10", "tabbing out of the item closes the panel", tabOutClosed);
 const gemControls = await page.locator('nav[aria-label="Main Navigation"] a:text-is("Gemstones")').getAttribute("aria-controls");
 t("M11", "Gemstones renders no dropdown", gemControls === null);
 
-// M12 overflow: panel fits the viewport at 1440 and 1280
+// M12 overflow: EVERY panel fits the viewport at 1440 and 1280 (compact
+// panels anchor to their tab; right-side tabs rely on the JS clamp)
+const MENU_TABS = ["Consultations", "Horoscope", "Panchang", "Muhurat", "Astrology", "Poojan", "Free Calculators", "Blog"];
+const widths1440 = {};
 for (const width of [1440, 1280]) {
   await page.setViewportSize({ width, height: 900 });
   await open("/");
-  await trigger("Free Calculators").hover();
-  await panel("Free Calculators").waitFor({ state: "visible" });
-  const pb = await panel("Free Calculators").boundingBox();
-  const fits = pb.x >= -1 && pb.x + pb.width <= width + 1 && pb.y > 0;
-  t(`M12-${width}`, `panel within viewport at ${width}px`, fits, `x=${pb.x.toFixed(0)} w=${pb.width.toFixed(0)}`);
-  await page.screenshot({ path: resolve(OUT, "shots", `desktop-${width}-light.png`) });
+  const bad = [];
+  for (const label of MENU_TABS) {
+    await trigger(label).hover();
+    await panel(label).waitFor({ state: "visible", timeout: 2000 });
+    await page.waitForTimeout(250); // let the 140ms fade finish — shots must show the settled panel
+    const pb = await panel(label).boundingBox();
+    const fits = pb.x >= -1 && pb.x + pb.width <= width + 1 && pb.y > 0;
+    if (!fits) bad.push(`${label} x=${pb.x.toFixed(0)} w=${pb.width.toFixed(0)}`);
+    if (width === 1440) widths1440[label] = Math.round(pb.width);
+    if (label === "Free Calculators" || label === "Consultations") {
+      await page.screenshot({ path: resolve(OUT, "shots", `desktop-${width}-${label.toLowerCase().replace(/\s+/g, "-")}.png`) });
+    }
+  }
+  t(`M12-${width}`, `every panel within viewport at ${width}px (8 tabs)`, bad.length === 0, bad.join("; ") || "all fit");
 }
+
+// M16 content-sized panels (owner tweak): no full-width bars — widths stay
+// under the 920px cap and vary with each tab's sub-categories
+const ws16 = Object.values(widths1440);
+t("M16", "panels content-sized per tab, not full-width", ws16.every((w) => w <= 925) && new Set(ws16).size >= 5, Object.entries(widths1440).map(([k, v]) => `${k}=${v}`).join(", "));
 
 // M13 every configured sub-link resolves 200
 await page.setViewportSize({ width: 1440, height: 900 });
