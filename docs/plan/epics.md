@@ -394,8 +394,18 @@ E0 5✅ + 0.5b ✅ · E1 10✅(incl 1.7–1.10) · E2 2.1–2.7 all ✅ (incl 2.
 E3 4✅ + 3.2b/3.4b/3.1b ✅ · E4 4.1–4.7b all ✅ (incl 4.2b interpretations) ·
 E5 5✅ (5.2 profile [slug] + offers-config ✅) ·
 E6 4✅ · E7 7.1✅ (7.2/7.4 owner-keys remain) · E8 1✅(8.1+8.1b) · E9 4✅ (D12) ·
-E14 4✅ (calculators overhaul, 2026-11-21 — backend AND frontend pushed & live)
-**= 55 tracked stories: all code-side work done; both repos pushed (2026-11-21) ·
+E14 4✅ (calculators overhaul, 2026-11-21 — backend AND frontend pushed & live) ·
+E-ZC 4✅ (Zodiac Sign Compatibility — Mary research 144 pairs → owner gate G1
+[6 scored categories + Tips, honest 35–95, hub + 78 canonical pages] → Paige 78/78
+original records, all gates green [schema/aspect-geometry/banned-words/§10 sign-binding/
+originality 6-gram vs Astrotalk corpus] → Sally Stitch design spec → backend engine
++ /api/v1/compatibility/signs(+/pair) + content, tests 288→336 green → frontend hub
++ 78 pair pages + astrology card + sitemap, S16/S15 fields reused → Sally reconcile
+[verdict-card pattern, band accents, disabled-until-both, cross-link band] →
+qa/e2e-zc-compatibility.mjs 23/23 + axe strict light+dark clean + aria/contrast suites
+ALL PASS; footer col-heads h4→h2 site-wide [axe heading-order], CTA ink --ink-on-gold→
+--color-on-primary on --gold fills — 2026-11-22, LOCAL ONLY, owner push-consent G2 pending)
+**= 59 tracked stories: all code-side work done; both repos pushed (2026-11-21, E-ZC local) ·
 remaining items are owner-gated only: 7.2 CSP/WAF/Turnstile (owner keys + production
 deploy loop), 7.3 legal drafts (owner review), 7.4 CF-analytics/error-monitoring/email
 (owner accounts), 8.2 Lighthouse / 8.3 device matrix / 8.4 launch review (owner gates) ·
