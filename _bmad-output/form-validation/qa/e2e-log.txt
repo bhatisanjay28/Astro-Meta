@@ -1,0 +1,64 @@
+pass  rashi empty — summary visible: "Please fix 3 fields to continue."
+pass  rashi empty — focus on first error (got #bf-date-dd)
+pass  rashi — DOB message under date field
+pass  rashi — date ok, 2 left (time+place)
+pass  rashi — TOB message under time field
+pass  rashi — only place left → fix 1
+pass  rashi — free-text place blocked with POB message
+pass  rashi — pick clears place error
+pass  rashi — 31 Feb rejected with specific message
+pass  rashi — future date rejected
+pass  rashi — valid input still calculates
+pass  sun-sign empty — summary visible: "Please fix 1 field to continue."
+pass  sun-sign empty — focus on first error (got #bf-date-dd)
+pass  sun-sign — only date required (time/place optional)
+pass  sun-sign — valid without time/place still calculates
+pass  numerology empty — summary visible: "Please fix 1 field to continue."
+pass  numerology empty — focus on first error (got #bf-date-dd)
+pass  numerology — name is optional (date only)
+pass  numerology — no native required on name
+pass  numerology — calculates without a name
+pass  name-numerology empty — summary visible: "Please fix 1 field to continue."
+pass  name-numerology empty — focus on first error (got #bf-name)
+pass  name-numerology — name message
+pass  name-numerology — typing clears the error
+pass  name-numerology — calculates
+pass  mobile empty — summary visible: "Please fix 1 field to continue."
+pass  mobile empty — focus on first error (got #bf-digits)
+pass  mobile — calculates
+pass  vehicle empty — summary visible: "Please fix 2 fields to continue."
+pass  vehicle empty — focus on first error (got #bf-date-dd)
+pass  vehicle — plate ok, date missing → 1
+pass  vehicle — calculates
+pass  kundli empty — summary visible: "Please fix 2 fields to continue."
+pass  kundli empty — focus on first error (got #k-date-dd)
+pass  kundli — time prefilled 10:00 → date+place only
+pass  kundli — unselected place blocked
+pass  kundli — chart renders after valid submit
+pass  matching empty — summary visible: "Please fix 6 fields to continue."
+pass  matching empty — focus on first error (got #boy-date-dd)
+pass  matching — 4 dt + 2 places = 6
+pass  matching — girl side remains: 3
+pass  matching — 36-gun table renders
+pass  home kundli — date+time+place (name optional)
+pass  home kundli — full name no longer native-required
+pass  home kundli — result panel renders
+pass  booking empty — summary visible: "Please fix 2 fields to continue."
+pass  booking empty — focus on first error (got #bk-name)
+pass  booking — name+phone required, email optional
+pass  booking — phone missing → 1
+pass  booking — phone aria-invalid
+pass  booking — request sent ("✓ Request received — Your consultation request is saved and ")
+pass  booking modal — name+phone+email+consent = 4
+pass  modal — errors cleared after fixing (not resubmitted)
+pass  rashi hi — Hindi summary
+pass  rashi hi — Hindi DOB message
+pass  rashi hi — Hindi POB message
+pass  rashi errors — no horizontal overflow @360px
+pass  rashi errors — no horizontal overflow @768px
+pass  rashi errors — no horizontal overflow @1024px
+pass  rashi errors — no horizontal overflow @1440px
+pass  summary light — summary contrast 6.25:1 (rgb(185, 28, 28) on rgb(252, 251, 248))
+pass  summary dark — summary contrast 7.74:1 (rgb(242, 165, 160) on rgb(40, 37, 34))
+
+ALL PASS
