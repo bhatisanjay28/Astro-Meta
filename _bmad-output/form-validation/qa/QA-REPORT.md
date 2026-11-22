@@ -47,6 +47,8 @@ consultation {name}                         → 400 details: phone/topic listed
 
 > **AMENDMENT 3 (2026-11-22, owner find — time without AM/PM):** the owner reported that a time field accepts hh:mm without selecting AM/PM. Root cause: `checkTime` (date-time-core.ts) treated a complete hh:mm with `ampm: ""` as valid and composed it as **AM** — e.g. 10:30 PM submitted as 10:30 AM, a silently wrong result. Fix: hour12 + missing meridiem → `ok:false code:"ampm"` (message "Select AM or PM." while typing; on submit the part-aware "Please complete the time — AM/PM missing."), hidden value stays empty so the gate blocks. Pinned by new unit tests (`frontend/scripts/date-time-core.test.ts`, 5 tests/18 assertions, run `bun test scripts/`) and 3 new e2e assertions — **e2e now 65/65 ALL PASS**. Lesson recorded: partial-field states must be tested per part (meridiem included), not only fully-empty vs fully-filled.
 
+> **AMENDMENT 3 live (2026-11-22, owner-approved push):** frontend ccf66b1 Pages-deploy success — live rashi page serves the `un4pormk` DateField chunk, which contains both "Select AM or PM." and the part-aware submit template; fix live on vyotish.com.
+
 ## Bugs found & fixed during QA
 
 | # | Bug | Fix |
