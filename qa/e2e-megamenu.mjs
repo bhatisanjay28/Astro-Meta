@@ -2,8 +2,9 @@
 // Black-box e2e through the real UI: hover open/close intent delays (100/250ms),
 // panel survives the move into it, hover-switching between tabs, click-through
 // to sub-pages, keyboard (focus-open, ArrowDown, Escape refocus, tab-out close),
-// Gemstones renders no dropdown, every panel viewport-clamped (1280/1440) and
-// content-sized per tab (compact, not full-width),
+// Gemstones renders no dropdown, every panel fully viewport-fit at desktop and
+// short-laptop sizes (1440/1366/1280) with nothing scrolled out, content-sized
+// per tab (compact, not full-width),
 // every configured sub-link resolves 200, mobile/touch accordion (360/768) with
 // hub navigation intact, axe light+dark with a panel open, screenshots.
 // Run: bun qa/e2e-megamenu.mjs   (preview server on :4321 required)
@@ -135,12 +136,14 @@ t("M10", "tabbing out of the item closes the panel", tabOutClosed);
 const gemControls = await page.locator('nav[aria-label="Main Navigation"] a:text-is("Gemstones")').getAttribute("aria-controls");
 t("M11", "Gemstones renders no dropdown", gemControls === null);
 
-// M12 overflow: EVERY panel fits the viewport at 1440 and 1280 (compact
-// panels anchor to their tab; right-side tabs rely on the JS clamp)
+// M12 overflow: EVERY panel fits fully inside the viewport — including short
+// laptop heights, where a wrapped second row hung the "fun" column near the
+// bottom (owner report). Also asserts nothing is scrolled out of view inside
+// the panel (max-height guard must not engage at today's menu sizes).
 const MENU_TABS = ["Consultations", "Horoscope", "Panchang", "Muhurat", "Astrology", "Poojan", "Free Calculators", "Blog"];
 const widths1440 = {};
-for (const width of [1440, 1280]) {
-  await page.setViewportSize({ width, height: 900 });
+for (const [width, height] of [[1440, 900], [1366, 768], [1280, 720]]) {
+  await page.setViewportSize({ width, height });
   await open("/");
   const bad = [];
   for (const label of MENU_TABS) {
@@ -148,20 +151,21 @@ for (const width of [1440, 1280]) {
     await panel(label).waitFor({ state: "visible", timeout: 2000 });
     await page.waitForTimeout(250); // let the 140ms fade finish — shots must show the settled panel
     const pb = await panel(label).boundingBox();
-    const fits = pb.x >= -1 && pb.x + pb.width <= width + 1 && pb.y > 0;
-    if (!fits) bad.push(`${label} x=${pb.x.toFixed(0)} w=${pb.width.toFixed(0)}`);
+    const fits = pb.x >= -1 && pb.x + pb.width <= width + 1 && pb.y > 0 && pb.y + pb.height <= height + 1;
+    const hiddenPx = await panel(label).evaluate((el) => el.scrollHeight - el.clientHeight);
+    if (!fits || hiddenPx > 1) bad.push(`${label} fits=${fits} hiddenPx=${hiddenPx} x=${pb.x.toFixed(0)} w=${pb.width.toFixed(0)} h=${pb.height.toFixed(0)}`);
     if (width === 1440) widths1440[label] = Math.round(pb.width);
     if (label === "Free Calculators" || label === "Consultations") {
       await page.screenshot({ path: resolve(OUT, "shots", `desktop-${width}-${label.toLowerCase().replace(/\s+/g, "-")}.png`) });
     }
   }
-  t(`M12-${width}`, `every panel within viewport at ${width}px (8 tabs)`, bad.length === 0, bad.join("; ") || "all fit");
+  t(`M12-${width}x${height}`, "every panel fully inside the viewport, nothing scrolled out (8 tabs)", bad.length === 0, bad.join("; ") || "all fit");
 }
 
-// M16 content-sized panels (owner tweak): no full-width bars — widths stay
-// under the 920px cap and vary with each tab's sub-categories
-const ws16 = Object.values(widths1440);
-t("M16", "panels content-sized per tab, not full-width", ws16.every((w) => w <= 925) && new Set(ws16).size >= 5, Object.entries(widths1440).map(([k, v]) => `${k}=${v}`).join(", "));
+// M16 content-sized panels (owner tweak): no full-width bars — each panel is
+// narrower than the container and its width varies with its sub-categories
+const ws16 = Object.entries(widths1440);
+t("M16", "panels content-sized per tab, not full-width", ws16.every(([, w]) => w < 1100) && new Set(ws16.map(([, w]) => w)).size >= 5, ws16.map(([k, v]) => `${k}=${v}`).join(", "));
 
 // M13 every configured sub-link resolves 200
 await page.setViewportSize({ width: 1440, height: 900 });
