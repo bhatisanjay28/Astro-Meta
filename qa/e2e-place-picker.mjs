@@ -149,15 +149,26 @@ await page.waitForTimeout(300);
 st = await placeState("k-place");
 t("P-04", "free text on blur → aria-invalid + 'Please select a city from the list.'",
   st.ariaInvalid && st.status.includes("Please select a city from the list."));
-await page.fill('[name="date"]', "2000-01-01");
-await page.fill('[name="time"]', "10:00");
+// S16 segmented DateField: compose via the picker's own API (the hidden
+// [name=date]/[name=time] inputs are not directly fillable)
+await page.evaluate(() => {
+  window.vyDateTime.set(document.querySelector('[name="date"]'), "2000-01-01");
+  window.vyDateTime.set(document.querySelector('[name="time"]'), "10:00");
+});
 await page.locator('form:has(#k-place) button[type="submit"]').click();
 await page.waitForTimeout(500);
-const kErr = await page.evaluate(() => {
-  const e = document.querySelector("[data-k-error]");
-  return e && !e.hidden ? e.textContent : null;
+// S18: the shared gate owns submit blocking (capture + stopPropagation) —
+// the free-text place is caught by the GATE (status + summary), and the
+// page's fetch handler never runs, so [data-k-error] stays hidden
+const kBlock = await page.evaluate(() => {
+  const status = document.querySelector('form:has(#k-place) [data-place-status]')?.textContent ?? "";
+  const summary = document.querySelector('form:has(#k-place) [data-form-errors]')?.textContent ?? "";
+  const kErr = document.querySelector("[data-k-error]");
+  return { status, summary, kErrHidden: !kErr || kErr.hidden };
 });
-t("P-05", "kundli submit blocked while field holds free text", Boolean(kErr), String(kErr));
+t("P-05", "kundli submit blocked while field holds free text (gate owns the block)",
+  kBlock.status.includes("place of birth") && kBlock.summary.length > 0 && kBlock.kErrHidden,
+  JSON.stringify(kBlock));
 
 // AC-5: keyboard — arrows+Enter, Tab-to-×, Esc×2
 await open("/kundli");
@@ -258,23 +269,27 @@ t("P-10b", "non-carded pick keeps the designed fallback message",
 
 // ── calculators — required and optional kinds ────────────────────────────────
 await open("/calculators/rashi/");
-await page.fill('[name="date"]', "2000-01-01");
-await page.fill('[name="time"]', "10:00");
+await page.evaluate(() => {
+  window.vyDateTime.set(document.querySelector('[name="date"]'), "2000-01-01");
+  window.vyDateTime.set(document.querySelector('[name="time"]'), "10:00");
+});
 await typeFree("bf-place", "Jaipur");
 await page.locator('form button[type="submit"]').click();
 await page.waitForTimeout(500);
 const calcStatus = await page.evaluate(
   () => document.querySelector("[data-place-status]")?.textContent ?? "",
 );
-t("P-11a", "required calculator blocks free text", calcStatus.includes("Please select a city from the list."),
-  calcStatus);
+t("P-11a", "required calculator blocks free text (gate wording — birth place context)",
+  calcStatus.includes("place of birth from the list"), calcStatus);
 await pick("bf-place", "Jaipur");
 await page.locator('form button[type="submit"]').click();
 await page.waitForSelector("[data-calc-result] .verdict-card", { timeout: 20000 });
 t("P-11b", "required calculator submits after a real pick", true);
 
 await open("/calculators/sun-sign/");
-await page.fill('[name="date"]', "1995-11-05");
+await page.evaluate(() => {
+  window.vyDateTime.set(document.querySelector('[name="date"]'), "1995-11-05");
+});
 await typeFree("bf-place", "Jaipur");
 await page.locator('form button[type="submit"]').click();
 await page.waitForTimeout(500);

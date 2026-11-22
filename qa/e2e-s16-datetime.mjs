@@ -222,7 +222,7 @@ await page.locator('[data-k-form] button[type="submit"]').click();
 st = await dtState("k-date");
 const ran1 = await page.evaluate(() => window.__pageSubmitRan);
 t("D-19", "required-empty submit blocked before page handler; focus on DD",
-  !ran1 && st.invalid && st.error.includes("complete date") && await segLoc("k-date", "dd").evaluate((el) => el === document.activeElement),
+  !ran1 && st.invalid && st.error.includes("Please enter your date of birth") && await segLoc("k-date", "dd").evaluate((el) => el === document.activeElement),
   `ran=${ran1} err=${st.error}`);
 
 // valid payload keeps ISO (intercept the POST)
@@ -251,8 +251,15 @@ await typeDate("hk-dob", "07", "04", "1985");
 let v = await page.evaluate(() => document.querySelector("[data-dob]")?.value);
 t("D-21", "HomeKundli [data-dob] hidden carries ISO", v === "1985-04-07", v);
 await typeTime("hk-tob", "6", "45");
+// S18 rule pin: an hour12 time WITHOUT a meridiem never composes — assuming
+// AM silently turned 10:30 PM into 10:30 AM, so empty is the intended state
+let vNoM = await page.evaluate(() => document.querySelector("[data-tob]")?.value);
+t("D-22a", "hour12 time without AM/PM stays empty (no silent AM — S18)",
+  vNoM === "" && (await dtState("hk-tob")).amPressed === false && (await dtState("hk-tob")).pmPressed === false,
+  `v=${vNoM}`);
+await page.locator('[data-dt]:has(#hk-tob) [data-dt-amp]').click();
 v = await page.evaluate(() => document.querySelector("[data-tob]")?.value);
-t("D-22", "HomeKundli [data-tob] hidden carries 24h", v === "06:45", v);
+t("D-22", "HomeKundli [data-tob] hidden carries 24h (AM picked)", v === "06:45", v);
 // BookingModal field works inside the modal
 await page.locator("[data-open-booking]").first().click();
 await page.waitForTimeout(300);
@@ -283,7 +290,7 @@ await page.evaluate(() => {
 await page.locator('#match-form button[type="submit"]').click();
 st = await dtState("boy-time");
 const ran2 = await page.evaluate(() => window.__pageSubmitRan);
-t("D-26", "partially-typed optional time blocks submit", !ran2 && st.invalid && st.error.includes("complete time"), `ran=${ran2} err=${st.error}`);
+t("D-26", "partially-typed optional time blocks submit", !ran2 && st.invalid && st.error.includes("complete the time"), `ran=${ran2} err=${st.error}`);
 await shot(page, "matching-light");
 
 // ═══ /calculators/rashi — BirthForm (birth kind) ═════════════════════════════
@@ -297,8 +304,12 @@ t("D-27", "BirthForm bf-date hidden ISO (FormData contract)", bfDate === "1990-1
 await open("/calculators/sun-sign");
 await typeDate("bf-date", "05", "05", "1995");
 await typeTime("bf-time", "9", "15");
+// per-part state: hh+mi without meridiem must NOT compose (S18, no silent AM)
+const timeNoM = await page.evaluate(() => document.querySelector('[data-calc-endpoint] [name="time"]')?.value);
+t("D-28a", "tool time without AM/PM stays empty (no silent AM — S18)", timeNoM === "", timeNoM);
+await page.locator('[data-dt]:has(#bf-time) [data-dt-amp]').click();
 const timeVal = await page.evaluate(() => document.querySelector('[data-calc-endpoint] [name="time"]')?.value);
-t("D-28", "[tool] time guard reads hidden [name=time] .value", timeVal === "09:15", timeVal);
+t("D-28", "[tool] time guard reads hidden [name=time] .value (AM picked)", timeVal === "09:15", timeVal);
 await page.locator('form[data-calc-endpoint] button[type="submit"]').click();
 await page.waitForTimeout(300);
 const placeStatus = await page.evaluate(() => document.querySelector("[data-place-status]")?.textContent ?? "");
@@ -388,9 +399,13 @@ await page.evaluate(() => {
 await page.locator('[data-mf-form] button[type="submit"]').click();
 await page.waitForTimeout(600);
 mfRan = await page.evaluate(() => window.__pageSubmitRan);
-const mfErr = await page.evaluate(() => document.querySelector("[data-mf-error]")?.textContent ?? "");
-t("D-41", "valid range passes guard → page handler runs (city error shows)",
-  mfRan && mfErr.includes("select the city"), `ran=${mfRan} err=${mfErr}`);
+// S18: the shared validation gate owns submit blocking (capture +
+// stopPropagation) — an empty city is caught by the GATE with the finder's
+// own context wording, and the page's fetch handler must not run
+const mfCityStatus = await page.evaluate(() =>
+  document.querySelector('[data-mf-form] [data-place-status]')?.textContent ?? "");
+t("D-41", "valid range, empty city → gate blocks (city wording, handler suppressed)",
+  !mfRan && mfCityStatus.includes("select the city"), `ran=${mfRan} status=${mfCityStatus}`);
 
 // ═══ datetime mode + set/rebind seams (injected root, admin pattern) ═════════
 await open("/kundli");
