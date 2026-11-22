@@ -1,0 +1,211 @@
+{
+  "ran_at": "2026-11-21T18:59:21.799Z",
+  "base": "http://127.0.0.1:4321",
+  "results": [
+    {
+      "id": "P-01",
+      "name": "select fills roles + selected + × visible + ✓ status",
+      "ok": true,
+      "detail": "combined=28.62137,77.2148,Asia/Kolkata"
+    },
+    {
+      "id": "P-02a",
+      "name": "clicking the filled field selects all its text",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-02b",
+      "name": "first keystroke invalidates the old place immediately",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-02c",
+      "name": "new pick replaces old value end-to-end",
+      "ok": true,
+      "detail": "text=Mumbai, Maharashtra, India"
+    },
+    {
+      "id": "P-02d",
+      "name": "same query re-fetches after a consumed selection",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-03",
+      "name": "× clears text+state, refocuses input, announces, shows placeholder path",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-04",
+      "name": "free text on blur → aria-invalid + 'Please select a city from the list.'",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-05",
+      "name": "kundli submit blocked while field holds free text",
+      "ok": true,
+      "detail": "Please select your place of birth from the suggestions."
+    },
+    {
+      "id": "P-06a",
+      "name": "ArrowDown highlights, Enter picks",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-06b",
+      "name": "Tab from input reaches × (aria-label 'Clear city')",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-06c",
+      "name": "Enter on × clears the field",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-06d",
+      "name": "first Esc closes the list",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-06e",
+      "name": "second Esc clears the field",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-07a",
+      "name": "prefill adopted — selected + × visible",
+      "ok": true,
+      "detail": "text=Jaipur, Rajasthan, India"
+    },
+    {
+      "id": "P-07b",
+      "name": "editing a prefilled place invalidates it",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-07c",
+      "name": "prefilled place replaceable end-to-end",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-08a",
+      "name": "boy+girl selected independently",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-08b",
+      "name": "editing boy clears only boy; girl untouched",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-09a",
+      "name": "muhurat default New Delhi in roles, empty look, no ×",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-09b",
+      "name": "pick reloads today windows via place:selected",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-10a",
+      "name": "carded city pick navigates to /panchang/mumbai",
+      "ok": true,
+      "detail": "http://127.0.0.1:4321/panchang/mumbai"
+    },
+    {
+      "id": "P-10b",
+      "name": "non-carded pick keeps the designed fallback message",
+      "ok": true,
+      "detail": "This town has no dedicated page yet — open a nearby city bel"
+    },
+    {
+      "id": "P-11a",
+      "name": "required calculator blocks free text",
+      "ok": true,
+      "detail": "Please select a city from the list."
+    },
+    {
+      "id": "P-11b",
+      "name": "required calculator submits after a real pick",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-11c",
+      "name": "optional calculator blocks free text with no pick",
+      "ok": true,
+      "detail": "Please select a city from the list."
+    },
+    {
+      "id": "P-11d",
+      "name": "optional calculator still works with no place (regression)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-12",
+      "name": "readonly field: no × rendered, picker binds nothing",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "P-13",
+      "name": "axe wcag2aa clean in light + dark (incl. error state)",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "shots": [
+    "kundli-360.png",
+    "kundli-768.png",
+    "kundli-1024.png",
+    "kundli-1440.png",
+    "matching-360.png",
+    "matching-768.png",
+    "matching-1024.png",
+    "matching-1440.png",
+    "muhurat-360.png",
+    "muhurat-768.png",
+    "muhurat-1024.png",
+    "muhurat-1440.png",
+    "panchang-360.png",
+    "panchang-768.png",
+    "panchang-1024.png",
+    "panchang-1440.png",
+    "home-kundli-360.png",
+    "home-kundli-768.png",
+    "home-kundli-1024.png",
+    "home-kundli-1440.png",
+    "home-panchang-360.png",
+    "home-panchang-768.png",
+    "home-panchang-1024.png",
+    "home-panchang-1440.png",
+    "calc-rashi-360.png",
+    "calc-rashi-768.png",
+    "calc-rashi-1024.png",
+    "calc-rashi-1440.png",
+    "calc-sun-sign-360.png",
+    "calc-sun-sign-768.png",
+    "calc-sun-sign-1024.png",
+    "calc-sun-sign-1440.png",
+    "full-kundli-360.png",
+    "full-matching-360.png",
+    "full-muhurat-360.png"
+  ]
+}

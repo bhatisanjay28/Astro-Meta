@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-21T18:01:42.581Z",
+  "date": "2026-11-21T18:52:55.940Z",
   "pass": 26,
   "fail": 0,
   "results": [
@@ -73,7 +73,7 @@
       "id": "QB-02",
       "desc": "transits Rahu sidereal ≈ 300.74° (Δ<0.3°)",
       "ok": true,
-      "detail": "got 300.7441 Δ=0.00017062696792891074"
+      "detail": "got 300.7422 Δ=0.00015724820070772694"
     },
     {
       "id": "QB-03",
@@ -103,7 +103,7 @@
       "id": "QB-06",
       "desc": "sade-sati Ex2 window starts 2022-04-29 (first-entry)",
       "ok": true,
-      "detail": "got 2022-04-29T02:17:35.075Z"
+      "detail": "got 2022-04-29T02:17:23.508Z"
     },
     {
       "id": "QB-08",
