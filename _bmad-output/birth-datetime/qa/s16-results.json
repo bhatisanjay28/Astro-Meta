@@ -1,0 +1,347 @@
+{
+  "results": [
+    {
+      "id": "D-01",
+      "name": "kundli time prefill 10:00 → segments + AM + hidden",
+      "ok": true,
+      "detail": "{\"value\":\"10:00\",\"dd\":\"\",\"mm\":\"\",\"yy\":\"\",\"hh\":\"10\",\"mi\":\"00\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":true,\"pmPressed\":false,\"hasAmpm\":true,\"expanded\":false}"
+    },
+    {
+      "id": "D-02",
+      "name": "type 15/8/1990 → auto-pad 08, hidden ISO 1990-08-15",
+      "ok": true,
+      "detail": "{\"value\":\"1990-08-15\",\"dd\":\"15\",\"mm\":\"08\",\"yy\":\"1990\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false}"
+    },
+    {
+      "id": "D-03",
+      "name": "31 Feb 1990 → impossible message, hidden empty, invalid flag",
+      "ok": true,
+      "detail": "31 February 1990 doesn't exist — February 1990 has 28 days."
+    },
+    {
+      "id": "D-04",
+      "name": "fix to 28 Feb 1990 → message cleared, hidden ISO",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "D-05",
+      "name": "tomorrow rejected in birth preset",
+      "ok": true,
+      "detail": "The birth date can't be in the future."
+    },
+    {
+      "id": "D-06",
+      "name": "year older than 100 rejected",
+      "ok": true,
+      "detail": "Please enter a year within the last 100 years (1926–2026)."
+    },
+    {
+      "id": "D-07",
+      "name": "paste \"25-12-1995\" distributes across segments",
+      "ok": true,
+      "detail": "{\"value\":\"1995-12-25\",\"dd\":\"25\",\"mm\":\"12\",\"yy\":\"1995\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false}"
+    },
+    {
+      "id": "D-08",
+      "name": "time 11:30 AM unset → hidden 11:30",
+      "ok": true,
+      "detail": "{\"value\":\"11:30\",\"dd\":\"\",\"mm\":\"\",\"yy\":\"\",\"hh\":\"11\",\"mi\":\"30\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":true,\"pmPressed\":false,\"hasAmpm\":true,\"expanded\":false}"
+    },
+    {
+      "id": "D-09",
+      "name": "PM click → hidden 23:30",
+      "ok": true,
+      "detail": "{\"value\":\"23:30\",\"dd\":\"\",\"mm\":\"\",\"yy\":\"\",\"hh\":\"11\",\"mi\":\"30\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":true,\"hasAmpm\":true,\"expanded\":false}"
+    },
+    {
+      "id": "D-10",
+      "name": "\"a\" key sets AM → hidden 11:30",
+      "ok": true,
+      "detail": "{\"value\":\"11:30\",\"dd\":\"\",\"mm\":\"\",\"yy\":\"\",\"hh\":\"11\",\"mi\":\"30\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":true,\"pmPressed\":false,\"hasAmpm\":true,\"expanded\":false}"
+    },
+    {
+      "id": "D-11",
+      "name": "13:00 in 12h → hour message, hidden empty",
+      "ok": true,
+      "detail": "Hour must be 1–12."
+    },
+    {
+      "id": "D-12",
+      "name": "popup opens (dialog + focus + today marked)",
+      "ok": true,
+      "detail": "{\"visible\":true,\"expanded\":true,\"yearCount\":101,\"firstYear\":2026,\"lastYear\":1926,\"newestFirst\":true,\"disabledMonths\":1,\"focusedDay\":true,\"todayMarked\":true}"
+    },
+    {
+      "id": "D-13",
+      "name": "birth years newest-first: 2026…1926 (101)",
+      "ok": true,
+      "detail": "{\"visible\":true,\"expanded\":true,\"yearCount\":101,\"firstYear\":2026,\"lastYear\":1926,\"newestFirst\":true,\"disabledMonths\":1,\"focusedDay\":true,\"todayMarked\":true}"
+    },
+    {
+      "id": "D-14",
+      "name": "future months disabled in Nov 2026 view",
+      "ok": true,
+      "detail": "1"
+    },
+    {
+      "id": "D-15",
+      "name": "day pick fills segments + hidden + closes + focus returns",
+      "ok": true,
+      "detail": "{\"st\":{\"value\":\"1990-08-15\",\"dd\":\"15\",\"mm\":\"08\",\"yy\":\"1990\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false},\"pop\":{\"hidden\":true,\"expanded\":\"false\",\"focusBack\":true}}"
+    },
+    {
+      "id": "D-16",
+      "name": "popup keyboard: arrows + Enter picks focused day",
+      "ok": true,
+      "detail": "1990-08-09"
+    },
+    {
+      "id": "D-17",
+      "name": "Esc closes popup and refocuses the trigger",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "D-18",
+      "name": "clear empties segments + hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "D-19",
+      "name": "required-empty submit blocked before page handler; focus on DD",
+      "ok": true,
+      "detail": "ran=false err=Please enter a complete date (DD/MM/YYYY)."
+    },
+    {
+      "id": "D-20",
+      "name": "submit payload: date ISO + 24h time intact",
+      "ok": true,
+      "detail": "{\"date\":\"1990-08-15\",\"time\":\"10:30\",\"lat\":28.62137,\"lng\":77.2148,\"tz\":\"Asia/Kolkata\"}"
+    },
+    {
+      "id": "D-21",
+      "name": "HomeKundli [data-dob] hidden carries ISO",
+      "ok": true,
+      "detail": "1985-04-07"
+    },
+    {
+      "id": "D-22",
+      "name": "HomeKundli [data-tob] hidden carries 24h",
+      "ok": true,
+      "detail": "06:45"
+    },
+    {
+      "id": "D-23",
+      "name": "BookingModal #bk-date free preset accepts future",
+      "ok": true,
+      "detail": "{\"value\":\"2027-03-20\",\"dd\":\"20\",\"mm\":\"03\",\"yy\":\"2027\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false}"
+    },
+    {
+      "id": "D-24",
+      "name": "modal popup year dropdown populated (free preset newest first)",
+      "ok": true,
+      "detail": "2100"
+    },
+    {
+      "id": "D-25",
+      "name": "matching hidden ids keep the page contract",
+      "ok": true,
+      "detail": "1992-06-12/1994-09-03"
+    },
+    {
+      "id": "D-26",
+      "name": "partially-typed optional time blocks submit",
+      "ok": true,
+      "detail": "ran=false err=Please enter a complete time, or clear it."
+    },
+    {
+      "id": "D-27",
+      "name": "BirthForm bf-date hidden ISO (FormData contract)",
+      "ok": true,
+      "detail": "1990-10-10"
+    },
+    {
+      "id": "D-28",
+      "name": "[tool] time guard reads hidden [name=time] .value",
+      "ok": true,
+      "detail": "09:15"
+    },
+    {
+      "id": "D-29",
+      "name": "time-without-place guard still fires (hidden value drives it)",
+      "ok": true,
+      "detail": "Add your place of birth to use the birth time — or clear the time field."
+    },
+    {
+      "id": "D-30",
+      "name": "age tool date is birth preset (future rejected)",
+      "ok": true,
+      "detail": "The birth date can't be in the future."
+    },
+    {
+      "id": "D-31",
+      "name": "age 'now' extra is free preset (future accepted)",
+      "ok": true,
+      "detail": "{\"value\":\"2030-06-01\",\"dd\":\"01\",\"mm\":\"06\",\"yy\":\"2030\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false}"
+    },
+    {
+      "id": "D-32",
+      "name": "age submit qs: date + now ISO",
+      "ok": true,
+      "detail": "https://astro-backend.vyotish.workers.dev/api/v1/calculators/age?date=2000-01-01&now=2030-06-01"
+    },
+    {
+      "id": "D-33",
+      "name": "moon-phase UTC time: no AM/PM buttons",
+      "ok": true,
+      "detail": "{\"value\":\"\",\"dd\":\"\",\"mm\":\"\",\"yy\":\"\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false}"
+    },
+    {
+      "id": "D-34",
+      "name": "24h time typed → hidden 18:30",
+      "ok": true,
+      "detail": "{\"value\":\"18:30\",\"dd\":\"\",\"mm\":\"\",\"yy\":\"\",\"hh\":\"18\",\"mi\":\"30\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false}"
+    },
+    {
+      "id": "D-35",
+      "name": "moon-phase qs: date ISO + UTC time",
+      "ok": true,
+      "detail": "https://astro-backend.vyotish.workers.dev/api/v1/calculators/moon-phase?date=1969-07-20&time=18%3A30"
+    },
+    {
+      "id": "D-36",
+      "name": "free preset years 2100…1900 (201)",
+      "ok": true,
+      "detail": "{\"first\":2100,\"last\":1900,\"count\":201}"
+    },
+    {
+      "id": "D-37",
+      "name": "panchang date prefill (init seam): hidden + segments = today",
+      "ok": true,
+      "detail": "{\"st\":{\"value\":\"2026-11-22\",\"dd\":\"22\",\"mm\":\"11\",\"yy\":\"2026\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false},\"todayIso\":\"2026-11-22\"}"
+    },
+    {
+      "id": "D-38",
+      "name": "Tomorrow button updates hidden + segments (seam)",
+      "ok": true,
+      "detail": "{\"st\":{\"value\":\"2026-11-23\",\"dd\":\"23\",\"mm\":\"11\",\"yy\":\"2026\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false},\"url\":\"http://127.0.0.1:4321/panchang/mumbai?date=2026-11-23\"}"
+    },
+    {
+      "id": "D-39",
+      "name": "popup pick on panchang updates ?date= via change dispatch",
+      "ok": true,
+      "detail": "{\"st\":{\"value\":\"2026-11-01\",\"dd\":\"01\",\"mm\":\"11\",\"yy\":\"2026\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false},\"url\":\"http://127.0.0.1:4321/panchang/mumbai?date=2026-11-01\"}"
+    },
+    {
+      "id": "D-40",
+      "name": "muhurat empty range blocked by guard (from focused)",
+      "ok": true,
+      "detail": "ran=false err=Please enter a complete date (DD/MM/YYYY)."
+    },
+    {
+      "id": "D-41",
+      "name": "valid range passes guard → page handler runs (city error shows)",
+      "ok": true,
+      "detail": "ran=true err=Please select the city from the suggestions."
+    },
+    {
+      "id": "D-42",
+      "name": "rebind() adopts injected datetime root",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "id": "D-43",
+      "name": "set() seam composes datetime: segments + PM + hidden",
+      "ok": true,
+      "detail": "{\"value\":\"2026-12-05T14:30\",\"dd\":\"05\",\"mm\":\"12\",\"yy\":\"2026\",\"hh\":\"02\",\"mi\":\"30\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":true,\"hasAmpm\":true,\"expanded\":false}"
+    },
+    {
+      "id": "D-44",
+      "name": "datetime edit recomposes hidden (08:15 AM)",
+      "ok": true,
+      "detail": "{\"value\":\"2026-12-05T08:15\",\"dd\":\"05\",\"mm\":\"12\",\"yy\":\"2026\",\"hh\":\"08\",\"mi\":\"15\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":true,\"pmPressed\":false,\"hasAmpm\":true,\"expanded\":false}"
+    },
+    {
+      "id": "D-45",
+      "name": "date-box clear only empties the date half",
+      "ok": true,
+      "detail": "{\"value\":\"\",\"dd\":\"\",\"mm\":\"\",\"yy\":\"\",\"hh\":\"08\",\"mi\":\"15\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":true,\"pmPressed\":false,\"hasAmpm\":true,\"expanded\":false}"
+    },
+    {
+      "id": "D-46",
+      "name": "consultation BookingForm preferred_date works + clearable",
+      "ok": true,
+      "detail": "{\"value\":\"\",\"dd\":\"\",\"mm\":\"\",\"yy\":\"\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false}"
+    },
+    {
+      "id": "D-47",
+      "name": "form.reset() re-renders field from reset hidden (seam)",
+      "ok": true,
+      "detail": "{\"value\":\"\",\"dd\":\"\",\"mm\":\"\",\"yy\":\"\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false}"
+    },
+    {
+      "id": "D-48",
+      "name": "axe wcag2aa /kundli light",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "id": "D-49",
+      "name": "axe wcag2aa / light",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "id": "D-50",
+      "name": "axe wcag2aa /matching light",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "id": "D-51",
+      "name": "axe wcag2aa /calculators/age light",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "id": "D-52",
+      "name": "axe wcag2aa /calculators/moon-phase light",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "id": "D-53",
+      "name": "axe wcag2aa /muhurat light",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "id": "D-54",
+      "name": "axe wcag2aa /panchang/mumbai light",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "id": "D-55",
+      "name": "axe wcag2aa /kundli dark",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "id": "D-56",
+      "name": "axe wcag2aa /calculators/age dark",
+      "ok": true,
+      "detail": "clean"
+    },
+    {
+      "id": "D-57",
+      "name": "360px: popup clamps to viewport",
+      "ok": true,
+      "detail": "{\"visible\":true,\"within\":true,\"width\":336}"
+    }
+  ],
+  "failures": 0
+}
