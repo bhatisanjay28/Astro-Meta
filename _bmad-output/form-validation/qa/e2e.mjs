@@ -237,19 +237,22 @@ await page.locator("[data-booking-result] p").filter({ hasText: /received|not se
 const bookingResult = await txt(page.locator("[data-booking-result]"));
 expect(/received/i.test(bookingResult), `booking — request sent ("${bookingResult.slice(0, 60)}")`);
 
-/* ===== 11. home BookingModal — name/phone/email/consent ===== */
+/* ===== 11. home BookingModal — name/phone/consent (email optional) ===== */
 await page.goto(base + "/", { waitUntil: "networkidle" });
 await page.locator("[data-open-booking]").first().click();
 await page.locator("#booking-modal:not(.hidden)").waitFor();
 await page.locator("#booking-modal button[type=submit]").click();
 await page.locator("#booking-modal [data-form-errors]").waitFor();
-expect((await summaryText("#booking-modal")).includes("fix 4 fields"), "booking modal — name+phone+email+consent = 4");
+expect((await summaryText("#booking-modal")).includes("fix 3 fields"), "booking modal — name+phone+consent = 3, email optional");
+expect(await page.locator("#booking-modal #bk-email").getAttribute("required") === null,
+  "booking modal — email no longer native-required");
 await page.locator("#booking-modal #bk-name").fill("QA S18");
 await page.locator("#booking-modal #bk-phone").fill("9999999999");
-await page.locator("#booking-modal #bk-email").fill("qa-s18@example.invalid");
 await page.locator("#consent-check").check();
 await page.waitForTimeout(200);
 expect((await summaryText()).includes("fix 0") === false, "modal — errors cleared after fixing (not resubmitted)");
+expect(await page.locator("#booking-modal #bk-email").getAttribute("aria-invalid") === null,
+  "modal — untouched optional email never flagged invalid");
 
 /* ===== 12. Hindi catalog — flip the document lang and resubmit rashi ===== */
 await page.goto(base + "/calculators/rashi", { waitUntil: "networkidle" });

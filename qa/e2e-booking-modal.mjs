@@ -29,7 +29,13 @@ const page = await (await browser.newContext({ viewport: { width: 1440, height: 
   await page.fill("#bk-email", "qa-regression@example.com");
   await page.check("#consent-check");
   await page.selectOption("#bk-topic", { index: 1 });
-  await page.fill("#bk-date", "2026-12-05");
+  // S16 made #bk-date a hidden DateField input — drive the visible segments
+  const dsegs = page.locator(".dt:has(#bk-date) [data-dt-seg]");
+  await dsegs.nth(0).fill("05");
+  await dsegs.nth(1).fill("12");
+  await dsegs.nth(2).fill("2026");
+  await dsegs.nth(0).blur();
+  await page.waitForTimeout(200);
   await page.check("#consent-check");
   await page.click('[data-booking-form] [type="submit"]');
   await page.waitForTimeout(600);
@@ -104,6 +110,26 @@ const page = await (await browser.newContext({ viewport: { width: 1440, height: 
   assert(ctxPage.url() === BASE + "/", "main tab did not navigate away");
   assert((await ctxPage.inputValue("#bk-name")) === "QA Tab Check", "form data intact after link click");
   await ctxPage.close();
+}
+
+// ---- Path 5: email is OPTIONAL (privacy-policy parity) — submit without it ----
+{
+  let posts = [];
+  await page.reload({ waitUntil: "load" });
+  await page.route(API, async (route) => {
+    posts.push(route.request().postDataJSON());
+    await route.fulfill({ status: 201, contentType: "application/json", body: JSON.stringify({ data: { id: "test-id", status: "received" } }) });
+  });
+  await page.click("[data-open-booking]");
+  await page.fill("#bk-name", "QA No Email");
+  await page.fill("#bk-phone", "+91 98000 00000");
+  await page.check("#consent-check");
+  await page.click('[data-booking-form] [type="submit"]');
+  await page.waitForTimeout(600);
+  assert(posts.length === 1, "no-email — request still posts");
+  const body = posts[0] ?? {};
+  assert(typeof body.email === "string" && body.email.trim() === "", "no-email — payload carries empty email (backend stores null)");
+  assert(await page.isVisible("[data-booking-ok]"), "no-email — success message shown");
 }
 
 await browser.close();
