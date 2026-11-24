@@ -1,0 +1,1231 @@
+{
+ "generated": "2026-11-24",
+ "sampleDate": "2026-11-25 (IST)",
+ "signs": {
+  "aries": {
+   "daily": {
+    "at": "2026-11-25T00:05 IST",
+    "snapshot": {
+     "Sun": {
+      "lon": 218.26294409554964,
+      "sign": 7,
+      "retro": false,
+      "house": 8,
+      "b": -1
+     },
+     "Moon": {
+      "lon": 40.42265606185458,
+      "sign": 1,
+      "retro": false,
+      "house": 2,
+      "b": -1
+     },
+     "Mars": {
+      "lon": 125.28462894448592,
+      "sign": 4,
+      "retro": false,
+      "house": 5,
+      "b": -1
+     },
+     "Mercury": {
+      "lon": 199.2851295396258,
+      "sign": 6,
+      "retro": false,
+      "house": 7,
+      "b": -1
+     },
+     "Jupiter": {
+      "lon": 122.25798978338833,
+      "sign": 4,
+      "retro": false,
+      "house": 5,
+      "b": 1
+     },
+     "Venus": {
+      "lon": 180.80435682261202,
+      "sign": 6,
+      "retro": false,
+      "house": 7,
+      "b": -1
+     },
+     "Saturn": {
+      "lon": 343.9365369357806,
+      "sign": 11,
+      "retro": true,
+      "house": 12,
+      "b": -1
+     },
+     "Rahu": {
+      "lon": 300.58372159676395,
+      "sign": 10,
+      "retro": true,
+      "house": 11,
+      "b": 0.6
+     },
+     "Ketu": {
+      "lon": 120.58372159676395,
+      "sign": 4,
+      "retro": true,
+      "house": 5,
+      "b": -1
+     }
+    },
+    "areas": {
+     "health": -1,
+     "education": -0.30000000000000004,
+     "career": -0.8999999999999999,
+     "business": -0.7,
+     "wealth": -0.4,
+     "love": -0.7,
+     "marriage": -0.4,
+     "family": -0.7,
+     "children": -0.19999999999999996
+    },
+    "ratings": {
+     "health": "Challenging",
+     "education": "Challenging",
+     "career": "Challenging",
+     "business": "Challenging",
+     "wealth": "Challenging",
+     "love": "Challenging",
+     "marriage": "Challenging",
+     "family": "Challenging",
+     "children": "Challenging"
+    },
+    "satH": 12,
+    "sadePhase": "Sade Sati phase 1",
+    "jupH": 5,
+    "attrib": {
+     "planet": "Jupiter",
+     "base": 1,
+     "colours": [
+      "yellow",
+      "gold"
+     ],
+     "number": 3,
+     "direction": "North-East",
+     "directionPlanet": "Jupiter",
+     "deity": "Brihaspati",
+     "mantra": "Om Graam Greem Graum Sah Gurave Namah"
+    },
+    "dosDonts": {
+     "doHouse": 5,
+     "doPlanet": "Jupiter",
+     "dontHouse": 8,
+     "dontPlanet": "Sun"
+    },
+    "moonHouse": 2,
+    "panchang": {
+     "vaar": "Wednesday",
+     "tithi": "Krishna Pratipada",
+     "nakshatra": "Rohini",
+     "paksha": "Krishna (waning)"
+    }
+   },
+   "weekly": {
+    "window": "Mon 2026-11-30 – Sun 2026-12-06",
+    "areas": {
+     "health": -0.7528571428571429,
+     "education": 0.24857142857142853,
+     "career": -0.7285714285714285,
+     "business": -0.29999999999999993,
+     "wealth": -0.09142857142857144,
+     "love": -0.42571428571428566,
+     "marriage": -0.21714285714285714,
+     "family": -0.38,
+     "children": 0.028571428571428612
+    },
+    "ratings": {
+     "health": "Challenging",
+     "education": "Good",
+     "career": "Challenging",
+     "business": "Challenging",
+     "wealth": "Moderate",
+     "love": "Challenging",
+     "marriage": "Challenging",
+     "family": "Challenging",
+     "children": "Moderate"
+    },
+    "moonSweepHouses": [
+     5,
+     5,
+     5,
+     6,
+     6,
+     7,
+     7
+    ],
+    "attrib": {
+     "planet": "Jupiter",
+     "base": 1,
+     "colours": [
+      "yellow",
+      "gold"
+     ],
+     "number": 3,
+     "direction": "North-East",
+     "directionPlanet": "Jupiter",
+     "deity": "Brihaspati",
+     "mantra": "Om Graam Greem Graum Sah Gurave Namah"
+    },
+    "dosDonts": {
+     "doHouse": 8,
+     "doPlanet": "Mercury",
+     "dontHouse": 8,
+     "dontPlanet": "Sun"
+    }
+   },
+   "monthly": {
+    "month": "December 2026",
+    "areas": {
+     "health": -0.8103225806451616,
+     "education": 0.17806451612903218,
+     "career": -0.7529032258064519,
+     "business": -0.30774193548387097,
+     "wealth": -0.1793548387096774,
+     "love": -0.5161290322580645,
+     "marriage": -0.32645161290322566,
+     "family": -0.5038709677419357,
+     "children": -0.11419354838709675
+    },
+    "ratings": {
+     "health": "Challenging",
+     "education": "Good",
+     "career": "Challenging",
+     "business": "Challenging",
+     "wealth": "Challenging",
+     "love": "Challenging",
+     "marriage": "Challenging",
+     "family": "Challenging",
+     "children": "Challenging"
+    },
+    "bestDays": [
+     {
+      "d": "2026-12-05",
+      "core4": -0.03500000000000004
+     },
+     {
+      "d": "2026-12-06",
+      "core4": -0.042500000000000045
+     },
+     {
+      "d": "2026-12-12",
+      "core4": -0.042500000000000045
+     }
+    ],
+    "testingDay": {
+     "d": "2026-12-29",
+     "core4": -0.73
+    },
+    "sunIngress": "2026-12-16: Sun → Sagittarius",
+    "stations": [],
+    "planetIngresses": [
+     "2026-12-03: Mercury → Scorpio",
+     "2026-12-22: Mercury → Sagittarius"
+    ],
+    "newMoon": "2026-12-09",
+    "fullMoon": "2026-12-24",
+    "attrib": {
+     "planet": "Mercury",
+     "base": 1,
+     "colours": [
+      "green"
+     ],
+     "number": 5,
+     "direction": "North",
+     "directionPlanet": "Mercury",
+     "deity": "Vishnu",
+     "mantra": "Om Braam Breem Braum Sah Budhaya Namah"
+    },
+    "dosDonts": {
+     "doHouse": 11,
+     "doPlanet": "Moon",
+     "dontHouse": 9,
+     "dontPlanet": "Sun"
+    }
+   },
+   "yearly": {
+    "year": 2027,
+    "areas": {
+     "health": -0.6686148233486944,
+     "education": -0.12224193548387097,
+     "career": -0.7343876088069635,
+     "business": -0.3236985407066051,
+     "wealth": -0.18362083973374296,
+     "love": -0.07200563236047103,
+     "marriage": -0.12670020481310804,
+     "family": -0.4587535842293908,
+     "children": -0.19792537122375828
+    },
+    "ratings": {
+     "health": "Challenging",
+     "education": "Challenging",
+     "career": "Challenging",
+     "business": "Challenging",
+     "wealth": "Challenging",
+     "love": "Moderate",
+     "marriage": "Challenging",
+     "family": "Challenging",
+     "children": "Challenging"
+    },
+    "trajectories": {
+     "Jupiter": [
+      {
+       "date": "2027-01-25",
+       "sign": "Cancer"
+      },
+      {
+       "date": "2027-06-26",
+       "sign": "Leo"
+      },
+      {
+       "date": "2027-11-27",
+       "sign": "Virgo"
+      }
+     ],
+     "Saturn": [
+      {
+       "date": "2027-06-03",
+       "sign": "Aries"
+      },
+      {
+       "date": "2027-10-21",
+       "sign": "Pisces"
+      }
+     ],
+     "Rahu": []
+    },
+    "months": [
+     {
+      "month": "2027-01",
+      "areas": {
+       "health": -0.6370967741935484,
+       "education": 0.027096774193548407,
+       "career": -0.6574193548387092,
+       "business": -0.28387096774193527,
+       "wealth": -0.092258064516129,
+       "love": -0.1135483870967742,
+       "marriage": -0.06451612903225805,
+       "family": -0.34903225806451615,
+       "children": -0.041935483870967724
+      },
+      "tableRating": "Challenging",
+      "satHouse": 12,
+      "jupHouse": 5,
+      "rahuHouse": 10,
+      "topPos": "Jupiter in H5",
+      "topNeg": "Saturn in H12"
+     },
+     {
+      "month": "2027-02",
+      "areas": {
+       "health": -0.6285714285714289,
+       "education": -0.2859999999999999,
+       "career": -0.715285714285714,
+       "business": -0.36328571428571427,
+       "wealth": -0.4574285714285714,
+       "love": -0.3871428571428571,
+       "marriage": -0.5057142857142857,
+       "family": -0.6850000000000002,
+       "children": -0.5578571428571429
+      },
+      "tableRating": "Challenging",
+      "satHouse": 12,
+      "jupHouse": 4,
+      "rahuHouse": 10,
+      "topPos": "Rahu in H10",
+      "topNeg": "Jupiter in H4"
+     },
+     {
+      "month": "2027-03",
+      "areas": {
+       "health": -0.6780645161290325,
+       "education": -0.25032258064516116,
+       "career": -0.7890322580645162,
+       "business": -0.36516129032258055,
+       "wealth": -0.5096774193548389,
+       "love": -0.5174193548387095,
+       "marriage": -0.6245161290322578,
+       "family": -0.7316129032258063,
+       "children": -0.6425806451612901
+      },
+      "tableRating": "Challenging",
+      "satHouse": 12,
+      "jupHouse": 4,
+      "rahuHouse": 10,
+      "topPos": "Rahu in H10",
+      "topNeg": "Jupiter in H4"
+     },
+     {
+      "month": "2027-04",
+      "areas": {
+       "health": -0.7733333333333335,
+       "education": -0.5319999999999999,
+       "career": -1,
+       "business": -0.5299999999999998,
+       "wealth": -0.3380000000000001,
+       "love": 0.06400000000000002,
+       "marriage": -0.12400000000000001,
+       "family": -0.5920000000000002,
+       "children": -0.4799999999999999
+      },
+      "tableRating": "Challenging",
+      "satHouse": 12,
+      "jupHouse": 4,
+      "rahuHouse": 10,
+      "topPos": "Rahu in H10",
+      "topNeg": "Jupiter in H4"
+     },
+     {
+      "month": "2027-05",
+      "areas": {
+       "health": -0.7945161290322581,
+       "education": -0.35548387096774176,
+       "career": -1,
+       "business": -0.3696774193548385,
+       "wealth": -0.2793548387096774,
+       "love": 0.043870967741935524,
+       "marriage": -0.1374193548387097,
+       "family": -0.615483870967742,
+       "children": -0.49677419354838703
+      },
+      "tableRating": "Challenging",
+      "satHouse": 12,
+      "jupHouse": 4,
+      "rahuHouse": 10,
+      "topPos": "Rahu in H10",
+      "topNeg": "Jupiter in H4"
+     },
+     {
+      "month": "2027-06",
+      "areas": {
+       "health": -0.6423333333333333,
+       "education": -0.5086666666666666,
+       "career": -0.8249999999999998,
+       "business": -0.5606666666666665,
+       "wealth": -0.2893333333333334,
+       "love": 0.0766666666666667,
+       "marriage": -0.05333333333333334,
+       "family": -0.482,
+       "children": -0.26799999999999996
+      },
+      "tableRating": "Challenging",
+      "satHouse": 1,
+      "jupHouse": 4,
+      "rahuHouse": 10,
+      "topPos": "Rahu in H10",
+      "topNeg": "Jupiter in H4"
+     },
+     {
+      "month": "2027-07",
+      "areas": {
+       "health": -0.39548387096774207,
+       "education": -0.10451612903225813,
+       "career": -0.3719354838709676,
+       "business": -0.2709677419354838,
+       "wealth": -0.018709677419354833,
+       "love": 0.32387096774193547,
+       "marriage": 0.15548387096774188,
+       "family": -0.23129032258064525,
+       "children": 0.18322580645161296
+      },
+      "tableRating": "Moderate",
+      "satHouse": 1,
+      "jupHouse": 5,
+      "rahuHouse": 10,
+      "topPos": "Jupiter in H5",
+      "topNeg": "Saturn in H1"
+     },
+     {
+      "month": "2027-08",
+      "areas": {
+       "health": -0.6361290322580647,
+       "education": 0.3109677419354837,
+       "career": -0.5609677419354839,
+       "business": 0.127741935483871,
+       "wealth": 0.2296774193548387,
+       "love": 0.4987096774193548,
+       "marriage": 0.32322580645161286,
+       "family": -0.2887096774193549,
+       "children": 0.1180645161290323
+      },
+      "tableRating": "Moderate",
+      "satHouse": 1,
+      "jupHouse": 5,
+      "rahuHouse": 10,
+      "topPos": "Rahu in H10",
+      "topNeg": "Saturn in H1"
+     },
+     {
+      "month": "2027-09",
+      "areas": {
+       "health": -0.6346666666666665,
+       "education": 0.4446666666666664,
+       "career": -0.5233333333333332,
+       "business": -0.09000000000000001,
+       "wealth": 0.10200000000000013,
+       "love": -0.17600000000000002,
+       "marriage": -0.0006666666666666922,
+       "family": -0.24199999999999988,
+       "children": 0.21333333333333332
+      },
+      "tableRating": "Challenging",
+      "satHouse": 1,
+      "jupHouse": 5,
+      "rahuHouse": 10,
+      "topPos": "Jupiter in H5",
+      "topNeg": "Saturn in H1"
+     },
+     {
+      "month": "2027-10",
+      "areas": {
+       "health": -0.5967741935483871,
+       "education": 0.034193548387096734,
+       "career": -0.5748387096774195,
+       "business": -0.47483870967741926,
+       "wealth": -0.1445161290322581,
+       "love": -0.37096774193548365,
+       "marriage": -0.1677419354838711,
+       "family": -0.2877419354838709,
+       "children": 0.15548387096774188
+      },
+      "tableRating": "Challenging",
+      "satHouse": 1,
+      "jupHouse": 5,
+      "rahuHouse": 10,
+      "topPos": "Jupiter in H5",
+      "topNeg": "Saturn in H1"
+     },
+     {
+      "month": "2027-11",
+      "areas": {
+       "health": -0.8086666666666668,
+       "education": 0.16799999999999995,
+       "career": -0.8399999999999997,
+       "business": -0.21333333333333332,
+       "wealth": 0.09866666666666665,
+       "love": 0.0706666666666667,
+       "marriage": 0.18266666666666664,
+       "family": -0.2853333333333335,
+       "children": 0.1
+      },
+      "tableRating": "Challenging",
+      "satHouse": 12,
+      "jupHouse": 5,
+      "rahuHouse": 10,
+      "topPos": "Jupiter in H5",
+      "topNeg": "Saturn in H12"
+     },
+     {
+      "month": "2027-12",
+      "areas": {
+       "health": -0.7977419354838708,
+       "education": -0.4148387096774193,
+       "career": -0.9548387096774194,
+       "business": -0.49032258064516127,
+       "wealth": -0.504516129032258,
+       "love": -0.3767741935483871,
+       "marriage": -0.5038709677419354,
+       "family": -0.7148387096774194,
+       "children": -0.6580645161290322
+      },
+      "tableRating": "Challenging",
+      "satHouse": 12,
+      "jupHouse": 6,
+      "rahuHouse": 10,
+      "topPos": "Rahu in H10",
+      "topNeg": "Jupiter in H6"
+     }
+    ],
+    "attrib": {
+     "planet": "Venus",
+     "base": 1,
+     "colours": [
+      "white",
+      "cream"
+     ],
+     "number": 6,
+     "direction": "South-East",
+     "directionPlanet": "Venus",
+     "deity": "Lakshmi",
+     "mantra": "Om Draam Dreem Draum Sah Shukraya Namah"
+    },
+    "sadeMonths2027": [
+     {
+      "month": "2027-01",
+      "house": 12,
+      "phase": "Sade Sati phase 1"
+     },
+     {
+      "month": "2027-02",
+      "house": 12,
+      "phase": "Sade Sati phase 1"
+     },
+     {
+      "month": "2027-03",
+      "house": 12,
+      "phase": "Sade Sati phase 1"
+     },
+     {
+      "month": "2027-04",
+      "house": 12,
+      "phase": "Sade Sati phase 1"
+     },
+     {
+      "month": "2027-05",
+      "house": 12,
+      "phase": "Sade Sati phase 1"
+     },
+     {
+      "month": "2027-06",
+      "house": 1,
+      "phase": "Sade Sati phase 2 (peak)"
+     },
+     {
+      "month": "2027-07",
+      "house": 1,
+      "phase": "Sade Sati phase 2 (peak)"
+     },
+     {
+      "month": "2027-08",
+      "house": 1,
+      "phase": "Sade Sati phase 2 (peak)"
+     },
+     {
+      "month": "2027-09",
+      "house": 1,
+      "phase": "Sade Sati phase 2 (peak)"
+     },
+     {
+      "month": "2027-10",
+      "house": 1,
+      "phase": "Sade Sati phase 2 (peak)"
+     },
+     {
+      "month": "2027-11",
+      "house": 12,
+      "phase": "Sade Sati phase 1"
+     },
+     {
+      "month": "2027-12",
+      "house": 12,
+      "phase": "Sade Sati phase 1"
+     }
+    ]
+   }
+  },
+  "pisces": {
+   "daily": {
+    "at": "2026-11-25T00:05 IST",
+    "snapshot": {
+     "Sun": {
+      "lon": 218.26294409554964,
+      "sign": 7,
+      "retro": false,
+      "house": 9,
+      "b": -1
+     },
+     "Moon": {
+      "lon": 40.42265606185458,
+      "sign": 1,
+      "retro": false,
+      "house": 3,
+      "b": 0.2
+     },
+     "Mars": {
+      "lon": 125.28462894448592,
+      "sign": 4,
+      "retro": false,
+      "house": 6,
+      "b": 0.2
+     },
+     "Mercury": {
+      "lon": 199.2851295396258,
+      "sign": 6,
+      "retro": false,
+      "house": 8,
+      "b": 0.2
+     },
+     "Jupiter": {
+      "lon": 122.25798978338833,
+      "sign": 4,
+      "retro": false,
+      "house": 6,
+      "b": -1
+     },
+     "Venus": {
+      "lon": 180.80435682261202,
+      "sign": 6,
+      "retro": false,
+      "house": 8,
+      "b": 1
+     },
+     "Saturn": {
+      "lon": 343.9365369357806,
+      "sign": 11,
+      "retro": true,
+      "house": 1,
+      "b": -1
+     },
+     "Rahu": {
+      "lon": 300.58372159676395,
+      "sign": 10,
+      "retro": true,
+      "house": 12,
+      "b": -1
+     },
+     "Ketu": {
+      "lon": 120.58372159676395,
+      "sign": 4,
+      "retro": true,
+      "house": 6,
+      "b": 0.6
+     }
+    },
+    "areas": {
+     "health": -0.63,
+     "education": -0.09999999999999995,
+     "career": -0.83,
+     "business": -0.06,
+     "wealth": -0.13999999999999999,
+     "love": 0.34,
+     "marriage": -0.060000000000000026,
+     "family": -0.53,
+     "children": -0.4
+    },
+    "ratings": {
+     "health": "Challenging",
+     "education": "Moderate",
+     "career": "Challenging",
+     "business": "Moderate",
+     "wealth": "Challenging",
+     "love": "Good",
+     "marriage": "Moderate",
+     "family": "Challenging",
+     "children": "Challenging"
+    },
+    "satH": 1,
+    "sadePhase": "Sade Sati phase 2 (peak)",
+    "jupH": 6,
+    "attrib": {
+     "planet": "Venus",
+     "base": 1,
+     "colours": [
+      "white",
+      "cream"
+     ],
+     "number": 6,
+     "direction": "South-East",
+     "directionPlanet": "Venus",
+     "deity": "Lakshmi",
+     "mantra": "Om Draam Dreem Draum Sah Shukraya Namah"
+    },
+    "dosDonts": {
+     "doHouse": 8,
+     "doPlanet": "Venus",
+     "dontHouse": 9,
+     "dontPlanet": "Sun"
+    },
+    "moonHouse": 3,
+    "panchang": {
+     "vaar": "Wednesday",
+     "tithi": "Krishna Pratipada",
+     "nakshatra": "Rohini",
+     "paksha": "Krishna (waning)"
+    }
+   },
+   "weekly": {
+    "window": "Mon 2026-11-30 – Sun 2026-12-06",
+    "areas": {
+     "health": -0.5499999999999999,
+     "education": -0.3514285714285714,
+     "career": -0.9271428571428572,
+     "business": -0.29999999999999993,
+     "wealth": -0.20857142857142857,
+     "love": 0.40857142857142853,
+     "marriage": -0.0142857142857143,
+     "family": -0.45000000000000007,
+     "children": -0.34285714285714286
+    },
+    "ratings": {
+     "health": "Challenging",
+     "education": "Challenging",
+     "career": "Challenging",
+     "business": "Challenging",
+     "wealth": "Challenging",
+     "love": "Excellent",
+     "marriage": "Moderate",
+     "family": "Challenging",
+     "children": "Challenging"
+    },
+    "moonSweepHouses": [
+     6,
+     6,
+     6,
+     7,
+     7,
+     8,
+     8
+    ],
+    "attrib": {
+     "planet": "Venus",
+     "base": 1,
+     "colours": [
+      "white",
+      "cream"
+     ],
+     "number": 6,
+     "direction": "South-East",
+     "directionPlanet": "Venus",
+     "deity": "Lakshmi",
+     "mantra": "Om Draam Dreem Draum Sah Shukraya Namah"
+    },
+    "dosDonts": {
+     "doHouse": 7,
+     "doPlanet": "Moon",
+     "dontHouse": 9,
+     "dontPlanet": "Sun"
+    }
+   },
+   "monthly": {
+    "month": "December 2026",
+    "areas": {
+     "health": -0.35258064516129023,
+     "education": -0.4058064516129032,
+     "career": -0.6264516129032266,
+     "business": -0.2916129032258067,
+     "wealth": -0.26774193548387093,
+     "love": 0.3438709677419354,
+     "marriage": -0.08322580645161287,
+     "family": -0.4674193548387099,
+     "children": -0.3258064516129033
+    },
+    "ratings": {
+     "health": "Challenging",
+     "education": "Challenging",
+     "career": "Challenging",
+     "business": "Challenging",
+     "wealth": "Challenging",
+     "love": "Good",
+     "marriage": "Moderate",
+     "family": "Challenging",
+     "children": "Challenging"
+    },
+    "bestDays": [
+     {
+      "d": "2026-12-22",
+      "core4": 6.938893903907228e-18
+     },
+     {
+      "d": "2026-12-23",
+      "core4": 6.938893903907228e-18
+     },
+     {
+      "d": "2026-12-28",
+      "core4": 6.938893903907228e-18
+     }
+    ],
+    "testingDay": {
+     "d": "2026-12-05",
+     "core4": -0.7975
+    },
+    "sunIngress": "2026-12-16: Sun → Sagittarius",
+    "stations": [],
+    "planetIngresses": [
+     "2026-12-03: Mercury → Scorpio",
+     "2026-12-22: Mercury → Sagittarius"
+    ],
+    "newMoon": "2026-12-09",
+    "fullMoon": "2026-12-24",
+    "attrib": {
+     "planet": "Venus",
+     "base": 1,
+     "colours": [
+      "white",
+      "cream"
+     ],
+     "number": 6,
+     "direction": "South-East",
+     "directionPlanet": "Venus",
+     "deity": "Lakshmi",
+     "mantra": "Om Draam Dreem Draum Sah Shukraya Namah"
+    },
+    "dosDonts": {
+     "doHouse": 10,
+     "doPlanet": "Sun",
+     "dontHouse": 12,
+     "dontPlanet": "Moon"
+    }
+   },
+   "yearly": {
+    "year": 2027,
+    "areas": {
+     "health": -0.5580751408090117,
+     "education": -0.033694214029697876,
+     "career": -0.6487052227342549,
+     "business": -0.2080733230926779,
+     "wealth": -0.12256338965693798,
+     "love": 0.052544290834613434,
+     "marriage": -0.0766784434203789,
+     "family": -0.4235413466461854,
+     "children": -0.1575775729646697
+    },
+    "ratings": {
+     "health": "Challenging",
+     "education": "Moderate",
+     "career": "Challenging",
+     "business": "Challenging",
+     "wealth": "Challenging",
+     "love": "Moderate",
+     "marriage": "Moderate",
+     "family": "Challenging",
+     "children": "Challenging"
+    },
+    "trajectories": {
+     "Jupiter": [
+      {
+       "date": "2027-01-25",
+       "sign": "Cancer"
+      },
+      {
+       "date": "2027-06-26",
+       "sign": "Leo"
+      },
+      {
+       "date": "2027-11-27",
+       "sign": "Virgo"
+      }
+     ],
+     "Saturn": [
+      {
+       "date": "2027-06-03",
+       "sign": "Aries"
+      },
+      {
+       "date": "2027-10-21",
+       "sign": "Pisces"
+      }
+     ],
+     "Rahu": []
+    },
+    "months": [
+     {
+      "month": "2027-01",
+      "areas": {
+       "health": -0.27864516129032263,
+       "education": 0.10516129032258066,
+       "career": -0.24303225806451606,
+       "business": 0.04606451612903226,
+       "wealth": -0.16193548387096773,
+       "love": 0.04361290322580648,
+       "marriage": -0.23935483870967741,
+       "family": -0.46290322580645143,
+       "children": -0.247741935483871
+      },
+      "tableRating": "Challenging",
+      "satHouse": 1,
+      "jupHouse": 6,
+      "rahuHouse": 11,
+      "topPos": "Rahu in H11",
+      "topNeg": "Jupiter in H6"
+     },
+     {
+      "month": "2027-02",
+      "areas": {
+       "health": -0.4814285714285713,
+       "education": -0.2485714285714287,
+       "career": -0.5207142857142857,
+       "business": -0.49571428571428555,
+       "wealth": -0.31857142857142845,
+       "love": -0.19428571428571426,
+       "marriage": -0.2885714285714284,
+       "family": -0.4685714285714285,
+       "children": -0.06428571428571427
+      },
+      "tableRating": "Challenging",
+      "satHouse": 1,
+      "jupHouse": 5,
+      "rahuHouse": 11,
+      "topPos": "Jupiter in H5",
+      "topNeg": "Saturn in H1"
+     },
+     {
+      "month": "2027-03",
+      "areas": {
+       "health": -0.6661290322580643,
+       "education": 0.10077419354838707,
+       "career": -0.8479354838709677,
+       "business": -0.21367741935483875,
+       "wealth": 0.14722580645161296,
+       "love": 0.34193548387096767,
+       "marriage": 0.31548387096774194,
+       "family": -0.2054838709677418,
+       "children": 0.1761290322580646
+      },
+      "tableRating": "Moderate",
+      "satHouse": 1,
+      "jupHouse": 5,
+      "rahuHouse": 11,
+      "topPos": "Jupiter in H5",
+      "topNeg": "Saturn in H1"
+     },
+     {
+      "month": "2027-04",
+      "areas": {
+       "health": -0.7370000000000001,
+       "education": 0.15666666666666665,
+       "career": -0.8703333333333332,
+       "business": -0.1873333333333332,
+       "wealth": 0.23000000000000007,
+       "love": 0.382,
+       "marriage": 0.42666666666666664,
+       "family": -0.18066666666666673,
+       "children": 0.2539999999999999
+      },
+      "tableRating": "Moderate",
+      "satHouse": 1,
+      "jupHouse": 5,
+      "rahuHouse": 11,
+      "topPos": "Jupiter in H5",
+      "topNeg": "Saturn in H1"
+     },
+     {
+      "month": "2027-05",
+      "areas": {
+       "health": -0.33967741935483864,
+       "education": 0.22580645161290328,
+       "career": -0.24161290322580642,
+       "business": 0.058709677419354823,
+       "wealth": 0.24129032258064512,
+       "love": 0.6129032258064518,
+       "marriage": 0.40064516129032274,
+       "family": -0.11387096774193549,
+       "children": 0.3238709677419355
+      },
+      "tableRating": "Good",
+      "satHouse": 1,
+      "jupHouse": 5,
+      "rahuHouse": 11,
+      "topPos": "Jupiter in H5",
+      "topNeg": "Saturn in H1"
+     },
+     {
+      "month": "2027-06",
+      "areas": {
+       "health": -0.31133333333333335,
+       "education": 0.19880000000000017,
+       "career": -0.2265333333333333,
+       "business": 0.16253333333333334,
+       "wealth": 0.09280000000000002,
+       "love": 0.482,
+       "marriage": 0.15466666666666662,
+       "family": -0.2826666666666667,
+       "children": -0.006666666666666606
+      },
+      "tableRating": "Moderate",
+      "satHouse": 2,
+      "jupHouse": 5,
+      "rahuHouse": 11,
+      "topPos": "Rahu in H11",
+      "topNeg": "Saturn in H2"
+     },
+     {
+      "month": "2027-07",
+      "areas": {
+       "health": -0.7212903225806452,
+       "education": 0.14129032258064517,
+       "career": -0.8593548387096771,
+       "business": 0.0851612903225807,
+       "wealth": -0.08580645161290322,
+       "love": 0.10193548387096772,
+       "marriage": -0.12451612903225805,
+       "family": -0.5929032258064516,
+       "children": -0.4806451612903224
+      },
+      "tableRating": "Challenging",
+      "satHouse": 2,
+      "jupHouse": 6,
+      "rahuHouse": 11,
+      "topPos": "Rahu in H11",
+      "topNeg": "Jupiter in H6"
+     },
+     {
+      "month": "2027-08",
+      "areas": {
+       "health": -0.5741935483870967,
+       "education": -0.3406451612903224,
+       "career": -0.7290322580645154,
+       "business": -0.4322580645161293,
+       "wealth": -0.4496774193548386,
+       "love": -0.31225806451612903,
+       "marriage": -0.45548387096774184,
+       "family": -0.6341935483870969,
+       "children": -0.5258064516129036
+      },
+      "tableRating": "Challenging",
+      "satHouse": 2,
+      "jupHouse": 6,
+      "rahuHouse": 11,
+      "topPos": "Rahu in H11",
+      "topNeg": "Jupiter in H6"
+     },
+     {
+      "month": "2027-09",
+      "areas": {
+       "health": -0.5253333333333332,
+       "education": -0.6666666666666666,
+       "career": -0.7999999999999995,
+       "business": -0.7900000000000003,
+       "wealth": -0.7699999999999996,
+       "love": -0.7200000000000001,
+       "marriage": -0.8133333333333337,
+       "family": -0.7200000000000001,
+       "children": -0.6533333333333332
+      },
+      "tableRating": "Challenging",
+      "satHouse": 2,
+      "jupHouse": 6,
+      "rahuHouse": 11,
+      "topPos": "Rahu in H11",
+      "topNeg": "Jupiter in H6"
+     },
+     {
+      "month": "2027-10",
+      "areas": {
+       "health": -0.7922580645161288,
+       "education": -0.18812903225806452,
+       "career": -0.960645161290323,
+       "business": -0.23316129032258062,
+       "wealth": -0.2584516129032258,
+       "love": -0.045161290322580656,
+       "marriage": -0.21290322580645155,
+       "family": -0.6629032258064516,
+       "children": -0.5354838709677417
+      },
+      "tableRating": "Challenging",
+      "satHouse": 2,
+      "jupHouse": 6,
+      "rahuHouse": 11,
+      "topPos": "Rahu in H11",
+      "topNeg": "Jupiter in H6"
+     },
+     {
+      "month": "2027-11",
+      "areas": {
+       "health": -0.7679999999999997,
+       "education": -0.2933333333333334,
+       "career": -0.9933333333333333,
+       "business": -0.4133333333333332,
+       "wealth": -0.3266666666666666,
+       "love": -0.14666666666666664,
+       "marriage": -0.26666666666666666,
+       "family": -0.6483333333333333,
+       "children": -0.4599999999999999
+      },
+      "tableRating": "Challenging",
+      "satHouse": 1,
+      "jupHouse": 6,
+      "rahuHouse": 11,
+      "topPos": "Rahu in H11",
+      "topNeg": "Jupiter in H6"
+     },
+     {
+      "month": "2027-12",
+      "areas": {
+       "health": -0.5016129032258062,
+       "education": 0.40451612903225803,
+       "career": -0.49193548387096775,
+       "business": -0.08387096774193531,
+       "wealth": 0.18903225806451612,
+       "love": 0.0845161290322581,
+       "marriage": 0.1832258064516129,
+       "family": -0.10999999999999995,
+       "children": 0.32903225806451614
+      },
+      "tableRating": "Moderate",
+      "satHouse": 1,
+      "jupHouse": 7,
+      "rahuHouse": 11,
+      "topPos": "Jupiter in H7",
+      "topNeg": "Saturn in H1"
+     }
+    ],
+    "attrib": {
+     "planet": "Venus",
+     "base": 1,
+     "colours": [
+      "white",
+      "cream"
+     ],
+     "number": 6,
+     "direction": "South-East",
+     "directionPlanet": "Venus",
+     "deity": "Lakshmi",
+     "mantra": "Om Draam Dreem Draum Sah Shukraya Namah"
+    },
+    "sadeMonths2027": [
+     {
+      "month": "2027-01",
+      "house": 1,
+      "phase": "Sade Sati phase 2 (peak)"
+     },
+     {
+      "month": "2027-02",
+      "house": 1,
+      "phase": "Sade Sati phase 2 (peak)"
+     },
+     {
+      "month": "2027-03",
+      "house": 1,
+      "phase": "Sade Sati phase 2 (peak)"
+     },
+     {
+      "month": "2027-04",
+      "house": 1,
+      "phase": "Sade Sati phase 2 (peak)"
+     },
+     {
+      "month": "2027-05",
+      "house": 1,
+      "phase": "Sade Sati phase 2 (peak)"
+     },
+     {
+      "month": "2027-06",
+      "house": 2,
+      "phase": "Sade Sati phase 3"
+     },
+     {
+      "month": "2027-07",
+      "house": 2,
+      "phase": "Sade Sati phase 3"
+     },
+     {
+      "month": "2027-08",
+      "house": 2,
+      "phase": "Sade Sati phase 3"
+     },
+     {
+      "month": "2027-09",
+      "house": 2,
+      "phase": "Sade Sati phase 3"
+     },
+     {
+      "month": "2027-10",
+      "house": 2,
+      "phase": "Sade Sati phase 3"
+     },
+     {
+      "month": "2027-11",
+      "house": 1,
+      "phase": "Sade Sati phase 2 (peak)"
+     },
+     {
+      "month": "2027-12",
+      "house": 1,
+      "phase": "Sade Sati phase 2 (peak)"
+     }
+    ]
+   }
+  }
+ }
+}
