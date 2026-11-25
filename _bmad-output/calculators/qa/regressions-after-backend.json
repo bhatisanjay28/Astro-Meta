@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-21T17:12:55.587Z",
+  "date": "2026-11-25T18:00:09.486Z",
   "pass": 23,
   "fail": 0,
   "results": [
@@ -43,7 +43,7 @@
       "id": "RG-07",
       "desc": "name-numerology 'Sanjay Bhati' → 25 → 7 Ketu",
       "ok": true,
-      "detail": "{\"sum\":25,\"root\":7,\"lord\":\"Ketu\",\"letters\":[{\"letter\":\"S\",\"value\":3},{\"letter\":\"A\",\"value\":1},{\"letter\":\"N\",\"value\":5},{\"letter\":\"J\",\"value\":1},{\"letter\":\"A\",\"value\":1},{\"letter\":\"Y\",\"value\":1},{\"letter\":\"B\",\"value\":2},{\"letter\":\"H\",\"value\":5},{\"letter\":\"A\",\"value\":1},{\"letter\":\"T\",\"value\":4},{\"letter\":\"I\",\"value\":1}],\"words\":[{\"word\":\"SANJAY\",\"sum\":12,\"root\":3},{\"word\":\"BHATI\",\"sum\":13,\"root\":4}],\"note\":\"Chaldean name numerology (traditional Vedic numerology uses Chaldean values).\",\"interpretation\":{\"verdict\":\"Name root 7 — ruled by Ketu\",\"meaning\":\"Root 7 is ruled by Ketu — the seeker's number; introspective, philosophical and analytical, it succeeds through depth rather than breadth.\",\"guidance\":[\"Key themes: spirituality, research, introspection.\"],\"basis\":\"Chaldean numerology research §3; interpretations pending Jyotishi review (P11)\"},\"engine_version\":\"1.4.0-alpha1\"}"
+      "detail": "{\"sum\":25,\"root\":7,\"lord\":\"Ketu\",\"letters\":[{\"letter\":\"S\",\"value\":3},{\"letter\":\"A\",\"value\":1},{\"letter\":\"N\",\"value\":5},{\"letter\":\"J\",\"value\":1},{\"letter\":\"A\",\"value\":1},{\"letter\":\"Y\",\"value\":1},{\"letter\":\"B\",\"value\":2},{\"letter\":\"H\",\"value\":5},{\"letter\":\"A\",\"value\":1},{\"letter\":\"T\",\"value\":4},{\"letter\":\"I\",\"value\":1}],\"words\":[{\"word\":\"SANJAY\",\"sum\":12,\"root\":3},{\"word\":\"BHATI\",\"sum\":13,\"root\":4}],\"note\":\"Chaldean name numerology (traditional Vedic numerology uses Chaldean values).\",\"owner_compatibility\":null,\"interpretation\":{\"verdict\":\"Name root 7 — ruled by Ketu\",\"meaning\":\"Root 7 is ruled by Ketu — the seeker's number; introspective, philosophical and analytical, it succeeds through depth rather than breadth.\",\"guidance\":[\"Key themes: spirituality, research, introspection.\"],\"basis\":\"Chaldean numerology research §3; interpretations pending Jyotishi review (P11)\"},\"engine_version\":\"1.4.0-alpha1\"}"
     },
     {
       "id": "RG-08",
@@ -71,9 +71,9 @@
     },
     {
       "id": "QB-02",
-      "desc": "transits Rahu sidereal ≈ 300.75° (Δ<0.3°)",
+      "desc": "transits Rahu sidereal ≈ 300.53° (Δ<0.3°)",
       "ok": true,
-      "detail": "got 300.7458 Δ=0.00008213167234316643"
+      "detail": "got 300.5321 Δ=0.00008818224421247578"
     },
     {
       "id": "QB-05",
@@ -85,7 +85,7 @@
       "id": "QB-06",
       "desc": "sade-sati Ex2 window starts 2022-04-29 (first-entry)",
       "ok": true,
-      "detail": "got 2022-04-29T02:17:35.057Z"
+      "detail": "got 2022-04-29T02:17:26.573Z"
     },
     {
       "id": "QB-08",

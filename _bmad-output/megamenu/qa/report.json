@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-22T06:58:23.167Z",
+  "date": "2026-11-25T17:59:53.484Z",
   "failures": 0,
   "results": [
     {
       "id": "M1",
       "name": "hover opens after intent delay (not instantly)",
       "ok": true,
-      "detail": "opened ~145ms, not visible at 60ms: true"
+      "detail": "opened ~153ms, not visible at 60ms: true"
     },
     {
       "id": "M2",

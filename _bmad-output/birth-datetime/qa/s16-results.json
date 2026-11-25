@@ -232,19 +232,19 @@
       "id": "D-37",
       "name": "panchang date prefill (init seam): hidden + segments = today",
       "ok": true,
-      "detail": "{\"st\":{\"value\":\"2026-11-22\",\"dd\":\"22\",\"mm\":\"11\",\"yy\":\"2026\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false},\"todayIso\":\"2026-11-22\"}"
+      "detail": "{\"st\":{\"value\":\"2026-11-25\",\"dd\":\"25\",\"mm\":\"11\",\"yy\":\"2026\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false},\"todayIso\":\"2026-11-25\"}"
     },
     {
       "id": "D-38",
       "name": "Tomorrow button updates hidden + segments (seam)",
       "ok": true,
-      "detail": "{\"st\":{\"value\":\"2026-11-23\",\"dd\":\"23\",\"mm\":\"11\",\"yy\":\"2026\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false},\"url\":\"http://127.0.0.1:4321/panchang/mumbai?date=2026-11-23\"}"
+      "detail": "{\"st\":{\"value\":\"2026-11-26\",\"dd\":\"26\",\"mm\":\"11\",\"yy\":\"2026\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false},\"url\":\"https://vyotish.com/panchang/mumbai/?date=2026-11-26\"}"
     },
     {
       "id": "D-39",
       "name": "popup pick on panchang updates ?date= via change dispatch",
       "ok": true,
-      "detail": "{\"st\":{\"value\":\"2026-11-01\",\"dd\":\"01\",\"mm\":\"11\",\"yy\":\"2026\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false},\"url\":\"http://127.0.0.1:4321/panchang/mumbai?date=2026-11-01\"}"
+      "detail": "{\"st\":{\"value\":\"2026-11-01\",\"dd\":\"01\",\"mm\":\"11\",\"yy\":\"2026\",\"hh\":\"\",\"mi\":\"\",\"invalid\":false,\"error\":\"\",\"errVisible\":false,\"amPressed\":false,\"pmPressed\":false,\"hasAmpm\":false,\"expanded\":false},\"url\":\"https://vyotish.com/panchang/mumbai/?date=2026-11-01\"}"
     },
     {
       "id": "D-40",

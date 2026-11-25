@@ -1,2 +1,5 @@
 node_modules/
 .bun-cache/
+
+# pre-migration DB backups contain raw visitor PII — local restore point only, never pushed
+_bmad-output/admin/backups/
