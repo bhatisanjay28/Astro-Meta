@@ -1,0 +1,42 @@
+ERROR  yearly.wealth [rating=good.driver=jupiter-good] en#3: EN banned token: never
+ERROR  yearly.wealth [rating=challenging.driver=jupiter-good] en#2: EN banned token: buys
+ERROR  yearly.wealth [rating=challenging.driver=jupiter-good] en#2: EN banned token: disaster
+ERROR  yearly.wealth [rating=excellent.driver=saturn-phase] en#3: EN banned token: never
+ERROR  yearly.wealth [rating=good.driver=saturn-phase] en#3: EN banned token: never
+ERROR  yearly.wealth [rating=moderate.driver=saturn-phase] en#2: EN banned token: always
+ERROR  yearly.wealth [rating=challenging.driver=saturn-phase] en#1: EN banned token: punishment
+ERROR  yearly.wealth [rating=challenging.driver=saturn-phase] en#3: EN banned token: failure
+ERROR  yearly.wealth [rating=excellent.driver=rahu-axis] en#1: EN banned token: never
+ERROR  yearly.wealth [rating=excellent.driver=rahu-axis] en#3: EN banned token: never
+ERROR  yearly.wealth [rating=challenging.driver=rahu-axis] en#1: length 144 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=good.driver=mixed] en#2: EN banned token: never
+ERROR  yearly.wealth [rating=good.driver=steady] en#2: EN banned token: beware
+ERROR  yearly.wealth [rating=moderate.driver=steady] en#2: EN banned token: buys
+ERROR  yearly.wealth [rating=challenging.driver=steady] en#3: EN banned token: cannot
+ERROR  yearly.wealth [rating=excellent.driver=jupiter-good] hi#1: length 145 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=excellent.driver=jupiter-good] hi#2: length 145 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=excellent.driver=jupiter-good] hi#3: length 155 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=good.driver=jupiter-good] hi#2: length 143 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=good.driver=jupiter-good] hi#2: HI banned token: खरीदें
+ERROR  yearly.wealth [rating=moderate.driver=jupiter-good] hi#1: length 143 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=moderate.driver=jupiter-good] hi#1: HI banned token: खरीदें
+ERROR  yearly.wealth [rating=moderate.driver=jupiter-good] hi#2: length 143 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=moderate.driver=jupiter-good] hi#3: HI banned token: खरीदें
+ERROR  yearly.wealth [rating=challenging.driver=jupiter-good] hi#1: length 145 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=excellent.driver=saturn-phase] hi#2: length 158 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=excellent.driver=saturn-phase] hi#3: length 146 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=good.driver=saturn-phase] hi#2: length 142 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=challenging.driver=saturn-phase] hi#1: length 142 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=challenging.driver=saturn-phase] hi#3: length 145 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=challenging.driver=saturn-phase] hi#3: HI banned token: असफलता
+ERROR  yearly.wealth [rating=excellent.driver=rahu-axis] hi#1: length 156 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=excellent.driver=rahu-axis] hi#1: HI banned token: कभी नहीं
+ERROR  yearly.wealth [rating=good.driver=rahu-axis] hi#1: length 146 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=challenging.driver=rahu-axis] hi#1: length 152 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=challenging.driver=rahu-axis] hi#3: HI banned token: /(?<![\p{L}\p{M}])डर/
+ERROR  yearly.wealth [rating=excellent.driver=mixed] hi#3: length 142 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=moderate.driver=mixed] hi#3: HI banned token: खरीदें
+ERROR  yearly.wealth [rating=challenging.driver=mixed] hi#1: HI banned token: खरीदें
+ERROR  yearly.wealth [rating=excellent.driver=steady] hi#3: length 146 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=good.driver=steady] hi#3: length 141 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=challenging.driver=steady] hi#2: HI banned token: खरीदें

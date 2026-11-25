@@ -1,0 +1,297 @@
+=== yearly.overview [rating=excellent] en#3
+   your moon sign   <-ap-daily.html
+   the month to   <-at-aries-monthly.html
+   in your favour   <-at-aries-daily.html
+=== yearly.overview [rating=moderate] en#1
+   more than you   <-pb-aries-daily.html
+   and let the   <-pb-aries-daily.html
+=== yearly.overview [rating=challenging] en#1
+   this year asks   <-at-aries-yearly.html
+   of the year   <-at-aries-yearly.html
+=== yearly.overview [rating=challenging] en#3
+   your moon sign   <-ap-daily.html
+   asks you to   <-at-aries-yearly.html
+=== yearly.business [rating=excellent.driver=jupiter-good] en#2
+   this is a   <-at-aries-monthly.html
+=== yearly.business [rating=good.driver=jupiter-good] en#1
+   it is a   <-at-aries-daily.html
+   is a good   <-at-aries-daily.html
+=== yearly.business [rating=moderate.driver=jupiter-good] en#2
+   in the first   <-at-aries-yearly.html
+=== yearly.business [rating=moderate.driver=jupiter-good] en#3
+   are the most   <-ap-daily.html
+=== yearly.business [rating=challenging.driver=jupiter-good] en#2
+   and let the   <-pb-aries-daily.html
+=== yearly.business [rating=excellent.driver=saturn-phase] en#1
+   and long term   <-at-aries-monthly.html
+=== yearly.business [rating=excellent.driver=saturn-phase] en#2
+   this is a   <-at-aries-monthly.html
+   is a favourable   <-at-aries-monthly.html
+   and let the   <-pb-aries-daily.html
+=== yearly.business [rating=excellent.driver=saturn-phase] en#3
+   it is a   <-at-aries-daily.html
+=== yearly.business [rating=good.driver=saturn-phase] en#2
+   it is a   <-at-aries-daily.html
+=== yearly.business [rating=challenging.driver=saturn-phase] en#2
+   to what is   <-pb-aries-daily.html
+=== yearly.business [rating=good.driver=rahu-axis] en#2
+   rather than a   <-at-aries-monthly.html
+=== yearly.business [rating=good.driver=rahu-axis] en#3
+   for the next   <-at-aries-daily.html
+=== yearly.business [rating=moderate.driver=rahu-axis] en#3
+   it is the   <-at-aries-monthly.html
+=== yearly.business [rating=challenging.driver=rahu-axis] en#1
+   in the first   <-at-aries-yearly.html
+   they are the   <-ap-daily.html
+=== yearly.business [rating=good.driver=mixed] en#3
+   avoid over committing   <-pb-aries-daily.html
+=== yearly.business [rating=excellent.driver=steady] en#2
+   and let the   <-pb-aries-daily.html
+=== yearly.business [rating=good.driver=steady] en#1
+   it is a   <-at-aries-daily.html
+   is a good   <-at-aries-daily.html
+=== yearly.business [rating=challenging.driver=steady] en#1
+   for the year   <-at-aries-yearly.html
+=== yearly.career [rating=excellent.driver=jupiter-good] en#3
+   of the year   <-at-aries-yearly.html
+   this is a   <-at-aries-monthly.html
+   luck is a   <-at-aries-daily.html
+=== yearly.career [rating=good.driver=jupiter-good] en#1
+   of the year   <-at-aries-yearly.html
+=== yearly.career [rating=excellent.driver=steady] en#3
+   it is the   <-at-aries-monthly.html
+=== yearly.career [rating=good.driver=steady] en#1
+   it is a   <-at-aries-daily.html
+   is a good   <-at-aries-daily.html
+=== yearly.career [rating=challenging.driver=steady] en#1
+   for the year   <-at-aries-yearly.html
+=== yearly.children [rating=excellent.driver=jupiter-good] en#1
+   this is a   <-at-aries-monthly.html
+   and let the   <-pb-aries-daily.html
+=== yearly.children [rating=good.driver=jupiter-good] en#1
+   this is a   <-at-aries-monthly.html
+   is a good   <-at-aries-daily.html
+=== yearly.children [rating=excellent.driver=saturn-phase] en#1
+   this is a   <-at-aries-monthly.html
+   when it comes   <-ap-daily.html
+=== yearly.children [rating=good.driver=saturn-phase] en#1
+   this is a   <-at-aries-monthly.html
+   is a good   <-at-aries-daily.html
+=== yearly.children [rating=good.driver=saturn-phase] en#3
+   go to the   <-pb-aries-weekly.html
+   most of the   <-at-aries-daily.html
+   is a gift   <-ap-daily.html
+=== yearly.children [rating=good.driver=steady] en#1
+   it is a   <-at-aries-daily.html
+   is a good   <-at-aries-daily.html
+=== yearly.children [rating=good.driver=steady] en#2
+   a buffer for   <-pb-aries-daily.html
+=== yearly.education [rating=excellent.driver=jupiter-good] en#1
+   this is the   <-ap-daily.html
+=== yearly.education [rating=good.driver=jupiter-good] en#1
+   to what you   <-pb-aries-weekly.html
+   this is a   <-at-aries-monthly.html
+   is a good   <-at-aries-daily.html
+=== yearly.education [rating=excellent.driver=saturn-phase] en#1
+   this is the   <-ap-daily.html
+   when it comes   <-ap-daily.html
+=== yearly.education [rating=excellent.driver=saturn-phase] en#2
+   is also a   <-at-aries-monthly.html
+   and let the   <-pb-aries-daily.html
+=== yearly.education [rating=good.driver=saturn-phase] en#3
+   go to the   <-pb-aries-weekly.html
+   most of the   <-at-aries-daily.html
+=== yearly.education [rating=good.driver=steady] en#1
+   it is a   <-at-aries-daily.html
+   is a good   <-at-aries-daily.html
+=== yearly.education [rating=challenging.driver=steady] en#1
+   for the year   <-at-aries-yearly.html
+=== yearly.family [rating=excellent.driver=jupiter-good] en#2
+   better than usual   <-at-aries-daily.html
+   for the next   <-at-aries-daily.html
+   is also a   <-at-aries-monthly.html
+=== yearly.family [rating=good.driver=jupiter-good] en#1
+   this is a   <-at-aries-monthly.html
+   is a good   <-at-aries-daily.html
+=== yearly.family [rating=excellent.driver=saturn-phase] en#1
+   this is the   <-ap-daily.html
+   when it comes   <-ap-daily.html
+=== yearly.family [rating=excellent.driver=saturn-phase] en#2
+   is also a   <-at-aries-monthly.html
+   and let the   <-pb-aries-daily.html
+=== yearly.family [rating=good.driver=saturn-phase] en#3
+   go to the   <-pb-aries-weekly.html
+   most of the   <-at-aries-daily.html
+=== yearly.family [rating=good.driver=steady] en#1
+   it is a   <-at-aries-daily.html
+   is a good   <-at-aries-daily.html
+=== yearly.family [rating=challenging.driver=steady] en#1
+   for the year   <-at-aries-yearly.html
+=== yearly.health [rating=excellent.driver=jupiter-good] en#1
+   this is the   <-ap-daily.html
+   is a gift   <-ap-daily.html
+   and let the   <-pb-aries-daily.html
+=== yearly.health [rating=excellent.driver=saturn-phase] en#1
+   this is the   <-ap-daily.html
+   when it comes   <-ap-daily.html
+=== yearly.health [rating=excellent.driver=saturn-phase] en#2
+   is also a   <-at-aries-monthly.html
+   and let the   <-pb-aries-daily.html
+=== yearly.health [rating=good.driver=saturn-phase] en#3
+   most of the   <-at-aries-daily.html
+=== yearly.health [rating=excellent.driver=rahu-axis] en#3
+   of the year   <-at-aries-yearly.html
+   is the most   <-at-aries-yearly.html
+=== yearly.health [rating=good.driver=steady] en#1
+   it is a   <-at-aries-daily.html
+   is a good   <-at-aries-daily.html
+=== yearly.health [rating=challenging.driver=steady] en#1
+   for the year   <-at-aries-yearly.html
+=== yearly.love [rating=excellent.driver=jupiter-good] en#1
+   this is a   <-at-aries-monthly.html
+   and let the   <-pb-aries-daily.html
+=== yearly.love [rating=excellent.driver=jupiter-good] en#3
+   this is a   <-at-aries-monthly.html
+   side by side   <-pb-aries-daily.html
+   rather than a   <-at-aries-monthly.html
+=== yearly.love [rating=good.driver=jupiter-good] en#1
+   better than usual   <-at-aries-daily.html
+   of the year   <-at-aries-yearly.html
+   and let the   <-pb-aries-daily.html
+=== yearly.love [rating=good.driver=jupiter-good] en#2
+   your romantic life   <-ap-daily.html
+   there is no   <-at-aries-daily.html
+   rather than rushing   <-at-aries-monthly.html
+   the first half   <-at-aries-yearly.html
+=== yearly.love [rating=moderate.driver=jupiter-good] en#2
+   your romantic life   <-ap-daily.html
+   for the year   <-at-aries-yearly.html
+=== yearly.love [rating=excellent.driver=saturn-phase] en#2
+   your romantic life   <-ap-daily.html
+   this is the   <-ap-daily.html
+=== yearly.love [rating=good.driver=saturn-phase] en#1
+   there is no   <-at-aries-daily.html
+   what you want   <-at-aries-yearly.html
+=== yearly.love [rating=good.driver=saturn-phase] en#2
+   your romantic life   <-ap-daily.html
+   better than usual   <-at-aries-daily.html
+   in your favour   <-at-aries-daily.html
+   as well as   <-ap-daily.html
+=== yearly.love [rating=moderate.driver=saturn-phase] en#3
+   your romantic life   <-ap-daily.html
+   for the year   <-at-aries-yearly.html
+=== yearly.love [rating=excellent.driver=rahu-axis] en#2
+   you may feel   <-at-aries-monthly.html
+   may feel drawn   <-at-aries-yearly.html
+=== yearly.love [rating=excellent.driver=rahu-axis] en#3
+   of the year   <-at-aries-yearly.html
+   at all the   <-at-aries-monthly.html
+=== yearly.love [rating=good.driver=rahu-axis] en#1
+   into your romantic   <-ap-daily.html
+   your romantic life   <-ap-daily.html
+   for the year   <-at-aries-yearly.html
+   the year ahead   <-at-aries-monthly.html
+=== yearly.love [rating=good.driver=rahu-axis] en#2
+   your love life   <-at-aries-daily.html
+   in your favour   <-at-aries-daily.html
+=== yearly.love [rating=challenging.driver=rahu-axis] en#1
+   your romantic life   <-ap-daily.html
+   these are the   <-at-aries-daily.html
+=== yearly.love [rating=good.driver=mixed] en#1
+   your romantic life   <-ap-daily.html
+=== yearly.love [rating=excellent.driver=steady] en#1
+   your romantic life   <-ap-daily.html
+   there is no   <-at-aries-daily.html
+=== yearly.love [rating=good.driver=steady] en#1
+   this is a   <-at-aries-monthly.html
+   is a good   <-at-aries-daily.html
+=== yearly.love [rating=challenging.driver=steady] en#1
+   your love life   <-at-aries-daily.html
+   for the year   <-at-aries-yearly.html
+=== yearly.marriage [rating=excellent.driver=jupiter-good] en#3
+   this is the   <-ap-daily.html
+   you want to   <-at-aries-daily.html
+=== yearly.marriage [rating=challenging.driver=jupiter-good] en#1
+   at all the   <-at-aries-monthly.html
+   singles may feel   <-at-aries-yearly.html
+=== yearly.marriage [rating=excellent.driver=rahu-axis] en#2
+   you may feel   <-at-aries-monthly.html
+   may feel drawn   <-at-aries-yearly.html
+=== yearly.marriage [rating=good.driver=rahu-axis] en#1
+   for the year   <-at-aries-yearly.html
+   the year ahead   <-at-aries-monthly.html
+=== yearly.marriage [rating=good.driver=steady] en#1
+   this is a   <-at-aries-monthly.html
+   is a good   <-at-aries-daily.html
+=== yearly.wealth [rating=excellent.driver=jupiter-good] en#1
+   this is a   <-at-aries-monthly.html
+   that lets you   <-at-aries-monthly.html
+   rather than a   <-at-aries-monthly.html
+=== yearly.wealth [rating=good.driver=saturn-phase] en#2
+   in your favour   <-at-aries-daily.html
+   as well as   <-ap-daily.html
+=== yearly.wealth [rating=excellent.driver=rahu-axis] en#2
+   you may feel   <-at-aries-monthly.html
+   may feel drawn   <-at-aries-yearly.html
+=== yearly.wealth [rating=good.driver=rahu-axis] en#1
+   for the year   <-at-aries-yearly.html
+   the year ahead   <-at-aries-monthly.html
+=== yearly.wealth [rating=excellent.driver=steady] en#3
+   this is the   <-ap-daily.html
+   the long term   <-at-aries-monthly.html
+=== yearly.wealth [rating=good.driver=steady] en#1
+   this is a   <-at-aries-monthly.html
+   is a good   <-at-aries-daily.html
+
+=== FRAGMENT FREQUENCY across failing rows ===
+15 this is a
+14 is a good
+11 and let the
+11 for the year
+ 9 it is a
+ 9 your romantic life
+ 8 this is the
+ 6 of the year
+ 4 in your favour
+ 4 when it comes
+ 4 most of the
+ 4 is also a
+ 3 rather than a
+ 3 go to the
+ 3 better than usual
+ 3 there is no
+ 3 you may feel
+ 3 may feel drawn
+ 3 the year ahead
+ 2 your moon sign
+ 2 in the first
+ 2 for the next
+ 2 it is the
+ 2 is a gift
+ 2 as well as
+ 2 at all the
+ 2 your love life
+ 1 the month to
+ 1 more than you
+ 1 this year asks
+ 1 asks you to
+ 1 are the most
+ 1 and long term
+ 1 is a favourable
+ 1 to what is
+ 1 they are the
+ 1 avoid over committing
+ 1 luck is a
+ 1 a buffer for
+ 1 to what you
+ 1 is the most
+ 1 side by side
+ 1 rather than rushing
+ 1 the first half
+ 1 what you want
+ 1 into your romantic
+ 1 these are the
+ 1 you want to
+ 1 singles may feel
+ 1 that lets you
+ 1 the long term

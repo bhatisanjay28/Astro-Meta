@@ -1,0 +1,766 @@
+ERROR  weekly.education [rating=excellent.pb=fav.retro=review] hi#1: length 71 outside §8 bounds 45–70
+ERROR  weekly.education [rating=excellent.pb=fav.retro=review] hi#3: length 71 outside §8 bounds 45–70
+ERROR  weekly.education [rating=excellent.pb=neutral.retro=review] hi#2: length 71 outside §8 bounds 45–70
+ERROR  monthly.overview|rating=excellent.retro=none|en: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=excellent.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=excellent.retro=review|en: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=excellent.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=good.retro=none|en: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=good.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=good.retro=review|en: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=good.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=moderate.retro=none|en: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=moderate.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=moderate.retro=review|en: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=moderate.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=challenging.retro=none|en: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=challenging.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=challenging.retro=review|en: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=challenging.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=excellent.retro=none|hi: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=excellent.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=excellent.retro=review|hi: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=excellent.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=good.retro=none|hi: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=good.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=good.retro=review|hi: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=good.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=moderate.retro=none|hi: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=moderate.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=moderate.retro=review|hi: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=moderate.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=challenging.retro=none|hi: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=challenging.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.overview|rating=challenging.retro=review|hi: only 0 variants (need ≥4)
+ERROR  monthly.overview|rating=challenging.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=excellent.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=excellent.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=excellent.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=excellent.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=excellent.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=excellent.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=excellent.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=excellent.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=excellent.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=excellent.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=excellent.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=excellent.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=good.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=good.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=good.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=good.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=good.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=good.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=good.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=good.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=good.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=good.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=good.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=good.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=moderate.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=moderate.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=moderate.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=moderate.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=moderate.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=moderate.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=moderate.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=moderate.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=moderate.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=moderate.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=moderate.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=moderate.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=challenging.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=challenging.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=challenging.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=challenging.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=challenging.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=challenging.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=challenging.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=challenging.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=challenging.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=challenging.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=challenging.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=challenging.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=excellent.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=excellent.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=excellent.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=excellent.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=excellent.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=excellent.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=excellent.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=excellent.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=excellent.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=excellent.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=excellent.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=excellent.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=good.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=good.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=good.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=good.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=good.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=good.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=good.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=good.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=good.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=good.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=good.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=good.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=moderate.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=moderate.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=moderate.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=moderate.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=moderate.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=moderate.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=moderate.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=moderate.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=moderate.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=moderate.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=moderate.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=moderate.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=challenging.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=challenging.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=challenging.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=challenging.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=challenging.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=challenging.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=challenging.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=challenging.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=challenging.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=challenging.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=challenging.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=challenging.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=excellent.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=excellent.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=excellent.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=excellent.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=excellent.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=excellent.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=excellent.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=excellent.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=excellent.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=excellent.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=excellent.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=excellent.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=good.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=good.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=good.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=good.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=good.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=good.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=good.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=good.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=good.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=good.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=good.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=good.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=moderate.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=moderate.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=moderate.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=moderate.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=moderate.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=moderate.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=moderate.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=moderate.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=moderate.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=moderate.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=moderate.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=moderate.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=challenging.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=challenging.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=challenging.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=challenging.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=challenging.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=challenging.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=challenging.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=challenging.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=challenging.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=challenging.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=challenging.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=challenging.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=excellent.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=excellent.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=excellent.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=excellent.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=excellent.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=excellent.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=excellent.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=excellent.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=excellent.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=excellent.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=excellent.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=excellent.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=good.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=good.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=good.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=good.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=good.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=good.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=good.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=good.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=good.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=good.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=good.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=good.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=moderate.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=moderate.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=moderate.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=moderate.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=moderate.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=moderate.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=moderate.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=moderate.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=moderate.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=moderate.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=moderate.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=moderate.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=challenging.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=challenging.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=challenging.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=challenging.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=challenging.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=challenging.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=challenging.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=challenging.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=challenging.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=challenging.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=challenging.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=challenging.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=excellent.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=excellent.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=excellent.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=excellent.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=excellent.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=excellent.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=excellent.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=excellent.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=excellent.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=excellent.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=excellent.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=excellent.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=good.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=good.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=good.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=good.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=good.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=good.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=good.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=good.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=good.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=good.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=good.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=good.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=moderate.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=moderate.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=moderate.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=moderate.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=moderate.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=moderate.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=moderate.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=moderate.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=moderate.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=moderate.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=moderate.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=moderate.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=challenging.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=challenging.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=challenging.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=challenging.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=challenging.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=challenging.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=challenging.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=challenging.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=challenging.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=challenging.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=challenging.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=challenging.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=chandrashtama.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=chandrashtama.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=chandrashtama.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=chandrashtama.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=chandrashtama.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=chandrashtama.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=chandrashtama.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=chandrashtama.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=chandrashtama.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=chandrashtama.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=chandrashtama.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=chandrashtama.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=fav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=fav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=fav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=fav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=neutral.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=neutral.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=neutral.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=neutral.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=unfav.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=unfav.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=unfav.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=unfav.retro=review|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=chandrashtama.retro=none|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=chandrashtama.retro=none|en: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=chandrashtama.retro=review|en: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=chandrashtama.retro=review|en: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=excellent.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=excellent.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=excellent.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=excellent.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=excellent.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=excellent.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=excellent.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=excellent.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=excellent.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=excellent.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=excellent.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=excellent.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=good.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=good.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=good.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=good.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=good.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=good.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=good.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=good.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=good.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=good.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=good.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=good.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=moderate.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=moderate.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=moderate.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=moderate.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=moderate.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=moderate.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=moderate.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=moderate.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=moderate.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=moderate.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=moderate.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=moderate.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=challenging.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=challenging.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=challenging.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=challenging.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=challenging.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=challenging.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=challenging.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=challenging.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=challenging.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=challenging.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.family|rating=challenging.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.family|rating=challenging.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=excellent.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=excellent.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=excellent.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=excellent.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=excellent.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=excellent.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=excellent.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=excellent.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=excellent.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=excellent.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=excellent.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=excellent.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=excellent.pb=chandrashtama.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=excellent.pb=chandrashtama.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=excellent.pb=chandrashtama.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=excellent.pb=chandrashtama.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=good.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=good.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=good.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=good.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=good.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=good.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=good.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=good.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=good.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=good.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=good.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=good.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=good.pb=chandrashtama.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=good.pb=chandrashtama.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=good.pb=chandrashtama.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=good.pb=chandrashtama.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=moderate.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=moderate.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=moderate.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=moderate.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=moderate.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=moderate.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=moderate.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=moderate.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=moderate.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=moderate.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=moderate.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=moderate.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=moderate.pb=chandrashtama.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=moderate.pb=chandrashtama.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=moderate.pb=chandrashtama.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=moderate.pb=chandrashtama.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=challenging.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=challenging.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=challenging.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=challenging.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=challenging.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=challenging.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=challenging.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=challenging.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=challenging.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=challenging.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=challenging.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=challenging.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=challenging.pb=chandrashtama.retro=none|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=challenging.pb=chandrashtama.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  weekly.health|rating=challenging.pb=chandrashtama.retro=review|hi: only 0 variants (need ≥3)
+ERROR  weekly.health|rating=challenging.pb=chandrashtama.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=excellent.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=excellent.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=excellent.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=excellent.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=excellent.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=excellent.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=excellent.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=excellent.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=excellent.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=excellent.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=excellent.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=excellent.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=good.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=good.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=good.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=good.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=good.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=good.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=good.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=good.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=good.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=good.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=good.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=good.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=moderate.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=moderate.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=moderate.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=moderate.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=moderate.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=moderate.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=moderate.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=moderate.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=moderate.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=moderate.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=moderate.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=moderate.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=challenging.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=challenging.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=challenging.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=challenging.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=challenging.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=challenging.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=challenging.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=challenging.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=challenging.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=challenging.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.career|rating=challenging.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.career|rating=challenging.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=excellent.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=excellent.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=excellent.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=excellent.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=excellent.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=excellent.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=excellent.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=excellent.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=excellent.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=excellent.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=excellent.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=excellent.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=good.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=good.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=good.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=good.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=good.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=good.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=good.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=good.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=good.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=good.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=good.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=good.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=moderate.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=moderate.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=moderate.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=moderate.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=moderate.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=moderate.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=moderate.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=moderate.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=moderate.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=moderate.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=moderate.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=moderate.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=challenging.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=challenging.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=challenging.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=challenging.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=challenging.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=challenging.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=challenging.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=challenging.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=challenging.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=challenging.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.money|rating=challenging.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.money|rating=challenging.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=excellent.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=excellent.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=excellent.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=excellent.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=excellent.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=excellent.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=excellent.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=excellent.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=excellent.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=excellent.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=excellent.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=excellent.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=good.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=good.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=good.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=good.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=good.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=good.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=good.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=good.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=good.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=good.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=good.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=good.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=moderate.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=moderate.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=moderate.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=moderate.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=moderate.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=moderate.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=moderate.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=moderate.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=moderate.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=moderate.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=moderate.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=moderate.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=challenging.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=challenging.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=challenging.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=challenging.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=challenging.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=challenging.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=challenging.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=challenging.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=challenging.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=challenging.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.love|rating=challenging.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.love|rating=challenging.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=excellent.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=excellent.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=excellent.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=excellent.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=excellent.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=excellent.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=excellent.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=excellent.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=excellent.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=excellent.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=excellent.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=excellent.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=good.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=good.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=good.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=good.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=good.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=good.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=good.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=good.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=good.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=good.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=good.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=good.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=moderate.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=moderate.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=moderate.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=moderate.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=moderate.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=moderate.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=moderate.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=moderate.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=moderate.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=moderate.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=moderate.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=moderate.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=challenging.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=challenging.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=challenging.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=challenging.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=challenging.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=challenging.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=challenging.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=challenging.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=challenging.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=challenging.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.education|rating=challenging.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.education|rating=challenging.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=excellent.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=excellent.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=excellent.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=excellent.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=excellent.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=excellent.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=excellent.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=excellent.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=excellent.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=excellent.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=excellent.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=excellent.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=good.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=good.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=good.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=good.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=good.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=good.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=good.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=good.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=good.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=good.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=good.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=good.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=moderate.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=moderate.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=moderate.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=moderate.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=moderate.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=moderate.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=moderate.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=moderate.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=moderate.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=moderate.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=moderate.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=moderate.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=challenging.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=challenging.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=challenging.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=challenging.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=challenging.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=challenging.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=challenging.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=challenging.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=challenging.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=challenging.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.family|rating=challenging.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.family|rating=challenging.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=chandrashtama.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=chandrashtama.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=excellent.pb=chandrashtama.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=excellent.pb=chandrashtama.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=chandrashtama.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=chandrashtama.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=good.pb=chandrashtama.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=good.pb=chandrashtama.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=chandrashtama.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=chandrashtama.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=moderate.pb=chandrashtama.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=moderate.pb=chandrashtama.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=fav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=fav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=fav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=fav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=neutral.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=neutral.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=neutral.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=neutral.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=unfav.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=unfav.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=unfav.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=unfav.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=chandrashtama.retro=none|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=chandrashtama.retro=none|hi: has 0 variants, expected exactly 4
+ERROR  monthly.health|rating=challenging.pb=chandrashtama.retro=review|hi: only 0 variants (need ≥3)
+ERROR  monthly.health|rating=challenging.pb=chandrashtama.retro=review|hi: has 0 variants, expected exactly 4
+ERROR  total: 4888 rows, expected 6392
+warn   yearly.business [rating=challenging.driver=saturn-phase] en#1: EN review token: taxes
+warn   yearly.business [rating=challenging.driver=steady] en#2: EN review token: taxes
+warn   yearly.career [rating=challenging.driver=steady] en#2: EN review token: tax
+warn   yearly.love [rating=excellent.driver=steady] en#1: EN review token: will
+warn   yearly.marriage [rating=excellent.driver=steady] en#1: EN review token: will
+warn   yearly.wealth [rating=excellent.driver=steady] en#1: EN review token: will
+warn   thought [theme=6.tone=good] hi#4: HI review token: सजा
+
+4888 rows · 756 errors · 7 warnings
+LINT FAILED

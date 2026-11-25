@@ -1,0 +1,12 @@
+62 |   slot: string,
+63 |   lang: Lang,
+64 |   cells: Array<[condition: string, texts: string[]]>,
+65 | ): BankRow[] {
+66 |   const out: BankRow[] = [];
+67 |   for (const [condition, texts] of cells) {
+       ^
+TypeError: {} is not iterable
+      at makeRows (C:\Users\sanjay.bhati.OM\Downloads\Vyotish-Repos\Astro-Meta\_bmad-output\horoscope\content\bank\types.ts:67:3)
+      at C:\Users\sanjay.bhati.OM\Downloads\Vyotish-Repos\Astro-Meta\_bmad-output\horoscope\content\bank\monthly-career.en.ts:202:45
+
+Bun v1.4.4 (Windows x64)

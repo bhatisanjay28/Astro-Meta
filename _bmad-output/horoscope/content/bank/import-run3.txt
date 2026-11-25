@@ -1,0 +1,25 @@
+warn   yearly.business [rating=challenging.driver=saturn-phase] en#1: EN review token: taxes
+warn   yearly.business [rating=challenging.driver=steady] en#2: EN review token: taxes
+warn   yearly.career [rating=challenging.driver=steady] en#2: EN review token: tax
+warn   yearly.love [rating=excellent.driver=steady] en#1: EN review token: will
+warn   yearly.marriage [rating=excellent.driver=steady] en#1: EN review token: will
+warn   yearly.wealth [rating=excellent.driver=steady] en#1: EN review token: will
+
+1368 rows · 0 errors · 6 warnings
+ERROR  clause.pos [planet=Jupiter.band=fav] en#1: trigram overlap 9.09% > 1%
+ERROR  clause.pos [planet=Saturn.band=unfav] en#3: trigram overlap 10.00% > 1%
+ERROR  clause.pos [planet=Rahu.band=neutral] en#1: trigram overlap 10.00% > 1%
+ERROR  clause.neg [planet=Saturn.band=neutral] en#4: trigram overlap 10.00% > 1%
+ERROR  clause.neg [planet=Saturn.band=neutral] en#5: trigram overlap 9.09% > 1%
+ERROR  clause.closing [rating=moderate] en#6: trigram overlap 33.33% > 1%
+ERROR  yearly.business [rating=excellent.driver=jupiter-good] en#2: trigram overlap 1.01% > 1%
+ERROR  yearly.business [rating=excellent.driver=saturn-phase] en#3: trigram overlap 1.05% > 1%
+ERROR  yearly.business [rating=good.driver=saturn-phase] en#2: trigram overlap 1.05% > 1%
+ERROR  yearly.career [rating=good.driver=jupiter-good] en#1: trigram overlap 1.02% > 1%
+ERROR  yearly.career [rating=excellent.driver=steady] en#3: trigram overlap 1.04% > 1%
+ERROR  yearly.education [rating=excellent.driver=jupiter-good] en#1: trigram overlap 1.77% > 1%
+ERROR  yearly.love [rating=good.driver=jupiter-good] en#1: trigram overlap 1.63% > 1%
+ERROR  yearly.love [rating=good.driver=jupiter-good] en#2: trigram overlap 1.60% > 1%
+ERROR  yearly.love [rating=moderate.driver=jupiter-good] en#2: trigram overlap 1.67% > 1%
+ERROR  yearly.love [rating=good.driver=mixed] en#1: trigram overlap 1.05% > 1%
+ORIGINALITY FAILED

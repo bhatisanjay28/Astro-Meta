@@ -1,0 +1,7 @@
+yearly.business [rating=excellent.driver=jupiter-good] en#2
+yearly.business [rating=excellent.driver=saturn-phase] en#3
+yearly.business [rating=good.driver=saturn-phase] en#2
+yearly.career [rating=excellent.driver=steady] en#3
+yearly.career [rating=good.driver=jupiter-good] en#1
+yearly.education [rating=excellent.driver=jupiter-good] en#1
+yearly.love [rating=good.driver=jupiter-good] en#1

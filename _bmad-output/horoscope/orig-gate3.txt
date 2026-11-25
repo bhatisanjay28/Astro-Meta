@@ -1,0 +1,5 @@
+ERROR  daily.overview [rating=good.retro=none] en#4: 2.70% (1/37)
+ERROR  daily.health [rating=good.pb=fav.retro=none] en#3: 2.70% (1/37)
+ERROR  monthly.money [rating=excellent.pb=neutral.retro=none] en#4: 1.20% (1/83)
+ERROR  monthly.health [rating=excellent.pb=chandrashtama.retro=none] en#4: 1.30% (1/77)
+4 failing

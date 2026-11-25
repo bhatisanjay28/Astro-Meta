@@ -1,0 +1,9 @@
+warn   yearly.business [rating=challenging.driver=saturn-phase] en#1: EN review token: taxes
+warn   yearly.business [rating=challenging.driver=steady] en#2: EN review token: taxes
+warn   yearly.career [rating=challenging.driver=steady] en#2: EN review token: tax
+warn   yearly.love [rating=excellent.driver=steady] en#1: EN review token: will
+warn   yearly.marriage [rating=excellent.driver=steady] en#1: EN review token: will
+warn   yearly.wealth [rating=excellent.driver=steady] en#1: EN review token: will
+
+1368 rows · 0 errors · 6 warnings
+LINT OK

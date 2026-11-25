@@ -1,0 +1,30 @@
+=== yearly.business [rating=excellent.driver=jupiter-good] en#2
+    For business matters, this is a Jupiter-led year — the classic growth transit. Opportunities tend to arrive as introductions and second meetings rather than cold starts, so nurture every warm contact. Learning something structured this year — a course, a mentor, a certification — feeds directly into commercial results. The favourable months favour signing, launching and expanding; the quieter ones
+   SHARED: this is a <-at-aries-monthly.html
+=== yearly.business [rating=excellent.driver=saturn-phase] en#3
+    Saturn presides over business this year from a position of quiet strength. Whatever was built methodically in past years now generates returns with little maintenance. The year supports weighty, well-structured moves: formal partnerships, long leases signed with care, deliberate entry into a steadier market. Keep the Saturn style in every deal — modest promises, generous margins for delay, everyth
+   SHARED: it is a <-at-aries-daily.html
+=== yearly.business [rating=good.driver=saturn-phase] en#2
+    The year's business tone is Saturn's: workmanlike and rewarding. Progress comes through routines — weekly numbers, monthly reviews, quarterly goals — more than through inspiration. New clients arrive slowly but fit well; existing ones reward reliability with loyalty. It is a sensible year to clean house: renegotiate weak contracts, retire underperforming offerings, document tribal knowledge. Expan
+   SHARED: it is a <-at-aries-daily.html
+=== yearly.career [rating=good.driver=jupiter-good] en#1
+    Your career keeps a steady, supported rhythm this year. Jupiter angles helpfully rather than spectacularly, which usually means gradual gains: a better project, a fair appraisal, growing trust from decision-makers. Interviews and performance conversations go reasonably well when you prepare properly. The single best use of the year is building capability that outlasts it — skills, systems, relatio
+   SHARED: of the year <-at-aries-yearly.html
+=== yearly.career [rating=excellent.driver=steady] en#3
+    The commercial year runs flat and favourable — rare conditions that reward methodical ambition. No transits interfere, so your calendar is the owner: set the year's pushes deliberately and execute without seasonal delays. Existing clients deepen; referrals flow from dependable service. It is the ideal year for formalising — structures, contracts, pricing, processes — because decisions taken now me
+   SHARED: it is the <-at-aries-monthly.html
+=== yearly.education [rating=excellent.driver=jupiter-good] en#1
+    This is the year your studies open up. Teachers, mentors and examiners respond to you warmly, and the work you put in travels further than usual — one focused hour lands like two. Admissions, interviews and viva-style assessments favor the prepared, and you are well placed to be prepared. This is the year to attempt the step you have been circling: the tougher elective, the certification, the entr
+   SHARED: this is the <-ap-daily.html
+=== yearly.love [rating=good.driver=jupiter-good] en#1
+    Romance flows on friendly terms this year: affection comes easily, and warmth met with warmth tends to grow. Couples enjoy a steadier hum of closeness — better conversations, easier forgiveness, more laughing over nothing in particular. Plan one or two occasions properly rather than many loosely; the year rewards doing fewer things with full attention. Singles meet people through the usual channel
+   SHARED: better than usual <-at-aries-daily.html
+   SHARED: of the year <-at-aries-yearly.html
+
+== FREQ ==
+2 it is a
+2 of the year
+1 this is a
+1 it is the
+1 this is the
+1 better than usual

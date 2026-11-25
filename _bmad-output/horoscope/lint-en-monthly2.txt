@@ -1,0 +1,11 @@
+203 | 
+204 | const cells: Array<[string, string[]]> = [];
+205 | for (const rating of RATINGS) {
+206 |   for (const pb of AREA_PB_HEALTH) {
+207 |     for (const retro of RETRO) {
+208 |       cells.push([`rating=${rating}.pb=${pb}.retro=${retro}`, TEXTS[rating]![pb]![retro]!]);
+                                                                                   ^
+TypeError: undefined is not an object (evaluating 'TEXTS[rating][pb][retro]')
+      at C:\Users\sanjay.bhati.OM\Downloads\Vyotish-Repos\Astro-Meta\_bmad-output\horoscope\content\bank\monthly-health.en.ts:208:78
+
+Bun v1.4.4 (Windows x64)

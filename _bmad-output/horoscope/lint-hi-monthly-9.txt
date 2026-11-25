@@ -1,0 +1,11 @@
+246 | };
+      ^
+error: Expected identifier but found "}"
+    at C:\Users\sanjay.bhati.OM\Downloads\Vyotish-Repos\Astro-Meta\_bmad-output\horoscope\content\bank\monthly-health.hi.ts:246:1
+
+246 | };
+      ^
+error: This constant must be initialized
+    at C:\Users\sanjay.bhati.OM\Downloads\Vyotish-Repos\Astro-Meta\_bmad-output\horoscope\content\bank\monthly-health.hi.ts:246:1
+
+Bun v1.4.4 (Windows x64)

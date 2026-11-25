@@ -1,0 +1,453 @@
+ERROR  yearly.children [rating=good.driver=jupiter-good] en#3: EN banned token: investment
+ERROR  yearly.children [rating=moderate.driver=jupiter-good] en#1: EN banned token: buying
+ERROR  yearly.children [rating=challenging.driver=jupiter-good] en#2: EN banned token: buy
+ERROR  yearly.children [rating=challenging.driver=jupiter-good] en#3: EN banned token: cannot
+ERROR  yearly.children [rating=good.driver=saturn-phase] en#1: EN banned token: buys
+ERROR  yearly.children [rating=good.driver=saturn-phase] en#2: EN banned token: never
+ERROR  yearly.children [rating=good.driver=saturn-phase] en#3: EN banned token: buys
+ERROR  yearly.children [rating=moderate.driver=saturn-phase] en#1: EN banned token: never
+ERROR  yearly.children [rating=moderate.driver=saturn-phase] en#3: EN banned token: struggle
+ERROR  yearly.children [rating=challenging.driver=saturn-phase] en#1: EN banned token: buy
+ERROR  yearly.children [rating=challenging.driver=saturn-phase] en#2: EN banned token: buys
+ERROR  yearly.children [rating=challenging.driver=saturn-phase] en#2: EN banned token: cannot
+ERROR  yearly.children [rating=challenging.driver=saturn-phase] en#2: EN banned token: struggle
+ERROR  yearly.children [rating=challenging.driver=saturn-phase] en#3: EN banned token: danger
+ERROR  yearly.children [rating=challenging.driver=saturn-phase] en#3: EN banned token: failure
+ERROR  yearly.children [rating=challenging.driver=rahu-axis] en#3: EN banned token: investing
+ERROR  yearly.children [rating=excellent.driver=steady] en#2: EN banned token: invest
+ERROR  yearly.children [rating=good.driver=steady] en#2: EN banned token: beware
+ERROR  yearly.children [rating=moderate.driver=steady] en#2: EN banned token: buys
+ERROR  yearly.children [rating=challenging.driver=steady] en#3: EN banned token: cannot
+ERROR  yearly.children [rating=good.driver=jupiter-good] hi#3: HI banned token: निवेश
+ERROR  yearly.children [rating=challenging.driver=saturn-phase] hi#3: HI banned token: खतरा
+ERROR  yearly.children [rating=challenging.driver=saturn-phase] hi#3: HI banned token: असफलता
+ERROR  yearly.children [rating=challenging.driver=rahu-axis] hi#3: HI banned token: निवेश
+ERROR  yearly.children [rating=challenging.driver=rahu-axis] hi#3: HI banned token: /(?<![\p{L}\p{M}])डर/
+ERROR  yearly.children [rating=excellent.driver=mixed] hi#1: HI banned token: पट्टी
+ERROR  yearly.children [rating=excellent.driver=mixed] hi#3: HI banned token: /(?<![\p{L}\p{M}])दंड/
+ERROR  yearly.children [rating=moderate.driver=mixed] hi#1: HI banned token: पट्टी
+ERROR  yearly.children [rating=moderate.driver=mixed] hi#2: HI banned token: पट्टी
+ERROR  yearly.children [rating=challenging.driver=mixed] hi#1: HI banned token: खरीदें
+ERROR  yearly.children [rating=challenging.driver=mixed] hi#1: HI banned token: पट्टी
+ERROR  yearly.children [rating=challenging.driver=mixed] hi#2: HI banned token: पट्टी
+ERROR  yearly.children [rating=challenging.driver=mixed] hi#3: HI banned token: खरीदें
+ERROR  yearly.children [rating=challenging.driver=mixed] hi#3: HI banned token: /(?<![\p{L}\p{M}])दंड/
+ERROR  yearly.children [rating=excellent.driver=steady] hi#1: HI banned token: पट्टी
+ERROR  yearly.children [rating=excellent.driver=steady] hi#2: HI banned token: निवेश
+ERROR  yearly.children [rating=moderate.driver=steady] hi#1: HI banned token: पट्टी
+ERROR  yearly.children [rating=moderate.driver=steady] hi#2: HI banned token: /(?<![\p{L}\p{M}])दंड/
+ERROR  yearly.children [rating=challenging.driver=steady] hi#2: HI banned token: खरीदें
+ERROR  yearly.children [rating=challenging.driver=steady] hi#3: HI banned token: पट्टी
+ERROR  yearly.education [rating=excellent.driver=jupiter-good] en#3: EN banned token: invest
+ERROR  yearly.education [rating=good.driver=jupiter-good] en#3: EN banned token: investment
+ERROR  yearly.education [rating=moderate.driver=jupiter-good] en#1: EN banned token: buying
+ERROR  yearly.education [rating=challenging.driver=jupiter-good] en#2: EN banned token: buys
+ERROR  yearly.education [rating=good.driver=saturn-phase] en#1: EN banned token: buys
+ERROR  yearly.education [rating=good.driver=saturn-phase] en#2: EN banned token: never
+ERROR  yearly.education [rating=good.driver=saturn-phase] en#3: EN banned token: buys
+ERROR  yearly.education [rating=moderate.driver=saturn-phase] en#1: EN banned token: never
+ERROR  yearly.education [rating=challenging.driver=saturn-phase] en#1: EN banned token: buys
+ERROR  yearly.education [rating=challenging.driver=saturn-phase] en#2: EN banned token: buys
+ERROR  yearly.education [rating=challenging.driver=saturn-phase] en#2: EN banned token: cannot
+ERROR  yearly.education [rating=challenging.driver=saturn-phase] en#3: EN banned token: failure
+ERROR  yearly.education [rating=excellent.driver=rahu-axis] en#2: EN banned token: buying
+ERROR  yearly.education [rating=excellent.driver=rahu-axis] en#3: EN banned token: never
+ERROR  yearly.education [rating=moderate.driver=rahu-axis] en#2: EN banned token: bought
+ERROR  yearly.education [rating=challenging.driver=rahu-axis] en#3: EN banned token: investing
+ERROR  yearly.education [rating=challenging.driver=rahu-axis] en#3: EN banned token: afraid
+ERROR  yearly.education [rating=good.driver=mixed] en#2: EN banned token: never
+ERROR  yearly.education [rating=excellent.driver=steady] en#2: EN banned token: invest
+ERROR  yearly.education [rating=good.driver=steady] en#2: EN banned token: beware
+ERROR  yearly.education [rating=moderate.driver=steady] en#2: EN banned token: buys
+ERROR  yearly.education [rating=challenging.driver=steady] en#3: EN banned token: cannot
+ERROR  yearly.education [rating=excellent.driver=jupiter-good] hi#2: HI banned token: /(?<![\p{L}\p{M}])डर/
+ERROR  yearly.education [rating=excellent.driver=jupiter-good] hi#3: HI banned token: निवेश
+ERROR  yearly.education [rating=good.driver=jupiter-good] hi#1: HI banned token: /(?<![\p{L}\p{M}])डर/
+ERROR  yearly.education [rating=good.driver=jupiter-good] hi#3: HI banned token: निवेश
+ERROR  yearly.education [rating=good.driver=jupiter-good] hi#3: HI banned token: /(?<![\p{L}\p{M}])डर/
+ERROR  yearly.education [rating=good.driver=saturn-phase] hi#1: length 142 outside §8 bounds 90–140
+ERROR  yearly.education [rating=challenging.driver=saturn-phase] hi#3: HI banned token: खतरा
+ERROR  yearly.education [rating=challenging.driver=saturn-phase] hi#3: HI banned token: असफलता
+ERROR  yearly.education [rating=challenging.driver=rahu-axis] hi#3: HI banned token: निवेश
+ERROR  yearly.education [rating=challenging.driver=rahu-axis] hi#3: HI banned token: /(?<![\p{L}\p{M}])डर/
+ERROR  yearly.education [rating=excellent.driver=mixed] hi#1: HI banned token: पट्टी
+ERROR  yearly.education [rating=excellent.driver=mixed] hi#3: HI banned token: /(?<![\p{L}\p{M}])दंड/
+ERROR  yearly.education [rating=moderate.driver=mixed] hi#1: HI banned token: पट्टी
+ERROR  yearly.education [rating=moderate.driver=mixed] hi#2: HI banned token: पट्टी
+ERROR  yearly.education [rating=challenging.driver=mixed] hi#1: HI banned token: खरीदें
+ERROR  yearly.education [rating=challenging.driver=mixed] hi#1: HI banned token: पट्टी
+ERROR  yearly.education [rating=challenging.driver=mixed] hi#2: HI banned token: पट्टी
+ERROR  yearly.education [rating=challenging.driver=mixed] hi#3: HI banned token: खरीदें
+ERROR  yearly.education [rating=challenging.driver=mixed] hi#3: HI banned token: /(?<![\p{L}\p{M}])दंड/
+ERROR  yearly.education [rating=excellent.driver=steady] hi#1: HI banned token: पट्टी
+ERROR  yearly.education [rating=excellent.driver=steady] hi#2: HI banned token: निवेश
+ERROR  yearly.education [rating=moderate.driver=steady] hi#1: HI banned token: पट्टी
+ERROR  yearly.education [rating=moderate.driver=steady] hi#2: HI banned token: /(?<![\p{L}\p{M}])दंड/
+ERROR  yearly.education [rating=challenging.driver=steady] hi#2: HI banned token: खरीदें
+ERROR  yearly.education [rating=challenging.driver=steady] hi#3: HI banned token: पट्टी
+ERROR  yearly.family [rating=excellent.driver=jupiter-good] en#3: EN banned token: invests
+ERROR  yearly.family [rating=good.driver=jupiter-good] en#3: EN banned token: investment
+ERROR  yearly.family [rating=challenging.driver=jupiter-good] en#2: EN banned token: buy
+ERROR  yearly.family [rating=good.driver=saturn-phase] en#1: EN banned token: buys
+ERROR  yearly.family [rating=good.driver=saturn-phase] en#2: EN banned token: never
+ERROR  yearly.family [rating=good.driver=saturn-phase] en#3: EN banned token: buys
+ERROR  yearly.family [rating=moderate.driver=saturn-phase] en#1: EN banned token: never
+ERROR  yearly.family [rating=challenging.driver=saturn-phase] en#1: EN banned token: buy
+ERROR  yearly.family [rating=challenging.driver=saturn-phase] en#2: EN banned token: buys
+ERROR  yearly.family [rating=challenging.driver=saturn-phase] en#2: EN banned token: cannot
+ERROR  yearly.family [rating=challenging.driver=saturn-phase] en#3: EN banned token: failure
+ERROR  yearly.family [rating=excellent.driver=rahu-axis] en#3: EN banned token: never
+ERROR  yearly.family [rating=challenging.driver=rahu-axis] en#3: EN banned token: investing
+ERROR  yearly.family [rating=challenging.driver=rahu-axis] en#3: EN banned token: afraid
+ERROR  yearly.family [rating=good.driver=mixed] en#2: EN banned token: never
+ERROR  yearly.family [rating=excellent.driver=steady] en#2: EN banned token: invest
+ERROR  yearly.family [rating=good.driver=steady] en#2: EN banned token: beware
+ERROR  yearly.family [rating=moderate.driver=steady] en#2: EN banned token: buys
+ERROR  yearly.family [rating=challenging.driver=steady] en#3: EN banned token: cannot
+ERROR  yearly.family [rating=excellent.driver=jupiter-good] hi#2: length 146 outside §8 bounds 90–140
+ERROR  yearly.family [rating=excellent.driver=jupiter-good] hi#3: length 142 outside §8 bounds 90–140
+ERROR  yearly.family [rating=excellent.driver=jupiter-good] hi#3: HI banned token: निवेश
+ERROR  yearly.family [rating=good.driver=jupiter-good] hi#1: length 150 outside §8 bounds 90–140
+ERROR  yearly.family [rating=challenging.driver=jupiter-good] hi#1: length 142 outside §8 bounds 90–140
+ERROR  yearly.family [rating=challenging.driver=jupiter-good] hi#1: HI banned token: ख़तरा
+ERROR  yearly.family [rating=good.driver=saturn-phase] hi#1: length 142 outside §8 bounds 90–140
+ERROR  yearly.family [rating=moderate.driver=saturn-phase] hi#1: HI banned token: कभी नहीं
+ERROR  yearly.family [rating=excellent.driver=rahu-axis] hi#1: HI banned token: निवेश
+ERROR  yearly.family [rating=excellent.driver=rahu-axis] hi#3: length 147 outside §8 bounds 90–140
+ERROR  yearly.family [rating=good.driver=rahu-axis] hi#3: length 142 outside §8 bounds 90–140
+ERROR  yearly.family [rating=challenging.driver=rahu-axis] hi#1: length 156 outside §8 bounds 90–140
+ERROR  yearly.family [rating=challenging.driver=rahu-axis] hi#3: HI banned token: निवेश
+ERROR  yearly.family [rating=challenging.driver=rahu-axis] hi#3: HI banned token: /(?<![\p{L}\p{M}])डर/
+ERROR  yearly.family [rating=excellent.driver=mixed] hi#1: HI banned token: बैंड
+ERROR  yearly.family [rating=moderate.driver=mixed] hi#1: HI banned token: बैंड
+ERROR  yearly.family [rating=moderate.driver=mixed] hi#2: HI banned token: बैंड
+ERROR  yearly.family [rating=challenging.driver=mixed] hi#1: HI banned token: बैंड
+ERROR  yearly.family [rating=challenging.driver=mixed] hi#2: HI banned token: बैंड
+ERROR  yearly.family [rating=excellent.driver=steady] hi#1: HI banned token: बैंड
+ERROR  yearly.family [rating=excellent.driver=steady] hi#2: HI banned token: निवेश
+ERROR  yearly.family [rating=good.driver=steady] hi#3: length 141 outside §8 bounds 90–140
+ERROR  yearly.family [rating=moderate.driver=steady] hi#1: HI banned token: बैंड
+ERROR  yearly.family [rating=challenging.driver=steady] hi#3: HI banned token: बैंड
+ERROR  yearly.health [rating=excellent.driver=jupiter-good] en#1: EN banned token: invest
+ERROR  yearly.health [rating=good.driver=jupiter-good] en#3: EN banned token: investment
+ERROR  yearly.health [rating=challenging.driver=jupiter-good] en#2: EN banned token: buys
+ERROR  yearly.health [rating=good.driver=saturn-phase] en#1: EN banned token: buys
+ERROR  yearly.health [rating=good.driver=saturn-phase] en#2: EN banned token: never
+ERROR  yearly.health [rating=good.driver=saturn-phase] en#3: EN banned token: buys
+ERROR  yearly.health [rating=moderate.driver=saturn-phase] en#1: EN banned token: never
+ERROR  yearly.health [rating=challenging.driver=saturn-phase] en#1: EN banned token: buys
+ERROR  yearly.health [rating=challenging.driver=saturn-phase] en#2: EN banned token: cannot
+ERROR  yearly.health [rating=challenging.driver=saturn-phase] en#2: EN banned token: punishment
+ERROR  yearly.health [rating=challenging.driver=saturn-phase] en#3: EN banned token: failure
+ERROR  yearly.health [rating=excellent.driver=rahu-axis] en#3: EN banned token: never
+ERROR  yearly.health [rating=challenging.driver=rahu-axis] en#3: EN banned token: investing
+ERROR  yearly.health [rating=challenging.driver=rahu-axis] en#3: EN banned token: afraid
+ERROR  yearly.health [rating=good.driver=mixed] en#2: EN banned token: never
+ERROR  yearly.health [rating=excellent.driver=steady] en#2: EN banned token: invest
+ERROR  yearly.health [rating=good.driver=steady] en#2: EN banned token: beware
+ERROR  yearly.health [rating=moderate.driver=steady] en#2: EN banned token: buys
+ERROR  yearly.health [rating=challenging.driver=steady] en#3: EN banned token: cannot
+ERROR  yearly.health [rating=challenging.driver=jupiter-good] hi#1: length 142 outside §8 bounds 90–140
+ERROR  yearly.health [rating=moderate.driver=saturn-phase] hi#1: HI banned token: कभी नहीं
+ERROR  yearly.health [rating=excellent.driver=rahu-axis] hi#1: HI banned token: निवेश
+ERROR  yearly.health [rating=excellent.driver=rahu-axis] hi#3: length 151 outside §8 bounds 90–140
+ERROR  yearly.health [rating=challenging.driver=rahu-axis] hi#1: length 155 outside §8 bounds 90–140
+ERROR  yearly.health [rating=challenging.driver=rahu-axis] hi#3: HI banned token: निवेश
+ERROR  yearly.health [rating=challenging.driver=rahu-axis] hi#3: HI banned token: /(?<![\p{L}\p{M}])डर/
+ERROR  yearly.health [rating=excellent.driver=mixed] hi#1: HI banned token: बैंड
+ERROR  yearly.health [rating=moderate.driver=mixed] hi#1: HI banned token: बैंड
+ERROR  yearly.health [rating=moderate.driver=mixed] hi#2: HI banned token: बैंड
+ERROR  yearly.health [rating=challenging.driver=mixed] hi#1: HI banned token: बैंड
+ERROR  yearly.health [rating=challenging.driver=mixed] hi#2: HI banned token: बैंड
+ERROR  yearly.health [rating=excellent.driver=steady] hi#1: HI banned token: बैंड
+ERROR  yearly.health [rating=excellent.driver=steady] hi#2: HI banned token: निवेश
+ERROR  yearly.health [rating=good.driver=steady] hi#3: length 141 outside §8 bounds 90–140
+ERROR  yearly.health [rating=moderate.driver=steady] hi#1: HI banned token: बैंड
+ERROR  yearly.health [rating=challenging.driver=steady] hi#3: HI banned token: बैंड
+ERROR  yearly.love [rating=good.driver=jupiter-good] en#2: EN banned token: invest
+ERROR  yearly.love [rating=good.driver=jupiter-good] en#3: EN banned token: never
+ERROR  yearly.love [rating=moderate.driver=jupiter-good] en#2: EN banned token: failure
+ERROR  yearly.love [rating=challenging.driver=jupiter-good] en#1: length 146 outside §8 bounds 90–140
+ERROR  yearly.love [rating=excellent.driver=saturn-phase] en#3: EN banned token: invest
+ERROR  yearly.love [rating=good.driver=saturn-phase] en#1: EN banned token: never
+ERROR  yearly.love [rating=moderate.driver=saturn-phase] en#2: EN banned token: always
+ERROR  yearly.love [rating=challenging.driver=saturn-phase] en#1: EN banned token: buy
+ERROR  yearly.love [rating=challenging.driver=saturn-phase] en#2: EN banned token: punishment
+ERROR  yearly.love [rating=challenging.driver=saturn-phase] en#3: EN banned token: failure
+ERROR  yearly.love [rating=excellent.driver=rahu-axis] en#1: EN banned token: invest
+ERROR  yearly.love [rating=excellent.driver=rahu-axis] en#3: EN banned token: never
+ERROR  yearly.love [rating=moderate.driver=rahu-axis] en#3: EN banned token: invest
+ERROR  yearly.love [rating=challenging.driver=rahu-axis] en#3: EN banned token: investing
+ERROR  yearly.love [rating=good.driver=mixed] en#2: EN banned token: never
+ERROR  yearly.love [rating=excellent.driver=steady] en#2: EN banned token: invest
+ERROR  yearly.love [rating=good.driver=steady] en#2: EN banned token: beware
+ERROR  yearly.love [rating=moderate.driver=steady] en#2: EN banned token: buys
+ERROR  yearly.love [rating=challenging.driver=steady] en#3: EN banned token: cannot
+ERROR  yearly.love [rating=excellent.driver=jupiter-good] hi#1: length 142 outside §8 bounds 90–140
+ERROR  yearly.love [rating=excellent.driver=jupiter-good] hi#2: length 153 outside §8 bounds 90–140
+ERROR  yearly.love [rating=good.driver=jupiter-good] hi#1: length 147 outside §8 bounds 90–140
+ERROR  yearly.love [rating=good.driver=jupiter-good] hi#3: length 141 outside §8 bounds 90–140
+ERROR  yearly.love [rating=moderate.driver=jupiter-good] hi#2: HI banned token: असफलता
+ERROR  yearly.love [rating=challenging.driver=jupiter-good] hi#1: length 170 outside §8 bounds 90–140
+ERROR  yearly.love [rating=excellent.driver=saturn-phase] hi#1: length 142 outside §8 bounds 90–140
+ERROR  yearly.love [rating=excellent.driver=saturn-phase] hi#3: length 153 outside §8 bounds 90–140
+ERROR  yearly.love [rating=moderate.driver=saturn-phase] hi#1: HI banned token: कभी नहीं
+ERROR  yearly.love [rating=challenging.driver=saturn-phase] hi#1: length 141 outside §8 bounds 90–140
+ERROR  yearly.love [rating=challenging.driver=saturn-phase] hi#3: HI banned token: असफलता
+ERROR  yearly.love [rating=excellent.driver=rahu-axis] hi#1: length 156 outside §8 bounds 90–140
+ERROR  yearly.love [rating=excellent.driver=rahu-axis] hi#2: length 146 outside §8 bounds 90–140
+ERROR  yearly.love [rating=excellent.driver=rahu-axis] hi#3: length 148 outside §8 bounds 90–140
+ERROR  yearly.love [rating=good.driver=rahu-axis] hi#3: length 143 outside §8 bounds 90–140
+ERROR  yearly.love [rating=challenging.driver=rahu-axis] hi#1: length 150 outside §8 bounds 90–140
+ERROR  yearly.love [rating=challenging.driver=rahu-axis] hi#3: HI banned token: निवेश
+ERROR  yearly.love [rating=challenging.driver=rahu-axis] hi#3: HI banned token: /(?<![\p{L}\p{M}])डर/
+ERROR  yearly.love [rating=excellent.driver=mixed] hi#1: length 145 outside §8 bounds 90–140
+ERROR  yearly.love [rating=excellent.driver=mixed] hi#1: HI banned token: बैंड
+ERROR  yearly.love [rating=moderate.driver=mixed] hi#1: HI banned token: बैंड
+ERROR  yearly.love [rating=moderate.driver=mixed] hi#2: HI banned token: बैंड
+ERROR  yearly.love [rating=challenging.driver=mixed] hi#1: HI banned token: बैंड
+ERROR  yearly.love [rating=challenging.driver=mixed] hi#2: HI banned token: बैंड
+ERROR  yearly.love [rating=excellent.driver=steady] hi#1: HI banned token: बैंड
+ERROR  yearly.love [rating=excellent.driver=steady] hi#2: HI banned token: निवेश
+ERROR  yearly.love [rating=moderate.driver=steady] hi#1: HI banned token: बैंड
+ERROR  yearly.love [rating=challenging.driver=steady] hi#3: HI banned token: बैंड
+ERROR  yearly.wealth [rating=good.driver=jupiter-good] en#3: EN banned token: never
+ERROR  yearly.wealth [rating=challenging.driver=jupiter-good] en#2: EN banned token: buys
+ERROR  yearly.wealth [rating=challenging.driver=jupiter-good] en#2: EN banned token: disaster
+ERROR  yearly.wealth [rating=excellent.driver=saturn-phase] en#3: EN banned token: never
+ERROR  yearly.wealth [rating=good.driver=saturn-phase] en#3: EN banned token: never
+ERROR  yearly.wealth [rating=moderate.driver=saturn-phase] en#2: EN banned token: always
+ERROR  yearly.wealth [rating=challenging.driver=saturn-phase] en#1: EN banned token: punishment
+ERROR  yearly.wealth [rating=challenging.driver=saturn-phase] en#3: EN banned token: failure
+ERROR  yearly.wealth [rating=excellent.driver=rahu-axis] en#1: EN banned token: never
+ERROR  yearly.wealth [rating=excellent.driver=rahu-axis] en#3: EN banned token: never
+ERROR  yearly.wealth [rating=challenging.driver=rahu-axis] en#1: length 144 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=good.driver=mixed] en#2: EN banned token: never
+ERROR  yearly.wealth [rating=good.driver=steady] en#2: EN banned token: beware
+ERROR  yearly.wealth [rating=moderate.driver=steady] en#2: EN banned token: buys
+ERROR  yearly.wealth [rating=challenging.driver=steady] en#3: EN banned token: cannot
+ERROR  yearly.wealth [rating=excellent.driver=jupiter-good] hi#1: length 145 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=excellent.driver=jupiter-good] hi#2: length 145 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=excellent.driver=jupiter-good] hi#3: length 155 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=good.driver=jupiter-good] hi#2: length 143 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=good.driver=jupiter-good] hi#2: HI banned token: खरीदें
+ERROR  yearly.wealth [rating=moderate.driver=jupiter-good] hi#1: length 143 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=moderate.driver=jupiter-good] hi#1: HI banned token: खरीदें
+ERROR  yearly.wealth [rating=moderate.driver=jupiter-good] hi#2: length 143 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=moderate.driver=jupiter-good] hi#3: HI banned token: खरीदें
+ERROR  yearly.wealth [rating=challenging.driver=jupiter-good] hi#1: length 145 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=excellent.driver=saturn-phase] hi#2: length 158 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=excellent.driver=saturn-phase] hi#3: length 146 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=good.driver=saturn-phase] hi#2: length 142 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=challenging.driver=saturn-phase] hi#1: length 142 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=challenging.driver=saturn-phase] hi#3: length 145 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=challenging.driver=saturn-phase] hi#3: HI banned token: असफलता
+ERROR  yearly.wealth [rating=excellent.driver=rahu-axis] hi#1: length 156 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=excellent.driver=rahu-axis] hi#1: HI banned token: कभी नहीं
+ERROR  yearly.wealth [rating=good.driver=rahu-axis] hi#1: length 146 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=challenging.driver=rahu-axis] hi#1: length 152 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=challenging.driver=rahu-axis] hi#3: HI banned token: /(?<![\p{L}\p{M}])डर/
+ERROR  yearly.wealth [rating=excellent.driver=mixed] hi#3: length 142 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=moderate.driver=mixed] hi#3: HI banned token: खरीदें
+ERROR  yearly.wealth [rating=challenging.driver=mixed] hi#1: HI banned token: खरीदें
+ERROR  yearly.wealth [rating=excellent.driver=steady] hi#3: length 146 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=good.driver=steady] hi#3: length 141 outside §8 bounds 90–140
+ERROR  yearly.wealth [rating=challenging.driver=steady] hi#2: HI banned token: खरीदें
+warn   yearly.business [rating=good.driver=jupiter-good] en#3: EN review token: must
+warn   yearly.business [rating=moderate.driver=jupiter-good] en#3: EN review token: tax
+warn   yearly.business [rating=good.driver=saturn-phase] en#2: EN review token: loss
+warn   yearly.business [rating=challenging.driver=saturn-phase] en#1: EN review token: taxes
+warn   yearly.business [rating=excellent.driver=rahu-axis] en#2: EN review token: must
+warn   yearly.business [rating=challenging.driver=rahu-axis] en#2: EN review token: taxes
+warn   yearly.business [rating=excellent.driver=mixed] en#1: EN review token: will
+warn   yearly.business [rating=moderate.driver=mixed] en#1: EN review token: must
+warn   yearly.business [rating=challenging.driver=mixed] en#3: EN review token: tax
+warn   yearly.business [rating=challenging.driver=steady] en#2: EN review token: taxes
+warn   yearly.business [rating=good.driver=jupiter-good] hi#1: HI review token: सजा
+warn   yearly.business [rating=moderate.driver=rahu-axis] hi#2: HI review token: खरीद
+warn   yearly.career [rating=good.driver=jupiter-good] en#1: EN review token: will
+warn   yearly.career [rating=excellent.driver=rahu-axis] en#2: EN review token: must
+warn   yearly.career [rating=challenging.driver=rahu-axis] en#2: EN review token: taxes
+warn   yearly.career [rating=excellent.driver=mixed] en#1: EN review token: will
+warn   yearly.career [rating=excellent.driver=mixed] en#3: EN review token: taxes
+warn   yearly.career [rating=moderate.driver=mixed] en#1: EN review token: must
+warn   yearly.career [rating=challenging.driver=mixed] en#1: EN review token: will
+warn   yearly.career [rating=challenging.driver=mixed] en#3: EN review token: tax
+warn   yearly.career [rating=challenging.driver=steady] en#2: EN review token: tax
+warn   yearly.career [rating=good.driver=saturn-phase] hi#2: HI review token: खरीद
+warn   yearly.career [rating=moderate.driver=rahu-axis] hi#2: HI review token: खरीद
+warn   yearly.career [rating=moderate.driver=steady] hi#2: HI review token: खरीद
+warn   yearly.children [rating=challenging.driver=rahu-axis] en#2: EN review token: taxes
+warn   yearly.children [rating=excellent.driver=mixed] en#1: EN review token: will
+warn   yearly.children [rating=moderate.driver=mixed] en#1: EN review token: must
+warn   yearly.children [rating=challenging.driver=mixed] en#1: EN review token: will
+warn   yearly.children [rating=challenging.driver=mixed] en#3: EN review token: tax
+warn   yearly.children [rating=moderate.driver=jupiter-good] hi#1: HI review token: खरीद
+warn   yearly.children [rating=challenging.driver=jupiter-good] hi#2: HI review token: खरीद
+warn   yearly.children [rating=good.driver=saturn-phase] hi#1: HI review token: खरीद
+warn   yearly.children [rating=good.driver=saturn-phase] hi#3: HI review token: खरीद
+warn   yearly.children [rating=challenging.driver=saturn-phase] hi#1: HI review token: खरीद
+warn   yearly.children [rating=challenging.driver=saturn-phase] hi#2: HI review token: खरीद
+warn   yearly.children [rating=moderate.driver=rahu-axis] hi#2: HI review token: खरीद
+warn   yearly.children [rating=challenging.driver=rahu-axis] hi#1: HI review token: खरीद
+warn   yearly.children [rating=challenging.driver=mixed] hi#1: HI review token: खरीद
+warn   yearly.children [rating=challenging.driver=mixed] hi#3: HI review token: खरीद
+warn   yearly.children [rating=moderate.driver=steady] hi#2: HI review token: खरीद
+warn   yearly.children [rating=challenging.driver=steady] hi#2: HI review token: खरीद
+warn   yearly.education [rating=challenging.driver=rahu-axis] en#2: EN review token: taxes
+warn   yearly.education [rating=excellent.driver=mixed] en#1: EN review token: will
+warn   yearly.education [rating=moderate.driver=mixed] en#1: EN review token: must
+warn   yearly.education [rating=challenging.driver=mixed] en#3: EN review token: tax
+warn   yearly.education [rating=good.driver=steady] en#3: EN review token: will
+warn   yearly.education [rating=moderate.driver=jupiter-good] hi#1: HI review token: खरीद
+warn   yearly.education [rating=challenging.driver=jupiter-good] hi#2: HI review token: खरीद
+warn   yearly.education [rating=good.driver=saturn-phase] hi#1: HI review token: खरीद
+warn   yearly.education [rating=good.driver=saturn-phase] hi#3: HI review token: खरीद
+warn   yearly.education [rating=challenging.driver=saturn-phase] hi#1: HI review token: खरीद
+warn   yearly.education [rating=challenging.driver=saturn-phase] hi#2: HI review token: खरीद
+warn   yearly.education [rating=excellent.driver=rahu-axis] hi#2: HI review token: खरीद
+warn   yearly.education [rating=moderate.driver=rahu-axis] hi#2: HI review token: खरीद
+warn   yearly.education [rating=challenging.driver=rahu-axis] hi#1: HI review token: खरीद
+warn   yearly.education [rating=challenging.driver=mixed] hi#1: HI review token: खरीद
+warn   yearly.education [rating=challenging.driver=mixed] hi#3: HI review token: खरीद
+warn   yearly.education [rating=moderate.driver=steady] hi#2: HI review token: खरीद
+warn   yearly.education [rating=challenging.driver=steady] hi#2: HI review token: खरीद
+warn   yearly.family [rating=challenging.driver=rahu-axis] en#2: EN review token: taxes
+warn   yearly.family [rating=excellent.driver=mixed] en#1: EN review token: will
+warn   yearly.family [rating=moderate.driver=mixed] en#1: EN review token: must
+warn   yearly.family [rating=challenging.driver=mixed] en#3: EN review token: tax
+warn   yearly.family [rating=good.driver=steady] en#3: EN review token: will
+warn   yearly.family [rating=excellent.driver=jupiter-good] hi#1: HI review token: खरीद
+warn   yearly.family [rating=challenging.driver=jupiter-good] hi#2: HI review token: खरीद
+warn   yearly.family [rating=good.driver=saturn-phase] hi#1: HI review token: खरीद
+warn   yearly.family [rating=good.driver=saturn-phase] hi#3: HI review token: खरीद
+warn   yearly.family [rating=challenging.driver=saturn-phase] hi#1: HI review token: खरीद
+warn   yearly.family [rating=challenging.driver=saturn-phase] hi#2: HI review token: खरीद
+warn   yearly.family [rating=challenging.driver=mixed] hi#1: HI review token: खरीद
+warn   yearly.family [rating=challenging.driver=mixed] hi#2: HI review token: खरीद
+warn   yearly.family [rating=challenging.driver=mixed] hi#3: HI review token: खरीद
+warn   yearly.family [rating=good.driver=steady] hi#3: HI review token: सजा
+warn   yearly.family [rating=moderate.driver=steady] hi#2: HI review token: खरीद
+warn   yearly.family [rating=challenging.driver=steady] hi#2: HI review token: खरीद
+warn   yearly.health [rating=excellent.driver=jupiter-good] en#1: EN review token: will
+warn   yearly.health [rating=excellent.driver=jupiter-good] en#2: EN review token: will
+warn   yearly.health [rating=moderate.driver=jupiter-good] en#2: EN review token: will
+warn   yearly.health [rating=challenging.driver=rahu-axis] en#2: EN review token: taxes
+warn   yearly.health [rating=excellent.driver=mixed] en#1: EN review token: will
+warn   yearly.health [rating=moderate.driver=mixed] en#1: EN review token: must
+warn   yearly.health [rating=challenging.driver=mixed] en#3: EN review token: tax
+warn   yearly.health [rating=good.driver=steady] en#3: EN review token: will
+warn   yearly.health [rating=challenging.driver=jupiter-good] hi#2: HI review token: खरीद
+warn   yearly.health [rating=good.driver=saturn-phase] hi#1: HI review token: खरीद
+warn   yearly.health [rating=good.driver=saturn-phase] hi#3: HI review token: खरीद
+warn   yearly.health [rating=challenging.driver=saturn-phase] hi#1: HI review token: खरीद
+warn   yearly.health [rating=challenging.driver=rahu-axis] hi#1: HI review token: खरीद
+warn   yearly.health [rating=challenging.driver=mixed] hi#1: HI review token: खरीद
+warn   yearly.health [rating=challenging.driver=mixed] hi#2: HI review token: खरीद
+warn   yearly.health [rating=challenging.driver=mixed] hi#3: HI review token: खरीद
+warn   yearly.health [rating=good.driver=steady] hi#3: HI review token: सजा
+warn   yearly.health [rating=moderate.driver=steady] hi#2: HI review token: खरीद
+warn   yearly.health [rating=challenging.driver=steady] hi#2: HI review token: खरीद
+warn   yearly.love [rating=moderate.driver=jupiter-good] en#1: EN review token: will
+warn   yearly.love [rating=moderate.driver=jupiter-good] en#2: EN review token: will
+warn   yearly.love [rating=moderate.driver=jupiter-good] en#3: EN review token: will
+warn   yearly.love [rating=challenging.driver=jupiter-good] en#1: EN review token: will
+warn   yearly.love [rating=challenging.driver=jupiter-good] en#2: EN review token: will
+warn   yearly.love [rating=challenging.driver=jupiter-good] en#3: EN review token: will
+warn   yearly.love [rating=excellent.driver=saturn-phase] en#1: EN review token: will
+warn   yearly.love [rating=good.driver=saturn-phase] en#1: EN review token: will
+warn   yearly.love [rating=good.driver=saturn-phase] en#3: EN review token: will
+warn   yearly.love [rating=moderate.driver=saturn-phase] en#2: EN review token: will
+warn   yearly.love [rating=challenging.driver=saturn-phase] en#2: EN review token: will
+warn   yearly.love [rating=challenging.driver=saturn-phase] en#3: EN review token: will
+warn   yearly.love [rating=excellent.driver=rahu-axis] en#2: EN review token: will
+warn   yearly.love [rating=moderate.driver=rahu-axis] en#1: EN review token: will
+warn   yearly.love [rating=challenging.driver=rahu-axis] en#1: EN review token: tax
+warn   yearly.love [rating=challenging.driver=rahu-axis] en#2: EN review token: taxes
+warn   yearly.love [rating=excellent.driver=mixed] en#1: EN review token: will
+warn   yearly.love [rating=excellent.driver=mixed] en#3: EN review token: will
+warn   yearly.love [rating=excellent.driver=mixed] en#3: EN review token: taxes
+warn   yearly.love [rating=good.driver=mixed] en#1: EN review token: will
+warn   yearly.love [rating=moderate.driver=mixed] en#1: EN review token: must
+warn   yearly.love [rating=challenging.driver=mixed] en#1: EN review token: will
+warn   yearly.love [rating=challenging.driver=mixed] en#3: EN review token: tax
+warn   yearly.love [rating=excellent.driver=steady] en#1: EN review token: will
+warn   yearly.love [rating=excellent.driver=steady] en#3: EN review token: will
+warn   yearly.love [rating=good.driver=steady] en#1: EN review token: will
+warn   yearly.love [rating=good.driver=steady] en#2: EN review token: will
+warn   yearly.love [rating=moderate.driver=steady] en#3: EN review token: will
+warn   yearly.love [rating=challenging.driver=steady] en#2: EN review token: will
+warn   yearly.love [rating=challenging.driver=jupiter-good] hi#2: HI review token: नुकसान
+warn   yearly.love [rating=challenging.driver=saturn-phase] hi#1: HI review token: खरीद
+warn   yearly.love [rating=moderate.driver=steady] hi#2: HI review token: खरीद
+warn   yearly.marriage [rating=excellent.driver=jupiter-good] en#1: EN review token: will
+warn   yearly.marriage [rating=moderate.driver=jupiter-good] en#1: EN review token: will
+warn   yearly.marriage [rating=challenging.driver=jupiter-good] en#3: EN review token: will
+warn   yearly.marriage [rating=good.driver=saturn-phase] en#1: EN review token: will
+warn   yearly.marriage [rating=moderate.driver=saturn-phase] en#2: EN review token: will
+warn   yearly.marriage [rating=challenging.driver=saturn-phase] en#2: EN review token: will
+warn   yearly.marriage [rating=challenging.driver=saturn-phase] en#3: EN review token: will
+warn   yearly.marriage [rating=excellent.driver=rahu-axis] en#2: EN review token: will
+warn   yearly.marriage [rating=moderate.driver=rahu-axis] en#1: EN review token: will
+warn   yearly.marriage [rating=challenging.driver=rahu-axis] en#1: EN review token: tax
+warn   yearly.marriage [rating=challenging.driver=rahu-axis] en#2: EN review token: taxes
+warn   yearly.marriage [rating=excellent.driver=mixed] en#1: EN review token: will
+warn   yearly.marriage [rating=excellent.driver=mixed] en#3: EN review token: will
+warn   yearly.marriage [rating=excellent.driver=mixed] en#3: EN review token: taxes
+warn   yearly.marriage [rating=good.driver=mixed] en#1: EN review token: will
+warn   yearly.marriage [rating=moderate.driver=mixed] en#1: EN review token: must
+warn   yearly.marriage [rating=challenging.driver=mixed] en#1: EN review token: will
+warn   yearly.marriage [rating=challenging.driver=mixed] en#3: EN review token: tax
+warn   yearly.marriage [rating=excellent.driver=steady] en#1: EN review token: will
+warn   yearly.marriage [rating=excellent.driver=steady] en#3: EN review token: will
+warn   yearly.marriage [rating=good.driver=steady] en#1: EN review token: will
+warn   yearly.marriage [rating=good.driver=steady] en#2: EN review token: will
+warn   yearly.marriage [rating=moderate.driver=steady] en#3: EN review token: will
+warn   yearly.marriage [rating=challenging.driver=steady] en#2: EN review token: will
+warn   yearly.marriage [rating=moderate.driver=jupiter-good] hi#3: HI review token: खरीद
+warn   yearly.marriage [rating=challenging.driver=jupiter-good] hi#1: HI review token: नुकसान
+warn   yearly.marriage [rating=challenging.driver=jupiter-good] hi#2: HI review token: खरीद
+warn   yearly.marriage [rating=challenging.driver=jupiter-good] hi#3: HI review token: नुकसान
+warn   yearly.marriage [rating=moderate.driver=steady] hi#2: HI review token: खरीद
+warn   yearly.wealth [rating=excellent.driver=jupiter-good] en#1: EN review token: will
+warn   yearly.wealth [rating=excellent.driver=jupiter-good] en#2: EN review token: will
+warn   yearly.wealth [rating=excellent.driver=jupiter-good] en#3: EN review token: will
+warn   yearly.wealth [rating=good.driver=jupiter-good] en#3: EN review token: will
+warn   yearly.wealth [rating=moderate.driver=jupiter-good] en#1: EN review token: will
+warn   yearly.wealth [rating=challenging.driver=jupiter-good] en#2: EN review token: must
+warn   yearly.wealth [rating=challenging.driver=jupiter-good] en#2: EN review token: tax
+warn   yearly.wealth [rating=challenging.driver=jupiter-good] en#3: EN review token: will
+warn   yearly.wealth [rating=excellent.driver=saturn-phase] en#2: EN review token: will
+warn   yearly.wealth [rating=good.driver=saturn-phase] en#1: EN review token: will
+warn   yearly.wealth [rating=moderate.driver=saturn-phase] en#2: EN review token: will
+warn   yearly.wealth [rating=challenging.driver=saturn-phase] en#2: EN review token: will
+warn   yearly.wealth [rating=challenging.driver=saturn-phase] en#3: EN review token: will
+warn   yearly.wealth [rating=excellent.driver=rahu-axis] en#2: EN review token: will
+warn   yearly.wealth [rating=moderate.driver=rahu-axis] en#1: EN review token: will
+warn   yearly.wealth [rating=challenging.driver=rahu-axis] en#1: EN review token: tax
+warn   yearly.wealth [rating=challenging.driver=rahu-axis] en#2: EN review token: taxes
+warn   yearly.wealth [rating=excellent.driver=mixed] en#1: EN review token: will
+warn   yearly.wealth [rating=excellent.driver=mixed] en#3: EN review token: will
+warn   yearly.wealth [rating=excellent.driver=mixed] en#3: EN review token: taxes
+warn   yearly.wealth [rating=good.driver=mixed] en#1: EN review token: will
+warn   yearly.wealth [rating=moderate.driver=mixed] en#1: EN review token: must
+warn   yearly.wealth [rating=challenging.driver=mixed] en#1: EN review token: will
+warn   yearly.wealth [rating=challenging.driver=mixed] en#3: EN review token: tax
+warn   yearly.wealth [rating=excellent.driver=steady] en#1: EN review token: will
+warn   yearly.wealth [rating=excellent.driver=steady] en#3: EN review token: will
+warn   yearly.wealth [rating=good.driver=steady] en#1: EN review token: will
+warn   yearly.wealth [rating=good.driver=steady] en#2: EN review token: will
+warn   yearly.wealth [rating=moderate.driver=steady] en#3: EN review token: will
+warn   yearly.wealth [rating=challenging.driver=steady] en#2: EN review token: will
+warn   yearly.wealth [rating=good.driver=jupiter-good] hi#2: HI review token: खरीद
+warn   yearly.wealth [rating=moderate.driver=jupiter-good] hi#1: HI review token: खरीद
+warn   yearly.wealth [rating=moderate.driver=jupiter-good] hi#3: HI review token: खरीद
+warn   yearly.wealth [rating=challenging.driver=jupiter-good] hi#1: HI review token: खरीद
+warn   yearly.wealth [rating=challenging.driver=jupiter-good] hi#2: HI review token: खरीद
+warn   yearly.wealth [rating=moderate.driver=mixed] hi#3: HI review token: खरीद
+warn   yearly.wealth [rating=challenging.driver=mixed] hi#1: HI review token: खरीद
+warn   yearly.wealth [rating=moderate.driver=steady] hi#2: HI review token: खरीद
+warn   yearly.wealth [rating=challenging.driver=steady] hi#2: HI review token: खरीद
+
+1368 rows · 255 errors · 195 warnings
+LINT FAILED

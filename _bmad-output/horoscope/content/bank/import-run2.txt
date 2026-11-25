@@ -1,0 +1,11 @@
+ERROR  yearly.overview [rating=excellent] en#3: length 97 outside §8 bounds 100–150
+ERROR  yearly.education [rating=good.driver=jupiter-good] en#1: EN banned token: fear
+warn   yearly.business [rating=challenging.driver=saturn-phase] en#1: EN review token: taxes
+warn   yearly.business [rating=challenging.driver=steady] en#2: EN review token: taxes
+warn   yearly.career [rating=challenging.driver=steady] en#2: EN review token: tax
+warn   yearly.love [rating=excellent.driver=steady] en#1: EN review token: will
+warn   yearly.marriage [rating=excellent.driver=steady] en#1: EN review token: will
+warn   yearly.wealth [rating=excellent.driver=steady] en#1: EN review token: will
+
+1368 rows · 2 errors · 6 warnings
+LINT FAILED

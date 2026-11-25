@@ -1,0 +1,36 @@
+ERROR  yearly.health [rating=excellent.driver=jupiter-good] en#1: EN banned token: invest
+ERROR  yearly.health [rating=good.driver=jupiter-good] en#3: EN banned token: investment
+ERROR  yearly.health [rating=challenging.driver=jupiter-good] en#2: EN banned token: buys
+ERROR  yearly.health [rating=good.driver=saturn-phase] en#1: EN banned token: buys
+ERROR  yearly.health [rating=good.driver=saturn-phase] en#2: EN banned token: never
+ERROR  yearly.health [rating=good.driver=saturn-phase] en#3: EN banned token: buys
+ERROR  yearly.health [rating=moderate.driver=saturn-phase] en#1: EN banned token: never
+ERROR  yearly.health [rating=challenging.driver=saturn-phase] en#1: EN banned token: buys
+ERROR  yearly.health [rating=challenging.driver=saturn-phase] en#2: EN banned token: cannot
+ERROR  yearly.health [rating=challenging.driver=saturn-phase] en#2: EN banned token: punishment
+ERROR  yearly.health [rating=challenging.driver=saturn-phase] en#3: EN banned token: failure
+ERROR  yearly.health [rating=excellent.driver=rahu-axis] en#3: EN banned token: never
+ERROR  yearly.health [rating=challenging.driver=rahu-axis] en#3: EN banned token: investing
+ERROR  yearly.health [rating=challenging.driver=rahu-axis] en#3: EN banned token: afraid
+ERROR  yearly.health [rating=good.driver=mixed] en#2: EN banned token: never
+ERROR  yearly.health [rating=excellent.driver=steady] en#2: EN banned token: invest
+ERROR  yearly.health [rating=good.driver=steady] en#2: EN banned token: beware
+ERROR  yearly.health [rating=moderate.driver=steady] en#2: EN banned token: buys
+ERROR  yearly.health [rating=challenging.driver=steady] en#3: EN banned token: cannot
+ERROR  yearly.health [rating=challenging.driver=jupiter-good] hi#1: length 142 outside §8 bounds 90–140
+ERROR  yearly.health [rating=moderate.driver=saturn-phase] hi#1: HI banned token: कभी नहीं
+ERROR  yearly.health [rating=excellent.driver=rahu-axis] hi#1: HI banned token: निवेश
+ERROR  yearly.health [rating=excellent.driver=rahu-axis] hi#3: length 151 outside §8 bounds 90–140
+ERROR  yearly.health [rating=challenging.driver=rahu-axis] hi#1: length 155 outside §8 bounds 90–140
+ERROR  yearly.health [rating=challenging.driver=rahu-axis] hi#3: HI banned token: निवेश
+ERROR  yearly.health [rating=challenging.driver=rahu-axis] hi#3: HI banned token: /(?<![\p{L}\p{M}])डर/
+ERROR  yearly.health [rating=excellent.driver=mixed] hi#1: HI banned token: बैंड
+ERROR  yearly.health [rating=moderate.driver=mixed] hi#1: HI banned token: बैंड
+ERROR  yearly.health [rating=moderate.driver=mixed] hi#2: HI banned token: बैंड
+ERROR  yearly.health [rating=challenging.driver=mixed] hi#1: HI banned token: बैंड
+ERROR  yearly.health [rating=challenging.driver=mixed] hi#2: HI banned token: बैंड
+ERROR  yearly.health [rating=excellent.driver=steady] hi#1: HI banned token: बैंड
+ERROR  yearly.health [rating=excellent.driver=steady] hi#2: HI banned token: निवेश
+ERROR  yearly.health [rating=good.driver=steady] hi#3: length 141 outside §8 bounds 90–140
+ERROR  yearly.health [rating=moderate.driver=steady] hi#1: HI banned token: बैंड
+ERROR  yearly.health [rating=challenging.driver=steady] hi#3: HI banned token: बैंड
