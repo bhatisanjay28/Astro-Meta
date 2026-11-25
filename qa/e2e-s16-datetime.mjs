@@ -12,7 +12,15 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const BASE = "http://127.0.0.1:4321";
+const BASE = process.env.HZ_BASE ?? "http://127.0.0.1:4321";
+// "Tomorrow" for the future-birth checks (D-05/D-30) must be computed — a
+// hardcoded date rots (the written-on date stopped being future three days
+// later and the checks failed against correct product behaviour).
+const TOMORROW = (() => {
+  const d = new Date();
+  d.setDate(d.getDate() + 1);
+  return [String(d.getDate()).padStart(2, "0"), String(d.getMonth() + 1).padStart(2, "0"), String(d.getFullYear())];
+})();
 const axeSrc = readFileSync(resolve(__dirname, "node_modules/axe-core/axe.min.js"), "utf8");
 const OUT = resolve(__dirname, "../_bmad-output/birth-datetime/qa");
 mkdirSync(resolve(OUT, "shots"), { recursive: true });
@@ -109,7 +117,7 @@ st = await dtState("k-date");
 t("D-04", "fix to 28 Feb 1990 → message cleared, hidden ISO", st.value === "1990-02-28" && !st.invalid && st.error === "");
 
 // future + 100-year window (birth preset)
-await typeDate("k-date", "23", "11", "2026");
+await typeDate("k-date", TOMORROW[0], TOMORROW[1], TOMORROW[2]);
 st = await dtState("k-date");
 t("D-05", "tomorrow rejected in birth preset", st.value === "" && st.invalid && st.error.includes("can't be in the future"), st.error);
 await typeDate("k-date", "1", "1", "1900");
@@ -317,7 +325,7 @@ t("D-29", "time-without-place guard still fires (hidden value drives it)", place
 
 // ═══ /calculators/age — inline birth date + free extra ═══════════════════════
 await open("/calculators/age");
-await typeDate("bf-date", "23", "11", "2026");
+await typeDate("bf-date", TOMORROW[0], TOMORROW[1], TOMORROW[2]);
 st = await dtState("bf-date");
 t("D-30", "age tool date is birth preset (future rejected)", st.invalid && st.error.includes("can't be in the future"), st.error);
 await typeDate("bf-date", "01", "01", "2000");
