@@ -3,3 +3,6 @@ node_modules/
 
 # pre-migration DB backups contain raw visitor PII — local restore point only, never pushed
 _bmad-output/admin/backups/
+
+# QA evidence shots may depict authenticated admin UI — local artifacts only, never pushed
+qa/evidence/
