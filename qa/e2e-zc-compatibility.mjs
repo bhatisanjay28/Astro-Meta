@@ -101,12 +101,18 @@ assert(hrefs.every((h) => /^\/compatibility\/[a-z]+\/\1\/$/.test(h) || h.match(/
 // --- 7. astrology hub card + sitemap carry the new URLs
 await page.goto(BASE + "/astrology/", { waitUntil: "load" });
 const zcCard = await page.locator('a[href="/compatibility"]').count();
-assert(zcCard === 1, "astrology hub has the Zodiac Compatibility card");
+// Header megamenu (Astrology panel) + mobile drawer also link /compatibility —
+// the assertion's intent is that the hub card is present, not that it is the
+// only link on the page.
+assert(zcCard >= 1, "astrology hub has the Zodiac Compatibility card");
 const res = await page.request.get(BASE + "/sitemap.xml");
 const xml = await res.text();
-const pairUrls = (xml.match(/\/compatibility\/[a-z]+\/[a-z]+/g) ?? []).length;
+// S24: pair URLs are twinned (EN + HI locs), each loc carrying 3 xhtml
+// alternates — count per-language <loc> entries instead of raw matches.
+const pairEn = (xml.match(/<loc>https:\/\/vyotish\.com\/compatibility\/[a-z]+\/[a-z]+<\/loc>/g) ?? []).length;
+const pairHi = (xml.match(/<loc>https:\/\/vyotish\.com\/hi\/compatibility\/[a-z]+\/[a-z]+<\/loc>/g) ?? []).length;
 assert(xml.includes("<loc>https://vyotish.com/compatibility</loc>"), "sitemap has hub URL");
-assert(pairUrls === 78, `sitemap has 78 pair URLs (got ${pairUrls})`);
+assert(pairEn === 78 && pairHi === 78, `sitemap has 78 EN + 78 HI pair URLs (got ${pairEn}/${pairHi})`);
 
 await browser.close();
 console.log(failures === 0 ? "\nALL ZC E2E CHECKS PASS" : `\n${failures} CHECK(S) FAILED`);

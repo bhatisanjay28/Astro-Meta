@@ -108,8 +108,20 @@ const kundliBody = (date, time, lat, lng, tz = "Asia/Kolkata") => ({
     return { verdict, details, rows };
   }
   const birthFill = (date, time) => async (page) => {
-    await page.fill('[name="date"]', date);
-    await page.fill('[name="time"]', time);
+    // S16 made #bf-date/#bf-time hidden DateField inputs — drive the visible
+    // segments (date DD/MM/YYYY; time is hour12, so convert 24h → 12h + AM/PM).
+    const [y, m, d] = date.split("-");
+    await page.fill("#bf-date-dd", d);
+    await page.fill("#bf-date-mm", m);
+    await page.fill("#bf-date-yy", y);
+    await page.locator("#bf-date-yy").blur();
+    const h24 = Number(time.split(":")[0]);
+    const mi = time.split(":")[1];
+    const h12 = h24 % 12 === 0 ? 12 : h24 % 12;
+    await page.fill("#bf-time-hh", String(h12).padStart(2, "0"));
+    await page.fill("#bf-time-mi", mi);
+    await page.locator(h24 >= 12 ? "[data-dt-pm]" : "[data-dt-amp]").click();
+    await page.locator("#bf-time-mi").blur();
     const place = page.locator('[data-place-field] input:not([type="hidden"])').first();
     await place.click();
     await place.fill("New Delhi");

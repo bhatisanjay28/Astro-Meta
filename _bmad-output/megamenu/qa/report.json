@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-25T17:59:53.484Z",
+  "date": "2026-11-27T18:48:39.787Z",
   "failures": 0,
   "results": [
     {
       "id": "M1",
       "name": "hover opens after intent delay (not instantly)",
       "ok": true,
-      "detail": "opened ~153ms, not visible at 60ms: true"
+      "detail": "opened ~281ms, not visible at 60ms: true"
     },
     {
       "id": "M2",
@@ -54,7 +54,7 @@
       "id": "M9",
       "name": "focus opens, ArrowDown enters panel, Escape closes + refocuses",
       "ok": true,
-      "detail": "focusOpen=true first=  All astrologers   Verified Jyotish scholars — browse by expertise and language  escClosed=true refocused=true"
+      "detail": "focusOpen=true first=  All astrologers सभी ज्योतिषी  Verified Jyotish scholars — browse by expertise and language  escClosed=true refocused=true"
     },
     {
       "id": "M10",
@@ -88,9 +88,9 @@
     },
     {
       "id": "M16",
-      "name": "panels content-sized per tab, not full-width",
+      "name": "panels per-tab sized, viewport-capped, widths vary",
       "ok": true,
-      "detail": "Consultations=576, Horoscope=850, Panchang=680, Muhurat=576, Astrology=544, Poojan=552, Free Calculators=1096, Blog=471"
+      "detail": "Consultations=623, Horoscope=881, Panchang=680, Muhurat=576, Astrology=568, Poojan=666, Free Calculators=1408, Blog=541"
     },
     {
       "id": "M13",

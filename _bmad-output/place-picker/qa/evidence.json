@@ -1,5 +1,5 @@
 {
-  "ran_at": "2026-11-22T15:32:48.136Z",
+  "ran_at": "2026-11-27T18:53:46.134Z",
   "base": "http://127.0.0.1:4321",
   "results": [
     {
@@ -126,7 +126,7 @@
       "id": "P-10a",
       "name": "carded city pick navigates to /panchang/mumbai",
       "ok": true,
-      "detail": "http://127.0.0.1:4321/panchang/mumbai?date=2026-11-22"
+      "detail": "http://127.0.0.1:4321/panchang/mumbai?date=2026-11-28"
     },
     {
       "id": "P-10b",

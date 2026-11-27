@@ -21,11 +21,34 @@ const browser = await chromium.launch({ channel: "chrome", headless: true });
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
 const page = await context.newPage();
 
+// S16 made #bf-date/#bf-time hidden DateField inputs — drive the visible
+// segments. Time fields may be 12h (AM/PM buttons) or 24h per data-hour12.
+async function fillDate(page, date) {
+  const [y, m, d] = date.split("-");
+  await page.fill("#bf-date-dd", d);
+  await page.fill("#bf-date-mm", m);
+  await page.fill("#bf-date-yy", y);
+  await page.locator("#bf-date-yy").blur();
+}
+async function fillTime(page, time) {
+  const hour12 = (await page.getAttribute('.dt[data-dt="time"]', "data-hour12")) === "true";
+  const [h, mi] = time.split(":").map(Number);
+  if (hour12) {
+    const h12 = h % 12 === 0 ? 12 : h % 12;
+    await page.fill("#bf-time-hh", String(h12).padStart(2, "0"));
+    await page.fill("#bf-time-mi", String(mi).padStart(2, "0"));
+    await page.locator(h >= 12 ? "[data-dt-pm]" : "[data-dt-amp]").click();
+  } else {
+    await page.fill("#bf-time-hh", String(h).padStart(2, "0"));
+    await page.fill("#bf-time-mi", String(mi).padStart(2, "0"));
+  }
+  await page.locator("#bf-time-mi").blur();
+}
+
 async function calc(path, fields) {
   await page.goto(BASE + path, { waitUntil: "load" });
-  for (const [name, value] of Object.entries(fields)) {
-    await page.fill(`[name="${name}"]`, value);
-  }
+  if (fields.date) await fillDate(page, fields.date);
+  if (fields.time) await fillTime(page, fields.time);
   await page.click("form button[type=submit]");
   await page.waitForSelector("[data-calc-result] .verdict-card, [data-calc-result] .hint.err", { timeout: 15000 });
   // S14-2 renderer shapes: verdict card, chips ("Label value"), detail rows ("k=v")
@@ -112,11 +135,15 @@ check("destiny 1947-08-15", indep, {
   rows: has("Master number=No"),
 });
 
-// 7. Impossible date — the browser's type=date input is the client-side guard:
-// it cannot hold 2025-02-30 at all, so submit stays blocked (server 400 path is
-// covered by the API route tests + live curl).
+// 7. Impossible date — the S16 DateField is the client-side guard: segments
+// can hold 30/02/2025, but the hidden value must not commit an invalid date
+// (server 400 path is covered by the API route tests + live curl).
 await page.goto(BASE + "/calculators/moon-phase/", { waitUntil: "load" });
-await page.fill('[name="date"]', "2025-02-30");
+await page.fill("#bf-date-dd", "30");
+await page.fill("#bf-date-mm", "02");
+await page.fill("#bf-date-yy", "2025");
+await page.locator("#bf-date-yy").blur();
+await page.waitForTimeout(200);
 const dateValue = await page.$eval('[name="date"]', (el) => el.value);
 const guarded = dateValue !== "2025-02-30";
 if (!guarded) failures++;

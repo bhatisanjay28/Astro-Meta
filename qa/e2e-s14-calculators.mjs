@@ -33,10 +33,33 @@ async function open(slug) {
     await page.waitForTimeout(200);
   }
 }
+// S16 made #bf-date/#bf-time hidden DateField inputs — drive the visible
+// segments. Time fields may be 12h (AM/PM buttons) or 24h per data-hour12.
+async function fillDateSegs(date) {
+  const [y, m, d] = date.split("-");
+  await page.fill("#bf-date-dd", d);
+  await page.fill("#bf-date-mm", m);
+  await page.fill("#bf-date-yy", y);
+  await page.locator("#bf-date-yy").blur();
+}
+async function fillTimeSegs(time) {
+  const hour12 = (await page.getAttribute('.dt[data-dt="time"]', "data-hour12")) === "true";
+  const [h, mi] = time.split(":").map(Number);
+  if (hour12) {
+    const h12 = h % 12 === 0 ? 12 : h % 12;
+    await page.fill("#bf-time-hh", String(h12).padStart(2, "0"));
+    await page.fill("#bf-time-mi", String(mi).padStart(2, "0"));
+    await page.locator(h >= 12 ? "[data-dt-pm]" : "[data-dt-amp]").click();
+  } else {
+    await page.fill("#bf-time-hh", String(h).padStart(2, "0"));
+    await page.fill("#bf-time-mi", String(mi).padStart(2, "0"));
+  }
+  await page.locator("#bf-time-mi").blur();
+}
 async function submitBirth(slug, date, time) {
   await open(slug);
-  await page.fill('[name="date"]', date);
-  await page.fill('[name="time"]', time);
+  await fillDateSegs(date);
+  if (time) await fillTimeSegs(time);
   const place = page.locator('[data-place-field] input:not([type="hidden"])').first();
   await place.click();
   await place.fill("New Delhi");
@@ -49,6 +72,7 @@ async function submitBirth(slug, date, time) {
 async function submitFields(slug, fields) {
   await open(slug);
   for (const [name, value] of Object.entries(fields)) {
+    if (name === "date") { await fillDateSegs(value); continue; } // S16 hidden DateField
     await page.fill(`[name="${name}"]`, value);
   }
   await page.click("form button[type=submit]");

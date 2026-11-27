@@ -99,7 +99,17 @@ else fail(`${sweepFail} pages failed the static sweep`);
   assert(en.includes('href="/hi/horoscope/"') || hi.includes('href="/horoscope/"'), "hubs: switcher counterparts");
   assert(await fetchText("/hi/").then((h) => h.includes('id="horoscope"') && h.includes("दैनिक, साप्ताहिक और वार्षिक राशिफल")), "hi home: Hindi widget section present");
   assert(await fetchText("/hi/").then((h) => h.includes('href="/hi/horoscope/aries/daily"')), "hi home: widget cards link /hi/horoscope");
-  assert(await fetchText("/hi/").then((h) => h.includes("हिन्दी बिल्ड चरणबद्ध है — राशिफल अब हिन्दी में उपलब्ध है")), "hi home: honest en-note present");
+  // S24 supersedes the S22 phased-rollout note: the whole site is Hindi now,
+  // so the "राशिफल अब हिन्दी में उपलब्ध है" banner was removed. Assert its
+  // absence plus the surviving honest-replacement signals.
+  assert(
+    !(await fetchText("/hi/")).includes("हिन्दी बिल्ड चरणबद्ध है"),
+    "hi home: obsolete phased note removed (S24)",
+  );
+  assert(
+    await fetchText("/hi/").then((h) => h.includes("वैदिक राशिफल") || h.includes("राशिफल")),
+    "hi home: horoscope widget copy is Hindi",
+  );
 }
 
 // ---------- browser: interactive behaviour + layout + axe ----------
